@@ -61,28 +61,7 @@ export default function TranscriptInfoForm({
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="programName">
-                专业名称
-              </Label>
-              <Input
-                id="programName"
-                name="programName"
-                value={formData.programName}
-                onChange={(e) => onChange("programName", e.target.value)}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="departmentName">
-                院系名称
-              </Label>
-              <Input
-                id="departmentName"
-                name="departmentName"
-                value={formData.departmentName}
-                onChange={(e) => onChange("departmentName", e.target.value)}
-              />
-            </div>
+
             <div className="space-y-2">
               <Label htmlFor="degreeType">
                 学位类型

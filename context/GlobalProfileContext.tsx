@@ -6,12 +6,14 @@ export interface GlobalProfile {
   universityName: string
   universityLogo: string
   universityAddress: string
+  universityCity: string
   universityWebsite: string
   universityContact: string
   fullName: string
   studentId: string
   faculty: string
   major: string
+  birthDate: string
   studentPhoto: string
   universityLogoLong: string
   cardBackgroundImage: string
@@ -21,12 +23,14 @@ const DEFAULT_PROFILE: GlobalProfile = {
   universityName: "",
   universityLogo: "/placeholder.svg?height=60&width=60",
   universityAddress: "",
+  universityCity: "",
   universityWebsite: "",
   universityContact: "",
   fullName: "",
   studentId: "",
   faculty: "",
   major: "",
+  birthDate: "2001-01-25",
   studentPhoto: "/placeholder.svg?height=150&width=120",
   universityLogoLong: "/placeholder.svg?height=40&width=200",
   cardBackgroundImage: "/placeholder.svg?height=90&width=140",

@@ -244,14 +244,25 @@ const GlobalProfilePanel: React.FC = () => {
                 </div>
               </div>
 
-              <div className="space-y-1.5">
-                <Label htmlFor="gp-universityAddress">Address</Label>
-                <Input
-                  id="gp-universityAddress"
-                  value={profile.universityAddress}
-                  onChange={(e) => updateProfile("universityAddress", e.target.value)}
-                  placeholder="Full address"
-                />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-universityAddress">Address</Label>
+                  <Input
+                    id="gp-universityAddress"
+                    value={profile.universityAddress}
+                    onChange={(e) => updateProfile("universityAddress", e.target.value)}
+                    placeholder="Full address"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-universityCity">City (For ID Card Display)</Label>
+                  <Input
+                    id="gp-universityCity"
+                    value={profile.universityCity}
+                    onChange={(e) => updateProfile("universityCity", e.target.value)}
+                    placeholder="e.g. Boston, MA"
+                  />
+                </div>
               </div>
 
               {/* University Logo Upload */}
@@ -405,8 +416,18 @@ const GlobalProfilePanel: React.FC = () => {
                   />
                 </div>
               </div>
+              
+              <div className="space-y-1.5 mt-3">
+                <Label htmlFor="gp-birthDate">Date of Birth</Label>
+                <Input
+                  id="gp-birthDate"
+                  type="date"
+                  value={profile.birthDate}
+                  onChange={(e) => updateProfile("birthDate", e.target.value)}
+                />
+              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
                 <div className="space-y-1.5">
                   <Label htmlFor="gp-faculty">Faculty / Department</Label>
                   <Input

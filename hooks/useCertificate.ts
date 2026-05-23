@@ -26,6 +26,7 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
       if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
       if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
       if (profile.fullName !== undefined && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
+      if (profile.birthDate !== undefined && profile.birthDate !== prev.birthDate) { updated.birthDate = profile.birthDate; changed = true }
       if (profile.studentId !== undefined && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
       if (profile.faculty !== undefined && profile.faculty !== prev.faculty) { updated.faculty = profile.faculty; changed = true }
       if (profile.major !== undefined && profile.major !== prev.major) { updated.major = profile.major; changed = true }

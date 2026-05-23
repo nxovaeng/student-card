@@ -71,7 +71,8 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
             ctx.drawImage(logo, 433, 177, 102, 102)
             ctx.restore()
           } else {
-            ctx.drawImage(logo, 15, 49, 165, 165)
+            // Scaled down logo slightly (was 165x165) and moved down/right to center
+            ctx.drawImage(logo, 20, 56, 150, 150)
           }
         }
       }
@@ -105,15 +106,21 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
 
       // Draw text fields
       const name = (formData.fullName || "John Smith").toUpperCase()
-      const dob = formData.validityStart || "2001-01-25"
+      const dob = (formData.birthDate as string) || "2001-01-25"
       const studentId = formData.studentId || "2023001001"
-      // Extract city or short address to prevent overflow
-      const rawAddress = formData.universityAddress || "123 University Avenue, Boston"
-      const addressParts = rawAddress.split(",")
-      const shortAddress = addressParts.length > 1 
-        ? addressParts[addressParts.length >= 3 ? addressParts.length - 2 : 1].trim() 
-        : addressParts[0].trim()
-      const address = shortAddress.substring(0, 22)
+      // Use explicitly provided city, or fallback to extracting from address
+      let addressStr = ""
+      if (formData.universityCity) {
+        addressStr = formData.universityCity
+      } else {
+        const rawAddress = formData.universityAddress || "123 University Avenue, Boston"
+        const addressParts = rawAddress.split(",")
+        const shortAddress = addressParts.length > 1 
+          ? addressParts[addressParts.length >= 3 ? addressParts.length - 2 : 1].trim() 
+          : addressParts[0].trim()
+        addressStr = shortAddress
+      }
+      const address = addressStr.substring(0, 22)
       const academicYear = formData.enrollmentYear
         ? `${formData.enrollmentYear}-${parseInt(formData.enrollmentYear) + 4}`
         : "2025-2028"
@@ -206,10 +213,10 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
       const yOffset = isSet2 ? 110 : 0
 
       if (!line2) {
-        ctx.fillText(line1, 165 + xOffset, 130 + yOffset)
+        ctx.fillText(line1, 175 + xOffset, 130 + yOffset)
       } else {
-        ctx.fillText(line1, 158 + xOffset, 112 + yOffset)
-        ctx.fillText(line2, 200 + xOffset, 149 + yOffset)
+        ctx.fillText(line1, 175 + xOffset, 112 + yOffset)
+        ctx.fillText(line2, 210 + xOffset, 149 + yOffset)
       }
 
       // Draw signature
@@ -218,10 +225,14 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
       ctx.shadowOffsetX = 2
       ctx.shadowOffsetY = 2
       ctx.font = "italic 38px cursive"
+      ctx.textAlign = "right" // Use right alignment
       const signature = formData.officialSignature || "S. Davis"
-      const sigX = isSet2 ? 955 : 1047
+      // Right edge boundary for the signature line
+      const sigX = isSet2 ? 1160 : 1250
       const sigY = isSet2 ? 700 : 693
       ctx.fillText(signature, sigX, sigY)
+      // Reset text alignment
+      ctx.textAlign = "left"
 
       // Reset shadow
       ctx.shadowColor = "transparent"

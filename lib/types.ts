@@ -12,7 +12,8 @@ export interface IDCardFormData {
   studentId: string
   faculty: string
   universityName: string
-  validityStart: string
+  universityCity: string
+  birthDate: string
   validityEnd: string
   enrollmentYear: string
   programType: string

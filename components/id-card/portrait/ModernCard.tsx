@@ -59,7 +59,14 @@ export const ModernCard: React.FC<CardComponentProps> = ({ formData, barcodeRef 
                     : {}
                 }
               >
-                <img src={formData.photo || "/placeholder.svg"} alt="Student" className="h-full w-full object-cover" />
+                <div 
+                  className="h-full w-full" 
+                  style={{
+                    backgroundImage: `url(${formData.photo || "/placeholder.svg"})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center"
+                  }}
+                />
               </div>
             </div>
 

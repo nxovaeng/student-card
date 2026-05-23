@@ -131,19 +131,21 @@ export default function SchedulePreview({
 
   // Render weekly view
   const renderWeeklyView = () => {
+    const HOUR_HEIGHT = 80 // Fixed height for proportional rendering
+
     return (
       <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
+        <table className="w-full border-collapse" style={{ tableLayout: "fixed" }}>
           <thead>
             <tr>
               <th
-                className="border p-2 text-center"
+                className="border p-2 text-center w-24"
                 style={{
                   backgroundColor: formData.tableHeaderColor,
                   borderColor: formData.borderColor,
                 }}
               >
-                Time / Day
+                Time
               </th>
               {getDisplayDays().map((day) => (
                 <th
@@ -166,59 +168,62 @@ export default function SchedulePreview({
               const displayTime = formatTime(timeString)
 
               return (
-                <tr key={timeString}>
-                  <td className="border p-2 text-center" style={{ borderColor: formData.borderColor }}>
+                <tr key={timeString} style={{ height: `${HOUR_HEIGHT}px` }}>
+                  <td className="border p-2 text-center align-top text-sm font-medium" style={{ borderColor: formData.borderColor }}>
                     {displayTime}
                   </td>
                   {getDisplayDays().map((day) => {
-                    const coursesOnDay = formData.courses.filter((course) => {
+                    const startingCourses = formData.courses.filter((course) => {
                       if (!isCourseOnDay(course, day.value)) return false
-
                       if (!course.startTime || !course.endTime) return false
 
-                      const [startHour, startMinute] = course.startTime.split(":").map(Number)
-                      const [endHour, endMinute] = course.endTime.split(":").map(Number)
-
-                      const courseStartHour = startHour
-                      const courseEndHour = endHour
-
-                      return hour >= courseStartHour && hour < courseEndHour
+                      const [startHour] = course.startTime.split(":").map(Number)
+                      // Only attach the course to the row matching its start hour
+                      return startHour === hour
                     })
 
                     return (
                       <td
                         key={`${day.value}-${timeString}`}
-                        className="border p-0"
-                        style={{ borderColor: formData.borderColor }}
+                        className="border p-0 relative align-top"
+                        style={{ borderColor: formData.borderColor, height: `${HOUR_HEIGHT}px` }}
                       >
-                        {coursesOnDay.map((course) => {
+                        {startingCourses.map((course) => {
                           const [startHour, startMinute] = course.startTime?.split(":").map(Number) || [0, 0]
-                          const courseStartHour = startHour
+                          const [endHour, endMinute] = course.endTime?.split(":").map(Number) || [0, 0]
 
-                          // Only render the course once at its start time
-                          if (courseStartHour === hour) {
-                            return (
-                              <div key={course.id} className="p-1" style={getCourseStyle(course)}>
-                                <div className="font-semibold">{course.courseName}</div>
-                                <div className="text-xs">
-                                  {course.courseCode && <span>{course.courseCode}</span>}
+                          const durationMinutes = (endHour * 60 + endMinute) - (startHour * 60 + startMinute)
+                          const topOffset = (startMinute / 60) * HOUR_HEIGHT
+                          const height = (durationMinutes / 60) * HOUR_HEIGHT
 
-                                  {formData.showInstructors && course.instructor && <span> | {course.instructor}</span>}
+                          return (
+                            <div 
+                              key={course.id} 
+                              className="absolute left-1 right-1 z-10 overflow-hidden shadow-sm hover:shadow-md transition-shadow" 
+                              style={{
+                                ...getCourseStyle(course),
+                                top: `${topOffset}px`,
+                                height: `${Math.max(height, 24)}px`, // minimum height to ensure visibility
+                                padding: "4px 6px",
+                              }}
+                            >
+                              <div className="font-semibold text-xs leading-tight truncate">{course.courseName}</div>
+                              <div className="text-[10px] opacity-90 leading-tight mt-0.5">
+                                {course.courseCode && <span className="block truncate">{course.courseCode}</span>}
 
-                                  {formData.showLocations && (course.building || course.room || course.location) && (
-                                    <span>
-                                      {" "}
-                                      | {course.building} {course.room}{" "}
-                                      {!course.building && !course.room ? course.location : ""}
-                                    </span>
-                                  )}
+                                {formData.showInstructors && course.instructor && <span className="block truncate">{course.instructor}</span>}
 
-                                  {formData.showCourseType && course.type && <span> | {course.type}</span>}
-                                </div>
+                                {formData.showLocations && (course.building || course.room || course.location) && (
+                                  <span className="block truncate">
+                                    {course.building} {course.room}{" "}
+                                    {!course.building && !course.room ? course.location : ""}
+                                  </span>
+                                )}
+
+                                {formData.showCourseType && course.type && <span className="block truncate">{course.type}</span>}
                               </div>
-                            )
-                          }
-                          return null
+                            </div>
+                          )
                         })}
                       </td>
                     )

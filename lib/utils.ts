@@ -69,15 +69,6 @@ export const validateFormData = (formData: any): Record<string, string> => {
   if (!formData.faculty) errors.faculty = "Faculty cannot be empty"
   if (!formData.universityName) errors.universityName = "University name cannot be empty"
 
-  // Date validation
-  if (formData.validityStart && formData.validityEnd) {
-    const startDate = new Date(formData.validityStart)
-    const endDate = new Date(formData.validityEnd)
-    if (startDate > endDate) {
-      errors.validityEnd = "Validity end date must be later than start date"
-    }
-  }
-
   return errors
 }
 

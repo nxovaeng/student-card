@@ -46,14 +46,7 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label>Department</Label>
-              <Input name="department" value={formData.department} onChange={handleChange} />
-            </div>
-            <div className="space-y-2">
-              <Label>Program</Label>
-              <Input name="program" value={formData.program} onChange={handleChange} />
-            </div>
+
             <div className="space-y-2">
               <Label>Term</Label>
               <Select value={formData.term} onValueChange={(value) => onChange("term", value)}>

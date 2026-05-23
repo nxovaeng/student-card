@@ -119,7 +119,7 @@ export const DEFAULT_FORM_DATA: IDCardFormData = {
   studentId: "2023001001",
   faculty: "School of Computer Science",
   universityName: "International University",
-  validityStart: new Date().toISOString().split("T")[0],
+  birthDate: "2001-01-25",
   validityEnd: new Date(new Date().setFullYear(new Date().getFullYear() + 4)).toISOString().split("T")[0],
   enrollmentYear: new Date().getFullYear().toString(),
   programType: "Bachelor",
@@ -150,6 +150,7 @@ export const DEFAULT_FORM_DATA: IDCardFormData = {
 
   // University information
   universityAddress: "123 University Avenue, Boston, MA 02115",
+  universityCity: "Boston, MA",
   universityContact: "(617) 555-1234",
   universityWebsite: "www.university.edu",
 

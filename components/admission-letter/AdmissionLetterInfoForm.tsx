@@ -28,33 +28,7 @@ export default function AdmissionLetterInfoForm({
             <CardTitle>Admission Information</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-2">
-                <Label htmlFor="programName">Program Name</Label>
-                <Input
-                  id="programName"
-                  name="programName"
-                  value={formData.programName}
-                  onChange={onChange}
-                  placeholder="e.g., Computer Science"
-                  className={formErrors.programName ? "border-red-500" : ""}
-                />
-                {formErrors.programName && <p className="text-red-500 text-sm">{formErrors.programName}</p>}
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="departmentName">Department Name</Label>
-                <Input
-                  id="departmentName"
-                  name="departmentName"
-                  value={formData.departmentName}
-                  onChange={onChange}
-                  placeholder="e.g., School of Computer Science"
-                  className={formErrors.departmentName ? "border-red-500" : ""}
-                />
-                {formErrors.departmentName && <p className="text-red-500 text-sm">{formErrors.departmentName}</p>}
-              </div>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="space-y-2">
