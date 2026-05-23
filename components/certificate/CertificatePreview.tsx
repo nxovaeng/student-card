@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import type { CertificatePreviewProps } from "@/lib/types"
 import { EXPORT_QUALITY_OPTIONS } from "@/lib/constants"
@@ -387,12 +386,10 @@ const CertificatePreview: React.FC<CertificatePreviewProps> = ({ formData, onDow
           >
             {formData.universityLogo && (
               <div className="relative w-16 h-16">
-                <Image
+                <img
                   src={formData.universityLogo}
                   alt="University Logo"
-                  fill
-                  style={{ objectFit: "contain" }}
-                  sizes="64px"
+                  className="w-full h-full object-contain"
                 />
               </div>
             )}
@@ -433,23 +430,19 @@ const CertificatePreview: React.FC<CertificatePreviewProps> = ({ formData, onDow
               {/* Student Photo */}
               {formData.studentPhoto && (
                 <div className="ml-4 relative w-[100px] h-[133px] border border-gray-300">
-                  <Image
+                  <img
                     src={formData.studentPhoto}
                     alt="Student Photo"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="100px"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}
               {!formData.studentPhoto && (
                 <div className="ml-4 relative w-[100px] h-[133px] border border-gray-300 overflow-hidden">
-                  <Image
+                  <img
                     src="/placeholder.svg?height=133&width=100"
                     alt="Student Photo"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="100px"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}

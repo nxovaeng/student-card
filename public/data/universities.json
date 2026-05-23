@@ -2,3015 +2,4391 @@
   "Afghanistan": [
     {
       "name": "Kabul University",
-      "address": "Jamal Mina, 3rd District, Kabul, Afghanistan"
+      "address": "Jamal Mina, 3rd District, Kabul, Afghanistan",
+      "website": "www.kabul-university.edu",
+      "contact": "+1-416-568-4651"
     },
     {
       "name": "American University of Afghanistan",
-      "address": "Darulaman Road, Kabul, Afghanistan"
+      "address": "Darulaman Road, Kabul, Afghanistan",
+      "website": "www.american-university-of-afghanistan.edu",
+      "contact": "+1-158-060-7117"
     },
     {
       "name": "Kardan University",
-      "address": "Taimani Square, Street 4, Kabul, Afghanistan"
+      "address": "Taimani Square, Street 4, Kabul, Afghanistan",
+      "website": "www.kardan-university.edu",
+      "contact": "+1-367-336-9767"
     },
     {
       "name": "Nangarhar University",
-      "address": "Jalalabad, Nangarhar Province, Afghanistan"
+      "address": "Jalalabad, Nangarhar Province, Afghanistan",
+      "website": "www.nangarhar-university.edu",
+      "contact": "+1-608-302-8014"
     },
     {
       "name": "Herat University",
-      "address": "Herat-Kandahar Highway, Herat, Afghanistan"
+      "address": "Herat-Kandahar Highway, Herat, Afghanistan",
+      "website": "www.herat-university.edu",
+      "contact": "+1-624-431-1014"
     }
   ],
   "Albania": [
     {
       "name": "University of Tirana",
-      "address": "Sheshi Nënë Tereza, Tirana, Albania"
+      "address": "Sheshi Nënë Tereza, Tirana, Albania",
+      "website": "www.university-of-tirana.edu",
+      "contact": "+1-147-676-5778"
     },
     {
       "name": "Polytechnic University of Tirana",
-      "address": "Sheshi Nënë Tereza 1, Tirana, Albania"
+      "address": "Sheshi Nënë Tereza 1, Tirana, Albania",
+      "website": "www.polytechnic-university-of-tirana.edu",
+      "contact": "+1-621-077-9832"
     },
     {
       "name": "Aleksandër Moisiu University",
-      "address": "Rruga e Currilave, Durrës, Albania"
+      "address": "Rruga e Currilave, Durrës, Albania",
+      "website": "www.aleksandr-moisiu-university.edu",
+      "contact": "+1-423-063-2946"
     },
     {
       "name": "Universiteti i Shkodrës 'Luigj Gurakuqi'",
-      "address": "Rruga Kongresi i Përmetit, Shkodër, Albania"
+      "address": "Rruga Kongresi i Përmetit, Shkodër, Albania",
+      "website": "www.universiteti-i-shkodrs-luigj-gurakuqi.edu",
+      "contact": "+1-392-703-8835"
     },
     {
       "name": "Epoka University",
-      "address": "Rruga Tiranë-Rinas, Km. 12, Tirana, Albania"
+      "address": "Rruga Tiranë-Rinas, Km. 12, Tirana, Albania",
+      "website": "www.epoka-university.edu",
+      "contact": "+1-528-074-6188"
     }
   ],
   "Algeria": [
     {
       "name": "University of Algiers",
-      "address": "2 Rue Didouche Mourad, Alger Centre, Algiers, Algeria"
+      "address": "2 Rue Didouche Mourad, Alger Centre, Algiers, Algeria",
+      "website": "www.university-of-algiers.edu",
+      "contact": "+1-243-680-7870"
     },
     {
       "name": "University of Oran",
-      "address": "Bir El Djir, Oran, Algeria"
+      "address": "Bir El Djir, Oran, Algeria",
+      "website": "www.university-of-oran.edu",
+      "contact": "+1-040-949-5207"
     },
     {
       "name": "University of Constantine",
-      "address": "Route d'Aïn El Bey, Constantine, Algeria"
+      "address": "Route d'Aïn El Bey, Constantine, Algeria",
+      "website": "www.university-of-constantine.edu",
+      "contact": "+1-010-451-1355"
     },
     {
       "name": "University of Tlemcen",
-      "address": "Campus Universitaire, BP 119, Tlemcen, Algeria"
+      "address": "Campus Universitaire, BP 119, Tlemcen, Algeria",
+      "website": "www.university-of-tlemcen.edu",
+      "contact": "+1-153-912-9973"
     },
     {
       "name": "University of Annaba",
-      "address": "Route d'El Hadjar, Annaba, Algeria"
+      "address": "Route d'El Hadjar, Annaba, Algeria",
+      "website": "www.university-of-annaba.edu",
+      "contact": "+1-227-874-5718"
     }
   ],
   "Argentina": [
     {
       "name": "University of Buenos Aires",
-      "address": "Viamonte 430, C1053ABJ Buenos Aires, Argentina"
+      "address": "Viamonte 430, C1053ABJ Buenos Aires, Argentina",
+      "website": "www.university-of-buenos-aires.edu",
+      "contact": "+1-163-609-6175"
     },
     {
       "name": "National University of Córdoba",
-      "address": "Haya de la Torre s/n, Pabellón Argentina, Ciudad Universitaria, X5000HUA Córdoba, Argentina"
+      "address": "Haya de la Torre s/n, Pabellón Argentina, Ciudad Universitaria, X5000HUA Córdoba, Argentina",
+      "website": "www.national-university-of-crdoba.edu",
+      "contact": "+1-618-379-1111"
     },
     {
       "name": "National University of La Plata",
-      "address": "Avenida 7 Nro. 776, B1900TFN La Plata, Buenos Aires, Argentina"
+      "address": "Avenida 7 Nro. 776, B1900TFN La Plata, Buenos Aires, Argentina",
+      "website": "www.national-university-of-la-plata.edu",
+      "contact": "+1-616-324-9044"
     },
     {
       "name": "University of Mendoza",
-      "address": "Boulogne Sur Mer, M5500 Mendoza, Argentina"
+      "address": "Boulogne Sur Mer, M5500 Mendoza, Argentina",
+      "website": "www.university-of-mendoza.edu",
+      "contact": "+1-372-419-0481"
     },
     {
       "name": "Austral University",
-      "address": "Av. Juan de Garay 125, C1063ABB Buenos Aires, Argentina"
+      "address": "Av. Juan de Garay 125, C1063ABB Buenos Aires, Argentina",
+      "website": "www.austral-university.edu",
+      "contact": "+1-491-020-7878"
     }
   ],
   "Armenia": [
     {
       "name": "Yerevan State University",
-      "address": "1 Alek Manukyan St, Yerevan 0025, Armenia"
+      "address": "1 Alek Manukyan St, Yerevan 0025, Armenia",
+      "website": "www.yerevan-state-university.edu",
+      "contact": "+1-285-184-1529"
     },
     {
       "name": "American University of Armenia",
-      "address": "40 Marshal Baghramyan Ave, Yerevan 0019, Armenia"
+      "address": "40 Marshal Baghramyan Ave, Yerevan 0019, Armenia",
+      "website": "www.american-university-of-armenia.edu",
+      "contact": "+1-355-975-9686"
     },
     {
       "name": "National Polytechnic University of Armenia",
-      "address": "105 Teryan St, Yerevan 0009, Armenia"
+      "address": "105 Teryan St, Yerevan 0009, Armenia",
+      "website": "www.national-polytechnic-university-of-armenia.edu",
+      "contact": "+1-223-374-0802"
     },
     {
       "name": "Armenian State University of Economics",
-      "address": "128 Nalbandyan St, Yerevan 0025, Armenia"
+      "address": "128 Nalbandyan St, Yerevan 0025, Armenia",
+      "website": "www.armenian-state-university-of-economics.edu",
+      "contact": "+1-397-853-5401"
     },
     {
       "name": "Gavar State University",
-      "address": "1 Hrachya Buniatyan St, Gavar 1201, Armenia"
+      "address": "1 Hrachya Buniatyan St, Gavar 1201, Armenia",
+      "website": "www.gavar-state-university.edu",
+      "contact": "+1-403-827-1600"
     }
   ],
   "Australia": [
     {
       "name": "University of Melbourne",
-      "address": "Grattan St, Parkville VIC 3010, Australia"
+      "address": "Grattan St, Parkville VIC 3010, Australia",
+      "website": "www.university-of-melbourne.edu",
+      "contact": "+1-370-186-7198"
     },
     {
       "name": "University of Sydney",
-      "address": "Camperdown NSW 2006, Australia"
+      "address": "Camperdown NSW 2006, Australia",
+      "website": "www.university-of-sydney.edu",
+      "contact": "+1-149-102-3429"
     },
     {
       "name": "Australian National University",
-      "address": "Acton ACT 2601, Australia"
+      "address": "Acton ACT 2601, Australia",
+      "website": "www.australian-national-university.edu",
+      "contact": "+1-787-858-3894"
     },
     {
       "name": "Monash University",
-      "address": "Wellington Rd, Clayton VIC 3800, Australia"
+      "address": "Wellington Rd, Clayton VIC 3800, Australia",
+      "website": "www.monash-university.edu",
+      "contact": "+1-708-629-3124"
     },
     {
       "name": "University of Queensland",
-      "address": "St Lucia QLD 4072, Australia"
+      "address": "St Lucia QLD 4072, Australia",
+      "website": "www.university-of-queensland.edu",
+      "contact": "+1-611-964-9269"
     }
   ],
   "Austria": [
     {
       "name": "University of Vienna",
-      "address": "Universitätsring 1, 1010 Vienna, Austria"
+      "address": "Universitätsring 1, 1010 Vienna, Austria",
+      "website": "www.university-of-vienna.edu",
+      "contact": "+1-141-988-2266"
     },
     {
       "name": "Vienna University of Technology",
-      "address": "Karlsplatz 13, 1040 Vienna, Austria"
+      "address": "Karlsplatz 13, 1040 Vienna, Austria",
+      "website": "www.vienna-university-of-technology.edu",
+      "contact": "+1-040-065-8764"
     },
     {
       "name": "University of Graz",
-      "address": "Universitätsplatz 3, 8010 Graz, Austria"
+      "address": "Universitätsplatz 3, 8010 Graz, Austria",
+      "website": "www.university-of-graz.edu",
+      "contact": "+1-040-925-6891"
     },
     {
       "name": "University of Innsbruck",
-      "address": "Innrain 52, 6020 Innsbruck, Austria"
+      "address": "Innrain 52, 6020 Innsbruck, Austria",
+      "website": "www.university-of-innsbruck.edu",
+      "contact": "+1-119-818-2676"
     },
     {
       "name": "Johannes Kepler University Linz",
-      "address": "Altenberger Str. 69, 4040 Linz, Austria"
+      "address": "Altenberger Str. 69, 4040 Linz, Austria",
+      "website": "www.johannes-kepler-university-linz.edu",
+      "contact": "+1-274-909-0190"
     }
   ],
   "Azerbaijan": [
     {
       "name": "Baku State University",
-      "address": "23 Zahid Khalilov St, Baku 1148, Azerbaijan"
+      "address": "23 Zahid Khalilov St, Baku 1148, Azerbaijan",
+      "website": "www.baku-state-university.edu",
+      "contact": "+1-188-276-6604"
     },
     {
       "name": "Azerbaijan Technical University",
-      "address": "25 Huseyn Javid Ave, Baku 1073, Azerbaijan"
+      "address": "25 Huseyn Javid Ave, Baku 1073, Azerbaijan",
+      "website": "www.azerbaijan-technical-university.edu",
+      "contact": "+1-144-825-1042"
     },
     {
       "name": "Azerbaijan Medical University",
-      "address": "23 Bakikhanov St, Baku 1022, Azerbaijan"
+      "address": "23 Bakikhanov St, Baku 1022, Azerbaijan",
+      "website": "www.azerbaijan-medical-university.edu",
+      "contact": "+1-397-911-1658"
     },
     {
       "name": "Khazar University",
-      "address": "41 Mehseti St, Baku 1096, Azerbaijan"
+      "address": "41 Mehseti St, Baku 1096, Azerbaijan",
+      "website": "www.khazar-university.edu",
+      "contact": "+1-053-177-5673"
     },
     {
       "name": "ADA University",
-      "address": "61 Ahmadbay Agha-Oglu St, Baku 1008, Azerbaijan"
+      "address": "61 Ahmadbay Agha-Oglu St, Baku 1008, Azerbaijan",
+      "website": "www.ada-university.edu",
+      "contact": "+1-095-774-1168"
     }
   ],
   "Bahamas": [
     {
       "name": "University of the Bahamas",
-      "address": "University Dr, Nassau, The Bahamas"
+      "address": "University Dr, Nassau, The Bahamas",
+      "website": "www.university-of-the-bahamas.edu",
+      "contact": "+1-244-601-6257"
     },
     {
       "name": "College of the Bahamas",
-      "address": "University Dr, Nassau, The Bahamas"
+      "address": "University Dr, Nassau, The Bahamas",
+      "website": "www.college-of-the-bahamas.edu",
+      "contact": "+1-509-483-3896"
     },
     {
       "name": "Bahamas Technical & Vocational Institute",
-      "address": "Old Trail Road, Nassau, The Bahamas"
+      "address": "Old Trail Road, Nassau, The Bahamas",
+      "website": "www.bahamas-technical-vocational-institute.edu",
+      "contact": "+1-448-210-4191"
     },
     {
       "name": "Bahamas International University",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.bahamas-international-university.edu",
+      "contact": "+1-025-525-6793"
     },
     {
       "name": "Caribbean Maritime University Bahamas",
-      "address": "Crystal Palace Training Hotel, Cable Beach, Nassau, The Bahamas"
+      "address": "Crystal Palace Training Hotel, Cable Beach, Nassau, The Bahamas",
+      "website": "www.caribbean-maritime-university-bahamas.edu",
+      "contact": "+1-827-256-4634"
     }
   ],
   "Bahrain": [
     {
       "name": "University of Bahrain",
-      "address": "Rd 45, Sakheer, Building 89, Bahrain"
+      "address": "Rd 45, Sakheer, Building 89, Bahrain",
+      "website": "www.university-of-bahrain.edu",
+      "contact": "+1-186-303-7338"
     },
     {
       "name": "Bahrain Polytechnic",
-      "address": "Isa Town, Building 8, Bahrain"
+      "address": "Isa Town, Building 8, Bahrain",
+      "website": "www.bahrain-polytechnic.edu",
+      "contact": "+1-591-052-2461"
     },
     {
       "name": "Royal College of Surgeons in Ireland – Bahrain",
-      "address": "Building 2441, Rd 2835, Busaiteen 228, Muharraq, Bahrain"
+      "address": "Building 2441, Rd 2835, Busaiteen 228, Muharraq, Bahrain",
+      "website": "www.royal-college-of-surgeons-in-ireland-bahrain.edu",
+      "contact": "+1-256-632-3633"
     },
     {
       "name": "Bahrain Institute of Banking and Finance",
-      "address": "Building 1076, Rd 4026, Manama 340, Bahrain"
+      "address": "Building 1076, Rd 4026, Manama 340, Bahrain",
+      "website": "www.bahrain-institute-of-banking-and-finance.edu",
+      "contact": "+1-335-737-3220"
     },
     {
       "name": "Arab Open University Bahrain",
-      "address": "Building 890, Rd 3218, A'ali 732, Bahrain"
+      "address": "Building 890, Rd 3218, A'ali 732, Bahrain",
+      "website": "www.arab-open-university-bahrain.edu",
+      "contact": "+1-089-976-5011"
     }
   ],
   "Bangladesh": [
     {
       "name": "University of Dhaka",
-      "address": "Nilkhet Road, Dhaka 1000, Bangladesh"
+      "address": "Nilkhet Road, Dhaka 1000, Bangladesh",
+      "website": "www.university-of-dhaka.edu",
+      "contact": "+1-020-100-7108"
     },
     {
       "name": "Bangladesh University of Engineering and Technology",
-      "address": "Palashi, Dhaka 1205, Bangladesh"
+      "address": "Palashi, Dhaka 1205, Bangladesh",
+      "website": "www.bangladesh-university-of-engineering-and-technology.edu",
+      "contact": "+1-199-583-2641"
     },
     {
       "name": "Jahangirnagar University",
-      "address": "Savar, Dhaka 1342, Bangladesh"
+      "address": "Savar, Dhaka 1342, Bangladesh",
+      "website": "www.jahangirnagar-university.edu",
+      "contact": "+1-441-921-0597"
     },
     {
       "name": "North South University",
-      "address": "Bashundhara, Dhaka 1229, Bangladesh"
+      "address": "Bashundhara, Dhaka 1229, Bangladesh",
+      "website": "www.north-south-university.edu",
+      "contact": "+1-160-832-4316"
     },
     {
       "name": "BRAC University",
-      "address": "66 Mohakhali, Dhaka 1212, Bangladesh"
+      "address": "66 Mohakhali, Dhaka 1212, Bangladesh",
+      "website": "www.brac-university.edu",
+      "contact": "+1-119-946-5904"
     }
   ],
   "Barbados": [
     {
       "name": "University of the West Indies Cave Hill",
-      "address": "Cave Hill, St. Michael, Barbados"
+      "address": "Cave Hill, St. Michael, Barbados",
+      "website": "www.university-of-the-west-indies-cave-hill.edu",
+      "contact": "+1-033-046-0791"
     },
     {
       "name": "Barbados Community College",
-      "address": "Howell's Cross Road, St. Michael, BB11115, Barbados"
+      "address": "Howell's Cross Road, St. Michael, BB11115, Barbados",
+      "website": "www.barbados-community-college.edu",
+      "contact": "+1-185-324-7722"
     },
     {
       "name": "Erdiston Teachers’ Training College",
-      "address": "Pine Hill, St. Michael, Barbados"
+      "address": "Pine Hill, St. Michael, Barbados",
+      "website": "www.erdiston-teachers-training-college.edu",
+      "contact": "+1-363-606-4247"
     },
     {
       "name": "Samuel Jackman Prescod Institute of Technology",
-      "address": "Wildey, St. Michael, BB11000, Barbados"
+      "address": "Wildey, St. Michael, BB11000, Barbados",
+      "website": "www.samuel-jackman-prescod-institute-of-technology.edu",
+      "contact": "+1-347-789-3974"
     },
     {
       "name": "Codrington College",
-      "address": "Sargeant Street, St. John, Barbados"
+      "address": "Sargeant Street, St. John, Barbados",
+      "website": "www.codrington-college.edu",
+      "contact": "+1-231-356-6430"
     }
   ],
   "Belarus": [
     {
       "name": "Belarusian State University",
-      "address": "4 Niezaliežnasci Avenue, Minsk 220030, Belarus"
+      "address": "4 Niezaliežnasci Avenue, Minsk 220030, Belarus",
+      "website": "www.belarusian-state-university.edu",
+      "contact": "+1-125-278-4723"
     },
     {
       "name": "Belarusian National Technical University",
-      "address": "65 Niezaliežnasci Avenue, Minsk 220013, Belarus"
+      "address": "65 Niezaliežnasci Avenue, Minsk 220013, Belarus",
+      "website": "www.belarusian-national-technical-university.edu",
+      "contact": "+1-350-259-3731"
     },
     {
       "name": "Grodno State University",
-      "address": "22 Ozheshko Street, Grodno 230023, Belarus"
+      "address": "22 Ozheshko Street, Grodno 230023, Belarus",
+      "website": "www.grodno-state-university.edu",
+      "contact": "+1-332-938-4988"
     },
     {
       "name": "Brest State University",
-      "address": "21 Cosmonauts Boulevard, Brest 224016, Belarus"
+      "address": "21 Cosmonauts Boulevard, Brest 224016, Belarus",
+      "website": "www.brest-state-university.edu",
+      "contact": "+1-379-531-6103"
     },
     {
       "name": "Polotsk State University",
-      "address": "29 Blokhin Street, Novopolotsk 211440, Belarus"
+      "address": "29 Blokhin Street, Novopolotsk 211440, Belarus",
+      "website": "www.polotsk-state-university.edu",
+      "contact": "+1-262-207-0669"
     }
   ],
   "Belgium": [
     {
       "name": "KU Leuven",
-      "address": "Oude Markt 13, 3000 Leuven, Belgium"
+      "address": "Oude Markt 13, 3000 Leuven, Belgium",
+      "website": "www.ku-leuven.edu",
+      "contact": "+1-030-293-1865"
     },
     {
       "name": "Ghent University",
-      "address": "Sint-Pietersnieuwstraat 25, 9000 Ghent, Belgium"
+      "address": "Sint-Pietersnieuwstraat 25, 9000 Ghent, Belgium",
+      "website": "www.ghent-university.edu",
+      "contact": "+1-314-434-5532"
     },
     {
       "name": "Université catholique de Louvain",
-      "address": "Place de l'Université 1, 1348 Louvain-la-Neuve, Belgium"
+      "address": "Place de l'Université 1, 1348 Louvain-la-Neuve, Belgium",
+      "website": "www.universit-catholique-de-louvain.edu",
+      "contact": "+1-409-199-5654"
     },
     {
       "name": "Vrije Universiteit Brussel",
-      "address": "Pleinlaan 2, 1050 Brussels, Belgium"
+      "address": "Pleinlaan 2, 1050 Brussels, Belgium",
+      "website": "www.vrije-universiteit-brussel.edu",
+      "contact": "+1-163-032-6583"
     },
     {
       "name": "Université libre de Bruxelles",
-      "address": "Avenue Franklin Roosevelt 50, 1050 Brussels, Belgium"
+      "address": "Avenue Franklin Roosevelt 50, 1050 Brussels, Belgium",
+      "website": "www.universit-libre-de-bruxelles.edu",
+      "contact": "+1-747-705-0347"
     }
   ],
   "Bhutan": [
     {
       "name": "Royal University of Bhutan",
-      "address": "Lower Motithang, Thimphu, Bhutan"
+      "address": "Lower Motithang, Thimphu, Bhutan",
+      "website": "www.royal-university-of-bhutan.edu",
+      "contact": "+1-860-948-4926"
     },
     {
       "name": "Bhutanese Institute of Technology",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.bhutanese-institute-of-technology.edu",
+      "contact": "+1-519-490-3345"
     },
     {
       "name": "College of Science & Technology",
-      "address": "Rinchending, Phuentsholing, Bhutan"
+      "address": "Rinchending, Phuentsholing, Bhutan",
+      "website": "www.college-of-science-technology.edu",
+      "contact": "+1-150-045-8814"
     },
     {
       "name": "Sherubtse College",
-      "address": "Kanglung, Trashigang, Bhutan"
+      "address": "Kanglung, Trashigang, Bhutan",
+      "website": "www.sherubtse-college.edu",
+      "contact": "+1-889-410-6062"
     },
     {
       "name": "Kelki College",
-      "address": "Babesa, Thimphu, Bhutan"
+      "address": "Babesa, Thimphu, Bhutan",
+      "website": "www.kelki-college.edu",
+      "contact": "+1-327-693-4041"
     }
   ],
   "Bolivia": [
     {
       "name": "University of San Andrés",
-      "address": "Av. Villazón 1995, La Paz, Bolivia"
+      "address": "Av. Villazón 1995, La Paz, Bolivia",
+      "website": "www.university-of-san-andrs.edu",
+      "contact": "+1-432-429-3668"
     },
     {
       "name": "Universidad Mayor de San Simón",
-      "address": "Calle Sucre, Cochabamba, Bolivia"
+      "address": "Calle Sucre, Cochabamba, Bolivia",
+      "website": "www.universidad-mayor-de-san-simn.edu",
+      "contact": "+1-751-891-6179"
     },
     {
       "name": "Technical University of Oruro",
-      "address": "Av. 6 de Octubre, Oruro, Bolivia"
+      "address": "Av. 6 de Octubre, Oruro, Bolivia",
+      "website": "www.technical-university-of-oruro.edu",
+      "contact": "+1-201-379-7163"
     },
     {
       "name": "Universidad Católica Boliviana",
-      "address": "Av. 14 de Septiembre, La Paz, Bolivia"
+      "address": "Av. 14 de Septiembre, La Paz, Bolivia",
+      "website": "www.universidad-catlica-boliviana.edu",
+      "contact": "+1-095-983-2399"
     },
     {
       "name": "Universidad Autónoma Gabriel René Moreno",
-      "address": "Av. Busch, Santa Cruz de la Sierra, Bolivia"
+      "address": "Av. Busch, Santa Cruz de la Sierra, Bolivia",
+      "website": "www.universidad-autnoma-gabriel-ren-moreno.edu",
+      "contact": "+1-663-730-7736"
     }
   ],
   "Brazil": [
     {
       "name": "University of São Paulo",
-      "address": "R. da Reitoria, 374 - Butantã, São Paulo - SP, 05508-220, Brazil"
+      "address": "R. da Reitoria, 374 - Butantã, São Paulo - SP, 05508-220, Brazil",
+      "website": "www.university-of-so-paulo.edu",
+      "contact": "+1-155-335-7233"
     },
     {
       "name": "University of Campinas",
-      "address": "Cidade Universitária Zeferino Vaz, Campinas - SP, 13083-970, Brazil"
+      "address": "Cidade Universitária Zeferino Vaz, Campinas - SP, 13083-970, Brazil",
+      "website": "www.university-of-campinas.edu",
+      "contact": "+1-003-523-0737"
     },
     {
       "name": "Federal University of Rio de Janeiro",
-      "address": "Av. Pedro Calmon, 550 - Cidade Universitária, Rio de Janeiro - RJ, 21941-901, Brazil"
+      "address": "Av. Pedro Calmon, 550 - Cidade Universitária, Rio de Janeiro - RJ, 21941-901, Brazil",
+      "website": "www.federal-university-of-rio-de-janeiro.edu",
+      "contact": "+1-452-714-5755"
     },
     {
       "name": "Federal University of Minas Gerais",
-      "address": "Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901, Brazil"
+      "address": "Av. Pres. Antônio Carlos, 6627 - Pampulha, Belo Horizonte - MG, 31270-901, Brazil",
+      "website": "www.federal-university-of-minas-gerais.edu",
+      "contact": "+1-882-360-4493"
     },
     {
       "name": "Federal University of Rio Grande do Sul",
-      "address": "Av. Paulo Gama, 110 - Farroupilha, Porto Alegre - RS, 90040-060, Brazil"
+      "address": "Av. Paulo Gama, 110 - Farroupilha, Porto Alegre - RS, 90040-060, Brazil",
+      "website": "www.federal-university-of-rio-grande-do-sul.edu",
+      "contact": "+1-956-843-9430"
     }
   ],
   "Bulgaria": [
     {
       "name": "Sofia University",
-      "address": "Tsar Osvoboditel Blvd 15, Sofia 1504, Bulgaria"
+      "address": "Tsar Osvoboditel Blvd 15, Sofia 1504, Bulgaria",
+      "website": "www.sofia-university.edu",
+      "contact": "+1-879-894-2836"
     },
     {
       "name": "Technical University of Sofia",
-      "address": "St. Kliment Ohridski Blvd 8, Sofia 1756, Bulgaria"
+      "address": "St. Kliment Ohridski Blvd 8, Sofia 1756, Bulgaria",
+      "website": "www.technical-university-of-sofia.edu",
+      "contact": "+1-201-020-7160"
     },
     {
       "name": "Plovdiv University",
-      "address": "Tsar Asen St 24, Plovdiv 4000, Bulgaria"
+      "address": "Tsar Asen St 24, Plovdiv 4000, Bulgaria",
+      "website": "www.plovdiv-university.edu",
+      "contact": "+1-685-203-3184"
     },
     {
       "name": "Varna University of Economics",
-      "address": "Knyaz Boris I Blvd 77, Varna 9002, Bulgaria"
+      "address": "Knyaz Boris I Blvd 77, Varna 9002, Bulgaria",
+      "website": "www.varna-university-of-economics.edu",
+      "contact": "+1-063-635-6865"
     },
     {
       "name": "New Bulgarian University",
-      "address": "Montevideo St 21, Sofia 1618, Bulgaria"
+      "address": "Montevideo St 21, Sofia 1618, Bulgaria",
+      "website": "www.new-bulgarian-university.edu",
+      "contact": "+1-781-105-1273"
     }
   ],
   "Cambodia": [
     {
       "name": "Royal University of Phnom Penh",
-      "address": "Russian Federation Blvd, Phnom Penh, Cambodia"
+      "address": "Russian Federation Blvd, Phnom Penh, Cambodia",
+      "website": "www.royal-university-of-phnom-penh.edu",
+      "contact": "+1-962-593-9829"
     },
     {
       "name": "Institute of Technology of Cambodia",
-      "address": "Pochentong Blvd, Phnom Penh, Cambodia"
+      "address": "Pochentong Blvd, Phnom Penh, Cambodia",
+      "website": "www.institute-of-technology-of-cambodia.edu",
+      "contact": "+1-144-703-5891"
     },
     {
       "name": "Royal University of Law and Economics",
-      "address": "Monivong Blvd, Phnom Penh, Cambodia"
+      "address": "Monivong Blvd, Phnom Penh, Cambodia",
+      "website": "www.royal-university-of-law-and-economics.edu",
+      "contact": "+1-141-561-3869"
     },
     {
       "name": "Paññasastra University of Cambodia",
-      "address": "Sothearos Blvd, Phnom Penh, Cambodia"
+      "address": "Sothearos Blvd, Phnom Penh, Cambodia",
+      "website": "www.paasastra-university-of-cambodia.edu",
+      "contact": "+1-026-705-0327"
     },
     {
       "name": "Cambodia Mekong University",
-      "address": "No. 21-24, Street 271, Phnom Penh, Cambodia"
+      "address": "No. 21-24, Street 271, Phnom Penh, Cambodia",
+      "website": "www.cambodia-mekong-university.edu",
+      "contact": "+1-225-286-0807"
     }
   ],
   "Cameroon": [
     {
       "name": "University of Yaoundé",
-      "address": "Ngoa-Ekelle, Yaoundé, Cameroon"
+      "address": "Ngoa-Ekelle, Yaoundé, Cameroon",
+      "website": "www.university-of-yaound.edu",
+      "contact": "+1-137-624-4622"
     },
     {
       "name": "University of Douala",
-      "address": "BP 2701, Douala, Cameroon"
+      "address": "BP 2701, Douala, Cameroon",
+      "website": "www.university-of-douala.edu",
+      "contact": "+1-192-920-1757"
     },
     {
       "name": "University of Buea",
-      "address": "Molyko, Buea, South-West Region, Cameroon"
+      "address": "Molyko, Buea, South-West Region, Cameroon",
+      "website": "www.university-of-buea.edu",
+      "contact": "+1-040-911-0918"
     },
     {
       "name": "University of Bamenda",
-      "address": "Bambili, Bamenda, North-West Region, Cameroon"
+      "address": "Bambili, Bamenda, North-West Region, Cameroon",
+      "website": "www.university-of-bamenda.edu",
+      "contact": "+1-185-879-4691"
     },
     {
       "name": "University of Dschang",
-      "address": "BP 96, Dschang, West Region, Cameroon"
+      "address": "BP 96, Dschang, West Region, Cameroon",
+      "website": "www.university-of-dschang.edu",
+      "contact": "+1-042-237-9375"
     }
   ],
   "Canada": [
     {
       "name": "University of Toronto",
-      "address": "27 King's College Cir, Toronto, ON M5S, Canada"
+      "address": "27 King's College Cir, Toronto, ON M5S, Canada",
+      "website": "www.university-of-toronto.edu",
+      "contact": "+1-163-709-3818"
     },
     {
       "name": "McGill University",
-      "address": "845 Sherbrooke St W, Montreal, Quebec H3A 0G4, Canada"
+      "address": "845 Sherbrooke St W, Montreal, Quebec H3A 0G4, Canada",
+      "website": "www.mcgill-university.edu",
+      "contact": "+1-448-347-3174"
     },
     {
       "name": "University of British Columbia",
-      "address": "2329 West Mall, Vancouver, BC V6T 1Z4, Canada"
+      "address": "2329 West Mall, Vancouver, BC V6T 1Z4, Canada",
+      "website": "www.university-of-british-columbia.edu",
+      "contact": "+1-177-415-0454"
     },
     {
       "name": "University of Alberta",
-      "address": "116 St & 85 Ave, Edmonton, AB T6G 2R3, Canada"
+      "address": "116 St & 85 Ave, Edmonton, AB T6G 2R3, Canada",
+      "website": "www.university-of-alberta.edu",
+      "contact": "+1-244-153-2102"
     },
     {
       "name": "University of Waterloo",
-      "address": "200 University Ave W, Waterloo, ON N2L 3G1, Canada"
+      "address": "200 University Ave W, Waterloo, ON N2L 3G1, Canada",
+      "website": "www.university-of-waterloo.edu",
+      "contact": "+1-065-174-9548"
     }
   ],
   "Central African Republic": [
     {
       "name": "University of Bangui",
-      "address": "Avenue des Martyrs, Bangui, Central African Republic"
+      "address": "Avenue des Martyrs, Bangui, Central African Republic",
+      "website": "www.university-of-bangui.edu",
+      "contact": "+1-229-537-5459"
     },
     {
       "name": "ESSTIN CAR",
-      "address": "Bangui, Central African Republic"
+      "address": "Bangui, Central African Republic",
+      "website": "www.esstin-car.edu",
+      "contact": "+1-234-114-4952"
     },
     {
       "name": "Université de l’Oubangui Champs-Élysées",
-      "address": "Bangui, Central African Republic"
+      "address": "Bangui, Central African Republic",
+      "website": "www.universit-de-loubangui-champslyses.edu",
+      "contact": "+1-106-968-4015"
     },
     {
       "name": "Institut Universitaire de Bangui",
-      "address": "Bangui, Central African Republic"
+      "address": "Bangui, Central African Republic",
+      "website": "www.institut-universitaire-de-bangui.edu",
+      "contact": "+1-188-305-4625"
     },
     {
       "name": "Faculty of Sciences Bangui",
-      "address": "Avenue des Martyrs, Bangui, Central African Republic"
+      "address": "Avenue des Martyrs, Bangui, Central African Republic",
+      "website": "www.faculty-of-sciences-bangui.edu",
+      "contact": "+1-085-875-2144"
     }
   ],
   "Chile": [
     {
       "name": "University of Chile",
-      "address": "Av. Libertador Bernardo O'Higgins 1058, Santiago, Región Metropolitana, Chile"
+      "address": "Av. Libertador Bernardo O'Higgins 1058, Santiago, Región Metropolitana, Chile",
+      "website": "www.university-of-chile.edu",
+      "contact": "+1-020-192-2906"
     },
     {
       "name": "Pontifical Catholic University of Chile",
-      "address": "Av. Libertador Bernardo O'Higgins 340, Santiago, Región Metropolitana, Chile"
+      "address": "Av. Libertador Bernardo O'Higgins 340, Santiago, Región Metropolitana, Chile",
+      "website": "www.pontifical-catholic-university-of-chile.edu",
+      "contact": "+1-374-242-9720"
     },
     {
       "name": "University of Santiago de Chile",
-      "address": "Av. Libertador Bernardo O'Higgins 3363, Estación Central, Santiago, Chile"
+      "address": "Av. Libertador Bernardo O'Higgins 3363, Estación Central, Santiago, Chile",
+      "website": "www.university-of-santiago-de-chile.edu",
+      "contact": "+1-190-689-5027"
     },
     {
       "name": "Adolfo Ibáñez University",
-      "address": "Av. Diagonal las Torres 2640, Peñalolén, Santiago, Chile"
+      "address": "Av. Diagonal las Torres 2640, Peñalolén, Santiago, Chile",
+      "website": "www.adolfo-ibez-university.edu",
+      "contact": "+1-107-179-2952"
     },
     {
       "name": "Federico Santa María Technical University",
-      "address": "Av. España 1680, Valparaíso, Chile"
+      "address": "Av. España 1680, Valparaíso, Chile",
+      "website": "www.federico-santa-mara-technical-university.edu",
+      "contact": "+1-184-675-3329"
     }
   ],
   "China": [
     {
       "name": "Tsinghua University",
-      "address": "30 Shuangqing Rd, Haidian District, Beijing, China"
+      "address": "30 Shuangqing Rd, Haidian District, Beijing, China",
+      "website": "www.tsinghua-university.edu",
+      "contact": "+1-322-217-2925"
     },
     {
       "name": "Peking University",
-      "address": "5 Yiheyuan Rd, Haidian District, Beijing, China"
+      "address": "5 Yiheyuan Rd, Haidian District, Beijing, China",
+      "website": "www.peking-university.edu",
+      "contact": "+1-043-243-7282"
     },
     {
       "name": "Fudan University",
-      "address": "220 Handan Rd, Yangpu District, Shanghai, China"
+      "address": "220 Handan Rd, Yangpu District, Shanghai, China",
+      "website": "www.fudan-university.edu",
+      "contact": "+1-096-517-2916"
     },
     {
       "name": "Zhejiang University",
-      "address": "866 Yuhangtang Rd, Xihu District, Hangzhou, Zhejiang, China"
+      "address": "866 Yuhangtang Rd, Xihu District, Hangzhou, Zhejiang, China",
+      "website": "www.zhejiang-university.edu",
+      "contact": "+1-224-946-4970"
     },
     {
       "name": "Shanghai Jiao Tong University",
-      "address": "800 Dongchuan Rd, Minhang District, Shanghai, China"
+      "address": "800 Dongchuan Rd, Minhang District, Shanghai, China",
+      "website": "www.shanghai-jiao-tong-university.edu",
+      "contact": "+1-106-036-8444"
     }
   ],
   "Colombia": [
     {
       "name": "University of the Andes",
-      "address": "Cra. 1 #18a-12, Bogotá, Colombia"
+      "address": "Cra. 1 #18a-12, Bogotá, Colombia",
+      "website": "www.university-of-the-andes.edu",
+      "contact": "+1-098-570-3073"
     },
     {
       "name": "National University of Colombia",
-      "address": "Cra 45 #26-85, Bogotá, Colombia"
+      "address": "Cra 45 #26-85, Bogotá, Colombia",
+      "website": "www.national-university-of-colombia.edu",
+      "contact": "+1-721-901-5487"
     },
     {
       "name": "Pontificia Universidad Javeriana",
-      "address": "Cra. 7 #40-62, Bogotá, Colombia"
+      "address": "Cra. 7 #40-62, Bogotá, Colombia",
+      "website": "www.pontificia-universidad-javeriana.edu",
+      "contact": "+1-621-452-3945"
     },
     {
       "name": "EAFIT University",
-      "address": "Cra. 49 #7 Sur-50, Medellín, Antioquia, Colombia"
+      "address": "Cra. 49 #7 Sur-50, Medellín, Antioquia, Colombia",
+      "website": "www.eafit-university.edu",
+      "contact": "+1-416-047-7735"
     },
     {
       "name": "University of Antioquia",
-      "address": "Cl. 67 #53-108, Medellín, Antioquia, Colombia"
+      "address": "Cl. 67 #53-108, Medellín, Antioquia, Colombia",
+      "website": "www.university-of-antioquia.edu",
+      "contact": "+1-316-267-6718"
     }
   ],
   "Comoros": [
     {
       "name": "University of Comoros",
-      "address": "Mutsamudu, Anjouan, Comoros"
+      "address": "Mutsamudu, Anjouan, Comoros",
+      "website": "www.university-of-comoros.edu",
+      "contact": "+1-057-018-0783"
     },
     {
       "name": "Université de Fomboni",
-      "address": "Fomboni, Mohéli, Comoros"
+      "address": "Fomboni, Mohéli, Comoros",
+      "website": "www.universit-de-fomboni.edu",
+      "contact": "+1-095-652-8881"
     },
     {
       "name": "Higher Institute of Agriculture Comoros",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.higher-institute-of-agriculture-comoros.edu",
+      "contact": "+1-083-639-5948"
     },
     {
       "name": "Comoros University of Technology",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.comoros-university-of-technology.edu",
+      "contact": "+1-186-086-4162"
     },
     {
       "name": "Comoros School of Nursing",
-      "address": "Moroni, Grande Comore, Comoros"
+      "address": "Moroni, Grande Comore, Comoros",
+      "website": "www.comoros-school-of-nursing.edu",
+      "contact": "+1-519-836-1339"
     }
   ],
   "Costa Rica": [
     {
       "name": "University of Costa Rica",
-      "address": "Ciudad Universitaria Rodrigo Facio, San Pedro, Montes de Oca, San José, Costa Rica"
+      "address": "Ciudad Universitaria Rodrigo Facio, San Pedro, Montes de Oca, San José, Costa Rica",
+      "website": "www.university-of-costa-rica.edu",
+      "contact": "+1-178-889-5096"
     },
     {
       "name": "Instituto Tecnológico de Costa Rica",
-      "address": "Avenida Central, Cartago, Costa Rica"
+      "address": "Avenida Central, Cartago, Costa Rica",
+      "website": "www.instituto-tecnolgico-de-costa-rica.edu",
+      "contact": "+1-181-576-0327"
     },
     {
       "name": "Universidad Nacional",
-      "address": "Av. 1, Heredia, Costa Rica"
+      "address": "Av. 1, Heredia, Costa Rica",
+      "website": "www.universidad-nacional.edu",
+      "contact": "+1-367-818-2235"
     },
     {
       "name": "Costa Rica Institute of Technology",
-      "address": "Avenida Central, Cartago, Costa Rica"
+      "address": "Avenida Central, Cartago, Costa Rica",
+      "website": "www.costa-rica-institute-of-technology.edu",
+      "contact": "+1-637-994-8917"
     },
     {
       "name": "UNED Costa Rica",
-      "address": "Carretera a Sabanilla, de la Rotonda de la Bandera 400 mts Este, Mercedes de Montes de Oca, San José, Costa Rica"
+      "address": "Carretera a Sabanilla, de la Rotonda de la Bandera 400 mts Este, Mercedes de Montes de Oca, San José, Costa Rica",
+      "website": "www.uned-costa-rica.edu",
+      "contact": "+1-383-651-9511"
     }
   ],
   "Côte d’Ivoire": [
     {
       "name": "Université Félix Houphouët-Boigny",
-      "address": "Boulevard de l'Université, Cocody, Abidjan, Côte d'Ivoire"
+      "address": "Boulevard de l'Université, Cocody, Abidjan, Côte d'Ivoire",
+      "website": "www.universit-flix-houphoutboigny.edu",
+      "contact": "+1-673-846-6104"
     },
     {
       "name": "Université Nangui Abrogoua",
-      "address": "Abobo-Adjamé, Abidjan, Côte d'Ivoire"
+      "address": "Abobo-Adjamé, Abidjan, Côte d'Ivoire",
+      "website": "www.universit-nangui-abrogoua.edu",
+      "contact": "+1-206-057-2016"
     },
     {
       "name": "Université de Cocody",
-      "address": "Boulevard de l'Université, Cocody, Abidjan, Côte d'Ivoire"
+      "address": "Boulevard de l'Université, Cocody, Abidjan, Côte d'Ivoire",
+      "website": "www.universit-de-cocody.edu",
+      "contact": "+1-039-412-3638"
     },
     {
       "name": "Université de Bouaké",
-      "address": "Campus 1, Bouaké, Côte d'Ivoire"
+      "address": "Campus 1, Bouaké, Côte d'Ivoire",
+      "website": "www.universit-de-bouak.edu",
+      "contact": "+1-042-222-9676"
     },
     {
       "name": "Université d’Abobo-Adjamé",
-      "address": "Abobo-Adjamé, Abidjan, Côte d'Ivoire"
+      "address": "Abobo-Adjamé, Abidjan, Côte d'Ivoire",
+      "website": "www.universit-daboboadjam.edu",
+      "contact": "+1-497-109-0751"
     }
   ],
   "Croatia": [
     {
       "name": "University of Zagreb",
-      "address": "Trg Republike Hrvatske 14, 10000, Zagreb, Croatia"
+      "address": "Trg Republike Hrvatske 14, 10000, Zagreb, Croatia",
+      "website": "www.university-of-zagreb.edu",
+      "contact": "+1-131-269-0682"
     },
     {
       "name": "University of Split",
-      "address": "Ruđera Boškovića 31, 21000, Split, Croatia"
+      "address": "Ruđera Boškovića 31, 21000, Split, Croatia",
+      "website": "www.university-of-split.edu",
+      "contact": "+1-018-690-5437"
     },
     {
       "name": "University of Rijeka",
-      "address": "Trg braće Mažuranića 10, 51000, Rijeka, Croatia"
+      "address": "Trg braće Mažuranića 10, 51000, Rijeka, Croatia",
+      "website": "www.university-of-rijeka.edu",
+      "contact": "+1-153-425-8657"
     },
     {
       "name": "University of Osijek",
-      "address": "Trg Svetog Trojstva 3, 31000, Osijek, Croatia"
+      "address": "Trg Svetog Trojstva 3, 31000, Osijek, Croatia",
+      "website": "www.university-of-osijek.edu",
+      "contact": "+1-161-093-6062"
     },
     {
       "name": "University of Dubrovnik",
-      "address": "Branitelja Dubrovnika 29, 20000, Dubrovnik, Croatia"
+      "address": "Branitelja Dubrovnika 29, 20000, Dubrovnik, Croatia",
+      "website": "www.university-of-dubrovnik.edu",
+      "contact": "+1-078-227-2465"
     }
   ],
   "Denmark": [
     {
       "name": "University of Copenhagen",
-      "address": "Nørregade 10, 1165 Copenhagen, Denmark"
+      "address": "Nørregade 10, 1165 Copenhagen, Denmark",
+      "website": "www.university-of-copenhagen.edu",
+      "contact": "+1-086-689-5553"
     },
     {
       "name": "Aarhus University",
-      "address": "Nordre Ringgade 1, 8000 Aarhus, Denmark"
+      "address": "Nordre Ringgade 1, 8000 Aarhus, Denmark",
+      "website": "www.aarhus-university.edu",
+      "contact": "+1-297-651-1302"
     },
     {
       "name": "Technical University of Denmark",
-      "address": "Anker Engelunds Vej 1, 2800 Kongens Lyngby, Denmark"
+      "address": "Anker Engelunds Vej 1, 2800 Kongens Lyngby, Denmark",
+      "website": "www.technical-university-of-denmark.edu",
+      "contact": "+1-021-976-8576"
     },
     {
       "name": "Copenhagen Business School",
-      "address": "Solbjerg Plads 3, 2000 Frederiksberg, Denmark"
+      "address": "Solbjerg Plads 3, 2000 Frederiksberg, Denmark",
+      "website": "www.copenhagen-business-school.edu",
+      "contact": "+1-138-966-6690"
     },
     {
       "name": "Aalborg University",
-      "address": "Fredrik Bajers Vej 5, 9220 Aalborg, Denmark"
+      "address": "Fredrik Bajers Vej 5, 9220 Aalborg, Denmark",
+      "website": "www.aalborg-university.edu",
+      "contact": "+1-259-012-7968"
     }
   ],
   "Dominica": [
     {
       "name": "Dominica State College",
-      "address": "Stock Farm, Roseau, Dominica"
+      "address": "Stock Farm, Roseau, Dominica",
+      "website": "www.dominica-state-college.edu",
+      "contact": "+1-537-089-0248"
     },
     {
       "name": "Ross University",
-      "address": "Picard, Portsmouth, Dominica"
+      "address": "Picard, Portsmouth, Dominica",
+      "website": "www.ross-university.edu",
+      "contact": "+1-617-065-9121"
     },
     {
       "name": "All Saints University",
-      "address": "48 Hillsborough Street, Roseau, Dominica"
+      "address": "48 Hillsborough Street, Roseau, Dominica",
+      "website": "www.all-saints-university.edu",
+      "contact": "+1-242-044-8035"
     },
     {
       "name": "Windsor University School of Medicine",
-      "address": "Brighton's Estate, Cayon, St. Kitts & Nevis (Relocated)"
+      "address": "Brighton's Estate, Cayon, St. Kitts & Nevis (Relocated)",
+      "website": "www.windsor-university-school-of-medicine.edu",
+      "contact": "+1-863-204-6199"
     },
     {
       "name": "American International University of Management",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.american-international-university-of-management.edu",
+      "contact": "+1-119-919-6714"
     }
   ],
   "Dominican Republic": [
     {
       "name": "Universidad Autónoma de Santo Domingo",
-      "address": "Av. Alma Mater, Santo Domingo, Dominican Republic"
+      "address": "Av. Alma Mater, Santo Domingo, Dominican Republic",
+      "website": "www.universidad-autnoma-de-santo-domingo.edu",
+      "contact": "+1-157-379-4111"
     },
     {
       "name": "Pontificia Universidad Católica Madre y Maestra",
-      "address": "Autopista Duarte Km 1 1/2, Santiago De Los Caballeros, Dominican Republic"
+      "address": "Autopista Duarte Km 1 1/2, Santiago De Los Caballeros, Dominican Republic",
+      "website": "www.pontificia-universidad-catlica-madre-y-maestra.edu",
+      "contact": "+1-121-773-5190"
     },
     {
       "name": "Universidad Iberoamericana",
-      "address": "Av. Francia 129, Santo Domingo, Dominican Republic"
+      "address": "Av. Francia 129, Santo Domingo, Dominican Republic",
+      "website": "www.universidad-iberoamericana.edu",
+      "contact": "+1-342-148-2170"
     },
     {
       "name": "Universidad Central del Este",
-      "address": "Av. Francisco Micheli, San Pedro de Macorís, Dominican Republic"
+      "address": "Av. Francisco Micheli, San Pedro de Macorís, Dominican Republic",
+      "website": "www.universidad-central-del-este.edu",
+      "contact": "+1-069-061-1071"
     },
     {
       "name": "Universidad del Caribe",
-      "address": "Autopista 30 de Mayo, Km 7 1/2, Santo Domingo, Dominican Republic"
+      "address": "Autopista 30 de Mayo, Km 7 1/2, Santo Domingo, Dominican Republic",
+      "website": "www.universidad-del-caribe.edu",
+      "contact": "+1-606-724-0753"
     }
   ],
   "Ecuador": [
     {
       "name": "University of San Francisco de Quito",
-      "address": "Diego de Robles y Vía Interoceánica, Cumbayá, Quito, Ecuador"
+      "address": "Diego de Robles y Vía Interoceánica, Cumbayá, Quito, Ecuador",
+      "website": "www.university-of-san-francisco-de-quito.edu",
+      "contact": "+1-293-522-7912"
     },
     {
       "name": "Pontifical Catholic University of Ecuador",
-      "address": "Av. 12 de Octubre 1076, Quito, Ecuador"
+      "address": "Av. 12 de Octubre 1076, Quito, Ecuador",
+      "website": "www.pontifical-catholic-university-of-ecuador.edu",
+      "contact": "+1-423-968-2712"
     },
     {
       "name": "Central University of Ecuador",
-      "address": "Av. América, Quito, Ecuador"
+      "address": "Av. América, Quito, Ecuador",
+      "website": "www.central-university-of-ecuador.edu",
+      "contact": "+1-877-152-2533"
     },
     {
       "name": "ESPOL",
-      "address": "Campus Gustavo Galindo, Km 30.5 Vía Perimetral, Guayaquil, Ecuador"
+      "address": "Campus Gustavo Galindo, Km 30.5 Vía Perimetral, Guayaquil, Ecuador",
+      "website": "www.espol.edu",
+      "contact": "+1-006-627-5007"
     },
     {
       "name": "Technical University of Ambato",
-      "address": "Av. de los Chasquis y Río Payamino, Ambato, Ecuador"
+      "address": "Av. de los Chasquis y Río Payamino, Ambato, Ecuador",
+      "website": "www.technical-university-of-ambato.edu",
+      "contact": "+1-159-078-9568"
     }
   ],
   "Egypt": [
     {
       "name": "Cairo University",
-      "address": "Giza District, Giza Governorate, Egypt"
+      "address": "Giza District, Giza Governorate, Egypt",
+      "website": "www.cairo-university.edu",
+      "contact": "+1-597-850-4870"
     },
     {
       "name": "Alexandria University",
-      "address": "22 El-Gaish Rd, El-Shatby, Alexandria, Egypt"
+      "address": "22 El-Gaish Rd, El-Shatby, Alexandria, Egypt",
+      "website": "www.alexandria-university.edu",
+      "contact": "+1-118-786-9321"
     },
     {
       "name": "Ain Shams University",
-      "address": "El-Khalifa El-Maamoun St, Abbassia, Cairo, Egypt"
+      "address": "El-Khalifa El-Maamoun St, Abbassia, Cairo, Egypt",
+      "website": "www.ain-shams-university.edu",
+      "contact": "+1-886-912-5142"
     },
     {
       "name": "American University in Cairo",
-      "address": "AUC Avenue, New Cairo, Egypt"
+      "address": "AUC Avenue, New Cairo, Egypt",
+      "website": "www.american-university-in-cairo.edu",
+      "contact": "+1-303-926-3167"
     },
     {
       "name": "Mansoura University",
-      "address": "Elgomhoria Street, Mansoura, Dakahlia Governorate, Egypt"
+      "address": "Elgomhoria Street, Mansoura, Dakahlia Governorate, Egypt",
+      "website": "www.mansoura-university.edu",
+      "contact": "+1-330-327-8976"
     }
   ],
   "El Salvador": [
     {
       "name": "University of El Salvador",
-      "address": "Final Av. Mártires y Héroes del 30 de julio, San Salvador, El Salvador"
+      "address": "Final Av. Mártires y Héroes del 30 de julio, San Salvador, El Salvador",
+      "website": "www.university-of-el-salvador.edu",
+      "contact": "+1-113-730-2496"
     },
     {
       "name": "Universidad Centroamericana 'José Simeón Cañas'",
-      "address": "Bulevar Los Próceres, Antiguo Cuscatlán, La Libertad, El Salvador"
+      "address": "Bulevar Los Próceres, Antiguo Cuscatlán, La Libertad, El Salvador",
+      "website": "www.universidad-centroamericana-jos-simen-caas.edu",
+      "contact": "+1-529-573-1883"
     },
     {
       "name": "Universidad Tecnológica de El Salvador",
-      "address": "17 Avenida Nte, San Salvador, El Salvador"
+      "address": "17 Avenida Nte, San Salvador, El Salvador",
+      "website": "www.universidad-tecnolgica-de-el-salvador.edu",
+      "contact": "+1-315-827-6256"
     },
     {
       "name": "Universidad de El Salvador ITCA-FEPADE",
-      "address": "Km. 11 1/2 Carretera a Santa Tecla, La Libertad, El Salvador"
+      "address": "Km. 11 1/2 Carretera a Santa Tecla, La Libertad, El Salvador",
+      "website": "www.universidad-de-el-salvador-itcafepade.edu",
+      "contact": "+1-431-980-2481"
     },
     {
       "name": "Universidad Francisco Gavidia",
-      "address": "Calle El Progreso 2748, San Salvador, El Salvador"
+      "address": "Calle El Progreso 2748, San Salvador, El Salvador",
+      "website": "www.universidad-francisco-gavidia.edu",
+      "contact": "+1-000-161-7811"
     }
   ],
   "Eritrea": [
     {
       "name": "University of Asmara",
-      "address": "Asmara, Eritrea"
+      "address": "Asmara, Eritrea",
+      "website": "www.university-of-asmara.edu",
+      "contact": "+1-228-333-4028"
     },
     {
       "name": "Asmara College of Health Sciences",
-      "address": "Asmara, Eritrea"
+      "address": "Asmara, Eritrea",
+      "website": "www.asmara-college-of-health-sciences.edu",
+      "contact": "+1-678-261-9202"
     },
     {
       "name": "Eritrea Institute of Technology",
-      "address": "Mai Nefhi, Near Asmara, Eritrea"
+      "address": "Mai Nefhi, Near Asmara, Eritrea",
+      "website": "www.eritrea-institute-of-technology.edu",
+      "contact": "+1-332-216-2400"
     },
     {
       "name": "Omondi University Eritrea",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.omondi-university-eritrea.edu",
+      "contact": "+1-520-360-0034"
     },
     {
       "name": "Cuba Eritrea Kevad College",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.cuba-eritrea-kevad-college.edu",
+      "contact": "+1-125-526-7139"
     }
   ],
   "Estonia": [
     {
       "name": "University of Tartu",
-      "address": "Ülikooli 18, 50090 Tartu, Estonia"
+      "address": "Ülikooli 18, 50090 Tartu, Estonia",
+      "website": "www.university-of-tartu.edu",
+      "contact": "+1-018-642-2673"
     },
     {
       "name": "Tallinn University of Technology",
-      "address": "Ehitajate tee 5, 19086 Tallinn, Estonia"
+      "address": "Ehitajate tee 5, 19086 Tallinn, Estonia",
+      "website": "www.tallinn-university-of-technology.edu",
+      "contact": "+1-170-940-6085"
     },
     {
       "name": "Estonian University of Life Sciences",
-      "address": "Kreutzwaldi 1, 51006 Tartu, Estonia"
+      "address": "Kreutzwaldi 1, 51006 Tartu, Estonia",
+      "website": "www.estonian-university-of-life-sciences.edu",
+      "contact": "+1-374-727-2019"
     },
     {
       "name": "Tallinn University",
-      "address": "Narva mnt 25, 10120 Tallinn, Estonia"
+      "address": "Narva mnt 25, 10120 Tallinn, Estonia",
+      "website": "www.tallinn-university.edu",
+      "contact": "+1-564-340-9070"
     },
     {
       "name": "Estonian Academy of Arts",
-      "address": "Põhja puiestee 7, 10412 Tallinn, Estonia"
+      "address": "Põhja puiestee 7, 10412 Tallinn, Estonia",
+      "website": "www.estonian-academy-of-arts.edu",
+      "contact": "+1-481-811-7066"
     }
   ],
   "Ethiopia": [
     {
       "name": "Addis Ababa University",
-      "address": "King George VI St, Addis Ababa, Ethiopia"
+      "address": "King George VI St, Addis Ababa, Ethiopia",
+      "website": "www.addis-ababa-university.edu",
+      "contact": "+1-383-864-8068"
     },
     {
       "name": "Jimma University",
-      "address": "Jimma, Oromia Region, Ethiopia"
+      "address": "Jimma, Oromia Region, Ethiopia",
+      "website": "www.jimma-university.edu",
+      "contact": "+1-078-209-9316"
     },
     {
       "name": "Mekelle University",
-      "address": "Mekelle, Tigray Region, Ethiopia"
+      "address": "Mekelle, Tigray Region, Ethiopia",
+      "website": "www.mekelle-university.edu",
+      "contact": "+1-538-460-6629"
     },
     {
       "name": "Hawassa University",
-      "address": "Hawassa, SNNPR, Ethiopia"
+      "address": "Hawassa, SNNPR, Ethiopia",
+      "website": "www.hawassa-university.edu",
+      "contact": "+1-260-332-6832"
     },
     {
       "name": "Bahir Dar University",
-      "address": "Bahir Dar, Amhara Region, Ethiopia"
+      "address": "Bahir Dar, Amhara Region, Ethiopia",
+      "website": "www.bahir-dar-university.edu",
+      "contact": "+1-350-708-7545"
     }
   ],
   "Finland": [
     {
       "name": "University of Helsinki",
-      "address": "Yliopistonkatu 4, 00100 Helsinki, Finland"
+      "address": "Yliopistonkatu 4, 00100 Helsinki, Finland",
+      "website": "www.university-of-helsinki.edu",
+      "contact": "+1-497-689-1810"
     },
     {
       "name": "Aalto University",
-      "address": "Otakaari 1, 02150 Espoo, Finland"
+      "address": "Otakaari 1, 02150 Espoo, Finland",
+      "website": "www.aalto-university.edu",
+      "contact": "+1-489-609-1335"
     },
     {
       "name": "Tampere University",
-      "address": "Kalevantie 4, 33100 Tampere, Finland"
+      "address": "Kalevantie 4, 33100 Tampere, Finland",
+      "website": "www.tampere-university.edu",
+      "contact": "+1-473-182-5306"
     },
     {
       "name": "University of Turku",
-      "address": "Yliopistonmäki, 20500 Turku, Finland"
+      "address": "Yliopistonmäki, 20500 Turku, Finland",
+      "website": "www.university-of-turku.edu",
+      "contact": "+1-018-582-7132"
     },
     {
       "name": "University of Oulu",
-      "address": "Pentti Kaiteran katu 1, 90570 Oulu, Finland"
+      "address": "Pentti Kaiteran katu 1, 90570 Oulu, Finland",
+      "website": "www.university-of-oulu.edu",
+      "contact": "+1-040-949-8438"
     }
   ],
   "France": [
     {
       "name": "Sorbonne University",
-      "address": "21 Rue de l'École de Médecine, 75006 Paris, France"
+      "address": "21 Rue de l'École de Médecine, 75006 Paris, France",
+      "website": "www.sorbonne-university.edu",
+      "contact": "+1-359-860-7884"
     },
     {
       "name": "École Normale Supérieure",
-      "address": "45 Rue d'Ulm, 75005 Paris, France"
+      "address": "45 Rue d'Ulm, 75005 Paris, France",
+      "website": "www.cole-normale-suprieure.edu",
+      "contact": "+1-402-349-0263"
     },
     {
       "name": "University of Paris-Saclay",
-      "address": "Bâtiment Breguet, 3 Rue Joliot Curie, 91190 Gif-sur-Yvette, France"
+      "address": "Bâtiment Breguet, 3 Rue Joliot Curie, 91190 Gif-sur-Yvette, France",
+      "website": "www.university-of-parissaclay.edu",
+      "contact": "+1-079-025-1176"
     },
     {
       "name": "École Polytechnique",
-      "address": "Route de Saclay, 91120 Palaiseau, France"
+      "address": "Route de Saclay, 91120 Palaiseau, France",
+      "website": "www.cole-polytechnique.edu",
+      "contact": "+1-510-969-3838"
     },
     {
       "name": "Sciences Po",
-      "address": "27 Rue Saint-Guillaume, 75007 Paris, France"
+      "address": "27 Rue Saint-Guillaume, 75007 Paris, France",
+      "website": "www.sciences-po.edu",
+      "contact": "+1-409-509-7136"
     }
   ],
   "Gambia": [
     {
       "name": "University of The Gambia",
-      "address": "MDI Road, Kanifing, The Gambia"
+      "address": "MDI Road, Kanifing, The Gambia",
+      "website": "www.university-of-the-gambia.edu",
+      "contact": "+1-263-349-2467"
     },
     {
       "name": "Gambia College",
-      "address": "Brikama, West Coast Region, The Gambia"
+      "address": "Brikama, West Coast Region, The Gambia",
+      "website": "www.gambia-college.edu",
+      "contact": "+1-318-168-9922"
     },
     {
       "name": "American International University West Africa",
-      "address": "89 Kairaba Avenue, Fajara, The Gambia"
+      "address": "89 Kairaba Avenue, Fajara, The Gambia",
+      "website": "www.american-international-university-west-africa.edu",
+      "contact": "+1-642-722-1355"
     },
     {
       "name": "Gambia Technical Training Institute",
-      "address": "Kanifing East, Serrekunda, The Gambia"
+      "address": "Kanifing East, Serrekunda, The Gambia",
+      "website": "www.gambia-technical-training-institute.edu",
+      "contact": "+1-528-208-6955"
     },
     {
       "name": "International Open University Gambia",
-      "address": "Kanifing, The Gambia"
+      "address": "Kanifing, The Gambia",
+      "website": "www.international-open-university-gambia.edu",
+      "contact": "+1-252-343-5819"
     }
   ],
   "Georgia": [
     {
       "name": "Tbilisi State University",
-      "address": "1 Chavchavadze Ave, Tbilisi 0179, Georgia"
+      "address": "1 Chavchavadze Ave, Tbilisi 0179, Georgia",
+      "website": "www.tbilisi-state-university.edu",
+      "contact": "+1-578-419-3263"
     },
     {
       "name": "Ivane Javakhishvili Tbilisi State University",
-      "address": "1 Chavchavadze Ave, Tbilisi 0179, Georgia"
+      "address": "1 Chavchavadze Ave, Tbilisi 0179, Georgia",
+      "website": "www.ivane-javakhishvili-tbilisi-state-university.edu",
+      "contact": "+1-029-289-0795"
     },
     {
       "name": "Georgian Technical University",
-      "address": "77 Kostava St, Tbilisi 0175, Georgia"
+      "address": "77 Kostava St, Tbilisi 0175, Georgia",
+      "website": "www.georgian-technical-university.edu",
+      "contact": "+1-009-274-2111"
     },
     {
       "name": "Ilia State University",
-      "address": "32 Chavchavadze Ave, Tbilisi, Georgia"
+      "address": "32 Chavchavadze Ave, Tbilisi, Georgia",
+      "website": "www.ilia-state-university.edu",
+      "contact": "+1-044-985-5070"
     },
     {
       "name": "Batumi State University",
-      "address": "35 Ninoshvili St, Batumi, Georgia"
+      "address": "35 Ninoshvili St, Batumi, Georgia",
+      "website": "www.batumi-state-university.edu",
+      "contact": "+1-167-357-0143"
     }
   ],
   "Germany": [
     {
       "name": "Technical University of Munich",
-      "address": "Arcisstraße 21, 80333 Munich, Germany"
+      "address": "Arcisstraße 21, 80333 Munich, Germany",
+      "website": "www.technical-university-of-munich.edu",
+      "contact": "+1-194-209-2194"
     },
     {
       "name": "University of Heidelberg",
-      "address": "Grabengasse 1, 69117 Heidelberg, Germany"
+      "address": "Grabengasse 1, 69117 Heidelberg, Germany",
+      "website": "www.university-of-heidelberg.edu",
+      "contact": "+1-397-217-7970"
     },
     {
       "name": "Humboldt University of Berlin",
-      "address": "Unter den Linden 6, 10117 Berlin, Germany"
+      "address": "Unter den Linden 6, 10117 Berlin, Germany",
+      "website": "www.humboldt-university-of-berlin.edu",
+      "contact": "+1-227-421-2598"
     },
     {
       "name": "University of Freiburg",
-      "address": "Fahnenbergplatz, 79085 Freiburg im Breisgau, Germany"
+      "address": "Fahnenbergplatz, 79085 Freiburg im Breisgau, Germany",
+      "website": "www.university-of-freiburg.edu",
+      "contact": "+1-142-977-2785"
     },
     {
       "name": "RWTH Aachen University",
-      "address": "Templergraben 55, 52062 Aachen, Germany"
+      "address": "Templergraben 55, 52062 Aachen, Germany",
+      "website": "www.rwth-aachen-university.edu",
+      "contact": "+1-526-558-8967"
     }
   ],
   "Ghana": [
     {
       "name": "University of Ghana",
-      "address": "Legon, Accra, Ghana"
+      "address": "Legon, Accra, Ghana",
+      "website": "www.university-of-ghana.edu",
+      "contact": "+1-019-823-6452"
     },
     {
       "name": "Kwame Nkrumah University of Science and Technology",
-      "address": "Kumasi, Ashanti Region, Ghana"
+      "address": "Kumasi, Ashanti Region, Ghana",
+      "website": "www.kwame-nkrumah-university-of-science-and-technology.edu",
+      "contact": "+1-472-934-7417"
     },
     {
       "name": "University of Cape Coast",
-      "address": "Cape Coast, Central Region, Ghana"
+      "address": "Cape Coast, Central Region, Ghana",
+      "website": "www.university-of-cape-coast.edu",
+      "contact": "+1-186-537-8048"
     },
     {
       "name": "Ashesi University",
-      "address": "1 University Avenue, Berekuso, Eastern Region, Ghana"
+      "address": "1 University Avenue, Berekuso, Eastern Region, Ghana",
+      "website": "www.ashesi-university.edu",
+      "contact": "+1-065-918-6103"
     },
     {
       "name": "University of Education Winneba",
-      "address": "Winneba, Central Region, Ghana"
+      "address": "Winneba, Central Region, Ghana",
+      "website": "www.university-of-education-winneba.edu",
+      "contact": "+1-171-760-7037"
     }
   ],
   "Greece": [
     {
       "name": "National and Kapodistrian University of Athens",
-      "address": "Panepistimiou 30, Athina 106 79, Greece"
+      "address": "Panepistimiou 30, Athina 106 79, Greece",
+      "website": "www.national-and-kapodistrian-university-of-athens.edu",
+      "contact": "+1-827-410-8214"
     },
     {
       "name": "Aristotle University of Thessaloniki",
-      "address": "University Campus, Thessaloniki 541 24, Greece"
+      "address": "University Campus, Thessaloniki 541 24, Greece",
+      "website": "www.aristotle-university-of-thessaloniki.edu",
+      "contact": "+1-548-866-0524"
     },
     {
       "name": "University of Patras",
-      "address": "University Campus, Rio Patras, 26504, Greece"
+      "address": "University Campus, Rio Patras, 26504, Greece",
+      "website": "www.university-of-patras.edu",
+      "contact": "+1-159-859-5016"
     },
     {
       "name": "Technical University of Crete",
-      "address": "University Campus, Kounoupidiana, 73100 Chania, Crete, Greece"
+      "address": "University Campus, Kounoupidiana, 73100 Chania, Crete, Greece",
+      "website": "www.technical-university-of-crete.edu",
+      "contact": "+1-202-489-4739"
     },
     {
       "name": "University of Crete",
-      "address": "University Campus, Gallos, 74100 Rethymno, Crete, Greece"
+      "address": "University Campus, Gallos, 74100 Rethymno, Crete, Greece",
+      "website": "www.university-of-crete.edu",
+      "contact": "+1-020-162-8592"
     }
   ],
   "Grenada": [
     {
       "name": "St. George’s University",
-      "address": "University Centre, Grenada, West Indies"
+      "address": "University Centre, Grenada, West Indies",
+      "website": "www.st-georges-university.edu",
+      "contact": "+1-324-966-8770"
     },
     {
       "name": "T.A. Marryshow Community College",
-      "address": "Tanteen, St. George, Grenada"
+      "address": "Tanteen, St. George, Grenada",
+      "website": "www.ta-marryshow-community-college.edu",
+      "contact": "+1-107-987-8264"
     },
     {
       "name": "New Life Academy College",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.new-life-academy-college.edu",
+      "contact": "+1-254-937-2351"
     },
     {
       "name": "Kirani James Institute",
-      "address": "Gouyave, St. John, Grenada"
+      "address": "Gouyave, St. John, Grenada",
+      "website": "www.kirani-james-institute.edu",
+      "contact": "+1-239-886-4255"
     },
     {
       "name": "Grenada Seventh-Day Adventist College",
-      "address": "Mount Rose, St. Patrick, Grenada"
+      "address": "Mount Rose, St. Patrick, Grenada",
+      "website": "www.grenada-seventhday-adventist-college.edu",
+      "contact": "+1-493-487-3181"
     }
   ],
   "Guatemala": [
     {
       "name": "University of San Carlos of Guatemala",
-      "address": "Ciudad Universitaria, Zona 12, Ciudad de Guatemala, Guatemala"
+      "address": "Ciudad Universitaria, Zona 12, Ciudad de Guatemala, Guatemala",
+      "website": "www.university-of-san-carlos-of-guatemala.edu",
+      "contact": "+1-487-026-1585"
     },
     {
       "name": "Del Valle University",
-      "address": "18 Avenida 11-95, Zona 15, Vista Hermosa III, Ciudad de Guatemala, Guatemala"
+      "address": "18 Avenida 11-95, Zona 15, Vista Hermosa III, Ciudad de Guatemala, Guatemala",
+      "website": "www.del-valle-university.edu",
+      "contact": "+1-244-525-4121"
     },
     {
       "name": "Rafael Landívar University",
-      "address": "Vista Hermosa III, Campus Central, Zona 16, Ciudad de Guatemala, Guatemala"
+      "address": "Vista Hermosa III, Campus Central, Zona 16, Ciudad de Guatemala, Guatemala",
+      "website": "www.rafael-landvar-university.edu",
+      "contact": "+1-398-491-1142"
     },
     {
       "name": "Mariano Gálvez University",
-      "address": "3a Avenida 9-00, Cdad. de Guatemala 01007, Guatemala"
+      "address": "3a Avenida 9-00, Cdad. de Guatemala 01007, Guatemala",
+      "website": "www.mariano-glvez-university.edu",
+      "contact": "+1-130-664-1719"
     },
     {
       "name": "Mesoamericana University",
-      "address": "3a Avenida 13-38, Zona 1, Quetzaltenango, Guatemala"
+      "address": "3a Avenida 13-38, Zona 1, Quetzaltenango, Guatemala",
+      "website": "www.mesoamericana-university.edu",
+      "contact": "+1-797-725-7983"
     }
   ],
   "Guinea": [
     {
       "name": "Université Gamal Abdel Nasser de Conakry",
-      "address": "Donka, Conakry, Guinea"
+      "address": "Donka, Conakry, Guinea",
+      "website": "www.universit-gamal-abdel-nasser-de-conakry.edu",
+      "contact": "+1-179-138-2650"
     },
     {
       "name": "Université Koffi Annan",
-      "address": "Nongo, Conakry, Guinea"
+      "address": "Nongo, Conakry, Guinea",
+      "website": "www.universit-koffi-annan.edu",
+      "contact": "+1-487-605-8767"
     },
     {
       "name": "Université Peleforo Gon Coulibaly",
-      "address": "Korhogo, Côte d'Ivoire (Note: This university is in Côte d'Ivoire, not Guinea)"
+      "address": "Korhogo, Côte d'Ivoire (Note: This university is in Côte d'Ivoire, not Guinea)",
+      "website": "www.universit-peleforo-gon-coulibaly.edu",
+      "contact": "+1-100-689-4814"
     },
     {
       "name": "Université de Nzérékoré",
-      "address": "Nzérékoré, Guinea"
+      "address": "Nzérékoré, Guinea",
+      "website": "www.universit-de-nzrkor.edu",
+      "contact": "+1-073-297-9726"
     },
     {
       "name": "Institut Polytechnique de Conakry",
-      "address": "Donka, Conakry, Guinea"
+      "address": "Donka, Conakry, Guinea",
+      "website": "www.institut-polytechnique-de-conakry.edu",
+      "contact": "+1-809-764-8416"
     }
   ],
   "Guyana": [
     {
       "name": "University of Guyana",
-      "address": "Turkeyen Campus, Georgetown, Guyana"
+      "address": "Turkeyen Campus, Georgetown, Guyana",
+      "website": "www.university-of-guyana.edu",
+      "contact": "+1-183-765-3952"
     },
     {
       "name": "Guyana School of Agriculture",
-      "address": "Mon Repos, East Coast Demerara, Guyana"
+      "address": "Mon Repos, East Coast Demerara, Guyana",
+      "website": "www.guyana-school-of-agriculture.edu",
+      "contact": "+1-133-821-8208"
     },
     {
       "name": "Georgetown American University",
-      "address": "157 Waterloo Street, North Cummingsburg, Georgetown, Guyana"
+      "address": "157 Waterloo Street, North Cummingsburg, Georgetown, Guyana",
+      "website": "www.georgetown-american-university.edu",
+      "contact": "+1-097-726-3873"
     },
     {
       "name": "Caribbean Maritime University Guyana",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.caribbean-maritime-university-guyana.edu",
+      "contact": "+1-705-257-6362"
     },
     {
       "name": "Guyana Technical Institute",
-      "address": "Woolford Avenue, Georgetown, Guyana"
+      "address": "Woolford Avenue, Georgetown, Guyana",
+      "website": "www.guyana-technical-institute.edu",
+      "contact": "+1-138-334-6611"
     }
   ],
   "Haiti": [
     {
       "name": "Quisqueya University",
-      "address": "25, Rue Paved, Port-au-Prince, Haiti"
+      "address": "25, Rue Paved, Port-au-Prince, Haiti",
+      "website": "www.quisqueya-university.edu",
+      "contact": "+1-145-425-2013"
     },
     {
       "name": "State University of Haiti",
-      "address": "25 Rue Oswald Durand, Port-au-Prince, Haiti"
+      "address": "25 Rue Oswald Durand, Port-au-Prince, Haiti",
+      "website": "www.state-university-of-haiti.edu",
+      "contact": "+1-431-913-8721"
     },
     {
       "name": "Université d’État d’Haïti",
-      "address": "25 Rue Oswald Durand, Port-au-Prince, Haiti"
+      "address": "25 Rue Oswald Durand, Port-au-Prince, Haiti",
+      "website": "www.universit-dtat-dhati.edu",
+      "contact": "+1-180-854-4491"
     },
     {
       "name": "Université Quisqueya",
-      "address": "25, Rue Paved, Port-au-Prince, Haiti"
+      "address": "25, Rue Paved, Port-au-Prince, Haiti",
+      "website": "www.universit-quisqueya.edu",
+      "contact": "+1-085-220-0103"
     },
     {
       "name": "Global University Haiti",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.global-university-haiti.edu",
+      "contact": "+1-292-676-2928"
     }
   ],
   "Honduras": [
     {
       "name": "National Autonomous University of Honduras",
-      "address": "Bulevar Suyapa, Tegucigalpa, Honduras"
+      "address": "Bulevar Suyapa, Tegucigalpa, Honduras",
+      "website": "www.national-autonomous-university-of-honduras.edu",
+      "contact": "+1-138-586-1029"
     },
     {
       "name": "University of San Pedro Sula",
-      "address": "Avenida Circunvalación, San Pedro Sula, Honduras"
+      "address": "Avenida Circunvalación, San Pedro Sula, Honduras",
+      "website": "www.university-of-san-pedro-sula.edu",
+      "contact": "+1-258-896-1662"
     },
     {
       "name": "Francisco Morazán National Pedagogical University",
-      "address": "Bulevar Centroamérica, Tegucigalpa, Honduras"
+      "address": "Bulevar Centroamérica, Tegucigalpa, Honduras",
+      "website": "www.francisco-morazn-national-pedagogical-university.edu",
+      "contact": "+1-506-822-2272"
     },
     {
       "name": "University of Tegucigalpa",
-      "address": "Colonia Lomas del Guijarro, Tegucigalpa, Honduras"
+      "address": "Colonia Lomas del Guijarro, Tegucigalpa, Honduras",
+      "website": "www.university-of-tegucigalpa.edu",
+      "contact": "+1-164-550-0825"
     },
     {
       "name": "Valle de Ángeles University",
-      "address": "Valle de Ángeles, Francisco Morazán, Honduras"
+      "address": "Valle de Ángeles, Francisco Morazán, Honduras",
+      "website": "www.valle-de-ngeles-university.edu",
+      "contact": "+1-071-764-9208"
     }
   ],
   "Hungary": [
     {
       "name": "Eötvös Loránd University",
-      "address": "Egyetem tér 1-3, Budapest 1053, Hungary"
+      "address": "Egyetem tér 1-3, Budapest 1053, Hungary",
+      "website": "www.etvs-lornd-university.edu",
+      "contact": "+1-110-868-6797"
     },
     {
       "name": "Budapest University of Technology and Economics",
-      "address": "Műegyetem rkp. 3, Budapest 1111, Hungary"
+      "address": "Műegyetem rkp. 3, Budapest 1111, Hungary",
+      "website": "www.budapest-university-of-technology-and-economics.edu",
+      "contact": "+1-653-851-0894"
     },
     {
       "name": "University of Debrecen",
-      "address": "Egyetem tér 1, Debrecen 4032, Hungary"
+      "address": "Egyetem tér 1, Debrecen 4032, Hungary",
+      "website": "www.university-of-debrecen.edu",
+      "contact": "+1-064-942-3791"
     },
     {
       "name": "University of Szeged",
-      "address": "Dugonics tér 13, Szeged 6720, Hungary"
+      "address": "Dugonics tér 13, Szeged 6720, Hungary",
+      "website": "www.university-of-szeged.edu",
+      "contact": "+1-149-007-6865"
     },
     {
       "name": "Corvinus University of Budapest",
-      "address": "Fővám tér 8, Budapest 1093, Hungary"
+      "address": "Fővám tér 8, Budapest 1093, Hungary",
+      "website": "www.corvinus-university-of-budapest.edu",
+      "contact": "+1-436-476-5546"
     }
   ],
   "Iceland": [
     {
       "name": "University of Iceland",
-      "address": "Sæmundargata 2, 101 Reykjavík, Iceland"
+      "address": "Sæmundargata 2, 101 Reykjavík, Iceland",
+      "website": "www.university-of-iceland.edu",
+      "contact": "+1-010-883-0271"
     },
     {
       "name": "Reykjavik University",
-      "address": "Menntavegur 1, 101 Reykjavík, Iceland"
+      "address": "Menntavegur 1, 101 Reykjavík, Iceland",
+      "website": "www.reykjavik-university.edu",
+      "contact": "+1-142-529-0871"
     },
     {
       "name": "Iceland University of the Arts",
-      "address": "Þverholt 11, 105 Reykjavík, Iceland"
+      "address": "Þverholt 11, 105 Reykjavík, Iceland",
+      "website": "www.iceland-university-of-the-arts.edu",
+      "contact": "+1-934-692-5792"
     },
     {
       "name": "Bifröst University",
-      "address": "Bifröst, 311 Borgarnes, Iceland"
+      "address": "Bifröst, 311 Borgarnes, Iceland",
+      "website": "www.bifrst-university.edu",
+      "contact": "+1-621-227-4890"
     },
     {
       "name": "Agricultural University of Iceland",
-      "address": "Hvanneyri, 311 Borgarnes, Iceland"
+      "address": "Hvanneyri, 311 Borgarnes, Iceland",
+      "website": "www.agricultural-university-of-iceland.edu",
+      "contact": "+1-103-948-9660"
     }
   ],
   "India": [
     {
       "name": "Indian Institute of Technology Bombay",
-      "address": "Powai, Mumbai, Maharashtra 400076, India"
+      "address": "Powai, Mumbai, Maharashtra 400076, India",
+      "website": "www.indian-institute-of-technology-bombay.edu",
+      "contact": "+1-478-894-5465"
     },
     {
       "name": "Indian Institute of Technology Delhi",
-      "address": "Hauz Khas, New Delhi, Delhi 110016, India"
+      "address": "Hauz Khas, New Delhi, Delhi 110016, India",
+      "website": "www.indian-institute-of-technology-delhi.edu",
+      "contact": "+1-400-038-9491"
     },
     {
       "name": "Indian Institute of Science Bangalore",
-      "address": "CV Raman Rd, Bengaluru, Karnataka 560012, India"
+      "address": "CV Raman Rd, Bengaluru, Karnataka 560012, India",
+      "website": "www.indian-institute-of-science-bangalore.edu",
+      "contact": "+1-123-388-5975"
     },
     {
       "name": "University of Delhi",
-      "address": "Benito Juarez Marg, South Campus, South Moti Bagh, New Delhi, Delhi 110021, India"
+      "address": "Benito Juarez Marg, South Campus, South Moti Bagh, New Delhi, Delhi 110021, India",
+      "website": "www.university-of-delhi.edu",
+      "contact": "+1-020-108-5995"
     },
     {
       "name": "Jawaharlal Nehru University",
-      "address": "New Mehrauli Road, New Delhi, Delhi 110067, India"
+      "address": "New Mehrauli Road, New Delhi, Delhi 110067, India",
+      "website": "www.jawaharlal-nehru-university.edu",
+      "contact": "+1-588-390-1659"
     }
   ],
   "Indonesia": [
     {
       "name": "University of Indonesia",
-      "address": "Kampus UI Depok, Depok, West Java 16424, Indonesia"
+      "address": "Kampus UI Depok, Depok, West Java 16424, Indonesia",
+      "website": "www.university-of-indonesia.edu",
+      "contact": "+1-158-710-8275"
     },
     {
       "name": "Gadjah Mada University",
-      "address": "Bulaksumur, Caturtunggal, Sleman, Special Region of Yogyakarta 55281, Indonesia"
+      "address": "Bulaksumur, Caturtunggal, Sleman, Special Region of Yogyakarta 55281, Indonesia",
+      "website": "www.gadjah-mada-university.edu",
+      "contact": "+1-866-462-7708"
     },
     {
       "name": "Bandung Institute of Technology",
-      "address": "Jl. Ganesa No.10, Lb. Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132, Indonesia"
+      "address": "Jl. Ganesa No.10, Lb. Siliwangi, Kecamatan Coblong, Kota Bandung, Jawa Barat 40132, Indonesia",
+      "website": "www.bandung-institute-of-technology.edu",
+      "contact": "+1-397-552-1405"
     },
     {
       "name": "Airlangga University",
-      "address": "Jl. Mayjen Prof. Dr. Moestopo No.47, Pacar Kembang, Surabaya, East Java 60132, Indonesia"
+      "address": "Jl. Mayjen Prof. Dr. Moestopo No.47, Pacar Kembang, Surabaya, East Java 60132, Indonesia",
+      "website": "www.airlangga-university.edu",
+      "contact": "+1-134-039-9972"
     },
     {
       "name": "Brawijaya University",
-      "address": "Jl. Veteran, Ketawanggede, Malang, East Java 65145, Indonesia"
+      "address": "Jl. Veteran, Ketawanggede, Malang, East Java 65145, Indonesia",
+      "website": "www.brawijaya-university.edu",
+      "contact": "+1-582-981-5308"
     }
   ],
   "Iran": [
     {
       "name": "University of Tehran",
-      "address": "Enghelab Square, Tehran, Iran"
+      "address": "Enghelab Square, Tehran, Iran",
+      "website": "www.university-of-tehran.edu",
+      "contact": "+1-148-074-1825"
     },
     {
       "name": "Sharif University of Technology",
-      "address": "Azadi Street, Tehran, Iran"
+      "address": "Azadi Street, Tehran, Iran",
+      "website": "www.sharif-university-of-technology.edu",
+      "contact": "+1-115-661-3776"
     },
     {
       "name": "Amirkabir University",
-      "address": "424 Hafez Ave, Tehran, Iran"
+      "address": "424 Hafez Ave, Tehran, Iran",
+      "website": "www.amirkabir-university.edu",
+      "contact": "+1-898-696-9134"
     },
     {
       "name": "Isfahan University of Technology",
-      "address": "Daneshgah e Sanati Highway, Isfahan, Iran"
+      "address": "Daneshgah e Sanati Highway, Isfahan, Iran",
+      "website": "www.isfahan-university-of-technology.edu",
+      "contact": "+1-427-812-1043"
     },
     {
       "name": "Tehran University of Medical Sciences",
-      "address": "Qods St, Keshavarz Blvd, Tehran, Iran"
+      "address": "Qods St, Keshavarz Blvd, Tehran, Iran",
+      "website": "www.tehran-university-of-medical-sciences.edu",
+      "contact": "+1-357-553-2403"
     }
   ],
   "Iraq": [
     {
       "name": "University of Baghdad",
-      "address": "Al-Jadriya Bridge, Baghdad, Iraq"
+      "address": "Al-Jadriya Bridge, Baghdad, Iraq",
+      "website": "www.university-of-baghdad.edu",
+      "contact": "+1-186-425-6144"
     },
     {
       "name": "University of Basrah",
-      "address": "Garmat Ali, Basrah, Iraq"
+      "address": "Garmat Ali, Basrah, Iraq",
+      "website": "www.university-of-basrah.edu",
+      "contact": "+1-229-553-4364"
     },
     {
       "name": "University of Mosul",
-      "address": "Al Majmoaa, Mosul, Nineveh Governorate, Iraq"
+      "address": "Al Majmoaa, Mosul, Nineveh Governorate, Iraq",
+      "website": "www.university-of-mosul.edu",
+      "contact": "+1-019-246-9263"
     },
     {
       "name": "University of Kufa",
-      "address": "Kufa, Najaf Governorate, Iraq"
+      "address": "Kufa, Najaf Governorate, Iraq",
+      "website": "www.university-of-kufa.edu",
+      "contact": "+1-040-937-9068"
     },
     {
       "name": "Al Mustansiriya University",
-      "address": "Palestine Street, Baghdad, Iraq"
+      "address": "Palestine Street, Baghdad, Iraq",
+      "website": "www.al-mustansiriya-university.edu",
+      "contact": "+1-739-574-1358"
     }
   ],
   "Ireland": [
     {
       "name": "Trinity College Dublin",
-      "address": "College Green, Dublin 2, Ireland"
+      "address": "College Green, Dublin 2, Ireland",
+      "website": "www.trinity-college-dublin.edu",
+      "contact": "+1-493-534-4866"
     },
     {
       "name": "University College Dublin",
-      "address": "Belfield, Dublin 4, Ireland"
+      "address": "Belfield, Dublin 4, Ireland",
+      "website": "www.university-college-dublin.edu",
+      "contact": "+1-496-787-8245"
     },
     {
       "name": "University of Galway",
-      "address": "University Road, Galway, Ireland"
+      "address": "University Road, Galway, Ireland",
+      "website": "www.university-of-galway.edu",
+      "contact": "+1-185-649-0892"
     },
     {
       "name": "University of Limerick",
-      "address": "Castletroy, Limerick, Ireland"
+      "address": "Castletroy, Limerick, Ireland",
+      "website": "www.university-of-limerick.edu",
+      "contact": "+1-302-960-7413"
     },
     {
       "name": "Dublin City University",
-      "address": "Glasnevin, Dublin 9, Ireland"
+      "address": "Glasnevin, Dublin 9, Ireland",
+      "website": "www.dublin-city-university.edu",
+      "contact": "+1-258-803-7277"
     }
   ],
   "Italy": [
     {
       "name": "University of Bologna",
-      "address": "Via Zamboni, 33, 40126 Bologna BO, Italy"
+      "address": "Via Zamboni, 33, 40126 Bologna BO, Italy",
+      "website": "www.university-of-bologna.edu",
+      "contact": "+1-145-861-8605"
     },
     {
       "name": "Sapienza University of Rome",
-      "address": "Piazzale Aldo Moro, 5, 00185 Roma RM, Italy"
+      "address": "Piazzale Aldo Moro, 5, 00185 Roma RM, Italy",
+      "website": "www.sapienza-university-of-rome.edu",
+      "contact": "+1-375-213-0123"
     },
     {
       "name": "University of Milan",
-      "address": "Via Festa del Perdono, 7, 20122 Milano MI, Italy"
+      "address": "Via Festa del Perdono, 7, 20122 Milano MI, Italy",
+      "website": "www.university-of-milan.edu",
+      "contact": "+1-019-265-5354"
     },
     {
       "name": "University of Padua",
-      "address": "Via 8 Febbraio, 2, 35122 Padova PD, Italy"
+      "address": "Via 8 Febbraio, 2, 35122 Padova PD, Italy",
+      "website": "www.university-of-padua.edu",
+      "contact": "+1-019-013-0200"
     },
     {
       "name": "University of Florence",
-      "address": "Piazza di San Marco, 4, 50121 Firenze FI, Italy"
+      "address": "Piazza di San Marco, 4, 50121 Firenze FI, Italy",
+      "website": "www.university-of-florence.edu",
+      "contact": "+1-216-514-2197"
     }
   ],
   "Jamaica": [
     {
       "name": "University of the West Indies Mona",
-      "address": "Mona, Kingston 7, Jamaica"
+      "address": "Mona, Kingston 7, Jamaica",
+      "website": "www.university-of-the-west-indies-mona.edu",
+      "contact": "+1-117-247-5502"
     },
     {
       "name": "University of Technology Jamaica",
-      "address": "237 Old Hope Road, Kingston 6, Jamaica"
+      "address": "237 Old Hope Road, Kingston 6, Jamaica",
+      "website": "www.university-of-technology-jamaica.edu",
+      "contact": "+1-306-001-9329"
     },
     {
       "name": "Northern Caribbean University",
-      "address": "Manchester Road, Mandeville, Jamaica"
+      "address": "Manchester Road, Mandeville, Jamaica",
+      "website": "www.northern-caribbean-university.edu",
+      "contact": "+1-746-608-4597"
     },
     {
       "name": "University of the Commonwealth Caribbean",
-      "address": "17 Worthington Avenue, Kingston 5, Jamaica"
+      "address": "17 Worthington Avenue, Kingston 5, Jamaica",
+      "website": "www.university-of-the-commonwealth-caribbean.edu",
+      "contact": "+1-501-725-8715"
     },
     {
       "name": "Mona School of Business",
-      "address": "Mona, Kingston 7, Jamaica"
+      "address": "Mona, Kingston 7, Jamaica",
+      "website": "www.mona-school-of-business.edu",
+      "contact": "+1-321-708-0456"
     }
   ],
   "Japan": [
     {
       "name": "University of Tokyo",
-      "address": "7 Chome-3-1 Hongo, Bunkyo City, Tokyo 113-8654, Japan"
+      "address": "7 Chome-3-1 Hongo, Bunkyo City, Tokyo 113-8654, Japan",
+      "website": "www.university-of-tokyo.edu",
+      "contact": "+1-018-601-2177"
     },
     {
       "name": "Kyoto University",
-      "address": "Yoshidahonmachi, Sakyo Ward, Kyoto, 606-8501, Japan"
+      "address": "Yoshidahonmachi, Sakyo Ward, Kyoto, 606-8501, Japan",
+      "website": "www.kyoto-university.edu",
+      "contact": "+1-419-938-8558"
     },
     {
       "name": "Osaka University",
-      "address": "1-1 Yamadaoka, Suita, Osaka 565-0871, Japan"
+      "address": "1-1 Yamadaoka, Suita, Osaka 565-0871, Japan",
+      "website": "www.osaka-university.edu",
+      "contact": "+1-121-438-8219"
     },
     {
       "name": "Tohoku University",
-      "address": "2 Chome-1-1 Katahira, Aoba Ward, Sendai, Miyagi 980-8577, Japan"
+      "address": "2 Chome-1-1 Katahira, Aoba Ward, Sendai, Miyagi 980-8577, Japan",
+      "website": "www.tohoku-university.edu",
+      "contact": "+1-016-666-1506"
     },
     {
       "name": "Nagoya University",
-      "address": "Furocho, Chikusa Ward, Nagoya, Aichi 464-8601, Japan"
+      "address": "Furocho, Chikusa Ward, Nagoya, Aichi 464-8601, Japan",
+      "website": "www.nagoya-university.edu",
+      "contact": "+1-817-730-2699"
     }
   ],
   "Jordan": [
     {
       "name": "University of Jordan",
-      "address": "Queen Rania Street, Amman, Jordan"
+      "address": "Queen Rania Street, Amman, Jordan",
+      "website": "www.university-of-jordan.edu",
+      "contact": "+1-175-751-3669"
     },
     {
       "name": "Jordan University of Science & Technology",
-      "address": "Irbid, Jordan"
+      "address": "Irbid, Jordan",
+      "website": "www.jordan-university-of-science-technology.edu",
+      "contact": "+1-132-661-6725"
     },
     {
       "name": "Yarmouk University",
-      "address": "Shafiq Irshidat St, Irbid, Jordan"
+      "address": "Shafiq Irshidat St, Irbid, Jordan",
+      "website": "www.yarmouk-university.edu",
+      "contact": "+1-047-897-5860"
     },
     {
       "name": "Hashemite University",
-      "address": "Zarqa, Jordan"
+      "address": "Zarqa, Jordan",
+      "website": "www.hashemite-university.edu",
+      "contact": "+1-312-548-5110"
     },
     {
       "name": "Princess Sumaya University for Technology",
-      "address": "Khalil Al-Saket Street, Amman, Jordan"
+      "address": "Khalil Al-Saket Street, Amman, Jordan",
+      "website": "www.princess-sumaya-university-for-technology.edu",
+      "contact": "+1-883-062-3798"
     }
   ],
   "Kazakhstan": [
     {
       "name": "Al-Farabi Kazakh National University",
-      "address": "71 Al-Farabi Ave, Almaty, Kazakhstan"
+      "address": "71 Al-Farabi Ave, Almaty, Kazakhstan",
+      "website": "www.alfarabi-kazakh-national-university.edu",
+      "contact": "+1-393-652-3197"
     },
     {
       "name": "Nazarbayev University",
-      "address": "53 Kabanbay Batyr Ave, Nur-Sultan (Astana), Kazakhstan"
+      "address": "53 Kabanbay Batyr Ave, Nur-Sultan (Astana), Kazakhstan",
+      "website": "www.nazarbayev-university.edu",
+      "contact": "+1-404-531-1771"
     },
     {
       "name": "Kazakh National Technical University",
-      "address": "22 Satpaev Street, Almaty, Kazakhstan"
+      "address": "22 Satpaev Street, Almaty, Kazakhstan",
+      "website": "www.kazakh-national-technical-university.edu",
+      "contact": "+1-747-723-2793"
     },
     {
       "name": "KIMEP University",
-      "address": "4 Abai Avenue, Almaty, Kazakhstan"
+      "address": "4 Abai Avenue, Almaty, Kazakhstan",
+      "website": "www.kimep-university.edu",
+      "contact": "+1-195-510-2452"
     },
     {
       "name": "Suleyman Demirel University",
-      "address": "1/1 Abylai Khan Street, Kaskelen, Kazakhstan"
+      "address": "1/1 Abylai Khan Street, Kaskelen, Kazakhstan",
+      "website": "www.suleyman-demirel-university.edu",
+      "contact": "+1-412-283-4486"
     }
   ],
   "Kenya": [
     {
       "name": "University of Nairobi",
-      "address": "University Way, Nairobi, Kenya"
+      "address": "University Way, Nairobi, Kenya",
+      "website": "www.university-of-nairobi.edu",
+      "contact": "+1-019-800-8995"
     },
     {
       "name": "Kenyatta University",
-      "address": "Thika Road, Nairobi, Kenya"
+      "address": "Thika Road, Nairobi, Kenya",
+      "website": "www.kenyatta-university.edu",
+      "contact": "+1-252-355-9305"
     },
     {
       "name": "Moi University",
-      "address": "Mabsout building, Eldoret, Kenya"
+      "address": "Mabsout building, Eldoret, Kenya",
+      "website": "www.moi-university.edu",
+      "contact": "+1-588-753-0617"
     },
     {
       "name": "Egerton University",
-      "address": "Njoro, Nakuru, Kenya"
+      "address": "Njoro, Nakuru, Kenya",
+      "website": "www.egerton-university.edu",
+      "contact": "+1-272-220-0138"
     },
     {
       "name": "Jomo Kenyatta University of Agriculture and Technology",
-      "address": "Thika Super Highway, Juja, Kenya"
+      "address": "Thika Super Highway, Juja, Kenya",
+      "website": "www.jomo-kenyatta-university-of-agriculture-and-technology.edu",
+      "contact": "+1-118-801-2992"
     }
   ],
   "Kosovo": [
     {
       "name": "University of Pristina",
-      "address": "George Bush Street, Pristina, Kosovo"
+      "address": "George Bush Street, Pristina, Kosovo",
+      "website": "www.university-of-pristina.edu",
+      "contact": "+1-105-726-2229"
     },
     {
       "name": "University for Business and Technology",
-      "address": "Lagjja Kalabria, Pristina, Kosovo"
+      "address": "Lagjja Kalabria, Pristina, Kosovo",
+      "website": "www.university-for-business-and-technology.edu",
+      "contact": "+1-621-702-6188"
     },
     {
       "name": "European University of Kosovo",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.european-university-of-kosovo.edu",
+      "contact": "+1-487-427-9135"
     },
     {
       "name": "Mother Teresa University",
-      "address": "Str. '122' no. 2, Ilinden Municipality, Skopje, North Macedonia"
+      "address": "Str. '122' no. 2, Ilinden Municipality, Skopje, North Macedonia",
+      "website": "www.mother-teresa-university.edu",
+      "contact": "+1-707-952-3905"
     },
     {
       "name": "Kosovo Physics Society University",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.kosovo-physics-society-university.edu",
+      "contact": "+1-646-603-5514"
     }
   ],
   "Kuwait": [
     {
       "name": "Kuwait University",
-      "address": "Jamal Abdul Nasser Street, Shuwaikh, Kuwait"
+      "address": "Jamal Abdul Nasser Street, Shuwaikh, Kuwait",
+      "website": "www.kuwait-university.edu",
+      "contact": "+1-648-255-5759"
     },
     {
       "name": "Gulf University for Science & Technology",
-      "address": "Block 5, Building 1, Mubarak Al-Abdullah Area / West Mishref, Kuwait"
+      "address": "Block 5, Building 1, Mubarak Al-Abdullah Area / West Mishref, Kuwait",
+      "website": "www.gulf-university-for-science-technology.edu",
+      "contact": "+1-401-551-1341"
     },
     {
       "name": "American University of Kuwait",
-      "address": "Salem Al-Mubarak Street, Salmiya, Kuwait"
+      "address": "Salem Al-Mubarak Street, Salmiya, Kuwait",
+      "website": "www.american-university-of-kuwait.edu",
+      "contact": "+1-333-659-1018"
     },
     {
       "name": "Box Hill College Kuwait",
-      "address": "Abu Haleefa, Block 1, Road 228, Building 2, Kuwait"
+      "address": "Abu Haleefa, Block 1, Road 228, Building 2, Kuwait",
+      "website": "www.box-hill-college-kuwait.edu",
+      "contact": "+1-019-909-6718"
     },
     {
       "name": "Australian College of Kuwait",
-      "address": "Block 5, Mubarak Al-Abdullah Al-Jaber Area, West Mishref, Kuwait"
+      "address": "Block 5, Mubarak Al-Abdullah Al-Jaber Area, West Mishref, Kuwait",
+      "website": "www.australian-college-of-kuwait.edu",
+      "contact": "+1-616-172-8621"
     }
   ],
   "Kyrgyzstan": [
     {
       "name": "Kyrgyz National University",
-      "address": "547 Frunze Street, Bishkek, Kyrgyzstan"
+      "address": "547 Frunze Street, Bishkek, Kyrgyzstan",
+      "website": "www.kyrgyz-national-university.edu",
+      "contact": "+1-258-684-6784"
     },
     {
       "name": "American University of Central Asia",
-      "address": "205 Abdumomunov Street, Bishkek, Kyrgyzstan"
+      "address": "205 Abdumomunov Street, Bishkek, Kyrgyzstan",
+      "website": "www.american-university-of-central-asia.edu",
+      "contact": "+1-545-275-7268"
     },
     {
       "name": "Kyrgyz State Technical University",
-      "address": "66 Prospekt Mira, Bishkek, Kyrgyzstan"
+      "address": "66 Prospekt Mira, Bishkek, Kyrgyzstan",
+      "website": "www.kyrgyz-state-technical-university.edu",
+      "contact": "+1-139-949-6380"
     },
     {
       "name": "International University of Kyrgyzstan",
-      "address": "255 Chui Avenue, Bishkek, Kyrgyzstan"
+      "address": "255 Chui Avenue, Bishkek, Kyrgyzstan",
+      "website": "www.international-university-of-kyrgyzstan.edu",
+      "contact": "+1-186-471-3307"
     },
     {
       "name": "Bishkek Humanities University",
-      "address": "27 Prospekt Mira, Bishkek, Kyrgyzstan"
+      "address": "27 Prospekt Mira, Bishkek, Kyrgyzstan",
+      "website": "www.bishkek-humanities-university.edu",
+      "contact": "+1-039-404-8132"
     }
   ],
   "Laos": [
     {
       "name": "National University of Laos",
-      "address": "Dongdok Campus, Vientiane, Laos"
+      "address": "Dongdok Campus, Vientiane, Laos",
+      "website": "www.national-university-of-laos.edu",
+      "contact": "+1-561-248-9602"
     },
     {
       "name": "Lao University of Health Sciences",
-      "address": "Samsenthai Road, Vientiane, Laos"
+      "address": "Samsenthai Road, Vientiane, Laos",
+      "website": "www.lao-university-of-health-sciences.edu",
+      "contact": "+1-908-587-8806"
     },
     {
       "name": "Lao-American College",
-      "address": "Phonsa-ath Village, Vientiane, Laos"
+      "address": "Phonsa-ath Village, Vientiane, Laos",
+      "website": "www.laoamerican-college.edu",
+      "contact": "+1-188-705-2406"
     },
     {
       "name": "Souphanouvong University",
-      "address": "Luang Prabang, Laos"
+      "address": "Luang Prabang, Laos",
+      "website": "www.souphanouvong-university.edu",
+      "contact": "+1-652-422-2120"
     },
     {
       "name": "Champasak University",
-      "address": "Pakse, Champasak Province, Laos"
+      "address": "Pakse, Champasak Province, Laos",
+      "website": "www.champasak-university.edu",
+      "contact": "+1-039-677-9405"
     }
   ],
   "Latvia": [
     {
       "name": "University of Latvia",
-      "address": "Raiņa bulvāris 19, Rīga, LV-1586, Latvia"
+      "address": "Raiņa bulvāris 19, Rīga, LV-1586, Latvia",
+      "website": "www.university-of-latvia.edu",
+      "contact": "+1-171-310-7546"
     },
     {
       "name": "Riga Technical University",
-      "address": "Kaļķu iela 1, Rīga, LV-1658, Latvia"
+      "address": "Kaļķu iela 1, Rīga, LV-1658, Latvia",
+      "website": "www.riga-technical-university.edu",
+      "contact": "+1-386-427-1552"
     },
     {
       "name": "Latvian University of Life Sciences and Technologies",
-      "address": "Lielā iela 2, Jelgava, LV-3001, Latvia"
+      "address": "Lielā iela 2, Jelgava, LV-3001, Latvia",
+      "website": "www.latvian-university-of-life-sciences-and-technologies.edu",
+      "contact": "+1-655-700-9048"
     },
     {
       "name": "Riga Stradins University",
-      "address": "Dzirciema iela 16, Rīga, LV-1007, Latvia"
+      "address": "Dzirciema iela 16, Rīga, LV-1007, Latvia",
+      "website": "www.riga-stradins-university.edu",
+      "contact": "+1-452-041-0139"
     },
     {
       "name": "Turība University",
-      "address": "Graudu iela 68, Rīga, LV-1058, Latvia"
+      "address": "Graudu iela 68, Rīga, LV-1058, Latvia",
+      "website": "www.turba-university.edu",
+      "contact": "+1-120-269-5659"
     }
   ],
   "Lebanon": [
     {
       "name": "American University of Beirut",
-      "address": "Bliss St, Beirut, Lebanon"
+      "address": "Bliss St, Beirut, Lebanon",
+      "website": "www.american-university-of-beirut.edu",
+      "contact": "+1-360-943-0078"
     },
     {
       "name": "Lebanese American University",
-      "address": "Koura, North Lebanon, Lebanon"
+      "address": "Koura, North Lebanon, Lebanon",
+      "website": "www.lebanese-american-university.edu",
+      "contact": "+1-000-346-1583"
     },
     {
       "name": "Université Saint-Joseph",
-      "address": "Rue de Damas, Beirut, Lebanon"
+      "address": "Rue de Damas, Beirut, Lebanon",
+      "website": "www.universit-saintjoseph.edu",
+      "contact": "+1-261-933-2861"
     },
     {
       "name": "Holy Spirit University of Kaslik",
-      "address": "Jounieh, Keserwan, Lebanon"
+      "address": "Jounieh, Keserwan, Lebanon",
+      "website": "www.holy-spirit-university-of-kaslik.edu",
+      "contact": "+1-716-969-3355"
     },
     {
       "name": "Lebanese University",
-      "address": "Museum Square, Beirut, Lebanon"
+      "address": "Museum Square, Beirut, Lebanon",
+      "website": "www.lebanese-university.edu",
+      "contact": "+1-008-632-5683"
     }
   ],
   "Liberia": [
     {
       "name": "University of Liberia",
-      "address": "Capitol Hill, Monrovia, Liberia"
+      "address": "Capitol Hill, Monrovia, Liberia",
+      "website": "www.university-of-liberia.edu",
+      "contact": "+1-294-015-3299"
     },
     {
       "name": "Booker Washington Institute",
-      "address": "Kakata, Margibi County, Liberia"
+      "address": "Kakata, Margibi County, Liberia",
+      "website": "www.booker-washington-institute.edu",
+      "contact": "+1-386-068-5841"
     },
     {
       "name": "United Methodist University Liberia",
-      "address": "Ashmun Street, Monrovia, Liberia"
+      "address": "Ashmun Street, Monrovia, Liberia",
+      "website": "www.united-methodist-university-liberia.edu",
+      "contact": "+1-278-765-7292"
     },
     {
       "name": "African Methodist Episcopal University",
-      "address": "34 Camp Johnson Road, Monrovia, Liberia"
+      "address": "34 Camp Johnson Road, Monrovia, Liberia",
+      "website": "www.african-methodist-episcopal-university.edu",
+      "contact": "+1-227-767-3047"
     },
     {
       "name": "Lofa Community College",
-      "address": "Voinjama, Lofa County, Liberia"
+      "address": "Voinjama, Lofa County, Liberia",
+      "website": "www.lofa-community-college.edu",
+      "contact": "+1-307-929-9554"
     }
   ],
   "Libya": [
     {
       "name": "University of Tripoli",
-      "address": "University Road, Tripoli, Libya"
+      "address": "University Road, Tripoli, Libya",
+      "website": "www.university-of-tripoli.edu",
+      "contact": "+1-171-470-0080"
     },
     {
       "name": "University of Benghazi",
-      "address": "Gamal Abdel Nasser St, Benghazi, Libya"
+      "address": "Gamal Abdel Nasser St, Benghazi, Libya",
+      "website": "www.university-of-benghazi.edu",
+      "contact": "+1-179-224-9595"
     },
     {
       "name": "Misurata University",
-      "address": "Airport Road, Misurata, Libya"
+      "address": "Airport Road, Misurata, Libya",
+      "website": "www.misurata-university.edu",
+      "contact": "+1-206-066-6988"
     },
     {
       "name": "University of Sabha",
-      "address": "Sabha, Libya"
+      "address": "Sabha, Libya",
+      "website": "www.university-of-sabha.edu",
+      "contact": "+1-018-736-1962"
     },
     {
       "name": "University of Zawiya",
-      "address": "Zawiya, Libya"
+      "address": "Zawiya, Libya",
+      "website": "www.university-of-zawiya.edu",
+      "contact": "+1-131-222-2056"
     }
   ],
   "Lithuania": [
     {
       "name": "Vilnius University",
-      "address": "Universiteto g. 3, Vilnius 01513, Lithuania"
+      "address": "Universiteto g. 3, Vilnius 01513, Lithuania",
+      "website": "www.vilnius-university.edu",
+      "contact": "+1-379-431-4628"
     },
     {
       "name": "Kaunas University of Technology",
-      "address": "K. Donelaičio g. 73, Kaunas 44249, Lithuania"
+      "address": "K. Donelaičio g. 73, Kaunas 44249, Lithuania",
+      "website": "www.kaunas-university-of-technology.edu",
+      "contact": "+1-520-298-5630"
     },
     {
       "name": "Vytautas Magnus University",
-      "address": "K. Donelaičio g. 58, Kaunas 44248, Lithuania"
+      "address": "K. Donelaičio g. 58, Kaunas 44248, Lithuania",
+      "website": "www.vytautas-magnus-university.edu",
+      "contact": "+1-927-480-7050"
     },
     {
       "name": "Klaipėda University",
-      "address": "Herkaus Manto g. 84, Klaipėda 92294, Lithuania"
+      "address": "Herkaus Manto g. 84, Klaipėda 92294, Lithuania",
+      "website": "www.klaipda-university.edu",
+      "contact": "+1-833-065-4305"
     },
     {
       "name": "Lithuanian University of Health Sciences",
-      "address": "A. Mickevičiaus g. 9, Kaunas 44307, Lithuania"
+      "address": "A. Mickevičiaus g. 9, Kaunas 44307, Lithuania",
+      "website": "www.lithuanian-university-of-health-sciences.edu",
+      "contact": "+1-447-378-4097"
     }
   ],
   "Luxembourg": [
     {
       "name": "University of Luxembourg",
-      "address": "2, avenue de l'Université, L-4365 Esch-sur-Alzette, Luxembourg"
+      "address": "2, avenue de l'Université, L-4365 Esch-sur-Alzette, Luxembourg",
+      "website": "www.university-of-luxembourg.edu",
+      "contact": "+1-642-764-4035"
     },
     {
       "name": "Luxembourg School of Business",
-      "address": "4, rue Albert Borschette, L-1246 Luxembourg"
+      "address": "4, rue Albert Borschette, L-1246 Luxembourg",
+      "website": "www.luxembourg-school-of-business.edu",
+      "contact": "+1-404-647-6201"
     },
     {
       "name": "Sacred Heart University Luxembourg",
-      "address": "7, rue Alcide de Gasperi, L-1615 Luxembourg"
+      "address": "7, rue Alcide de Gasperi, L-1615 Luxembourg",
+      "website": "www.sacred-heart-university-luxembourg.edu",
+      "contact": "+1-623-267-4906"
     },
     {
       "name": "Univerity of Luxembourg Campus Belval",
-      "address": "2, avenue de l'Université, L-4365 Esch-sur-Alzette, Luxembourg"
+      "address": "2, avenue de l'Université, L-4365 Esch-sur-Alzette, Luxembourg",
+      "website": "www.univerity-of-luxembourg-campus-belval.edu",
+      "contact": "+1-471-000-9917"
     },
     {
       "name": "International School of Luxembourg",
-      "address": "36 Boulevard Pierre Dupong, 1430 Luxembourg"
+      "address": "36 Boulevard Pierre Dupong, 1430 Luxembourg",
+      "website": "www.international-school-of-luxembourg.edu",
+      "contact": "+1-156-441-5915"
     }
   ],
   "Madagascar": [
     {
       "name": "University of Antananarivo",
-      "address": "Ankatso, Antananarivo, Madagascar"
+      "address": "Ankatso, Antananarivo, Madagascar",
+      "website": "www.university-of-antananarivo.edu",
+      "contact": "+1-200-001-9079"
     },
     {
       "name": "University of Fianarantsoa",
-      "address": "Andrainjato, Fianarantsoa, Madagascar"
+      "address": "Andrainjato, Fianarantsoa, Madagascar",
+      "website": "www.university-of-fianarantsoa.edu",
+      "contact": "+1-317-713-6074"
     },
     {
       "name": "University of Toliara",
-      "address": "Maninday, Toliara, Madagascar"
+      "address": "Maninday, Toliara, Madagascar",
+      "website": "www.university-of-toliara.edu",
+      "contact": "+1-163-136-1377"
     },
     {
       "name": "University of Mahajanga",
-      "address": "Ambondrona, Mahajanga, Madagascar"
+      "address": "Ambondrona, Mahajanga, Madagascar",
+      "website": "www.university-of-mahajanga.edu",
+      "contact": "+1-603-166-6381"
     },
     {
       "name": "University of Toamasina",
-      "address": "Barikadimy, Toamasina, Madagascar"
+      "address": "Barikadimy, Toamasina, Madagascar",
+      "website": "www.university-of-toamasina.edu",
+      "contact": "+1-331-213-9244"
     }
   ],
   "Malaysia": [
     {
       "name": "University of Malaya",
-      "address": "Jalan Universiti, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia"
+      "address": "Jalan Universiti, 50603 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia",
+      "website": "www.university-of-malaya.edu",
+      "contact": "+1-168-473-6408"
     },
     {
       "name": "Universiti Kebangsaan Malaysia",
-      "address": "43600 UKM, Bangi, Selangor, Malaysia"
+      "address": "43600 UKM, Bangi, Selangor, Malaysia",
+      "website": "www.universiti-kebangsaan-malaysia.edu",
+      "contact": "+1-805-879-4772"
     },
     {
       "name": "Universiti Putra Malaysia",
-      "address": "43400 UPM Serdang, Selangor, Malaysia"
+      "address": "43400 UPM Serdang, Selangor, Malaysia",
+      "website": "www.universiti-putra-malaysia.edu",
+      "contact": "+1-666-789-0079"
     },
     {
       "name": "Universiti Sains Malaysia",
-      "address": "11800 USM, Pulau Pinang, Malaysia"
+      "address": "11800 USM, Pulau Pinang, Malaysia",
+      "website": "www.universiti-sains-malaysia.edu",
+      "contact": "+1-822-490-9699"
     },
     {
       "name": "Taylor’s University",
-      "address": "No. 1, Jalan Taylor's, 47500 Subang Jaya, Selangor, Malaysia"
+      "address": "No. 1, Jalan Taylor's, 47500 Subang Jaya, Selangor, Malaysia",
+      "website": "www.taylors-university.edu",
+      "contact": "+1-411-020-0911"
     }
   ],
   "Maldives": [
     {
       "name": "University of the Maldives",
-      "address": "Buruzu Magu, Malé, Maldives"
+      "address": "Buruzu Magu, Malé, Maldives",
+      "website": "www.university-of-the-maldives.edu",
+      "contact": "+1-062-532-5005"
     },
     {
       "name": "Maafushi Vocational & Training Institute",
-      "address": "Maafushi, Kaafu Atoll, Maldives"
+      "address": "Maafushi, Kaafu Atoll, Maldives",
+      "website": "www.maafushi-vocational-training-institute.edu",
+      "contact": "+1-807-821-3941"
     },
     {
       "name": "Villa College",
-      "address": "Greenge, Male' 20212, Maldives"
+      "address": "Greenge, Male' 20212, Maldives",
+      "website": "www.villa-college.edu",
+      "contact": "+1-031-484-8635"
     },
     {
       "name": "Maldives National University",
-      "address": "Buruzu Magu, Malé, Maldives"
+      "address": "Buruzu Magu, Malé, Maldives",
+      "website": "www.maldives-national-university.edu",
+      "contact": "+1-093-868-6749"
     },
     {
       "name": "Pacific Academy Maldives",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.pacific-academy-maldives.edu",
+      "contact": "+1-415-168-1422"
     }
   ],
   "Mexico": [
     {
       "name": "National Autonomous University of Mexico",
-      "address": "Av. Universidad 3000, Coyoacán, 04510 Ciudad de México, CDMX, Mexico"
+      "address": "Av. Universidad 3000, Coyoacán, 04510 Ciudad de México, CDMX, Mexico",
+      "website": "www.national-autonomous-university-of-mexico.edu",
+      "contact": "+1-002-970-8146"
     },
     {
       "name": "Monterrey Institute of Technology",
-      "address": "Av. Eugenio Garza Sada 2501 Sur, Tecnológico, 64849 Monterrey, N.L., Mexico"
+      "address": "Av. Eugenio Garza Sada 2501 Sur, Tecnológico, 64849 Monterrey, N.L., Mexico",
+      "website": "www.monterrey-institute-of-technology.edu",
+      "contact": "+1-474-622-0581"
     },
     {
       "name": "University of Guadalajara",
-      "address": "Av. Juárez 976, Colonia Centro, 44100 Guadalajara, Jal., Mexico"
+      "address": "Av. Juárez 976, Colonia Centro, 44100 Guadalajara, Jal., Mexico",
+      "website": "www.university-of-guadalajara.edu",
+      "contact": "+1-238-816-5716"
     },
     {
       "name": "Benemérita Universidad Autónoma de Puebla",
-      "address": "Calle 4 Sur 104, Centro histórico de Puebla, 72000 Puebla, Pue., Mexico"
+      "address": "Calle 4 Sur 104, Centro histórico de Puebla, 72000 Puebla, Pue., Mexico",
+      "website": "www.benemrita-universidad-autnoma-de-puebla.edu",
+      "contact": "+1-587-739-9642"
     },
     {
       "name": "Autonomous University of Nuevo León",
-      "address": "Pedro de Alba s/n, San Nicolás de los Garza, N.L., Mexico"
+      "address": "Pedro de Alba s/n, San Nicolás de los Garza, N.L., Mexico",
+      "website": "www.autonomous-university-of-nuevo-len.edu",
+      "contact": "+1-072-533-5972"
     }
   ],
   "Monaco": [
     {
       "name": "International University of Monaco",
-      "address": "Le Stella, 14 Rue Hubert Clerissi, 98000 Monaco"
+      "address": "Le Stella, 14 Rue Hubert Clerissi, 98000 Monaco",
+      "website": "www.international-university-of-monaco.edu",
+      "contact": "+1-489-980-9290"
     },
     {
       "name": "Monaco Graduate Institute",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.monaco-graduate-institute.edu",
+      "contact": "+1-748-997-7823"
     },
     {
       "name": "Monaco Polytechnic Institute",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.monaco-polytechnic-institute.edu",
+      "contact": "+1-403-027-1452"
     },
     {
       "name": "University of Monaco",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.university-of-monaco.edu",
+      "contact": "+1-167-174-8200"
     },
     {
       "name": "Monaco Business School",
-      "address": "Le Stella, 14 Rue Hubert Clerissi, 98000 Monaco"
+      "address": "Le Stella, 14 Rue Hubert Clerissi, 98000 Monaco",
+      "website": "www.monaco-business-school.edu",
+      "contact": "+1-396-292-2027"
     }
   ],
   "Mongolia": [
     {
       "name": "National University of Mongolia",
-      "address": "University Street 1, Ulaanbaatar 14201, Mongolia"
+      "address": "University Street 1, Ulaanbaatar 14201, Mongolia",
+      "website": "www.national-university-of-mongolia.edu",
+      "contact": "+1-692-084-1995"
     },
     {
       "name": "Mongolian University of Science and Technology",
-      "address": "Baga Toiruu-34, Sukhbaatar District, Ulaanbaatar 14191, Mongolia"
+      "address": "Baga Toiruu-34, Sukhbaatar District, Ulaanbaatar 14191, Mongolia",
+      "website": "www.mongolian-university-of-science-and-technology.edu",
+      "contact": "+1-257-969-5734"
     },
     {
       "name": "Mongolian State University of Education",
-      "address": "Baga Toiruu Street, Ulaanbaatar, Mongolia"
+      "address": "Baga Toiruu Street, Ulaanbaatar, Mongolia",
+      "website": "www.mongolian-state-university-of-education.edu",
+      "contact": "+1-021-583-3952"
     },
     {
       "name": "University of the Humanities Mongolia",
-      "address": "Khan-Uul District, 3rd khoroo, Ulaanbaatar, Mongolia"
+      "address": "Khan-Uul District, 3rd khoroo, Ulaanbaatar, Mongolia",
+      "website": "www.university-of-the-humanities-mongolia.edu",
+      "contact": "+1-170-815-2181"
     },
     {
       "name": "NUM School of Medicine",
-      "address": "Sukhbaatar District, Zorig Street, Ulaanbaatar, Mongolia"
+      "address": "Sukhbaatar District, Zorig Street, Ulaanbaatar, Mongolia",
+      "website": "www.num-school-of-medicine.edu",
+      "contact": "+1-353-471-4609"
     }
   ],
   "Morocco": [
     {
       "name": "Mohammed V University",
-      "address": "Avenue des Nations Unies, Agdal, Rabat, Morocco"
+      "address": "Avenue des Nations Unies, Agdal, Rabat, Morocco",
+      "website": "www.mohammed-v-university.edu",
+      "contact": "+1-362-481-8718"
     },
     {
       "name": "Cadi Ayyad University",
-      "address": "Avenue Prince Moulay Abdellah, Marrakesh, Morocco"
+      "address": "Avenue Prince Moulay Abdellah, Marrakesh, Morocco",
+      "website": "www.cadi-ayyad-university.edu",
+      "contact": "+1-047-449-3511"
     },
     {
       "name": "Hassan II University",
-      "address": "19, Rue Tarik Bnou Ziad, Casablanca, Morocco"
+      "address": "19, Rue Tarik Bnou Ziad, Casablanca, Morocco",
+      "website": "www.hassan-ii-university.edu",
+      "contact": "+1-117-960-4116"
     },
     {
       "name": "Al Akhawayn University",
-      "address": "Avenue Hassan II, Ifrane 53000, Morocco"
+      "address": "Avenue Hassan II, Ifrane 53000, Morocco",
+      "website": "www.al-akhawayn-university.edu",
+      "contact": "+1-668-089-5895"
     },
     {
       "name": "Ibn Tofail University",
-      "address": "Campus Universitaire, BP 242, Kenitra, Morocco"
+      "address": "Campus Universitaire, BP 242, Kenitra, Morocco",
+      "website": "www.ibn-tofail-university.edu",
+      "contact": "+1-024-894-9738"
     }
   ],
   "Myanmar": [
     {
       "name": "University of Yangon",
-      "address": "University Avenue Road, Kamayut Township, Yangon, Myanmar"
+      "address": "University Avenue Road, Kamayut Township, Yangon, Myanmar",
+      "website": "www.university-of-yangon.edu",
+      "contact": "+1-134-112-1545"
     },
     {
       "name": "University of Mandalay",
-      "address": "University Campus, Mandalay, Myanmar"
+      "address": "University Campus, Mandalay, Myanmar",
+      "website": "www.university-of-mandalay.edu",
+      "contact": "+1-406-465-7212"
     },
     {
       "name": "University of Mawlamyine",
-      "address": "Mawlamyine, Mon State, Myanmar"
+      "address": "Mawlamyine, Mon State, Myanmar",
+      "website": "www.university-of-mawlamyine.edu",
+      "contact": "+1-069-819-6045"
     },
     {
       "name": "Technological University Yangon",
-      "address": "Gyogone, Insein Township, Yangon, Myanmar"
+      "address": "Gyogone, Insein Township, Yangon, Myanmar",
+      "website": "www.technological-university-yangon.edu",
+      "contact": "+1-941-912-8516"
     },
     {
       "name": "University of Magway",
-      "address": "Magway, Magway Region, Myanmar"
+      "address": "Magway, Magway Region, Myanmar",
+      "website": "www.university-of-magway.edu",
+      "contact": "+1-168-486-4941"
     }
   ],
   "Namibia": [
     {
       "name": "University of Namibia",
-      "address": "340 Mandume Ndemufayo Ave, Pionierspark, Windhoek, Namibia"
+      "address": "340 Mandume Ndemufayo Ave, Pionierspark, Windhoek, Namibia",
+      "website": "www.university-of-namibia.edu",
+      "contact": "+1-020-142-2676"
     },
     {
       "name": "Namibia University of Science and Technology",
-      "address": "13 Storch Street, Windhoek, Namibia"
+      "address": "13 Storch Street, Windhoek, Namibia",
+      "website": "www.namibia-university-of-science-and-technology.edu",
+      "contact": "+1-175-294-7327"
     },
     {
       "name": "International University of Management",
-      "address": "21-31 Bach Street, Windhoek West, Windhoek, Namibia"
+      "address": "21-31 Bach Street, Windhoek West, Windhoek, Namibia",
+      "website": "www.international-university-of-management.edu",
+      "contact": "+1-195-464-7500"
     },
     {
       "name": "Welwitchia Health Training",
-      "address": "Corner of Haddy and Tutaleni Street, Windhoek, Namibia"
+      "address": "Corner of Haddy and Tutaleni Street, Windhoek, Namibia",
+      "website": "www.welwitchia-health-training.edu",
+      "contact": "+1-627-873-8401"
     },
     {
       "name": "Namibia University of Agriculture",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.namibia-university-of-agriculture.edu",
+      "contact": "+1-140-955-0309"
     }
   ],
   "Nepal": [
     {
       "name": "Tribhuvan University",
-      "address": "Kirtipur, Kathmandu, Nepal"
+      "address": "Kirtipur, Kathmandu, Nepal",
+      "website": "www.tribhuvan-university.edu",
+      "contact": "+1-304-132-1039"
     },
     {
       "name": "Kathmandu University",
-      "address": "Dhulikhel, Kavre, Nepal"
+      "address": "Dhulikhel, Kavre, Nepal",
+      "website": "www.kathmandu-university.edu",
+      "contact": "+1-247-785-7005"
     },
     {
       "name": "Purbanchal University",
-      "address": "Biratnagar, Morang, Nepal"
+      "address": "Biratnagar, Morang, Nepal",
+      "website": "www.purbanchal-university.edu",
+      "contact": "+1-588-477-8300"
     },
     {
       "name": "Pokhara University",
-      "address": "Lekhnath, Kaski, Nepal"
+      "address": "Lekhnath, Kaski, Nepal",
+      "website": "www.pokhara-university.edu",
+      "contact": "+1-007-942-2778"
     },
     {
       "name": "Mid-Western University",
-      "address": "Birendranagar, Surkhet, Nepal"
+      "address": "Birendranagar, Surkhet, Nepal",
+      "website": "www.midwestern-university.edu",
+      "contact": "+1-134-980-4511"
     }
   ],
   "Netherlands": [
     {
       "name": "University of Amsterdam",
-      "address": "Spui 21, 1012 WX Amsterdam, Netherlands"
+      "address": "Spui 21, 1012 WX Amsterdam, Netherlands",
+      "website": "www.university-of-amsterdam.edu",
+      "contact": "+1-119-232-4769"
     },
     {
       "name": "Delft University of Technology",
-      "address": "Mekelweg 2, 2628 CD Delft, Netherlands"
+      "address": "Mekelweg 2, 2628 CD Delft, Netherlands",
+      "website": "www.delft-university-of-technology.edu",
+      "contact": "+1-536-746-0202"
     },
     {
       "name": "Leiden University",
-      "address": "Rapenburg 70, 2311 EZ Leiden, Netherlands"
+      "address": "Rapenburg 70, 2311 EZ Leiden, Netherlands",
+      "website": "www.leiden-university.edu",
+      "contact": "+1-192-390-5903"
     },
     {
       "name": "Utrecht University",
-      "address": "Domplein 29, 3512 JE Utrecht, Netherlands"
+      "address": "Domplein 29, 3512 JE Utrecht, Netherlands",
+      "website": "www.utrecht-university.edu",
+      "contact": "+1-186-030-0687"
     },
     {
       "name": "Erasmus University Rotterdam",
-      "address": "Burgemeester Oudlaan 50, 3062 PA Rotterdam, Netherlands"
+      "address": "Burgemeester Oudlaan 50, 3062 PA Rotterdam, Netherlands",
+      "website": "www.erasmus-university-rotterdam.edu",
+      "contact": "+1-082-074-2328"
     }
   ],
   "New Zealand": [
     {
       "name": "University of Auckland",
-      "address": "Princes Street, Auckland 1010, New Zealand"
+      "address": "Princes Street, Auckland 1010, New Zealand",
+      "website": "www.university-of-auckland.edu",
+      "contact": "+1-105-348-8478"
     },
     {
       "name": "University of Otago",
-      "address": "362 Leith Street, Dunedin 9016, New Zealand"
+      "address": "362 Leith Street, Dunedin 9016, New Zealand",
+      "website": "www.university-of-otago.edu",
+      "contact": "+1-019-049-0995"
     },
     {
       "name": "Victoria University of Wellington",
-      "address": "Kelburn Parade, Kelburn, Wellington 6012, New Zealand"
+      "address": "Kelburn Parade, Kelburn, Wellington 6012, New Zealand",
+      "website": "www.victoria-university-of-wellington.edu",
+      "contact": "+1-298-977-5575"
     },
     {
       "name": "University of Canterbury",
-      "address": "20 Kirkwood Ave, Upper Riccarton, Christchurch 8041, New Zealand"
+      "address": "20 Kirkwood Ave, Upper Riccarton, Christchurch 8041, New Zealand",
+      "website": "www.university-of-canterbury.edu",
+      "contact": "+1-139-007-0722"
     },
     {
       "name": "Massey University",
-      "address": "Tennent Drive, Palmerston North 4410, New Zealand"
+      "address": "Tennent Drive, Palmerston North 4410, New Zealand",
+      "website": "www.massey-university.edu",
+      "contact": "+1-608-862-1830"
     }
   ],
   "Nigeria": [
     {
       "name": "University of Lagos",
-      "address": "Akoka Rd, Yaba, Lagos, Nigeria"
+      "address": "Akoka Rd, Yaba, Lagos, Nigeria",
+      "website": "www.university-of-lagos.edu",
+      "contact": "+1-019-382-1569"
     },
     {
       "name": "University of Ibadan",
-      "address": "Ibadan, Oyo State, Nigeria"
+      "address": "Ibadan, Oyo State, Nigeria",
+      "website": "www.university-of-ibadan.edu",
+      "contact": "+1-179-865-5040"
     },
     {
       "name": "Obafemi Awolowo University",
-      "address": "Ife, Osun State, Nigeria"
+      "address": "Ife, Osun State, Nigeria",
+      "website": "www.obafemi-awolowo-university.edu",
+      "contact": "+1-323-928-3057"
     },
     {
       "name": "Covenant University",
-      "address": "Km 10 Idiroko Road, Ota, Ogun State, Nigeria"
+      "address": "Km 10 Idiroko Road, Ota, Ogun State, Nigeria",
+      "website": "www.covenant-university.edu",
+      "contact": "+1-651-790-8698"
     },
     {
       "name": "Ahmadu Bello University",
-      "address": "Sokoto Road, Samaru, Zaria, Kaduna State, Nigeria"
+      "address": "Sokoto Road, Samaru, Zaria, Kaduna State, Nigeria",
+      "website": "www.ahmadu-bello-university.edu",
+      "contact": "+1-064-484-0618"
     }
   ],
   "North Korea": [
     {
       "name": "Kim Il Sung University",
-      "address": "Ryongnam Hill, Taesong District, Pyongyang, North Korea"
+      "address": "Ryongnam Hill, Taesong District, Pyongyang, North Korea",
+      "website": "www.kim-il-sung-university.edu",
+      "contact": "+1-750-637-6601"
     },
     {
       "name": "Kim Chaek University of Technology",
-      "address": "Chongryu-dong No. 2, Chung-guyok, Pyongyang, North Korea"
+      "address": "Chongryu-dong No. 2, Chung-guyok, Pyongyang, North Korea",
+      "website": "www.kim-chaek-university-of-technology.edu",
+      "contact": "+1-336-078-8238"
     },
     {
       "name": "Pyongyang University of Foreign Studies",
-      "address": "Sosong District, Pyongyang, North Korea"
+      "address": "Sosong District, Pyongyang, North Korea",
+      "website": "www.pyongyang-university-of-foreign-studies.edu",
+      "contact": "+1-470-008-9916"
     },
     {
       "name": "University of Science and Technology Pyongyang",
-      "address": "Pyongsong, South Pyongan Province, North Korea"
+      "address": "Pyongsong, South Pyongan Province, North Korea",
+      "website": "www.university-of-science-and-technology-pyongyang.edu",
+      "contact": "+1-092-958-1736"
     },
     {
       "name": "Hamhung University",
-      "address": "Hamhung, South Hamgyong Province, North Korea"
+      "address": "Hamhung, South Hamgyong Province, North Korea",
+      "website": "www.hamhung-university.edu",
+      "contact": "+1-718-956-4780"
     }
   ],
   "Norway": [
     {
       "name": "University of Oslo",
-      "address": "Problemveien 7, 0315 Oslo, Norway"
+      "address": "Problemveien 7, 0315 Oslo, Norway",
+      "website": "www.university-of-oslo.edu",
+      "contact": "+1-040-949-6510"
     },
     {
       "name": "Norwegian University of Science and Technology",
-      "address": "Høgskoleringen 1, 7491 Trondheim, Norway"
+      "address": "Høgskoleringen 1, 7491 Trondheim, Norway",
+      "website": "www.norwegian-university-of-science-and-technology.edu",
+      "contact": "+1-198-653-8618"
     },
     {
       "name": "University of Bergen",
-      "address": "Muséplassen 1, 5007 Bergen, Norway"
+      "address": "Muséplassen 1, 5007 Bergen, Norway",
+      "website": "www.university-of-bergen.edu",
+      "contact": "+1-229-918-8216"
     },
     {
       "name": "University of Tromsø",
-      "address": "Hansine Hansens veg 18, 9019 Tromsø, Norway"
+      "address": "Hansine Hansens veg 18, 9019 Tromsø, Norway",
+      "website": "www.university-of-troms.edu",
+      "contact": "+1-146-853-1624"
     },
     {
       "name": "BI Norwegian Business School",
-      "address": "Nydalsveien 37, 0484 Oslo, Norway"
+      "address": "Nydalsveien 37, 0484 Oslo, Norway",
+      "website": "www.bi-norwegian-business-school.edu",
+      "contact": "+1-122-724-7323"
     }
   ],
   "Oman": [
     {
       "name": "Sultan Qaboos University",
-      "address": "Al Khoudh, Muscat, Oman"
+      "address": "Al Khoudh, Muscat, Oman",
+      "website": "www.sultan-qaboos-university.edu",
+      "contact": "+1-043-872-8804"
     },
     {
       "name": "Middle East College",
-      "address": "Knowledge Oasis, Muscat, Oman"
+      "address": "Knowledge Oasis, Muscat, Oman",
+      "website": "www.middle-east-college.edu",
+      "contact": "+1-022-886-9889"
     },
     {
       "name": "Dhofar University",
-      "address": "Salalah, Dhofar Governorate, Oman"
+      "address": "Salalah, Dhofar Governorate, Oman",
+      "website": "www.dhofar-university.edu",
+      "contact": "+1-026-288-2206"
     },
     {
       "name": "Gulf College Oman",
-      "address": "Al-Hail South, Muscat, Oman"
+      "address": "Al-Hail South, Muscat, Oman",
+      "website": "www.gulf-college-oman.edu",
+      "contact": "+1-133-089-1212"
     },
     {
       "name": "University of Technology and Applied Sciences",
-      "address": "Airport Heights, Bousher, Muscat, Oman"
+      "address": "Airport Heights, Bousher, Muscat, Oman",
+      "website": "www.university-of-technology-and-applied-sciences.edu",
+      "contact": "+1-190-937-2648"
     }
   ],
   "Pakistan": [
     {
       "name": "University of the Punjab",
-      "address": "Canal Rd, Quaid-i-Azam Campus, Lahore, Punjab, Pakistan"
+      "address": "Canal Rd, Quaid-i-Azam Campus, Lahore, Punjab, Pakistan",
+      "website": "www.university-of-the-punjab.edu",
+      "contact": "+1-005-582-0024"
     },
     {
       "name": "National University of Sciences and Technology",
-      "address": "H-12, Islamabad, Islamabad Capital Territory, Pakistan"
+      "address": "H-12, Islamabad, Islamabad Capital Territory, Pakistan",
+      "website": "www.national-university-of-sciences-and-technology.edu",
+      "contact": "+1-300-872-3521"
     },
     {
       "name": "Lahore University of Management Sciences",
-      "address": "DHA, Lahore Cantt, Lahore, Punjab, Pakistan"
+      "address": "DHA, Lahore Cantt, Lahore, Punjab, Pakistan",
+      "website": "www.lahore-university-of-management-sciences.edu",
+      "contact": "+1-741-035-5100"
     },
     {
       "name": "University of Karachi",
-      "address": "University Rd, Karachi, Sindh, Pakistan"
+      "address": "University Rd, Karachi, Sindh, Pakistan",
+      "website": "www.university-of-karachi.edu",
+      "contact": "+1-183-825-9144"
     },
     {
       "name": "COMSATS Institute",
-      "address": "Park Road, Tarlai Kalan, Islamabad, Pakistan"
+      "address": "Park Road, Tarlai Kalan, Islamabad, Pakistan",
+      "website": "www.comsats-institute.edu",
+      "contact": "+1-280-358-0285"
     }
   ],
   "Panama": [
     {
       "name": "University of Panama",
-      "address": "Vía Simón Bolívar, Panama City, Panama"
+      "address": "Vía Simón Bolívar, Panama City, Panama",
+      "website": "www.university-of-panama.edu",
+      "contact": "+1-159-878-9745"
     },
     {
       "name": "Technological University of Panama",
-      "address": "Avenida Ricardo J. Alfaro, Panama City, Panama"
+      "address": "Avenida Ricardo J. Alfaro, Panama City, Panama",
+      "website": "www.technological-university-of-panama.edu",
+      "contact": "+1-859-295-2899"
     },
     {
       "name": "Santa Maria La Antigua University",
-      "address": "Avenida Ricardo J. Alfaro, Panama City, Panama"
+      "address": "Avenida Ricardo J. Alfaro, Panama City, Panama",
+      "website": "www.santa-maria-la-antigua-university.edu",
+      "contact": "+1-142-362-8157"
     },
     {
       "name": "Faith International University of Panama",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.faith-international-university-of-panama.edu",
+      "contact": "+1-019-561-9071"
     },
     {
       "name": "Panama Pacific University",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.panama-pacific-university.edu",
+      "contact": "+1-636-308-5261"
     }
   ],
   "Papua New Guinea": [
     {
       "name": "University of Papua New Guinea",
-      "address": "Waigani Drive, Port Moresby, National Capital District, Papua New Guinea"
+      "address": "Waigani Drive, Port Moresby, National Capital District, Papua New Guinea",
+      "website": "www.university-of-papua-new-guinea.edu",
+      "contact": "+1-834-560-4133"
     },
     {
       "name": "Pacific Adventist University",
-      "address": "Koiari Park, Port Moresby, Papua New Guinea"
+      "address": "Koiari Park, Port Moresby, Papua New Guinea",
+      "website": "www.pacific-adventist-university.edu",
+      "contact": "+1-130-742-6129"
     },
     {
       "name": "Goroka Teachers College",
-      "address": "Goroka, Eastern Highlands Province, Papua New Guinea"
+      "address": "Goroka, Eastern Highlands Province, Papua New Guinea",
+      "website": "www.goroka-teachers-college.edu",
+      "contact": "+1-166-617-7683"
     },
     {
       "name": "University of Technology PNG",
-      "address": "Lae, Morobe Province, Papua New Guinea"
+      "address": "Lae, Morobe Province, Papua New Guinea",
+      "website": "www.university-of-technology-png.edu",
+      "contact": "+1-187-802-5844"
     },
     {
       "name": "Divine Word University",
-      "address": "Madang, Madang Province, Papua New Guinea"
+      "address": "Madang, Madang Province, Papua New Guinea",
+      "website": "www.divine-word-university.edu",
+      "contact": "+1-565-122-1779"
     }
   ],
   "Paraguay": [
     {
       "name": "National University of Asunción",
-      "address": "Av. Mcal. López, San Lorenzo, Paraguay"
+      "address": "Av. Mcal. López, San Lorenzo, Paraguay",
+      "website": "www.national-university-of-asuncin.edu",
+      "contact": "+1-111-931-3678"
     },
     {
       "name": "Universidad Católica Nuestra Señora de la Asunción",
-      "address": "Independencia Nacional y Comuneros, Asunción, Paraguay"
+      "address": "Independencia Nacional y Comuneros, Asunción, Paraguay",
+      "website": "www.universidad-catlica-nuestra-seora-de-la-asuncin.edu",
+      "contact": "+1-101-423-1481"
     },
     {
       "name": "Universidad Nacional de Pilar",
-      "address": "Mcal. Estigarribia, Pilar, Paraguay"
+      "address": "Mcal. Estigarribia, Pilar, Paraguay",
+      "website": "www.universidad-nacional-de-pilar.edu",
+      "contact": "+1-376-960-3488"
     },
     {
       "name": "Universidad Nacional de Itapúa",
-      "address": "Abog. Lorenzo Zacarías, Encarnación, Paraguay"
+      "address": "Abog. Lorenzo Zacarías, Encarnación, Paraguay",
+      "website": "www.universidad-nacional-de-itapa.edu",
+      "contact": "+1-359-193-0459"
     },
     {
       "name": "Universidad Americana",
-      "address": "Av. Brasilia 1100, Asunción, Paraguay"
+      "address": "Av. Brasilia 1100, Asunción, Paraguay",
+      "website": "www.universidad-americana.edu",
+      "contact": "+1-316-170-6753"
     }
   ],
   "Peru": [
     {
       "name": "National University of San Marcos",
-      "address": "Av. Venezuela s/n, Lima 15081, Peru"
+      "address": "Av. Venezuela s/n, Lima 15081, Peru",
+      "website": "www.national-university-of-san-marcos.edu",
+      "contact": "+1-121-257-6808"
     },
     {
       "name": "Pontifical Catholic University of Peru",
-      "address": "Av. Universitaria 1801, San Miguel, Lima 15088, Peru"
+      "address": "Av. Universitaria 1801, San Miguel, Lima 15088, Peru",
+      "website": "www.pontifical-catholic-university-of-peru.edu",
+      "contact": "+1-375-898-6445"
     },
     {
       "name": "University of Lima",
-      "address": "Av. Javier Prado Este 4600, Santiago de Surco, Lima 15023, Peru"
+      "address": "Av. Javier Prado Este 4600, Santiago de Surco, Lima 15023, Peru",
+      "website": "www.university-of-lima.edu",
+      "contact": "+1-040-939-7544"
     },
     {
       "name": "Cayetano Heredia University",
-      "address": "Av. Honorio Delgado 430, San Martín de Porres, Lima 15102, Peru"
+      "address": "Av. Honorio Delgado 430, San Martín de Porres, Lima 15102, Peru",
+      "website": "www.cayetano-heredia-university.edu",
+      "contact": "+1-063-258-1622"
     },
     {
       "name": "National University of Engineering",
-      "address": "Av. Túpac Amaru 210, Rímac, Lima 15333, Peru"
+      "address": "Av. Túpac Amaru 210, Rímac, Lima 15333, Peru",
+      "website": "www.national-university-of-engineering.edu",
+      "contact": "+1-924-527-0286"
     }
   ],
   "Philippines": [
     {
       "name": "University of the Philippines Diliman",
-      "address": "Roxas Ave, Diliman, Quezon City, Metro Manila, Philippines"
+      "address": "Roxas Ave, Diliman, Quezon City, Metro Manila, Philippines",
+      "website": "www.university-of-the-philippines-diliman.edu",
+      "contact": "+1-024-933-8381"
     },
     {
       "name": "Ateneo de Manila University",
-      "address": "Katipunan Ave, Quezon City, 1108 Metro Manila, Philippines"
+      "address": "Katipunan Ave, Quezon City, 1108 Metro Manila, Philippines",
+      "website": "www.ateneo-de-manila-university.edu",
+      "contact": "+1-070-431-2251"
     },
     {
       "name": "De La Salle University",
-      "address": "2401 Taft Ave, Malate, Manila, 1004 Metro Manila, Philippines"
+      "address": "2401 Taft Ave, Malate, Manila, 1004 Metro Manila, Philippines",
+      "website": "www.de-la-salle-university.edu",
+      "contact": "+1-204-275-4589"
     },
     {
       "name": "University of Santo Tomas",
-      "address": "España Blvd, Sampaloc, Manila, 1008 Metro Manila, Philippines"
+      "address": "España Blvd, Sampaloc, Manila, 1008 Metro Manila, Philippines",
+      "website": "www.university-of-santo-tomas.edu",
+      "contact": "+1-367-543-4408"
     },
     {
       "name": "Mapúa University",
-      "address": "658 Muralla St, Intramuros, Manila, 1002 Metro Manila, Philippines"
+      "address": "658 Muralla St, Intramuros, Manila, 1002 Metro Manila, Philippines",
+      "website": "www.mapa-university.edu",
+      "contact": "+1-142-604-1333"
     }
   ],
   "Poland": [
     {
       "name": "University of Warsaw",
-      "address": "Krakowskie Przedmieście 26/28, 00-927 Warsaw, Poland"
+      "address": "Krakowskie Przedmieście 26/28, 00-927 Warsaw, Poland",
+      "website": "www.university-of-warsaw.edu",
+      "contact": "+1-139-824-9576"
     },
     {
       "name": "Jagiellonian University",
-      "address": "Gołębia 24, 31-007 Kraków, Poland"
+      "address": "Gołębia 24, 31-007 Kraków, Poland",
+      "website": "www.jagiellonian-university.edu",
+      "contact": "+1-621-632-0995"
     },
     {
       "name": "Warsaw University of Technology",
-      "address": "plac Politechniki 1, 00-661 Warsaw, Poland"
+      "address": "plac Politechniki 1, 00-661 Warsaw, Poland",
+      "website": "www.warsaw-university-of-technology.edu",
+      "contact": "+1-007-267-2322"
     },
     {
       "name": "Adam Mickiewicz University",
-      "address": "Wieniawskiego 1, 61-712 Poznań, Poland"
+      "address": "Wieniawskiego 1, 61-712 Poznań, Poland",
+      "website": "www.adam-mickiewicz-university.edu",
+      "contact": "+1-858-869-6436"
     },
     {
       "name": "Gdańsk University of Technology",
-      "address": "Narutowicza 11/12, 80-233 Gdańsk, Poland"
+      "address": "Narutowicza 11/12, 80-233 Gdańsk, Poland",
+      "website": "www.gdask-university-of-technology.edu",
+      "contact": "+1-224-254-4427"
     }
   ],
   "Portugal": [
     {
       "name": "University of Lisbon",
-      "address": "Alameda da Universidade, 1649-004 Lisboa, Portugal"
+      "address": "Alameda da Universidade, 1649-004 Lisboa, Portugal",
+      "website": "www.university-of-lisbon.edu",
+      "contact": "+1-170-576-8190"
     },
     {
       "name": "University of Porto",
-      "address": "Praça de Gomes Teixeira, 4099-002 Porto, Portugal"
+      "address": "Praça de Gomes Teixeira, 4099-002 Porto, Portugal",
+      "website": "www.university-of-porto.edu",
+      "contact": "+1-018-969-9689"
     },
     {
       "name": "University of Coimbra",
-      "address": "Paço das Escolas, 3004-531 Coimbra, Portugal"
+      "address": "Paço das Escolas, 3004-531 Coimbra, Portugal",
+      "website": "www.university-of-coimbra.edu",
+      "contact": "+1-057-394-9750"
     },
     {
       "name": "Nova University Lisbon",
-      "address": "Campus de Campolide, 1099-085 Lisboa, Portugal"
+      "address": "Campus de Campolide, 1099-085 Lisboa, Portugal",
+      "website": "www.nova-university-lisbon.edu",
+      "contact": "+1-247-768-5143"
     },
     {
       "name": "University of Minho",
-      "address": "Largo do Paço, 4704-553 Braga, Portugal"
+      "address": "Largo do Paço, 4704-553 Braga, Portugal",
+      "website": "www.university-of-minho.edu",
+      "contact": "+1-019-265-3214"
     }
   ],
   "Qatar": [
     {
       "name": "Qatar University",
-      "address": "Al Tarfa, Doha, Qatar"
+      "address": "Al Tarfa, Doha, Qatar",
+      "website": "www.qatar-university.edu",
+      "contact": "+1-135-501-9207"
     },
     {
       "name": "Carnegie Mellon University Qatar",
-      "address": "Education City, Doha, Qatar"
+      "address": "Education City, Doha, Qatar",
+      "website": "www.carnegie-mellon-university-qatar.edu",
+      "contact": "+1-203-069-0620"
     },
     {
       "name": "Texas A&M University Qatar",
-      "address": "Education City, Doha, Qatar"
+      "address": "Education City, Doha, Qatar",
+      "website": "www.texas-am-university-qatar.edu",
+      "contact": "+1-070-904-5502"
     },
     {
       "name": "Weill Cornell Medicine Qatar",
-      "address": "Education City, Doha, Qatar"
+      "address": "Education City, Doha, Qatar",
+      "website": "www.weill-cornell-medicine-qatar.edu",
+      "contact": "+1-486-414-4233"
     },
     {
       "name": "Hamad Bin Khalifa University",
-      "address": "Education City, Doha, Qatar"
+      "address": "Education City, Doha, Qatar",
+      "website": "www.hamad-bin-khalifa-university.edu",
+      "contact": "+1-615-792-6828"
     }
   ],
   "Romania": [
     {
       "name": "University of Bucharest",
-      "address": "Bulevardul Mihail Kogălniceanu 36-46, București 050107, Romania"
+      "address": "Bulevardul Mihail Kogălniceanu 36-46, București 050107, Romania",
+      "website": "www.university-of-bucharest.edu",
+      "contact": "+1-360-459-7818"
     },
     {
       "name": "Babeș-Bolyai University",
-      "address": "Strada Mihail Kogălniceanu 1, Cluj-Napoca 400084, Romania"
+      "address": "Strada Mihail Kogălniceanu 1, Cluj-Napoca 400084, Romania",
+      "website": "www.babebolyai-university.edu",
+      "contact": "+1-083-122-9526"
     },
     {
       "name": "University Politehnica of Bucharest",
-      "address": "Splaiul Independenței 313, București 060042, Romania"
+      "address": "Splaiul Independenței 313, București 060042, Romania",
+      "website": "www.university-politehnica-of-bucharest.edu",
+      "contact": "+1-533-805-4866"
     },
     {
       "name": "Alexandru Ioan Cuza University",
-      "address": "Bulevardul Carol I 11, Iași 700506, Romania"
+      "address": "Bulevardul Carol I 11, Iași 700506, Romania",
+      "website": "www.alexandru-ioan-cuza-university.edu",
+      "contact": "+1-653-987-0860"
     },
     {
       "name": "Technical University of Cluj-Napoca",
-      "address": "Strada Memorandumului 28, Cluj-Napoca 400114, Romania"
+      "address": "Strada Memorandumului 28, Cluj-Napoca 400114, Romania",
+      "website": "www.technical-university-of-clujnapoca.edu",
+      "contact": "+1-230-083-9291"
     }
   ],
   "Russia": [
     {
       "name": "Lomonosov Moscow State University",
-      "address": "Leninskie Gory, 1, Moscow, Russia, 119991"
+      "address": "Leninskie Gory, 1, Moscow, Russia, 119991",
+      "website": "www.lomonosov-moscow-state-university.edu",
+      "contact": "+1-399-368-0087"
     },
     {
       "name": "Saint Petersburg State University",
-      "address": "Universitetskaya Embankment, 7/9, St. Petersburg, Russia, 199034"
+      "address": "Universitetskaya Embankment, 7/9, St. Petersburg, Russia, 199034",
+      "website": "www.saint-petersburg-state-university.edu",
+      "contact": "+1-270-426-8943"
     },
     {
       "name": "Bauman Moscow State Technical University",
-      "address": "2-ya Baumanskaya ul., 5, Moscow, Russia, 105005"
+      "address": "2-ya Baumanskaya ul., 5, Moscow, Russia, 105005",
+      "website": "www.bauman-moscow-state-technical-university.edu",
+      "contact": "+1-847-612-2922"
     },
     {
       "name": "Novosibirsk State University",
-      "address": "Pirogova St, 2, Novosibirsk, Russia, 630090"
+      "address": "Pirogova St, 2, Novosibirsk, Russia, 630090",
+      "website": "www.novosibirsk-state-university.edu",
+      "contact": "+1-059-800-3658"
     },
     {
       "name": "Tomsk State University",
-      "address": "Lenin Avenue, 36, Tomsk, Russia, 634050"
+      "address": "Lenin Avenue, 36, Tomsk, Russia, 634050",
+      "website": "www.tomsk-state-university.edu",
+      "contact": "+1-224-407-8611"
     }
   ],
   "Saint Lucia": [
     {
       "name": "University of the West Indies Open Campus",
-      "address": "Morne Fortune, Castries, Saint Lucia"
+      "address": "Morne Fortune, Castries, Saint Lucia",
+      "website": "www.university-of-the-west-indies-open-campus.edu",
+      "contact": "+1-431-577-4520"
     },
     {
       "name": "Sir Arthur Lewis Community College",
-      "address": "Morne Fortune, Castries, Saint Lucia"
+      "address": "Morne Fortune, Castries, Saint Lucia",
+      "website": "www.sir-arthur-lewis-community-college.edu",
+      "contact": "+1-383-131-2206"
     },
     {
       "name": "International American University Saint Lucia",
-      "address": "Vieux Fort, Saint Lucia"
+      "address": "Vieux Fort, Saint Lucia",
+      "website": "www.international-american-university-saint-lucia.edu",
+      "contact": "+1-415-515-0351"
     },
     {
       "name": "Caribbean Medical University",
-      "address": "Vide Bouteille, Castries, Saint Lucia"
+      "address": "Vide Bouteille, Castries, Saint Lucia",
+      "website": "www.caribbean-medical-university.edu",
+      "contact": "+1-108-931-3856"
     },
     {
       "name": "St. Lucia School of Nursing",
-      "address": "Victoria Hospital Compound, Castries, Saint Lucia"
+      "address": "Victoria Hospital Compound, Castries, Saint Lucia",
+      "website": "www.st-lucia-school-of-nursing.edu",
+      "contact": "+1-670-206-0476"
     }
   ],
   "Samoa": [
     {
       "name": "National University of Samoa",
-      "address": "Le Papaigalagala, Apia, Samoa"
+      "address": "Le Papaigalagala, Apia, Samoa",
+      "website": "www.national-university-of-samoa.edu",
+      "contact": "+1-640-791-1468"
     },
     {
       "name": "University of the South Pacific Samoa campus",
-      "address": "Alafua, Apia, Samoa"
+      "address": "Alafua, Apia, Samoa",
+      "website": "www.university-of-the-south-pacific-samoa-campus.edu",
+      "contact": "+1-205-780-2366"
     },
     {
       "name": "Samoa Polytechnic",
-      "address": "Vaivase-uta, Apia, Samoa"
+      "address": "Vaivase-uta, Apia, Samoa",
+      "website": "www.samoa-polytechnic.edu",
+      "contact": "+1-823-277-2215"
     },
     {
       "name": "Alafua Campus Institute",
-      "address": "Alafua, Apia, Samoa"
+      "address": "Alafua, Apia, Samoa",
+      "website": "www.alafua-campus-institute.edu",
+      "contact": "+1-331-120-1416"
     },
     {
       "name": "Samoa School of Nursing",
-      "address": "Moto'otua, Apia, Samoa"
+      "address": "Moto'otua, Apia, Samoa",
+      "website": "www.samoa-school-of-nursing.edu",
+      "contact": "+1-569-617-6814"
     }
   ],
   "San Marino": [
     {
       "name": "University of San Marino",
-      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino"
+      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino",
+      "website": "www.university-of-san-marino.edu",
+      "contact": "+1-399-234-5021"
     },
     {
       "name": "State University of San Marino",
-      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino"
+      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino",
+      "website": "www.state-university-of-san-marino.edu",
+      "contact": "+1-206-252-5202"
     },
     {
       "name": "San Marino Academy",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.san-marino-academy.edu",
+      "contact": "+1-596-723-7896"
     },
     {
       "name": "San Marino University Campus",
-      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino"
+      "address": "Contrada Omerelli, 20, 47890 Città di San Marino, San Marino",
+      "website": "www.san-marino-university-campus.edu",
+      "contact": "+1-422-517-7123"
     },
     {
       "name": "International Institute San Marino",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.international-institute-san-marino.edu",
+      "contact": "+1-361-653-5607"
     }
   ],
   "Saudi Arabia": [
     {
       "name": "King Saud University",
-      "address": "King Abdullah Road, Riyadh 11543, Saudi Arabia"
+      "address": "King Abdullah Road, Riyadh 11543, Saudi Arabia",
+      "website": "www.king-saud-university.edu",
+      "contact": "+1-506-171-5656"
     },
     {
       "name": "King Fahd University of Petroleum & Minerals",
-      "address": "Dhahran 31261, Saudi Arabia"
+      "address": "Dhahran 31261, Saudi Arabia",
+      "website": "www.king-fahd-university-of-petroleum-minerals.edu",
+      "contact": "+1-867-459-6403"
     },
     {
       "name": "King Abdulaziz University",
-      "address": "Abdullah Sulayman Street, Jeddah 21589, Saudi Arabia"
+      "address": "Abdullah Sulayman Street, Jeddah 21589, Saudi Arabia",
+      "website": "www.king-abdulaziz-university.edu",
+      "contact": "+1-289-531-6781"
     },
     {
       "name": "Imam Abdulrahman Bin Faisal University",
-      "address": "King Faisal Road, Dammam 34212, Saudi Arabia"
+      "address": "King Faisal Road, Dammam 34212, Saudi Arabia",
+      "website": "www.imam-abdulrahman-bin-faisal-university.edu",
+      "contact": "+1-195-987-0768"
     },
     {
       "name": "Alfaisal University",
-      "address": "Takhassusi Rd, Al Ma'athar, Riyadh 11533, Saudi Arabia"
+      "address": "Takhassusi Rd, Al Ma'athar, Riyadh 11533, Saudi Arabia",
+      "website": "www.alfaisal-university.edu",
+      "contact": "+1-079-414-9421"
     }
   ],
   "Senegal": [
     {
       "name": "Cheikh Anta Diop University",
-      "address": "Avenue Cheikh Anta Diop, Dakar, Senegal"
+      "address": "Avenue Cheikh Anta Diop, Dakar, Senegal",
+      "website": "www.cheikh-anta-diop-university.edu",
+      "contact": "+1-889-437-2356"
     },
     {
       "name": "University Gaston Berger",
-      "address": "Route de Ngallèle, Saint-Louis, Senegal"
+      "address": "Route de Ngallèle, Saint-Louis, Senegal",
+      "website": "www.university-gaston-berger.edu",
+      "contact": "+1-194-452-1081"
     },
     {
       "name": "Université de Thiès",
-      "address": "10ème RIAOM, Thiès, Senegal"
+      "address": "10ème RIAOM, Thiès, Senegal",
+      "website": "www.universit-de-this.edu",
+      "contact": "+1-069-552-3843"
     },
     {
       "name": "Université Assane Seck Ziguinchor",
-      "address": "Route de l'Aéroport, Ziguinchor, Senegal"
+      "address": "Route de l'Aéroport, Ziguinchor, Senegal",
+      "website": "www.universit-assane-seck-ziguinchor.edu",
+      "contact": "+1-751-990-7049"
     },
     {
       "name": "Université Alioune Diop",
-      "address": "Bambey, Diourbel Region, Senegal"
+      "address": "Bambey, Diourbel Region, Senegal",
+      "website": "www.universit-alioune-diop.edu",
+      "contact": "+1-449-136-8301"
     }
   ],
   "Serbia": [
     {
       "name": "University of Belgrade",
-      "address": "Studentski trg 1, Beograd 11000, Serbia"
+      "address": "Studentski trg 1, Beograd 11000, Serbia",
+      "website": "www.university-of-belgrade.edu",
+      "contact": "+1-173-528-8517"
     },
     {
       "name": "University of Novi Sad",
-      "address": "Dr Zorana Đinđića 1, Novi Sad 21000, Serbia"
+      "address": "Dr Zorana Đinđića 1, Novi Sad 21000, Serbia",
+      "website": "www.university-of-novi-sad.edu",
+      "contact": "+1-255-000-6879"
     },
     {
       "name": "University of Niš",
-      "address": "Univerzitetski trg 2, Niš 18000, Serbia"
+      "address": "Univerzitetski trg 2, Niš 18000, Serbia",
+      "website": "www.university-of-ni.edu",
+      "contact": "+1-026-388-6129"
     },
     {
       "name": "University of Kragujevac",
-      "address": "Jovana Cvijića bb, Kragujevac 34000, Serbia"
+      "address": "Jovana Cvijića bb, Kragujevac 34000, Serbia",
+      "website": "www.university-of-kragujevac.edu",
+      "contact": "+1-452-253-5220"
     },
     {
       "name": "University of Priština",
-      "address": "Kosančićeva bb, Kosovska Mitrovica 38220, Kosovo"
+      "address": "Kosančićeva bb, Kosovska Mitrovica 38220, Kosovo",
+      "website": "www.university-of-pritina.edu",
+      "contact": "+1-083-746-4231"
     }
   ],
   "Singapore": [
     {
       "name": "National University of Singapore",
-      "address": "21 Lower Kent Ridge Rd, Singapore 119077"
+      "address": "21 Lower Kent Ridge Rd, Singapore 119077",
+      "website": "www.national-university-of-singapore.edu",
+      "contact": "+1-465-767-4207"
     },
     {
       "name": "Nanyang Technological University",
-      "address": "50 Nanyang Ave, Singapore 639798"
+      "address": "50 Nanyang Ave, Singapore 639798",
+      "website": "www.nanyang-technological-university.edu",
+      "contact": "+1-522-349-9840"
     },
     {
       "name": "Singapore Management University",
-      "address": "81 Victoria St, Singapore 188065"
+      "address": "81 Victoria St, Singapore 188065",
+      "website": "www.singapore-management-university.edu",
+      "contact": "+1-932-080-7023"
     },
     {
       "name": "Singapore University of Technology and Design",
-      "address": "8 Somapah Rd, Singapore 487372"
+      "address": "8 Somapah Rd, Singapore 487372",
+      "website": "www.singapore-university-of-technology-and-design.edu",
+      "contact": "+1-082-904-7736"
     },
     {
       "name": "James Cook University Singapore",
-      "address": "149 Sims Dr, Singapore 387380"
+      "address": "149 Sims Dr, Singapore 387380",
+      "website": "www.james-cook-university-singapore.edu",
+      "contact": "+1-112-219-0587"
     }
   ],
   "Somalia": [
     {
       "name": "Somali National University",
-      "address": "KM4, Hodan District, Mogadishu, Somalia"
+      "address": "KM4, Hodan District, Mogadishu, Somalia",
+      "website": "www.somali-national-university.edu",
+      "contact": "+1-357-436-1175"
     },
     {
       "name": "Mogadishu University",
-      "address": "Wadajir District, Mogadishu, Somalia"
+      "address": "Wadajir District, Mogadishu, Somalia",
+      "website": "www.mogadishu-university.edu",
+      "contact": "+1-108-996-7720"
     },
     {
       "name": "Amoud University",
-      "address": "Borama, Awdal Region, Somaliland"
+      "address": "Borama, Awdal Region, Somaliland",
+      "website": "www.amoud-university.edu",
+      "contact": "+1-257-685-5068"
     },
     {
       "name": "Hargeisa University",
-      "address": "Hargeisa, Woqooyi Galbeed, Somaliland"
+      "address": "Hargeisa, Woqooyi Galbeed, Somaliland",
+      "website": "www.hargeisa-university.edu",
+      "contact": "+1-312-183-2242"
     },
     {
       "name": "SIMAD University",
-      "address": "Madina Road, Mogadishu, Somalia"
+      "address": "Madina Road, Mogadishu, Somalia",
+      "website": "www.simad-university.edu",
+      "contact": "+1-679-951-8860"
     }
   ],
   "South Africa": [
     {
       "name": "University of Cape Town",
-      "address": "Rondebosch, Cape Town, 7701, South Africa"
+      "address": "Rondebosch, Cape Town, 7701, South Africa",
+      "website": "www.university-of-cape-town.edu",
+      "contact": "+1-118-725-9624"
     },
     {
       "name": "University of the Witwatersrand",
-      "address": "1 Jan Smuts Ave, Braamfontein, Johannesburg, 2000, South Africa"
+      "address": "1 Jan Smuts Ave, Braamfontein, Johannesburg, 2000, South Africa",
+      "website": "www.university-of-the-witwatersrand.edu",
+      "contact": "+1-042-514-7485"
     },
     {
       "name": "University of Pretoria",
-      "address": "Lynnwood Rd, Hatfield, Pretoria, 0002, South Africa"
+      "address": "Lynnwood Rd, Hatfield, Pretoria, 0002, South Africa",
+      "website": "www.university-of-pretoria.edu",
+      "contact": "+1-117-099-5773"
     },
     {
       "name": "Stellenbosch University",
-      "address": "Victoria St, Stellenbosch Central, Stellenbosch, 7600, South Africa"
+      "address": "Victoria St, Stellenbosch Central, Stellenbosch, 7600, South Africa",
+      "website": "www.stellenbosch-university.edu",
+      "contact": "+1-456-571-0480"
     },
     {
       "name": "University of KwaZulu-Natal",
-      "address": "Rick Turner Rd, Westville, Durban, 4001, South Africa"
+      "address": "Rick Turner Rd, Westville, Durban, 4001, South Africa",
+      "website": "www.university-of-kwazulunatal.edu",
+      "contact": "+1-387-581-6129"
     }
   ],
   "South Korea": [
     {
       "name": "Seoul National University",
-      "address": "1 Gwanak-ro, Gwanak-gu, Seoul, South Korea"
+      "address": "1 Gwanak-ro, Gwanak-gu, Seoul, South Korea",
+      "website": "www.seoul-national-university.edu",
+      "contact": "+1-786-238-2800"
     },
     {
       "name": "Korea University",
-      "address": "145 Anam-ro, Seongbuk-gu, Seoul, South Korea"
+      "address": "145 Anam-ro, Seongbuk-gu, Seoul, South Korea",
+      "website": "www.korea-university.edu",
+      "contact": "+1-327-714-0996"
     },
     {
       "name": "Yonsei University",
-      "address": "50 Yonsei-ro, Seodaemun-gu, Seoul, South Korea"
+      "address": "50 Yonsei-ro, Seodaemun-gu, Seoul, South Korea",
+      "website": "www.yonsei-university.edu",
+      "contact": "+1-301-215-7425"
     },
     {
       "name": "KAIST",
-      "address": "291 Daehak-ro, Yuseong-gu, Daejeon, South Korea"
+      "address": "291 Daehak-ro, Yuseong-gu, Daejeon, South Korea",
+      "website": "www.kaist.edu",
+      "contact": "+1-007-127-3300"
     },
     {
       "name": "POSTECH",
-      "address": "77 Cheongam-ro, Nam-gu, Pohang, Gyeongsangbuk-do, South Korea"
+      "address": "77 Cheongam-ro, Nam-gu, Pohang, Gyeongsangbuk-do, South Korea",
+      "website": "www.postech.edu",
+      "contact": "+1-032-677-6522"
     }
   ],
   "South Sudan": [
     {
       "name": "University of Juba",
-      "address": "Juba, South Sudan"
+      "address": "Juba, South Sudan",
+      "website": "www.university-of-juba.edu",
+      "contact": "+1-040-934-9153"
     },
     {
       "name": "Juba University College",
-      "address": "Juba, South Sudan"
+      "address": "Juba, South Sudan",
+      "website": "www.juba-university-college.edu",
+      "contact": "+1-130-959-4363"
     },
     {
       "name": "Upper Nile University",
-      "address": "Malakal, Upper Nile State, South Sudan"
+      "address": "Malakal, Upper Nile State, South Sudan",
+      "website": "www.upper-nile-university.edu",
+      "contact": "+1-014-358-5764"
     },
     {
       "name": "Catholic University of South Sudan",
-      "address": "Juba, South Sudan"
+      "address": "Juba, South Sudan",
+      "website": "www.catholic-university-of-south-sudan.edu",
+      "contact": "+1-172-921-0034"
     },
     {
       "name": "Nile Empire University",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.nile-empire-university.edu",
+      "contact": "+1-561-711-8450"
     }
   ],
   "Spain": [
     {
       "name": "University of Barcelona",
-      "address": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain"
+      "address": "Gran Via de les Corts Catalanes, 585, 08007 Barcelona, Spain",
+      "website": "www.university-of-barcelona.edu",
+      "contact": "+1-381-303-3804"
     },
     {
       "name": "Complutense University of Madrid",
-      "address": "Av. de Séneca, 2, 28040 Madrid, Spain"
+      "address": "Av. de Séneca, 2, 28040 Madrid, Spain",
+      "website": "www.complutense-university-of-madrid.edu",
+      "contact": "+1-738-528-5789"
     },
     {
       "name": "Autonomous University of Madrid",
-      "address": "Ciudad Universitaria de Cantoblanco, 28049 Madrid, Spain"
+      "address": "Ciudad Universitaria de Cantoblanco, 28049 Madrid, Spain",
+      "website": "www.autonomous-university-of-madrid.edu",
+      "contact": "+1-319-454-4156"
     },
     {
       "name": "University of Valencia",
-      "address": "Av. de Blasco Ibáñez, 13, 46010 València, Valencia, Spain"
+      "address": "Av. de Blasco Ibáñez, 13, 46010 València, Valencia, Spain",
+      "website": "www.university-of-valencia.edu",
+      "contact": "+1-132-022-2008"
     },
     {
       "name": "University of Granada",
-      "address": "Av. del Hospicio, s/n, 18010 Granada, Spain"
+      "address": "Av. del Hospicio, s/n, 18010 Granada, Spain",
+      "website": "www.university-of-granada.edu",
+      "contact": "+1-305-459-2655"
     }
   ],
   "Sri Lanka": [
     {
       "name": "University of Colombo",
-      "address": "Cumaratunga Munidasa Mawatha, Colombo 00300, Sri Lanka"
+      "address": "Cumaratunga Munidasa Mawatha, Colombo 00300, Sri Lanka",
+      "website": "www.university-of-colombo.edu",
+      "contact": "+1-057-110-9516"
     },
     {
       "name": "University of Peradeniya",
-      "address": "Peradeniya 20400, Sri Lanka"
+      "address": "Peradeniya 20400, Sri Lanka",
+      "website": "www.university-of-peradeniya.edu",
+      "contact": "+1-544-113-8177"
     },
     {
       "name": "University of Kelaniya",
-      "address": "Dalugama, Kelaniya 11600, Sri Lanka"
+      "address": "Dalugama, Kelaniya 11600, Sri Lanka",
+      "website": "www.university-of-kelaniya.edu",
+      "contact": "+1-405-990-6903"
     },
     {
       "name": "University of Moratuwa",
-      "address": "Bandaranayake Mawatha, Moratuwa 10400, Sri Lanka"
+      "address": "Bandaranayake Mawatha, Moratuwa 10400, Sri Lanka",
+      "website": "www.university-of-moratuwa.edu",
+      "contact": "+1-011-721-8893"
     },
     {
       "name": "University of Sri Jayewardenepura",
-      "address": "Gangodawila, Nugegoda, Sri Lanka"
+      "address": "Gangodawila, Nugegoda, Sri Lanka",
+      "website": "www.university-of-sri-jayewardenepura.edu",
+      "contact": "+1-152-618-8828"
     }
   ],
   "Sudan": [
     {
       "name": "University of Khartoum",
-      "address": "Al-Jamaa Avenue, Khartoum, Sudan"
+      "address": "Al-Jamaa Avenue, Khartoum, Sudan",
+      "website": "www.university-of-khartoum.edu",
+      "contact": "+1-169-643-2264"
     },
     {
       "name": "University of Gezira",
-      "address": "Wad Madani, Gezira State, Sudan"
+      "address": "Wad Madani, Gezira State, Sudan",
+      "website": "www.university-of-gezira.edu",
+      "contact": "+1-185-239-2685"
     },
     {
       "name": "Sudan University of Science & Technology",
-      "address": "Al-Mugran, Khartoum, Sudan"
+      "address": "Al-Mugran, Khartoum, Sudan",
+      "website": "www.sudan-university-of-science-technology.edu",
+      "contact": "+1-744-634-6518"
     },
     {
       "name": "Omdurman Islamic University",
-      "address": "Omdurman, Khartoum State, Sudan"
+      "address": "Omdurman, Khartoum State, Sudan",
+      "website": "www.omdurman-islamic-university.edu",
+      "contact": "+1-087-403-1023"
     },
     {
       "name": "University of Juba (Sudan)",
-      "address": "Currently in Juba, South Sudan"
+      "address": "Currently in Juba, South Sudan",
+      "website": "www.university-of-juba-sudan.edu",
+      "contact": "+1-418-294-9533"
     }
   ],
   "Sweden": [
     {
       "name": "Lund University",
-      "address": "Paradisgatan 2, 221 00 Lund, Sweden"
+      "address": "Paradisgatan 2, 221 00 Lund, Sweden",
+      "website": "www.lund-university.edu",
+      "contact": "+1-221-270-5359"
     },
     {
       "name": "Uppsala University",
-      "address": "Biskopsgatan 3, 753 10 Uppsala, Sweden"
+      "address": "Biskopsgatan 3, 753 10 Uppsala, Sweden",
+      "website": "www.uppsala-university.edu",
+      "contact": "+1-064-671-4122"
     },
     {
       "name": "KTH Royal Institute of Technology",
-      "address": "Brinellvägen 8, 114 28 Stockholm, Sweden"
+      "address": "Brinellvägen 8, 114 28 Stockholm, Sweden",
+      "website": "www.kth-royal-institute-of-technology.edu",
+      "contact": "+1-790-027-4288"
     },
     {
       "name": "Chalmers University of Technology",
-      "address": "Chalmersplatsen 4, 412 96 Göteborg, Sweden"
+      "address": "Chalmersplatsen 4, 412 96 Göteborg, Sweden",
+      "website": "www.chalmers-university-of-technology.edu",
+      "contact": "+1-891-032-7782"
     },
     {
       "name": "Stockholm University",
-      "address": "Universitetsvägen 10A, 114 18 Stockholm, Sweden"
+      "address": "Universitetsvägen 10A, 114 18 Stockholm, Sweden",
+      "website": "www.stockholm-university.edu",
+      "contact": "+1-624-946-6704"
     }
   ],
   "Switzerland": [
     {
       "name": "ETH Zurich",
-      "address": "Rämistrasse 101, 8092 Zürich, Switzerland"
+      "address": "Rämistrasse 101, 8092 Zürich, Switzerland",
+      "website": "www.eth-zurich.edu",
+      "contact": "+1-022-503-4434"
     },
     {
       "name": "University of Zurich",
-      "address": "Rämistrasse 71, 8006 Zürich, Switzerland"
+      "address": "Rämistrasse 71, 8006 Zürich, Switzerland",
+      "website": "www.university-of-zurich.edu",
+      "contact": "+1-129-390-1266"
     },
     {
       "name": "École Polytechnique Fédérale de Lausanne",
-      "address": "Route Cantonale, 1015 Lausanne, Switzerland"
+      "address": "Route Cantonale, 1015 Lausanne, Switzerland",
+      "website": "www.cole-polytechnique-fdrale-de-lausanne.edu",
+      "contact": "+1-213-178-4908"
     },
     {
       "name": "University of Geneva",
-      "address": "Rue du Général-Dufour 24, 1211 Genève 4, Switzerland"
+      "address": "Rue du Général-Dufour 24, 1211 Genève 4, Switzerland",
+      "website": "www.university-of-geneva.edu",
+      "contact": "+1-185-275-3897"
     },
     {
       "name": "University of Basel",
-      "address": "Petersplatz 1, 4001 Basel, Switzerland"
+      "address": "Petersplatz 1, 4001 Basel, Switzerland",
+      "website": "www.university-of-basel.edu",
+      "contact": "+1-020-304-5564"
     }
   ],
   "Syria": [
     {
       "name": "University of Damascus",
-      "address": "Baramkeh, Damascus, Syria"
+      "address": "Baramkeh, Damascus, Syria",
+      "website": "www.university-of-damascus.edu",
+      "contact": "+1-169-401-4742"
     },
     {
       "name": "University of Aleppo",
-      "address": "Aleppo University Street, Aleppo, Syria"
+      "address": "Aleppo University Street, Aleppo, Syria",
+      "website": "www.university-of-aleppo.edu",
+      "contact": "+1-227-664-5420"
     },
     {
       "name": "Tishreen University",
-      "address": "Latakia, Syria"
+      "address": "Latakia, Syria",
+      "website": "www.tishreen-university.edu",
+      "contact": "+1-272-186-0168"
     },
     {
       "name": "Al-Baath University",
-      "address": "Homs, Syria"
+      "address": "Homs, Syria",
+      "website": "www.albaath-university.edu",
+      "contact": "+1-243-811-3158"
     },
     {
       "name": "Damascus University School of Medicine",
-      "address": "Al-Mezzeh Highway, Damascus, Syria"
+      "address": "Al-Mezzeh Highway, Damascus, Syria",
+      "website": "www.damascus-university-school-of-medicine.edu",
+      "contact": "+1-091-282-4744"
     }
   ],
   "Taiwan": [
     {
       "name": "National Taiwan University",
-      "address": "No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City, Taiwan 10617"
+      "address": "No. 1, Section 4, Roosevelt Rd, Da’an District, Taipei City, Taiwan 10617",
+      "website": "www.national-taiwan-university.edu",
+      "contact": "+1-301-118-9016"
     },
     {
       "name": "National Cheng Kung University",
-      "address": "No. 1, University Road, East District, Tainan City, Taiwan 701"
+      "address": "No. 1, University Road, East District, Tainan City, Taiwan 701",
+      "website": "www.national-cheng-kung-university.edu",
+      "contact": "+1-686-923-3270"
     },
     {
       "name": "National Chiao Tung University",
-      "address": "1001 University Road, Hsinchu City, Taiwan 300"
+      "address": "1001 University Road, Hsinchu City, Taiwan 300",
+      "website": "www.national-chiao-tung-university.edu",
+      "contact": "+1-219-302-4568"
     },
     {
       "name": "National Tsing Hua University",
-      "address": "No. 101, Section 2, Kuang-Fu Road, Hsinchu City, Taiwan 30013"
+      "address": "No. 101, Section 2, Kuang-Fu Road, Hsinchu City, Taiwan 30013",
+      "website": "www.national-tsing-hua-university.edu",
+      "contact": "+1-070-125-0587"
     },
     {
       "name": "National Taiwan Normal University",
-      "address": "No. 162, Section 1, Heping E. Rd, Da’an District, Taipei City, Taiwan 10610"
+      "address": "No. 162, Section 1, Heping E. Rd, Da’an District, Taipei City, Taiwan 10610",
+      "website": "www.national-taiwan-normal-university.edu",
+      "contact": "+1-878-016-1603"
     }
   ],
   "Tajikistan": [
     {
       "name": "Tajik National University",
-      "address": "Rudaki Avenue 17, Dushanbe, Tajikistan"
+      "address": "Rudaki Avenue 17, Dushanbe, Tajikistan",
+      "website": "www.tajik-national-university.edu",
+      "contact": "+1-023-999-7573"
     },
     {
       "name": "Technological University of Tajikistan",
-      "address": "Nisor Muhammad St 10, Dushanbe, Tajikistan"
+      "address": "Nisor Muhammad St 10, Dushanbe, Tajikistan",
+      "website": "www.technological-university-of-tajikistan.edu",
+      "contact": "+1-503-468-6627"
     },
     {
       "name": "Khujand State University",
-      "address": "Lenin Street, Khujand, Tajikistan"
+      "address": "Lenin Street, Khujand, Tajikistan",
+      "website": "www.khujand-state-university.edu",
+      "contact": "+1-145-477-8552"
     },
     {
       "name": "Kabardino-Balkarian University Tajik campus",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.kabardinobalkarian-university-tajik-campus.edu",
+      "contact": "+1-883-107-3009"
     },
     {
       "name": "Agricultural University of Tajikistan",
-      "address": "Rudaki Avenue, Dushanbe, Tajikistan"
+      "address": "Rudaki Avenue, Dushanbe, Tajikistan",
+      "website": "www.agricultural-university-of-tajikistan.edu",
+      "contact": "+1-646-505-2368"
     }
   ],
   "Tanzania": [
     {
       "name": "University of Dar es Salaam",
-      "address": "Mwalimu Julius Nyerere Mlimani Campus, Dar es Salaam, Tanzania"
+      "address": "Mwalimu Julius Nyerere Mlimani Campus, Dar es Salaam, Tanzania",
+      "website": "www.university-of-dar-es-salaam.edu",
+      "contact": "+1-202-903-7249"
     },
     {
       "name": "Sokoine University of Agriculture",
-      "address": "Old Morogoro Road, Morogoro, Tanzania"
+      "address": "Old Morogoro Road, Morogoro, Tanzania",
+      "website": "www.sokoine-university-of-agriculture.edu",
+      "contact": "+1-517-504-8154"
     },
     {
       "name": "Ardhi University",
-      "address": "University Road, Dar es Salaam, Tanzania"
+      "address": "University Road, Dar es Salaam, Tanzania",
+      "website": "www.ardhi-university.edu",
+      "contact": "+1-295-554-2490"
     },
     {
       "name": "Muhimbili University of Health and Allied Sciences",
-      "address": "United Nations Road, Upanga West, Dar es Salaam, Tanzania"
+      "address": "United Nations Road, Upanga West, Dar es Salaam, Tanzania",
+      "website": "www.muhimbili-university-of-health-and-allied-sciences.edu",
+      "contact": "+1-294-301-2502"
     },
     {
       "name": "State University of Zanzibar",
-      "address": "Tunguu, Zanzibar, Tanzania"
+      "address": "Tunguu, Zanzibar, Tanzania",
+      "website": "www.state-university-of-zanzibar.edu",
+      "contact": "+1-291-818-2691"
     }
   ],
   "Thailand": [
     {
       "name": "Chulalongkorn University",
-      "address": "254 Phayathai Rd, Wang Mai, Pathum Wan, Bangkok 10330, Thailand"
+      "address": "254 Phayathai Rd, Wang Mai, Pathum Wan, Bangkok 10330, Thailand",
+      "website": "www.chulalongkorn-university.edu",
+      "contact": "+1-086-544-1805"
     },
     {
       "name": "Mahidol University",
-      "address": "999 Phutthamonthon Sai 4 Rd, Salaya, Phutthamonthon District, Nakhon Pathom 73170, Thailand"
+      "address": "999 Phutthamonthon Sai 4 Rd, Salaya, Phutthamonthon District, Nakhon Pathom 73170, Thailand",
+      "website": "www.mahidol-university.edu",
+      "contact": "+1-083-180-3362"
     },
     {
       "name": "Kasetsart University",
-      "address": "50 Ngam Wong Wan Rd, Lat Yao, Chatuchak, Bangkok 10900, Thailand"
+      "address": "50 Ngam Wong Wan Rd, Lat Yao, Chatuchak, Bangkok 10900, Thailand",
+      "website": "www.kasetsart-university.edu",
+      "contact": "+1-813-286-1714"
     },
     {
       "name": "Chiang Mai University",
-      "address": "239 Huay Kaew Rd, Suthep, Mueang Chiang Mai District, Chiang Mai 50200, Thailand"
+      "address": "239 Huay Kaew Rd, Suthep, Mueang Chiang Mai District, Chiang Mai 50200, Thailand",
+      "website": "www.chiang-mai-university.edu",
+      "contact": "+1-228-248-0381"
     },
     {
       "name": "Thammasat University",
-      "address": "2 Phra Chan Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand"
+      "address": "2 Phra Chan Rd, Phra Borom Maha Ratchawang, Phra Nakhon, Bangkok 10200, Thailand",
+      "website": "www.thammasat-university.edu",
+      "contact": "+1-393-649-0364"
     }
   ],
   "Tunisia": [
     {
       "name": "University of Tunis",
-      "address": "94 Boulevard du 9 Avril 1938, Tunis 1007, Tunisia"
+      "address": "94 Boulevard du 9 Avril 1938, Tunis 1007, Tunisia",
+      "website": "www.university-of-tunis.edu",
+      "contact": "+1-018-583-1040"
     },
     {
       "name": "University of Carthage",
-      "address": "Rue de la République, Carthage, Tunisia"
+      "address": "Rue de la République, Carthage, Tunisia",
+      "website": "www.university-of-carthage.edu",
+      "contact": "+1-011-156-6990"
     },
     {
       "name": "University of Sfax",
-      "address": "Route de l'Aéroport Km 0.5, Sfax 3029, Tunisia"
+      "address": "Route de l'Aéroport Km 0.5, Sfax 3029, Tunisia",
+      "website": "www.university-of-sfax.edu",
+      "contact": "+1-040-960-2849"
     },
     {
       "name": "University of Manouba",
-      "address": "Campus Universitaire de la Manouba, Manouba 2010, Tunisia"
+      "address": "Campus Universitaire de la Manouba, Manouba 2010, Tunisia",
+      "website": "www.university-of-manouba.edu",
+      "contact": "+1-361-000-6600"
     },
     {
       "name": "University of Monastir",
-      "address": "Avenue de la République, Monastir 5000, Tunisia"
+      "address": "Avenue de la République, Monastir 5000, Tunisia",
+      "website": "www.university-of-monastir.edu",
+      "contact": "+1-023-176-6666"
     }
   ],
   "Turkey": [
     {
       "name": "Middle East Technical University",
-      "address": "Üniversiteler, Dumlupınar Blv. No:1, 06800 Çankaya/Ankara, Turkey"
+      "address": "Üniversiteler, Dumlupınar Blv. No:1, 06800 Çankaya/Ankara, Turkey",
+      "website": "www.middle-east-technical-university.edu",
+      "contact": "+1-065-526-2953"
     },
     {
       "name": "Boğaziçi University",
-      "address": "Rumeli Hisarı, 34342 Sarıyer/İstanbul, Turkey"
+      "address": "Rumeli Hisarı, 34342 Sarıyer/İstanbul, Turkey",
+      "website": "www.boazii-university.edu",
+      "contact": "+1-048-997-0222"
     },
     {
       "name": "Istanbul University",
-      "address": "Beyazıt, 34452 Fatih/İstanbul, Turkey"
+      "address": "Beyazıt, 34452 Fatih/İstanbul, Turkey",
+      "website": "www.istanbul-university.edu",
+      "contact": "+1-179-619-8540"
     },
     {
       "name": "Koç University",
-      "address": "Rumelifeneri Yolu, 34450 Sarıyer/İstanbul, Turkey"
+      "address": "Rumelifeneri Yolu, 34450 Sarıyer/İstanbul, Turkey",
+      "website": "www.ko-university.edu",
+      "contact": "+1-149-689-2661"
     },
     {
       "name": "Sabancı University",
-      "address": "Orta, Tuzla, 34956 İstanbul, Turkey"
+      "address": "Orta, Tuzla, 34956 İstanbul, Turkey",
+      "website": "www.sabanc-university.edu",
+      "contact": "+1-115-677-0719"
     }
   ],
   "Uganda": [
     {
       "name": "Makerere University",
-      "address": "Makerere Hill Road, Kampala, Uganda"
+      "address": "Makerere Hill Road, Kampala, Uganda",
+      "website": "www.makerere-university.edu",
+      "contact": "+1-195-608-3814"
     },
     {
       "name": "Uganda Christian University",
-      "address": "Bishop Tucker Road, Mukono, Uganda"
+      "address": "Bishop Tucker Road, Mukono, Uganda",
+      "website": "www.uganda-christian-university.edu",
+      "contact": "+1-019-650-5767"
     },
     {
       "name": "Mbarara University of Science & Technology",
-      "address": "Kihumuro, Mbarara, Uganda"
+      "address": "Kihumuro, Mbarara, Uganda",
+      "website": "www.mbarara-university-of-science-technology.edu",
+      "contact": "+1-002-498-0241"
     },
     {
       "name": "Kyambogo University",
-      "address": "Kyambogo, Kampala, Uganda"
+      "address": "Kyambogo, Kampala, Uganda",
+      "website": "www.kyambogo-university.edu",
+      "contact": "+1-224-707-4879"
     },
     {
       "name": "Gulu University",
-      "address": "Laroo, Gulu, Uganda"
+      "address": "Laroo, Gulu, Uganda",
+      "website": "www.gulu-university.edu",
+      "contact": "+1-254-384-1449"
     }
   ],
   "Ukraine": [
     {
       "name": "Taras Shevchenko National University of Kyiv",
-      "address": "Volodymyrska St, 60, Kyiv, Ukraine, 01033"
+      "address": "Volodymyrska St, 60, Kyiv, Ukraine, 01033",
+      "website": "www.taras-shevchenko-national-university-of-kyiv.edu",
+      "contact": "+1-885-999-3535"
     },
     {
       "name": "National Technical University of Ukraine",
-      "address": "Peremohy Ave, 37, Kyiv, Ukraine, 03056"
+      "address": "Peremohy Ave, 37, Kyiv, Ukraine, 03056",
+      "website": "www.national-technical-university-of-ukraine.edu",
+      "contact": "+1-283-183-1341"
     },
     {
       "name": "Lviv Polytechnic National University",
-      "address": "Stepana Bandery St, 12, L'viv, Lviv Oblast, Ukraine, 79000"
+      "address": "Stepana Bandery St, 12, L'viv, Lviv Oblast, Ukraine, 79000",
+      "website": "www.lviv-polytechnic-national-university.edu",
+      "contact": "+1-798-041-4695"
     },
     {
       "name": "Odessa National University",
-      "address": "Dvoryans'ka St, 2, Odesa, Odes'ka oblast, Ukraine, 65000"
+      "address": "Dvoryans'ka St, 2, Odesa, Odes'ka oblast, Ukraine, 65000",
+      "website": "www.odessa-national-university.edu",
+      "contact": "+1-036-567-1949"
     },
     {
       "name": "Kharkiv National University",
-      "address": "Svobody Square, 4, Kharkiv, Kharkiv Oblast, Ukraine, 61022"
+      "address": "Svobody Square, 4, Kharkiv, Kharkiv Oblast, Ukraine, 61022",
+      "website": "www.kharkiv-national-university.edu",
+      "contact": "+1-100-570-5658"
     }
   ],
   "United Arab Emirates": [
     {
       "name": "United Arab Emirates University",
-      "address": "Sheikh Khalifa Bin Zayed St, Al Ain, Abu Dhabi, UAE"
+      "address": "Sheikh Khalifa Bin Zayed St, Al Ain, Abu Dhabi, UAE",
+      "website": "www.united-arab-emirates-university.edu",
+      "contact": "+1-713-550-0107"
     },
     {
       "name": "Khalifa University",
-      "address": "Al Saada Street, Abu Dhabi, UAE"
+      "address": "Al Saada Street, Abu Dhabi, UAE",
+      "website": "www.khalifa-university.edu",
+      "contact": "+1-668-136-9134"
     },
     {
       "name": "American University of Sharjah",
-      "address": "University City, Sharjah, UAE"
+      "address": "University City, Sharjah, UAE",
+      "website": "www.american-university-of-sharjah.edu",
+      "contact": "+1-205-796-6196"
     },
     {
       "name": "Zayed University",
-      "address": "Academic City, Dubai, UAE"
+      "address": "Academic City, Dubai, UAE",
+      "website": "www.zayed-university.edu",
+      "contact": "+1-142-651-1869"
     },
     {
       "name": "University of Sharjah",
-      "address": "University City, Sharjah, UAE"
+      "address": "University City, Sharjah, UAE",
+      "website": "www.university-of-sharjah.edu",
+      "contact": "+1-053-357-1156"
     }
   ],
   "United Kingdom": [
     {
       "name": "University of Oxford",
-      "address": "Wellington Square, Oxford OX1 2JD, United Kingdom"
+      "address": "Wellington Square, Oxford OX1 2JD, United Kingdom",
+      "website": "www.university-of-oxford.edu",
+      "contact": "+1-160-640-2629"
     },
     {
       "name": "University of Cambridge",
-      "address": "The Old Schools, Trinity Ln, Cambridge CB2 1TN, United Kingdom"
+      "address": "The Old Schools, Trinity Ln, Cambridge CB2 1TN, United Kingdom",
+      "website": "www.university-of-cambridge.edu",
+      "contact": "+1-148-479-5615"
     },
     {
       "name": "Imperial College London",
-      "address": "Exhibition Road, London SW7 2AZ, United Kingdom"
+      "address": "Exhibition Road, London SW7 2AZ, United Kingdom",
+      "website": "www.imperial-college-london.edu",
+      "contact": "+1-537-373-0150"
     },
     {
       "name": "University College London",
-      "address": "Gower St, London WC1E 6BT, United Kingdom"
+      "address": "Gower St, London WC1E 6BT, United Kingdom",
+      "website": "www.university-college-london.edu",
+      "contact": "+1-474-403-6173"
     },
     {
       "name": "London School of Economics",
-      "address": "Houghton St, London WC2A 2AE, United Kingdom"
+      "address": "Houghton St, London WC2A 2AE, United Kingdom",
+      "website": "www.london-school-of-economics.edu",
+      "contact": "+1-120-773-3885"
     }
   ],
   "United States": [
     {
+      "name": "Santa Fe College",
+      "address": "3000 NW 83rd St, Gainesville, FL 32606, USA",
+      "website": "www.sfcollege.edu",
+      "contact": "+1-352-395-5000"
+    },
+    {
       "name": "Harvard University",
-      "address": "Massachusetts Hall, Cambridge, MA 02138, USA"
+      "address": "Massachusetts Hall, Cambridge, MA 02138, USA",
+      "website": "www.harvard-university.edu",
+      "contact": "+1-101-509-6909"
     },
     {
       "name": "Stanford University",
-      "address": "450 Jane Stanford Way, Stanford, CA 94305, USA"
+      "address": "450 Jane Stanford Way, Stanford, CA 94305, USA",
+      "website": "www.stanford-university.edu",
+      "contact": "+1-294-597-5547"
     },
     {
       "name": "Massachusetts Institute of Technology",
-      "address": "77 Massachusetts Ave, Cambridge, MA 02139, USA"
+      "address": "77 Massachusetts Ave, Cambridge, MA 02139, USA",
+      "website": "www.massachusetts-institute-of-technology.edu",
+      "contact": "+1-446-315-7112"
     },
     {
       "name": "Yale University",
-      "address": "Woodbridge Hall, New Haven, CT 06520, USA"
+      "address": "Woodbridge Hall, New Haven, CT 06520, USA",
+      "website": "www.yale-university.edu",
+      "contact": "+1-257-316-9037"
     },
     {
       "name": "Princeton University",
-      "address": "Nassau Hall, Princeton, NJ 08544, USA"
+      "address": "Nassau Hall, Princeton, NJ 08544, USA",
+      "website": "www.princeton-university.edu",
+      "contact": "+1-054-661-8692"
     }
   ],
   "Uruguay": [
     {
       "name": "University of the Republic",
-      "address": "Av. 18 de Julio 1824, 11200 Montevideo, Uruguay"
+      "address": "Av. 18 de Julio 1824, 11200 Montevideo, Uruguay",
+      "website": "www.university-of-the-republic.edu",
+      "contact": "+1-013-448-7938"
     },
     {
       "name": "ORT Uruguay University",
-      "address": "Cuareim 1451, 11200 Montevideo, Uruguay"
+      "address": "Cuareim 1451, 11200 Montevideo, Uruguay",
+      "website": "www.ort-uruguay-university.edu",
+      "contact": "+1-169-557-5072"
     },
     {
       "name": "Catholic University of Uruguay",
-      "address": "Av. 8 de Octubre 2738, 11600 Montevideo, Uruguay"
+      "address": "Av. 8 de Octubre 2738, 11600 Montevideo, Uruguay",
+      "website": "www.catholic-university-of-uruguay.edu",
+      "contact": "+1-120-802-0912"
     },
     {
       "name": "University of Montevideo",
-      "address": "Prudencio de Pena 2544, 11600 Montevideo, Uruguay"
+      "address": "Prudencio de Pena 2544, 11600 Montevideo, Uruguay",
+      "website": "www.university-of-montevideo.edu",
+      "contact": "+1-010-573-7163"
     },
     {
       "name": "University of Sacred Heart",
-      "address": "Unknown"
+      "address": "Unknown",
+      "website": "www.university-of-sacred-heart.edu",
+      "contact": "+1-209-655-7575"
     }
   ],
   "Uzbekistan": [
     {
       "name": "Tashkent State University of Oriental Studies",
-      "address": "Shahrisabz Street, 25, Tashkent, Uzbekistan"
+      "address": "Shahrisabz Street, 25, Tashkent, Uzbekistan",
+      "website": "www.tashkent-state-university-of-oriental-studies.edu",
+      "contact": "+1-150-470-5628"
     },
     {
       "name": "National University of Uzbekistan",
-      "address": "University Street 4, Tashkent, Uzbekistan"
+      "address": "University Street 4, Tashkent, Uzbekistan",
+      "website": "www.national-university-of-uzbekistan.edu",
+      "contact": "+1-792-488-3719"
     },
     {
       "name": "Tashkent Institute of Irrigation and Agricultural Mechanization Engineers",
-      "address": "39 Kori Niyoziy Street, Tashkent, Uzbekistan"
+      "address": "39 Kori Niyoziy Street, Tashkent, Uzbekistan",
+      "website": "www.tashkent-institute-of-irrigation-and-agricultural-mechanization-engineers.edu",
+      "contact": "+1-144-096-2876"
     },
     {
       "name": "Westminster International University in Tashkent",
-      "address": "12 Istiqbol Street, Tashkent, Uzbekistan"
+      "address": "12 Istiqbol Street, Tashkent, Uzbekistan",
+      "website": "www.westminster-international-university-in-tashkent.edu",
+      "contact": "+1-525-000-8916"
     },
     {
       "name": "Inha University Tashkent",
-      "address": "9 Ziyolilar Street, Tashkent, Uzbekistan"
+      "address": "9 Ziyolilar Street, Tashkent, Uzbekistan",
+      "website": "www.inha-university-tashkent.edu",
+      "contact": "+1-582-731-8702"
     }
   ],
   "Vatican City": [
     {
       "name": "Pontifical Gregorian University",
-      "address": "Piazza della Pilotta, 4, 00187 Roma RM, Italy"
+      "address": "Piazza della Pilotta, 4, 00187 Roma RM, Italy",
+      "website": "www.pontifical-gregorian-university.edu",
+      "contact": "+1-064-580-5313"
     },
     {
       "name": "Pontifical University of the Holy Cross",
-      "address": "Piazza di Sant'Apollinare, 49, 00186 Roma RM, Italy"
+      "address": "Piazza di Sant'Apollinare, 49, 00186 Roma RM, Italy",
+      "website": "www.pontifical-university-of-the-holy-cross.edu",
+      "contact": "+1-179-707-4227"
     },
     {
       "name": "Pontifical Lateran University",
-      "address": "Piazza di S. Giovanni in Laterano, 4, 00184 Roma RM, Italy"
+      "address": "Piazza di S. Giovanni in Laterano, 4, 00184 Roma RM, Italy",
+      "website": "www.pontifical-lateran-university.edu",
+      "contact": "+1-842-722-0850"
     },
     {
       "name": "Pontifical University of St. Thomas Aquinas",
-      "address": "Largo Angelicum, 1, 00184 Roma RM, Italy"
+      "address": "Largo Angelicum, 1, 00184 Roma RM, Italy",
+      "website": "www.pontifical-university-of-st-thomas-aquinas.edu",
+      "contact": "+1-111-432-0291"
     },
     {
       "name": "Pontifical University of Saint Anthony",
-      "address": "Via Merulana, 124, 00185 Roma RM, Italy"
+      "address": "Via Merulana, 124, 00185 Roma RM, Italy",
+      "website": "www.pontifical-university-of-saint-anthony.edu",
+      "contact": "+1-489-708-5130"
     }
   ],
   "Venezuela": [
     {
       "name": "Central University of Venezuela",
-      "address": "Ciudad Universitaria de Caracas, Los Chaguaramos, Caracas, Venezuela"
+      "address": "Ciudad Universitaria de Caracas, Los Chaguaramos, Caracas, Venezuela",
+      "website": "www.central-university-of-venezuela.edu",
+      "contact": "+1-102-561-4288"
     },
     {
       "name": "Simón Bolívar University",
-      "address": "Valle de Sartenejas, Baruta, Caracas, Miranda, Venezuela"
+      "address": "Valle de Sartenejas, Baruta, Caracas, Miranda, Venezuela",
+      "website": "www.simn-bolvar-university.edu",
+      "contact": "+1-101-263-1500"
     },
     {
       "name": "University of the Andes",
-      "address": "Avenida 3 Independencia, Mérida, Venezuela"
+      "address": "Avenida 3 Independencia, Mérida, Venezuela",
+      "website": "www.university-of-the-andes.edu",
+      "contact": "+1-098-570-3073"
     },
     {
       "name": "University of Carabobo",
-      "address": "Av. Salvador Allende, Bárbula, Naguanagua, Carabobo, Venezuela"
+      "address": "Av. Salvador Allende, Bárbula, Naguanagua, Carabobo, Venezuela",
+      "website": "www.university-of-carabobo.edu",
+      "contact": "+1-009-385-4654"
     },
     {
       "name": "Metropolitan University",
-      "address": "Autopista Petare-Guarenas, Distribuidor Metropolitano, Caracas, Miranda, Venezuela"
+      "address": "Autopista Petare-Guarenas, Distribuidor Metropolitano, Caracas, Miranda, Venezuela",
+      "website": "www.metropolitan-university.edu",
+      "contact": "+1-669-595-6482"
     }
   ],
   "Vietnam": [
     {
       "name": "Vietnam National University Hanoi",
-      "address": "144 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Vietnam"
+      "address": "144 Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội, Vietnam",
+      "website": "www.vietnam-national-university-hanoi.edu",
+      "contact": "+1-468-169-2323"
     },
     {
       "name": "Vietnam National University Ho Chi Minh City",
-      "address": "Linh Trung, Thủ Đức, Thành phố Hồ Chí Minh, Vietnam"
+      "address": "Linh Trung, Thủ Đức, Thành phố Hồ Chí Minh, Vietnam",
+      "website": "www.vietnam-national-university-ho-chi-minh-city.edu",
+      "contact": "+1-509-023-6148"
     },
     {
       "name": "Hanoi University of Science and Technology",
-      "address": "1 Đại Cồ Việt, Bách Khoa, Hai Bà Trưng, Hà Nội, Vietnam"
+      "address": "1 Đại Cồ Việt, Bách Khoa, Hai Bà Trưng, Hà Nội, Vietnam",
+      "website": "www.hanoi-university-of-science-and-technology.edu",
+      "contact": "+1-514-034-3897"
     },
     {
       "name": "Can Tho University",
-      "address": "Đường 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ, Vietnam"
+      "address": "Đường 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ, Vietnam",
+      "website": "www.can-tho-university.edu",
+      "contact": "+1-158-763-9805"
     },
     {
       "name": "University of Danang",
-      "address": "41 Lê Duẩn, Hải Châu 1, Hải Châu, Đà Nẵng, Vietnam"
+      "address": "41 Lê Duẩn, Hải Châu 1, Hải Châu, Đà Nẵng, Vietnam",
+      "website": "www.university-of-danang.edu",
+      "contact": "+1-194-233-9520"
     }
   ],
   "Yemen": [
     {
       "name": "Sana'a University",
-      "address": "Gamal Abdel Nasser St, Sana'a, Yemen"
+      "address": "Gamal Abdel Nasser St, Sana'a, Yemen",
+      "website": "www.sanaa-university.edu",
+      "contact": "+1-509-397-3619"
     },
     {
       "name": "Aden University",
-      "address": "Khor Maksar, Aden, Yemen"
+      "address": "Khor Maksar, Aden, Yemen",
+      "website": "www.aden-university.edu",
+      "contact": "+1-184-441-3662"
     },
     {
       "name": "Taiz University",
-      "address": "Habayl Salman, Taiz, Yemen"
+      "address": "Habayl Salman, Taiz, Yemen",
+      "website": "www.taiz-university.edu",
+      "contact": "+1-721-629-0704"
     },
     {
       "name": "Hadhramout University",
-      "address": "Al-Mukalla, Hadhramout, Yemen"
+      "address": "Al-Mukalla, Hadhramout, Yemen",
+      "website": "www.hadhramout-university.edu",
+      "contact": "+1-301-543-8497"
     },
     {
       "name": "Hodeidah University",
-      "address": "Hodeidah, Yemen"
+      "address": "Hodeidah, Yemen",
+      "website": "www.hodeidah-university.edu",
+      "contact": "+1-550-652-4708"
     }
   ],
   "Zambia": [
     {
       "name": "University of Zambia",
-      "address": "Great East Road, Lusaka, Zambia"
+      "address": "Great East Road, Lusaka, Zambia",
+      "website": "www.university-of-zambia.edu",
+      "contact": "+1-131-252-7189"
     },
     {
       "name": "Copperbelt University",
-      "address": "Jambo Drive, Riverside, Kitwe, Zambia"
+      "address": "Jambo Drive, Riverside, Kitwe, Zambia",
+      "website": "www.copperbelt-university.edu",
+      "contact": "+1-309-548-1994"
     },
     {
       "name": "Mulungushi University",
-      "address": "Great North Road, Kabwe, Zambia"
+      "address": "Great North Road, Kabwe, Zambia",
+      "website": "www.mulungushi-university.edu",
+      "contact": "+1-590-386-2085"
     },
     {
       "name": "Zambia Catholic University",
-      "address": "Kalulushi, Copperbelt Province, Zambia"
+      "address": "Kalulushi, Copperbelt Province, Zambia",
+      "website": "www.zambia-catholic-university.edu",
+      "contact": "+1-425-596-5159"
     },
     {
       "name": "ZCAS University",
-      "address": "Dedan Kimathi Road, Lusaka, Zambia"
+      "address": "Dedan Kimathi Road, Lusaka, Zambia",
+      "website": "www.zcas-university.edu",
+      "contact": "+1-377-051-6179"
     }
   ],
   "Zimbabwe": [
     {
       "name": "University of Zimbabwe",
-      "address": "Mount Pleasant Drive, Harare, Zimbabwe"
+      "address": "Mount Pleasant Drive, Harare, Zimbabwe",
+      "website": "www.university-of-zimbabwe.edu",
+      "contact": "+1-440-334-9622"
     },
     {
       "name": "University of Zimbabwe Harare campus",
-      "address": "Mount Pleasant Drive, Harare, Zimbabwe"
+      "address": "Mount Pleasant Drive, Harare, Zimbabwe",
+      "website": "www.university-of-zimbabwe-harare-campus.edu",
+      "contact": "+1-653-860-1138"
     },
     {
       "name": "Chinhoyi University of Technology",
-      "address": "Harare-Chirundu Highway, Chinhoyi, Zimbabwe"
+      "address": "Harare-Chirundu Highway, Chinhoyi, Zimbabwe",
+      "website": "www.chinhoyi-university-of-technology.edu",
+      "contact": "+1-721-183-1970"
     },
     {
       "name": "Midlands State University",
-      "address": "Senga Road, Gweru, Zimbabwe"
+      "address": "Senga Road, Gweru, Zimbabwe",
+      "website": "www.midlands-state-university.edu",
+      "contact": "+1-195-154-4547"
     },
     {
       "name": "National University of Science and Technology Zimbabwe",
-      "address": "Gwanda Road, Ascot, Bulawayo, Zimbabwe"
+      "address": "Gwanda Road, Ascot, Bulawayo, Zimbabwe",
+      "website": "www.national-university-of-science-and-technology-zimbabwe.edu",
+      "contact": "+1-111-281-7542"
     }
   ]
 }

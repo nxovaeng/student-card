@@ -58,13 +58,35 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
               <Label>University Address</Label>
               <Input name="universityAddress" value={formData.universityAddress} onChange={handleChange} />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 col-span-1 md:col-span-2">
               <Label>University Logo</Label>
-              <Input
-                type="file"
-                accept="image/*"
-                onChange={(e) => onFileChange && onFileChange(e, "universityLogo")}
-              />
+              <div className="grid grid-cols-1 gap-2">
+                <Input
+                  type="file"
+                  id="universityLogo"
+                  accept="image/*"
+                  onChange={(e) => onFileChange && onFileChange(e, "universityLogo")}
+                  className="hidden"
+                />
+                <div className="flex gap-2">
+                  <div className="w-16 h-16 border rounded overflow-hidden">
+                    <img
+                      src={formData.universityLogo || "/placeholder.svg"}
+                      alt="University Logo"
+                      className="w-full h-full object-contain p-1"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <Label
+                      htmlFor="universityLogo"
+                      className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
+                    >
+                      Select Logo
+                    </Label>
+                    <p className="text-xs text-gray-500 mt-2">Upload school or organization logo</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </CardContent>

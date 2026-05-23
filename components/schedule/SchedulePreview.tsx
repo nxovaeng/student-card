@@ -11,7 +11,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { EXPORT_QUALITY_OPTIONS, DAYS_OF_WEEK_OPTIONS } from "@/lib/constants"
 import { Download } from "lucide-react"
-import Image from "next/image"
 import type { ScheduleFormData, ScheduleCourse } from "@/lib/types"
 
 interface SchedulePreviewProps {
@@ -342,12 +341,10 @@ export default function SchedulePreview({
                 <div className="flex items-center justify-center mb-2">
                   {formData.universityLogo && (
                     <div className="mr-3">
-                      <Image
+                      <img
                         src={formData.universityLogo || "/placeholder.svg"}
                         alt="University Logo"
-                        width={60}
-                        height={60}
-                        className="object-contain"
+                        className="w-[60px] h-[60px] object-contain"
                       />
                     </div>
                   )}

@@ -9,7 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import type { FormComponentProps } from "@/lib/types"
 import type { CertificateFormData } from "@/lib/types"
 import { DEGREE_TYPE_OPTIONS, STUDY_MODE_OPTIONS } from "@/lib/constants"
-import Image from "next/image"
 
 const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange, onFileChange }) => {
   const data = formData as CertificateFormData
@@ -118,50 +117,41 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
             {/* Student Photo Upload */}
             <div className="space-y-2 col-span-1 md:col-span-2">
               <Label htmlFor="studentPhoto-upload">Student Photo</Label>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-                <div className="col-span-1">
-                  <input
-                    id="studentPhoto-upload"
-                    type="file"
-                    accept="image/*"
-                    className="hidden"
-                    onChange={(e) => {
-                      if (e.target.files && e.target.files[0]) {
-                        const reader = new FileReader()
-                        reader.onload = (event) => {
-                          if (event.target?.result) {
-                            handleChange("studentPhoto", event.target.result as string)
-                          }
+              <div className="grid grid-cols-1 gap-2">
+                <input
+                  id="studentPhoto-upload"
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      const reader = new FileReader()
+                      reader.onload = (event) => {
+                        if (event.target?.result) {
+                          handleChange("studentPhoto", event.target.result as string)
                         }
-                        reader.readAsDataURL(e.target.files[0])
                       }
-                    }}
-                  />
-                  <label
-                    htmlFor="studentPhoto-upload"
-                    className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                  >
-                    Select Student Photo
-                  </label>
-                </div>
-
-                <div className="col-span-2">
-                  {data.studentPhoto ? (
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-[75px] h-[100px] border rounded overflow-hidden">
-                        <Image
-                          src={data.studentPhoto || "/placeholder.svg"}
-                          alt="Student Photo Preview"
-                          fill
-                          style={{ objectFit: "cover" }}
-                          className="rounded-md"
-                          sizes="75px"
-                        />
-                      </div>
-                    </div>
-                  ) : (
-                    <p className="text-sm text-gray-500 mt-2">Please upload a front-facing photo, recommended size 3:4</p>
-                  )}
+                      reader.readAsDataURL(e.target.files[0])
+                    }
+                  }}
+                />
+                <div className="flex gap-2">
+                  <div className="w-[75px] h-[100px] border rounded overflow-hidden relative shrink-0">
+                    <img
+                      src={data.studentPhoto || "/placeholder.svg"}
+                      alt="Student Photo Preview"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <label
+                      htmlFor="studentPhoto-upload"
+                      className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
+                    >
+                      Select Photo
+                    </label>
+                    <p className="text-xs text-gray-500 mt-2">Please upload a front-facing photo, recommended size 3:4</p>
+                  </div>
                 </div>
               </div>
             </div>

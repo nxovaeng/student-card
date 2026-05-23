@@ -12,6 +12,8 @@ import { GraduationCap, School, User, Upload, CheckCircle2 } from "lucide-react"
 interface University {
   name: string
   address: string
+  website?: string
+  contact?: string
 }
 
 interface UniversityData {
@@ -73,6 +75,8 @@ const GlobalProfilePanel: React.FC = () => {
       if (uni) {
         updateProfile("universityName", uni.name)
         updateProfile("universityAddress", uni.address)
+        if (uni.website) updateProfile("universityWebsite", uni.website)
+        if (uni.contact) updateProfile("universityContact", uni.contact)
       }
     },
     [universities, updateProfile]

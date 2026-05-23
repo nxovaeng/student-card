@@ -748,31 +748,36 @@ const DEFAULT_FEE_ITEMS: TuitionFeeItem[] = [
 
 // Default payment items
 const DEFAULT_PAYMENTS: TuitionPaymentItem[] = [
-  { id: "1", description: "Scholarship Credit", amount: 5000, date: "2023-08-15" },
-  { id: "2", description: "Payment - Wire Transfer", amount: 8000, date: "2023-08-28" },
+  { id: "1", description: "Scholarship Credit", amount: 5000, date: "2026-08-15" },
+  { id: "2", description: "Payment - Wire Transfer", amount: 8000, date: "2026-08-28" },
 ]
 
 // Default tuition receipt data
 export const DEFAULT_TUITION_RECEIPT_DATA: TuitionReceiptFormData = {
+  // University Info
   universityName: "International University",
+  universityAddress: "100 University Road, Innovation City",
   universityLogo: "/placeholder.svg?height=80&width=80",
-  universityAddress: "123 University Avenue, Boston, MA 02115",
-  department: "Office of Student Accounts",
+  department: "Financial Services",
 
-  studentName: "Emily Johnson",
-  studentId: "2023001001",
+  // Student Info
+  studentName: "John Smith",
+  studentId: "2026001001",
   program: "Computer Science",
-  term: "Fall 2023",
-  academicYear: "2023-2024",
+  term: "Fall 2026",
+  academicYear: "2026-2027",
 
+  // Items
   feeItems: DEFAULT_FEE_ITEMS,
   payments: DEFAULT_PAYMENTS,
 
+  // Receipt Details
   receiptTitle: "Tuition Receipt",
   issueDate: new Date().toISOString().split("T")[0],
   receiptNumber: "TR-" + Math.floor(100000 + Math.random() * 900000).toString(),
   footerNote: "This receipt is computer-generated and does not require a signature. For inquiries, contact the Office of Student Accounts.",
 
+  // Design
   headerColor: "#1e40af",
   accentColor: "#4f46e5",
   textColor: "#000000",
