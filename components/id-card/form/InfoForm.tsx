@@ -42,71 +42,6 @@ export const InfoForm: React.FC<FormComponentProps> = ({ formData, onChange }) =
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Full Name */}
-          <FormField
-            control={form.control}
-            name="fullName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Full Name</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    placeholder="Enter student name"
-                    onChange={(e) => {
-                      field.onChange(e)
-                      handleInputChange(e)
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Student ID */}
-          <FormField
-            control={form.control}
-            name="studentId"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Student ID</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    placeholder="Enter student ID"
-                    onChange={(e) => {
-                      field.onChange(e)
-                      handleInputChange(e)
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          {/* Faculty */}
-          <FormField
-            control={form.control}
-            name="faculty"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Faculty</FormLabel>
-                <FormControl>
-                  <Input
-                    {...field}
-                    placeholder="Enter faculty/school"
-                    onChange={(e) => {
-                      field.onChange(e)
-                      handleInputChange(e)
-                    }}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
 
           {/* Degree Type */}
           <FormField
@@ -193,98 +128,33 @@ export const InfoForm: React.FC<FormComponentProps> = ({ formData, onChange }) =
               </FormItem>
             )}
           />
+
+          {/* Issue Date */}
+          <FormField
+            control={form.control}
+            name="issueDate"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Date of Issue</FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    type="date"
+                    onChange={(e) => {
+                      field.onChange(e)
+                      handleInputChange(e)
+                    }}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         </div>
 
         <div className="mt-6 border-t pt-6">
-          <h3 className="text-lg font-medium mb-4">School Information</h3>
+          <h3 className="text-lg font-medium mb-4">Card Settings</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* University Name */}
-            <FormField
-              control={form.control}
-              name="universityName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>University Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter university name"
-                      onChange={(e) => {
-                        field.onChange(e)
-                        handleInputChange(e)
-                      }}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* University Website */}
-            <FormField
-              control={form.control}
-              name="universityWebsite"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>University Website</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter university website"
-                      onChange={(e) => {
-                        field.onChange(e)
-                        handleInputChange(e)
-                      }}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* University Address */}
-            <FormField
-              control={form.control}
-              name="universityAddress"
-              render={({ field }) => (
-                <FormItem className="col-span-1 md:col-span-2">
-                  <FormLabel>University Address</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter university address"
-                      onChange={(e) => {
-                        field.onChange(e)
-                        handleInputChange(e)
-                      }}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Contact Information */}
-            <FormField
-              control={form.control}
-              name="universityContact"
-              render={({ field }) => (
-                <FormItem className="col-span-1 md:col-span-2">
-                  <FormLabel>Contact Information</FormLabel>
-                  <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Enter university contact"
-                      onChange={(e) => {
-                        field.onChange(e)
-                        handleInputChange(e)
-                      }}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
 
             {/* Official Signature */}
             <FormField

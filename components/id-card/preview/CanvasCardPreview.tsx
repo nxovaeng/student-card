@@ -73,17 +73,6 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
           } else {
             ctx.drawImage(logo, 15, 49, 165, 165)
           }
-
-          // Center icon (watermark logo)
-          ctx.save()
-          const opacity = formData.centerIconOpacity || 0.1
-          ctx.globalAlpha = opacity
-          const iconWidth = 620
-          const iconHeight = 620
-          const centerX = (1280 - iconWidth) / 2
-          const centerY = (804 - iconHeight) / 2
-          ctx.drawImage(logo, centerX, centerY, iconWidth, iconHeight)
-          ctx.restore()
         }
       }
 
@@ -118,12 +107,18 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
       const name = (formData.fullName || "John Smith").toUpperCase()
       const dob = formData.validityStart || "2001-01-25"
       const studentId = formData.studentId || "2023001001"
-      const address = (formData.universityAddress || "123 University Avenue").substring(0, 30)
+      // Extract city or short address to prevent overflow
+      const rawAddress = formData.universityAddress || "123 University Avenue, Boston"
+      const addressParts = rawAddress.split(",")
+      const shortAddress = addressParts.length > 1 
+        ? addressParts[addressParts.length >= 3 ? addressParts.length - 2 : 1].trim() 
+        : addressParts[0].trim()
+      const address = shortAddress.substring(0, 22)
       const academicYear = formData.enrollmentYear
         ? `${formData.enrollmentYear}-${parseInt(formData.enrollmentYear) + 4}`
         : "2025-2028"
       const expDate = formData.validityEnd || "31 DEC 2025"
-      const issueDate = new Date().toLocaleDateString("en-US", {
+      const issueDate = new Date(formData.issueDate || new Date()).toLocaleDateString("en-US", {
         day: "2-digit",
         month: "short",
         year: "numeric",

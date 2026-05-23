@@ -104,6 +104,28 @@ const GlobalProfilePanel: React.FC = () => {
     reader.readAsDataURL(file)
   }
 
+  // Handle long logo upload
+  const handleLongLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      updateProfile("universityLogoLong", reader.result as string)
+    }
+    reader.readAsDataURL(file)
+  }
+
+  // Handle card background image upload
+  const handleCardBackgroundImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      updateProfile("cardBackgroundImage", reader.result as string)
+    }
+    reader.readAsDataURL(file)
+  }
+
   // Count how many fields are filled
   const filledCount = Object.values(profile).filter((v) => v && v.length > 0).length
   const totalCount = Object.keys(profile).length
@@ -234,7 +256,7 @@ const GlobalProfilePanel: React.FC = () => {
 
               {/* University Logo Upload */}
               <div className="space-y-1.5">
-                <Label>University Logo</Label>
+                <Label>University Logo (1:1)</Label>
                 <div className="flex items-center gap-3">
                   <div className="h-14 w-14 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white">
                     {profile.universityLogo ? (
@@ -261,6 +283,66 @@ const GlobalProfilePanel: React.FC = () => {
                   </div>
                 </div>
               </div>
+
+              {/* University Long Logo Upload */}
+              <div className="space-y-1.5 mt-4">
+                <Label>University Logo (6:1 Long)</Label>
+                <div className="flex items-center gap-3">
+                  <div className="h-12 w-48 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white">
+                    {profile.universityLogoLong ? (
+                      <img src={profile.universityLogoLong} alt="Long Logo" className="h-full w-full object-contain p-1" />
+                    ) : (
+                      <Upload className="h-5 w-5 text-slate-400" />
+                    )}
+                  </div>
+                  <div>
+                    <Input
+                      type="file"
+                      id="gp-long-logo-upload"
+                      accept="image/*"
+                      onChange={handleLongLogoUpload}
+                      className="hidden"
+                    />
+                    <Label
+                      htmlFor="gp-long-logo-upload"
+                      className="cursor-pointer text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      {profile.universityLogoLong ? "Change Logo" : "Upload Logo"}
+                    </Label>
+                    <p className="text-xs text-slate-500">PNG or JPG, 6:1 ratio preferred</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Background Image Upload */}
+              <div className="space-y-1.5 mt-4">
+                <Label>Card Background Image (ID Card)</Label>
+                <div className="flex items-center gap-3">
+                  <div className="h-16 w-24 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white">
+                    {profile.cardBackgroundImage && profile.cardBackgroundImage.length > 50 ? (
+                      <img src={profile.cardBackgroundImage} alt="Background" className="h-full w-full object-cover" />
+                    ) : (
+                      <Upload className="h-5 w-5 text-slate-400" />
+                    )}
+                  </div>
+                  <div>
+                    <Input
+                      type="file"
+                      id="gp-bg-upload"
+                      accept="image/*"
+                      onChange={handleCardBackgroundImageUpload}
+                      className="hidden"
+                    />
+                    <Label
+                      htmlFor="gp-bg-upload"
+                      className="cursor-pointer text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      {(profile.cardBackgroundImage && profile.cardBackgroundImage.length > 50) ? "Change Background" : "Upload Background"}
+                    </Label>
+                    <p className="text-xs text-slate-500">Image for custom ID Card design</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -274,16 +356,15 @@ const GlobalProfilePanel: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {/* Student Photo Upload */}
-            <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
-              <div className="h-20 w-16 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white flex-shrink-0">
+            <div className="flex flex-col gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200 items-center justify-center">
+              <div className="h-44 w-32 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-slate-100 flex-shrink-0">
                 {profile.studentPhoto ? (
                   <img src={profile.studentPhoto} alt="Photo" className="h-full w-full object-cover" />
                 ) : (
-                  <User className="h-8 w-8 text-slate-400" />
+                  <User className="h-12 w-12 text-slate-400" />
                 )}
               </div>
-              <div>
+              <div className="text-center">
                 <Input
                   type="file"
                   id="gp-photo-upload"

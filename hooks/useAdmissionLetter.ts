@@ -27,15 +27,15 @@ export const useAdmissionLetter = (initialData: AdmissionLetterFormData = DEFAUL
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
-      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
-      if (profile.universityAddress && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
-      if (profile.universityContact && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
-      if (profile.universityWebsite && profile.universityWebsite !== prev.universityWebsite) { updated.universityWebsite = profile.universityWebsite; changed = true }
-      if (profile.fullName && profile.fullName !== prev.studentName) { updated.studentName = profile.fullName; changed = true }
-      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
-      if (profile.faculty && profile.faculty !== prev.departmentName) { updated.departmentName = profile.faculty; changed = true }
-      if (profile.major && profile.major !== prev.programName) { updated.programName = profile.major; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.universityAddress !== undefined && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
+      if (profile.universityContact !== undefined && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
+      if (profile.universityWebsite !== undefined && profile.universityWebsite !== prev.universityWebsite) { updated.universityWebsite = profile.universityWebsite; changed = true }
+      if (profile.fullName !== undefined && profile.fullName !== prev.studentName) { updated.studentName = profile.fullName; changed = true }
+      if (profile.studentId !== undefined && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty !== undefined && profile.faculty !== prev.departmentName) { updated.departmentName = profile.faculty; changed = true }
+      if (profile.major !== undefined && profile.major !== prev.programName) { updated.programName = profile.major; changed = true }
 
       return changed ? updated : prev
     })

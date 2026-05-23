@@ -173,6 +173,9 @@ export const DEFAULT_FORM_DATA: IDCardFormData = {
   presetTemplate: "",
   presetStyle: 1,
   centerIconOpacity: 0.8,
+  
+  // Issuance
+  issueDate: new Date().toISOString().split("T")[0],
 }
 
 // Default certificate data
@@ -764,7 +767,7 @@ export const DEFAULT_TUITION_RECEIPT_DATA: TuitionReceiptFormData = {
   studentName: "John Smith",
   studentId: "2026001001",
   program: "Computer Science",
-  term: "Fall 2026",
+  term: "Fall",
   academicYear: "2026-2027",
 
   // Items

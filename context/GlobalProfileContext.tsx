@@ -13,11 +13,13 @@ export interface GlobalProfile {
   faculty: string
   major: string
   studentPhoto: string
+  universityLogoLong: string
+  cardBackgroundImage: string
 }
 
 const DEFAULT_PROFILE: GlobalProfile = {
   universityName: "",
-  universityLogo: "",
+  universityLogo: "/placeholder.svg?height=60&width=60",
   universityAddress: "",
   universityWebsite: "",
   universityContact: "",
@@ -25,7 +27,9 @@ const DEFAULT_PROFILE: GlobalProfile = {
   studentId: "",
   faculty: "",
   major: "",
-  studentPhoto: "",
+  studentPhoto: "/placeholder.svg?height=150&width=120",
+  universityLogoLong: "/placeholder.svg?height=40&width=200",
+  cardBackgroundImage: "/placeholder.svg?height=90&width=140",
 }
 
 interface GlobalProfileContextType {

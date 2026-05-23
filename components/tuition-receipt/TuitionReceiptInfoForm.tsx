@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { FEE_CATEGORY_OPTIONS } from "@/lib/constants"
+import { FEE_CATEGORY_OPTIONS, SEMESTER_OPTIONS } from "@/lib/constants"
 import type { TuitionReceiptFormData, TuitionFeeItem, TuitionPaymentItem } from "@/lib/types"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -39,73 +39,16 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
 
   return (
     <div className="space-y-6">
-      {/* University Information */}
-      <Card>
-        <CardHeader>
-          <CardTitle>University Information</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label>University Name</Label>
-              <Input name="universityName" value={formData.universityName} onChange={handleChange} />
-            </div>
-            <div className="space-y-2">
-              <Label>Department</Label>
-              <Input name="department" value={formData.department} onChange={handleChange} />
-            </div>
-            <div className="col-span-1 md:col-span-2 space-y-2">
-              <Label>University Address</Label>
-              <Input name="universityAddress" value={formData.universityAddress} onChange={handleChange} />
-            </div>
-            <div className="space-y-2 col-span-1 md:col-span-2">
-              <Label>University Logo</Label>
-              <div className="grid grid-cols-1 gap-2">
-                <Input
-                  type="file"
-                  id="universityLogo"
-                  accept="image/*"
-                  onChange={(e) => onFileChange && onFileChange(e, "universityLogo")}
-                  className="hidden"
-                />
-                <div className="flex gap-2">
-                  <div className="w-16 h-16 border rounded overflow-hidden">
-                    <img
-                      src={formData.universityLogo || "/placeholder.svg"}
-                      alt="University Logo"
-                      className="w-full h-full object-contain p-1"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <Label
-                      htmlFor="universityLogo"
-                      className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                    >
-                      Select Logo
-                    </Label>
-                    <p className="text-xs text-gray-500 mt-2">Upload school or organization logo</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Student Information */}
       <Card>
         <CardHeader>
-          <CardTitle>Student Information</CardTitle>
+          <CardTitle>Academic Information</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label>Student Name</Label>
-              <Input name="studentName" value={formData.studentName} onChange={handleChange} />
-            </div>
-            <div className="space-y-2">
-              <Label>Student ID</Label>
-              <Input name="studentId" value={formData.studentId} onChange={handleChange} />
+              <Label>Department</Label>
+              <Input name="department" value={formData.department} onChange={handleChange} />
             </div>
             <div className="space-y-2">
               <Label>Program</Label>
@@ -113,7 +56,16 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
             </div>
             <div className="space-y-2">
               <Label>Term</Label>
-              <Input name="term" value={formData.term} onChange={handleChange} />
+              <Select value={formData.term} onValueChange={(value) => onChange("term", value)}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select term" />
+                </SelectTrigger>
+                <SelectContent>
+                  {SEMESTER_OPTIONS.map((opt) => (
+                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
             <div className="space-y-2">
               <Label>Academic Year</Label>

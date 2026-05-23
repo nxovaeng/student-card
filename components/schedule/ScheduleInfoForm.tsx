@@ -86,49 +86,6 @@ export default function ScheduleInfoForm({
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="universityName">University Name</Label>
-              <Input
-                id="universityName"
-                name="universityName"
-                value={formData.universityName}
-                onChange={(e) => onChange("universityName", e.target.value)}
-                placeholder="Enter university name"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="universityLogo">University Logo</Label>
-              <div className="grid grid-cols-1 gap-2">
-                <Input
-                  type="file"
-                  id="universityLogo"
-                  name="universityLogo"
-                  accept="image/*"
-                  onChange={(e) => onFileChange && onFileChange(e, "universityLogo")}
-                  className="hidden"
-                />
-                <div className="flex gap-2">
-                  <div className="w-16 h-16 border rounded overflow-hidden">
-                    <img
-                      src={formData.universityLogo || "/placeholder.svg"}
-                      alt="University Logo"
-                      className="w-full h-full object-contain p-1"
-                    />
-                  </div>
-                  <div className="flex flex-col justify-center">
-                    <Label
-                      htmlFor="universityLogo"
-                      className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                    >
-                      Select Logo
-                    </Label>
-                    <p className="text-xs text-gray-500 mt-2">Upload school or organization logo</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-2">
               <Label htmlFor="department">Department/School</Label>
               <Input
                 id="department"
@@ -136,39 +93,6 @@ export default function ScheduleInfoForm({
                 value={formData.department}
                 onChange={(e) => onChange("department", e.target.value)}
                 placeholder="Enter department or school name"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="fullName">Student Name</Label>
-              <Input
-                id="fullName"
-                name="fullName"
-                value={formData.fullName}
-                onChange={(e) => onChange("fullName", e.target.value)}
-                placeholder="Enter student name"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="studentId">Student ID</Label>
-              <Input
-                id="studentId"
-                name="studentId"
-                value={formData.studentId}
-                onChange={(e) => onChange("studentId", e.target.value)}
-                placeholder="Enter student ID"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="major">Major</Label>
-              <Input
-                id="major"
-                name="major"
-                value={formData.major}
-                onChange={(e) => onChange("major", e.target.value)}
-                placeholder="Enter major"
               />
             </div>
 

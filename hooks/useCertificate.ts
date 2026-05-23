@@ -23,13 +23,13 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
-      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
-      if (profile.fullName && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
-      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
-      if (profile.faculty && profile.faculty !== prev.faculty) { updated.faculty = profile.faculty; changed = true }
-      if (profile.major && profile.major !== prev.major) { updated.major = profile.major; changed = true }
-      if (profile.studentPhoto && profile.studentPhoto !== prev.studentPhoto) { updated.studentPhoto = profile.studentPhoto; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.fullName !== undefined && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
+      if (profile.studentId !== undefined && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty !== undefined && profile.faculty !== prev.faculty) { updated.faculty = profile.faculty; changed = true }
+      if (profile.major !== undefined && profile.major !== prev.major) { updated.major = profile.major; changed = true }
+      if (profile.studentPhoto !== undefined && profile.studentPhoto !== prev.studentPhoto) { updated.studentPhoto = profile.studentPhoto; changed = true }
 
       return changed ? updated : prev
     })

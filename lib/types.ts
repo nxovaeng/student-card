@@ -51,6 +51,7 @@ export interface IDCardFormData {
   returnInfo: string
   backLogo: string
   backLogoOpacity: string
+  issueDate: string
   // Preset template fields
   templateMode: "custom" | "preset"
   presetTemplate: string

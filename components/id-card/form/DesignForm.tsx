@@ -269,121 +269,6 @@ export const DesignForm: React.FC<FormComponentProps> = ({ formData, onChange, o
           {/* Media settings tab */}
           <TabsContent value="media">
             <div className="grid grid-cols-1 gap-4 mt-4">
-              {/* Upload Photo */}
-              <FormField
-                control={form.control}
-                name="photo"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Upload Photo</FormLabel>
-                    <div className="grid grid-cols-1 gap-2">
-                      <Input
-                        type="file"
-                        id="photoUpload"
-                        accept="image/*"
-                        onChange={(e) => onFileChange && onFileChange(e, "photo")}
-                        className="hidden"
-                      />
-                      <div className="flex gap-2">
-                        <div className="w-32 h-40 border rounded overflow-hidden">
-                          <img
-                            src={formData.photo || "/placeholder.svg"}
-                            alt="Student Photo"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                          <Label
-                            htmlFor="photoUpload"
-                            className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                          >
-                            Choose Photo
-                          </Label>
-                          <FormDescription className="mt-2">Please upload a standard ID photo, preferably 3:4 aspect ratio</FormDescription>
-                        </div>
-                      </div>
-                    </div>
-                  </FormItem>
-                )}
-              />
-
-              {/* Upload Logo */}
-              <FormField
-                control={form.control}
-                name="logo"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Upload Logo</FormLabel>
-                    <div className="grid grid-cols-1 gap-2">
-                      <Input
-                        type="file"
-                        id="logoUpload"
-                        accept="image/*"
-                        onChange={(e) => onFileChange && onFileChange(e, "logo")}
-                        className="hidden"
-                      />
-                      <div className="flex gap-2">
-                        <div className="w-16 h-16 border rounded overflow-hidden">
-                          <img
-                            src={formData.logo || "/placeholder.svg"}
-                            alt="School Logo"
-                            className="w-full h-full object-contain p-1"
-                          />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                          <Label
-                            htmlFor="logoUpload"
-                            className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                          >
-                            Choose Logo
-                          </Label>
-                          <FormDescription className="mt-2">Upload school or organization logo</FormDescription>
-                        </div>
-                      </div>
-                    </div>
-                  </FormItem>
-                )}
-              />
-
-              {/* Upload Background Image */}
-              {formData.templateMode !== "preset" && (
-                <>
-                  <FormField
-                    control={form.control}
-                    name="backgroundImage"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Upload Background Image</FormLabel>
-                    <div className="grid grid-cols-1 gap-2">
-                      <Input
-                        type="file"
-                        id="backgroundUpload"
-                        accept="image/*"
-                        onChange={(e) => onFileChange && onFileChange(e, "backgroundImage")}
-                        className="hidden"
-                      />
-                      <div className="flex gap-2">
-                        <div className="h-16 w-24 overflow-hidden rounded border">
-                          <img
-                            src={formData.backgroundImage || "/placeholder.svg?height=60&width=90"}
-                            alt="Background"
-                            className="h-full w-full object-contain"
-                          />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                          <Label
-                            htmlFor="backgroundUpload"
-                            className="cursor-pointer bg-primary hover:bg-primary/90 text-white py-2 px-4 rounded text-center"
-                          >
-                            Choose Background
-                          </Label>
-                          <FormDescription className="mt-2">Upload card background image</FormDescription>
-                        </div>
-                      </div>
-                    </div>
-                  </FormItem>
-                )}
-              />
 
               {/* Background Opacity */}
               <FormField
@@ -408,8 +293,6 @@ export const DesignForm: React.FC<FormComponentProps> = ({ formData, onChange, o
                   </FormItem>
                 )}
               />
-              </>
-              )}
 
               {/* Center Icon Opacity */}
               {formData.templateMode === "preset" && (
