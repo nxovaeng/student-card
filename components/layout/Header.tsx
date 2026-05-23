@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center space-x-2">
           <FileText className="h-8 w-8 text-white" />
           <h1 className="text-xl font-bold text-white md:text-2xl">
-            <span className="font-extrabold tracking-tight">Student ID Generator</span>
+            <span className="font-extrabold tracking-tight">Student Card</span>
           </h1>
         </div>
       </div>

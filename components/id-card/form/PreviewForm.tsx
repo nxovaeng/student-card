@@ -10,7 +10,6 @@ import { Download } from "lucide-react"
 import { useFormContext } from "react-hook-form"
 import PreviewContainer from "@/components/common/PreviewContainer"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import HandHoldingPreview from "@/components/id-card/preview/HandHoldingPreview"
 
 /**
  * Preview Form Component
@@ -45,14 +44,7 @@ export const PreviewForm: React.FC<IDCardPreviewFormProps> = ({ formData, onChan
   const previewContent = (
     <div id="student-card" ref={previewRef} className="w-full max-w-md">
       {/* Card front preview */}
-      <CardPreview formData={formData} showBack={false} />
-
-      {/* Card back preview - only shown when back is enabled */}
-      {formData.backEnabled && (
-        <div className="mt-4">
-          <CardPreview formData={formData} showBack={true} />
-        </div>
-      )}
+      <CardPreview formData={formData} />
     </div>
   )
 
@@ -113,9 +105,6 @@ export const PreviewForm: React.FC<IDCardPreviewFormProps> = ({ formData, onChan
       <PreviewContainer title="Student ID Preview" footer={footerContent}>
         {previewContent}
       </PreviewContainer>
-
-      {/* Hand Holding Preview */}
-      <HandHoldingPreview cardElementId="student-card" />
     </>
   )
 }

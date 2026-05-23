@@ -6,6 +6,9 @@ import { useState } from "react"
 import type { AdmissionLetterFormData } from "@/lib/types"
 import { DEFAULT_ADMISSION_LETTER_DATA } from "@/lib/constants"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { useEffect } from "react"
+
 /**
  * 录取通知书状态管理Hook
  */
@@ -15,6 +18,28 @@ export const useAdmissionLetter = (initialData: AdmissionLetterFormData = DEFAUL
 
   // 表单错误状态
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.universityAddress && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
+      if (profile.universityContact && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
+      if (profile.universityWebsite && profile.universityWebsite !== prev.universityWebsite) { updated.universityWebsite = profile.universityWebsite; changed = true }
+      if (profile.fullName && profile.fullName !== prev.studentName) { updated.studentName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty && profile.faculty !== prev.departmentName) { updated.departmentName = profile.faculty; changed = true }
+      if (profile.major && profile.major !== prev.programName) { updated.programName = profile.major; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   // 处理输入变更
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -35,6 +60,16 @@ export const useAdmissionLetter = (initialData: AdmissionLetterFormData = DEFAUL
       ...prev,
       [name]: value,
     }))
+
+    // Sync to global
+    if (name === "universityName") updateProfile("universityName", value)
+    if (name === "universityAddress") updateProfile("universityAddress", value)
+    if (name === "universityContact") updateProfile("universityContact", value)
+    if (name === "universityWebsite") updateProfile("universityWebsite", value)
+    if (name === "studentName") updateProfile("fullName", value)
+    if (name === "studentId") updateProfile("studentId", value)
+    if (name === "departmentName") updateProfile("faculty", value)
+    if (name === "programName") updateProfile("major", value)
 
     // 清除错误
     if (formErrors[name]) {

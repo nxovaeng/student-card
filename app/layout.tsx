@@ -12,6 +12,8 @@ const greatVibes = Great_Vibes({
   variable: "--font-handwriting",
 })
 
+import { GlobalProfileProvider } from "@/context/GlobalProfileContext"
+
 export const metadata: Metadata = {
   title: "VSID",
   description: "fast generate virtual student id",
@@ -28,8 +30,10 @@ export default function RootLayout({
       <head />
       <body className={`${inter.className} ${greatVibes.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Header />
-          {children}
+          <GlobalProfileProvider>
+            <Header />
+            {children}
+          </GlobalProfileProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -83,6 +83,23 @@ pnpm build
 pnpm start
 ```
 
+## 部署指南：
+
+### Vercel 部署:
+
+直接将代码推送到 GitHub，然后在 Vercel 中导入项目。
+框架预设保持为 Next.js 即可，Vercel 会自动识别并部署。
+
+### Cloudflare Pages 部署:
+
+将代码推送到 GitHub，在 Cloudflare 面板选择 "Pages" -> "Connect to Git"。
+构建设置：
+Framework preset: 选择 None（不要选 Next.js，因为这是包含后端的全栈部署）。
+Build command: 填写 npm run pages:build
+Build output directory: 填写 .vercel/output/static
+
+如果构建失败，可以检查一下 Cloudflare 面板上的 Node.js 版本是否设置为较高版本，比如 NODE_VERSION=20。
+
 ## 📖 Usage
 
 1. **Select Document Type**: Choose from ID Card, Certificate, Schedule, Admission Letter, or Transcript

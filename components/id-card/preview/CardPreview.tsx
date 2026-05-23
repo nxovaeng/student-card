@@ -5,7 +5,6 @@ import { useRef, useEffect, useState } from "react"
 import type { CardPreviewProps } from "@/lib/types"
 import ModernPortraitCard from "../portrait/ModernCard"
 import ModernLandscapeCard from "../landscape/ModernCard"
-import { CardBack } from "../common/CardBack"
 import JsBarcode from "jsbarcode"
 import { QRCodeSVG } from "qrcode.react"
 import CanvasCardPreview from "./CanvasCardPreview"
@@ -14,7 +13,7 @@ import CanvasCardPreview from "./CanvasCardPreview"
  * Card Preview Component
  * Display different card views based on card orientation and style
  */
-export const CardPreview: React.FC<CardPreviewProps> = ({ formData, showBack = false }) => {
+export const CardPreview: React.FC<CardPreviewProps> = ({ formData }) => {
   // Create barcode reference
   const barcodeRef = useRef<SVGSVGElement>(null)
   const [isClient, setIsClient] = useState(false)
@@ -60,179 +59,6 @@ export const CardPreview: React.FC<CardPreviewProps> = ({ formData, showBack = f
       }
     }
   }, [formData.studentId, formData.codeType, formData.orientation, isClient])
-
-  // If it's card back
-  if (showBack) {
-    // Copy back implementation from backup file
-    return (
-      <div className="w-full">
-        {formData.orientation === "landscape" ? (
-          // Landscape card back
-          <div className="mt-4">
-            <div
-              className={`relative overflow-hidden rounded-lg shadow-lg ${formData.realisticEffect ? "realistic-card" : ""}`}
-              style={{
-                backgroundColor: formData.realisticEffect ? "#ffffff" : "#ffffff",
-                aspectRatio: "1.586/1", // Maintain same ratio as front
-                maxWidth: "100%",
-                ...(formData.realisticEffect && {
-                  boxShadow:
-                    "0 1px 2px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.07), 0 8px 16px rgba(0,0,0,0.07)",
-                  backgroundImage: "linear-gradient(145deg, #ffffff, #f5f7fa)",
-                }),
-              }}
-            >
-              {/* Background image - full coverage */}
-              {formData.backgroundImage && (
-                <div
-                  className="absolute inset-0 z-0"
-                  style={{
-                    backgroundImage: `url(${formData.backgroundImage})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    opacity: Number(formData.backgroundOpacity) / 200, // Lower background opacity for back
-                    ...(formData.realisticEffect && {
-                      filter: "contrast(1.05) saturate(1.1)",
-                    }),
-                  }}
-                ></div>
-              )}
-
-              {/* 水印层 */}
-              {formData.enableWatermark && (
-                <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: `repeating-linear-gradient(
-                      -45deg,
-                      transparent,
-                      transparent ${formData.watermarkLineWidth}px,
-                      rgba(${Number.parseInt(formData.watermarkColor.slice(1, 3), 16)}, ${Number.parseInt(formData.watermarkColor.slice(3, 5), 16)}, ${Number.parseInt(formData.watermarkColor.slice(5, 7), 16)}, ${Number(formData.watermarkOpacity) / 100}) ${formData.watermarkLineWidth}px,
-                      rgba(${Number.parseInt(formData.watermarkColor.slice(1, 3), 16)}, ${Number.parseInt(formData.watermarkColor.slice(3, 5), 16)}, ${Number.parseInt(formData.watermarkColor.slice(5, 7), 16)}, ${Number(formData.watermarkOpacity) / 100}) ${Number(formData.watermarkLineWidth) * 2}px
-                    )`,
-                    }}
-                  ></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div
-                      className="transform text-center"
-                      style={{
-                        color: `rgba(${Number.parseInt(formData.watermarkColor.slice(1, 3), 16)}, ${Number.parseInt(formData.watermarkColor.slice(3, 5), 16)}, ${Number.parseInt(formData.watermarkColor.slice(5, 7), 16)}, ${Number(formData.watermarkOpacity) / 100})`,
-                        letterSpacing: "2px",
-                        width: "100%",
-                        fontSize: `${Number(formData.watermarkSize) * 0.8 + 1.5}rem`,
-                        transform: `rotate(${formData.watermarkAngle}deg)`,
-                      }}
-                    >
-                      {formData.watermarkText}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* 反面内容 */}
-              <div className="relative z-10 h-full p-4">
-                {/* 头部 - 学校信息 */}
-                <div className="flex items-center justify-between mb-3 border-b border-gray-200 pb-2">
-                  <div className="flex items-center">
-                    <div className="text-base font-bold text-gray-800">
-                      {formData.universityName || "INTERNATIONAL UNIVERSITY"}
-                    </div>
-                  </div>
-
-                  {/* 反面学校印章/校徽 */}
-                  <div className="relative">
-                    <img
-                      src={formData.backLogo || "/placeholder.svg"}
-                      alt="University Seal"
-                      className="h-12 w-12 object-contain"
-                      style={{
-                        opacity: Number(formData.backLogoOpacity) / 100,
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* 主要内容 - 两列布局 */}
-                <div className="flex text-sm">
-                  {/* 左列 */}
-                  <div className="w-[60%] pr-3">
-                    {/* 使用条款 */}
-                    <div className="mb-2">
-                      <div className="font-semibold text-xs mb-1 text-gray-700">TERMS OF USE</div>
-                      <p className="text-xs text-gray-600 leading-tight">{formData.termsOfUse}</p>
-                    </div>
-
-                    {/* 遗失声明 */}
-                    <div className="mb-2">
-                      <div className="font-semibold text-xs mb-1 text-gray-700">LOST CARD</div>
-                      <p className="text-xs text-gray-600 leading-tight">{formData.lostCardInfo}</p>
-                    </div>
-
-                    {/* 返还信息 */}
-                    <div className="mb-0">
-                      <p className="text-xs text-gray-600 leading-tight">{formData.returnInfo}</p>
-                    </div>
-                  </div>
-
-                  {/* 右列 */}
-                  <div className="w-[40%]">
-                    {/* 校园权限 */}
-                    <div className="mb-2">
-                      <div className="font-semibold text-xs mb-1 text-gray-700">ACCESS PRIVILEGES</div>
-                      <p className="text-xs text-gray-600 leading-tight">{formData.accessList}</p>
-                    </div>
-
-                    {/* 联系方式 */}
-                    <div className="mb-2">
-                      <div className="font-semibold text-xs mb-1 text-gray-700">EMERGENCY CONTACT</div>
-                      <p className="text-xs text-gray-600 leading-tight">{formData.emergencyContact}</p>
-                    </div>
-
-                    {/* 学校地址和网站 */}
-                    <div>
-                      <div className="font-semibold text-xs mb-1 text-gray-700">CONTACT INFO</div>
-                      <p className="text-xs text-gray-600 leading-tight mb-1">{formData.universityAddress}</p>
-                      <p className="text-xs text-gray-600 leading-tight">{formData.universityWebsite}</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 底部磁条效果 */}
-                {formData.realisticEffect && (
-                  <>
-                    {/* 磁条 */}
-                    <div
-                      className="absolute top-10 left-0 right-0 h-[8mm] bg-gradient-to-r from-[#2d2d2d] via-[#1a1a1a] to-[#2d2d2d]"
-                      style={{
-                        boxShadow: "inset 0 1px 2px rgba(255,255,255,0.1)",
-                      }}
-                    >
-                      {/* 磁条细微纹理 */}
-                      <div
-                        className="h-full w-full opacity-30"
-                        style={{
-                          backgroundImage:
-                            "repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0,0,0,0.2) 2px, rgba(0,0,0,0.2) 4px)",
-                        }}
-                      ></div>
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
-          </div>
-        ) : (
-          <CardBack
-            formData={formData}
-            cardStyle={formData.cardStyle}
-            orientation={formData.orientation}
-            barcodeRef={barcodeRef}
-          />
-        )}
-      </div>
-    )
-  }
 
   // 渲染卡片正面
   if (!isClient) return null

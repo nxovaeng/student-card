@@ -6,12 +6,38 @@ import { useState, useCallback } from "react"
 import type { TranscriptFormData, TranscriptCourse } from "@/lib/types"
 import { DEFAULT_TRANSCRIPT_DATA, GRADE_POINTS } from "@/lib/constants"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { useEffect } from "react"
+
 /**
  * 成绩单状态管理Hook
  */
 export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRIPT_DATA) => {
   const [formData, setFormData] = useState<TranscriptFormData>(initialData)
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.universityAddress && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
+      if (profile.universityContact && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
+      if (profile.universityWebsite && profile.universityWebsite !== prev.universityWebsite) { updated.universityWebsite = profile.universityWebsite; changed = true }
+      if (profile.fullName && profile.fullName !== prev.studentName) { updated.studentName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty && profile.faculty !== prev.departmentName) { updated.departmentName = profile.faculty; changed = true }
+      if (profile.major && profile.major !== prev.programName) { updated.programName = profile.major; changed = true }
+      if (profile.studentPhoto && profile.studentPhoto !== prev.studentPhoto) { updated.studentPhoto = profile.studentPhoto; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   // 处理表单字段变更
   const handleInputChange = useCallback(
@@ -24,6 +50,18 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
         [name]: newValue,
       }))
 
+      // Sync to global
+      if (typeof newValue === "string") {
+        if (name === "universityName") updateProfile("universityName", newValue)
+        if (name === "universityAddress") updateProfile("universityAddress", newValue)
+        if (name === "universityContact") updateProfile("universityContact", newValue)
+        if (name === "universityWebsite") updateProfile("universityWebsite", newValue)
+        if (name === "studentName") updateProfile("fullName", newValue)
+        if (name === "studentId") updateProfile("studentId", newValue)
+        if (name === "departmentName") updateProfile("faculty", newValue)
+        if (name === "programName") updateProfile("major", newValue)
+      }
+
       // 清除该字段的错误
       if (formErrors[name]) {
         setFormErrors((prev) => {
@@ -33,7 +71,7 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
         })
       }
     },
-    [formErrors],
+    [formErrors, updateProfile],
   )
 
   // 处理文件上传
@@ -44,14 +82,18 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
     const reader = new FileReader()
     reader.onload = (event) => {
       if (event.target?.result) {
+        const result = event.target?.result as string
         setFormData((prev) => ({
           ...prev,
-          [field]: event.target?.result,
+          [field]: result,
         }))
+
+        if (field === "universityLogo") updateProfile("universityLogo", result)
+        if (field === "studentPhoto") updateProfile("studentPhoto", result)
       }
     }
     reader.readAsDataURL(file)
-  }, [])
+  }, [updateProfile])
 
   // 处理课程变更
   const handleCoursesChange = useCallback((courses: TranscriptCourse[]) => {

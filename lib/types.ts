@@ -79,7 +79,6 @@ export interface CardElementsProps {
 
 export interface CardPreviewProps {
   formData: IDCardFormData
-  showBack?: boolean
   onChange?: (name: string, value: string | boolean) => void
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>, field: string) => void
   onDownload?: (quality: string) => void

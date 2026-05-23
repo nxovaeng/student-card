@@ -6,9 +6,31 @@ import { useState, useEffect } from "react"
 import type { TuitionReceiptFormData, TuitionFeeItem, TuitionPaymentItem } from "@/lib/types"
 import { DEFAULT_TUITION_RECEIPT_DATA } from "@/lib/constants"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+
 export const useTuitionReceipt = (initialData: TuitionReceiptFormData = DEFAULT_TUITION_RECEIPT_DATA) => {
   const [formData, setFormData] = useState<TuitionReceiptFormData>(initialData)
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.universityAddress && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
+      if (profile.faculty && profile.faculty !== prev.department) { updated.department = profile.faculty; changed = true }
+      if (profile.fullName && profile.fullName !== prev.studentName) { updated.studentName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.major && profile.major !== prev.program) { updated.program = profile.major; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   useEffect(() => {
     setFormErrors(validateData(formData))
@@ -16,11 +38,23 @@ export const useTuitionReceipt = (initialData: TuitionReceiptFormData = DEFAULT_
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // Sync to global
+    if (name === "universityName") updateProfile("universityName", value)
+    if (name === "universityAddress") updateProfile("universityAddress", value)
+    if (name === "department") updateProfile("faculty", value)
+    if (name === "studentName") updateProfile("fullName", value)
+    if (name === "studentId") updateProfile("studentId", value)
+    if (name === "program") updateProfile("major", value)
   }
 
   const handleSelectChange = (name: string, value: string | boolean) => {
-    setFormData({ ...formData, [name]: value })
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    if (name === "universityName" && typeof value === "string") updateProfile("universityName", value)
+    if (name === "department" && typeof value === "string") updateProfile("faculty", value)
+    if (name === "program" && typeof value === "string") updateProfile("major", value)
   }
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
@@ -28,7 +62,10 @@ export const useTuitionReceipt = (initialData: TuitionReceiptFormData = DEFAULT_
     if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
-        setFormData({ ...formData, [field]: reader.result as string })
+        const result = reader.result as string
+        setFormData((prev) => ({ ...prev, [field]: result }))
+
+        if (field === "universityLogo") updateProfile("universityLogo", result)
       }
       reader.readAsDataURL(file)
     }

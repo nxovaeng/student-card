@@ -8,6 +8,8 @@ import type { IDCardFormData, CardStyle } from "@/lib/types"
 import { DEFAULT_FORM_DATA, DEFAULT_CARD_STYLE } from "@/lib/constants"
 import { calculateExpiryYear, validateFormData } from "@/lib/utils"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+
 export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
   // Card form data
   const [formData, setFormData] = useState<IDCardFormData>(initialData)
@@ -17,6 +19,28 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
 
   // Card style
   const [cardStyle, setCardStyle] = useState<CardStyle>(DEFAULT_CARD_STYLE)
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.logo) { updated.logo = profile.universityLogo; changed = true }
+      if (profile.universityAddress && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
+      if (profile.universityWebsite && profile.universityWebsite !== prev.universityWebsite) { updated.universityWebsite = profile.universityWebsite; changed = true }
+      if (profile.universityContact && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
+      if (profile.fullName && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty && profile.faculty !== prev.faculty) { updated.faculty = profile.faculty; changed = true }
+      if (profile.studentPhoto && profile.studentPhoto !== prev.photo) { updated.photo = profile.studentPhoto; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   // Barcode references
   const barcodeRefs = {
@@ -85,6 +109,15 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
 
       return updated
     })
+
+    // Sync to global
+    if (name === "universityName") updateProfile("universityName", value)
+    if (name === "universityAddress") updateProfile("universityAddress", value)
+    if (name === "universityWebsite") updateProfile("universityWebsite", value)
+    if (name === "universityContact") updateProfile("universityContact", value)
+    if (name === "fullName") updateProfile("fullName", value)
+    if (name === "studentId") updateProfile("studentId", value)
+    if (name === "faculty") updateProfile("faculty", value)
   }
 
   // Handle select changes
@@ -103,6 +136,9 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
 
       return updated
     })
+
+    if (name === "universityName" && typeof value === "string") updateProfile("universityName", value)
+    if (name === "faculty" && typeof value === "string") updateProfile("faculty", value)
   }
 
   // Handle file upload
@@ -111,7 +147,11 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
     if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
-        setFormData((prev) => ({ ...prev, [field]: reader.result as string }))
+        const result = reader.result as string
+        setFormData((prev) => ({ ...prev, [field]: result }))
+        
+        if (field === "logo") updateProfile("universityLogo", result)
+        if (field === "photo") updateProfile("studentPhoto", result)
       }
       reader.readAsDataURL(file)
     }

@@ -7,10 +7,31 @@ import type { ScheduleFormData, ScheduleCourse } from "@/lib/types"
 import { DEFAULT_SCHEDULE_DATA } from "@/lib/constants"
 import { v4 as uuidv4 } from "uuid"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+
 export const useSchedule = (initialData: ScheduleFormData = DEFAULT_SCHEDULE_DATA) => {
   const [formData, setFormData] = useState<ScheduleFormData>(initialData)
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
   const [editingCourse, setEditingCourse] = useState<ScheduleCourse | null>(null)
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.fullName && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty && profile.faculty !== prev.department) { updated.department = profile.faculty; changed = true }
+      if (profile.major && profile.major !== prev.major) { updated.major = profile.major; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   // 处理表单输入变化
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -40,6 +61,13 @@ export const useSchedule = (initialData: ScheduleFormData = DEFAULT_SCHEDULE_DAT
       ...prev,
       [name]: value,
     }))
+
+    // Sync to global
+    if (name === "universityName") updateProfile("universityName", value)
+    if (name === "fullName") updateProfile("fullName", value)
+    if (name === "studentId") updateProfile("studentId", value)
+    if (name === "department") updateProfile("faculty", value)
+    if (name === "major") updateProfile("major", value)
   }
 
   // 处理文件上传
@@ -49,10 +77,13 @@ export const useSchedule = (initialData: ScheduleFormData = DEFAULT_SCHEDULE_DAT
 
     const reader = new FileReader()
     reader.onloadend = () => {
+      const result = reader.result as string
       setFormData((prev) => ({
         ...prev,
-        [field]: reader.result as string,
+        [field]: result,
       }))
+
+      if (field === "universityLogo") updateProfile("universityLogo", result)
     }
     reader.readAsDataURL(file)
   }

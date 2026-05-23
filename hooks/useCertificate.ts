@@ -6,12 +6,34 @@ import { useState, useEffect } from "react"
 import type { CertificateFormData } from "@/lib/types"
 import { DEFAULT_CERTIFICATE_DATA } from "@/lib/constants"
 
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+
 export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIFICATE_DATA) => {
   // 证书表单数据
   const [formData, setFormData] = useState<CertificateFormData>(initialData)
 
   // 表单错误
   const [formErrors, setFormErrors] = useState<Record<string, string>>({})
+
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // Sync from global profile
+  useEffect(() => {
+    setFormData((prev) => {
+      let changed = false
+      const updated = { ...prev }
+
+      if (profile.universityName && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityLogo && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
+      if (profile.fullName && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
+      if (profile.studentId && profile.studentId !== prev.studentId) { updated.studentId = profile.studentId; changed = true }
+      if (profile.faculty && profile.faculty !== prev.faculty) { updated.faculty = profile.faculty; changed = true }
+      if (profile.major && profile.major !== prev.major) { updated.major = profile.major; changed = true }
+      if (profile.studentPhoto && profile.studentPhoto !== prev.studentPhoto) { updated.studentPhoto = profile.studentPhoto; changed = true }
+
+      return changed ? updated : prev
+    })
+  }, [profile])
 
   // 验证表单数据
   useEffect(() => {
@@ -21,12 +43,23 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
   // 处理输入变化
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // Sync to global
+    if (name === "universityName") updateProfile("universityName", value)
+    if (name === "fullName") updateProfile("fullName", value)
+    if (name === "studentId") updateProfile("studentId", value)
+    if (name === "faculty") updateProfile("faculty", value)
+    if (name === "major") updateProfile("major", value)
   }
 
   // 处理选择变化
   const handleSelectChange = (name: string, value: string | boolean) => {
-    setFormData({ ...formData, [name]: value })
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    if (name === "universityName" && typeof value === "string") updateProfile("universityName", value)
+    if (name === "faculty" && typeof value === "string") updateProfile("faculty", value)
+    if (name === "major" && typeof value === "string") updateProfile("major", value)
   }
 
   // 处理文件上传
@@ -35,7 +68,11 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
     if (file) {
       const reader = new FileReader()
       reader.onloadend = () => {
-        setFormData({ ...formData, [field]: reader.result as string })
+        const result = reader.result as string
+        setFormData((prev) => ({ ...prev, [field]: result }))
+
+        if (field === "universityLogo") updateProfile("universityLogo", result)
+        if (field === "studentPhoto") updateProfile("studentPhoto", result)
       }
       reader.readAsDataURL(file)
     }

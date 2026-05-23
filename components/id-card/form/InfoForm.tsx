@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { PROGRAM_TYPE_OPTIONS } from "@/lib/constants"
 import { useFormContext } from "react-hook-form"
-import UniversitySelector from "./UniversitySelector"
 
 /**
  * Student Information Form Component
@@ -197,17 +196,6 @@ export const InfoForm: React.FC<FormComponentProps> = ({ formData, onChange }) =
         </div>
 
         <div className="mt-6 border-t pt-6">
-          {/* University Database Quick Fill */}
-          <div className="mb-6">
-            <UniversitySelector
-              currentUniversity={formData.universityName}
-              onSelect={(uni) => {
-                onChange("universityName", uni.name)
-                onChange("universityAddress", uni.address)
-              }}
-            />
-          </div>
-
           <h3 className="text-lg font-medium mb-4">School Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* University Name */}

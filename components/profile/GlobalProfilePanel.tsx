@@ -1,0 +1,358 @@
+"use client"
+
+import React, { useState, useEffect, useMemo, useCallback } from "react"
+import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Badge } from "@/components/ui/badge"
+import { GraduationCap, School, User, Upload, CheckCircle2 } from "lucide-react"
+
+interface University {
+  name: string
+  address: string
+}
+
+interface UniversityData {
+  [country: string]: University[]
+}
+
+/**
+ * Global Profile Panel
+ * A standalone panel for configuring shared school and student info.
+ * Data entered here is automatically synced to all generator tabs.
+ */
+const GlobalProfilePanel: React.FC = () => {
+  const { profile, updateProfile } = useGlobalProfile()
+
+  // University database state
+  const [uniData, setUniData] = useState<UniversityData>({})
+  const [selectedCountry, setSelectedCountry] = useState<string>("")
+  const [countrySearch, setCountrySearch] = useState<string>("")
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  // Load university database
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const response = await fetch("/data/universities.json")
+        if (!response.ok) return
+        const jsonData = await response.json()
+        setUniData(jsonData)
+        setIsLoaded(true)
+      } catch {
+        console.error("Failed to load university data")
+      }
+    }
+    loadData()
+  }, [])
+
+  // Filtered countries
+  const filteredCountries = useMemo(() => {
+    const countries = Object.keys(uniData).sort()
+    if (!countrySearch) return countries
+    return countries.filter((c) =>
+      c.toLowerCase().includes(countrySearch.toLowerCase())
+    )
+  }, [uniData, countrySearch])
+
+  // Universities for selected country
+  const universities = useMemo(() => {
+    if (!selectedCountry || !uniData[selectedCountry]) return []
+    return uniData[selectedCountry]
+  }, [uniData, selectedCountry])
+
+  const handleCountryChange = useCallback((value: string) => {
+    setSelectedCountry(value)
+  }, [])
+
+  const handleUniversitySelect = useCallback(
+    (value: string) => {
+      const uni = universities.find((u) => u.name === value)
+      if (uni) {
+        updateProfile("universityName", uni.name)
+        updateProfile("universityAddress", uni.address)
+      }
+    },
+    [universities, updateProfile]
+  )
+
+  // Handle photo upload
+  const handlePhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      updateProfile("studentPhoto", reader.result as string)
+    }
+    reader.readAsDataURL(file)
+  }
+
+  // Handle logo upload
+  const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    const reader = new FileReader()
+    reader.onloadend = () => {
+      updateProfile("universityLogo", reader.result as string)
+    }
+    reader.readAsDataURL(file)
+  }
+
+  // Count how many fields are filled
+  const filledCount = Object.values(profile).filter((v) => v && v.length > 0).length
+  const totalCount = Object.keys(profile).length
+
+  return (
+    <div className="space-y-6">
+      {/* Status Bar */}
+      <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+        <CheckCircle2 className="h-5 w-5 text-blue-600" />
+        <div className="flex-1">
+          <p className="text-sm font-medium text-blue-900">
+            Profile Completion
+          </p>
+          <p className="text-xs text-blue-600">
+            Data entered here is shared across all document generators.
+          </p>
+        </div>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-700">
+          {filledCount}/{totalCount} fields
+        </Badge>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* School Information */}
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-base flex items-center gap-2">
+              <School className="h-5 w-5 text-blue-600" />
+              School Information
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {/* University Database Picker */}
+            {isLoaded && (
+              <div className="p-4 rounded-lg bg-slate-50 border border-slate-200 space-y-3">
+                <p className="text-xs font-medium text-slate-600 uppercase tracking-wider">
+                  Quick Fill from Database ({Object.keys(uniData).length} countries)
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="space-y-1">
+                    <Label className="text-xs">Country</Label>
+                    <Input
+                      placeholder="Search country..."
+                      value={countrySearch}
+                      onChange={(e) => setCountrySearch(e.target.value)}
+                      className="h-8 text-sm"
+                    />
+                    <Select value={selectedCountry} onValueChange={handleCountryChange}>
+                      <SelectTrigger className="h-8 text-sm">
+                        <SelectValue placeholder="Select country" />
+                      </SelectTrigger>
+                      <SelectContent className="max-h-[300px]">
+                        {filteredCountries.map((country) => (
+                          <SelectItem key={country} value={country}>
+                            {country}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-1">
+                    <Label className="text-xs">University</Label>
+                    <Select
+                      value=""
+                      onValueChange={handleUniversitySelect}
+                      disabled={!selectedCountry}
+                    >
+                      <SelectTrigger className="h-8 text-sm">
+                        <SelectValue
+                          placeholder={selectedCountry ? "Select university" : "Select country first"}
+                        />
+                      </SelectTrigger>
+                      <SelectContent className="max-h-[300px]">
+                        {universities.map((uni) => (
+                          <SelectItem key={uni.name} value={uni.name}>
+                            {uni.name}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Manual fields */}
+            <div className="space-y-3">
+              <div className="space-y-1.5">
+                <Label htmlFor="gp-universityName">University Name</Label>
+                <Input
+                  id="gp-universityName"
+                  value={profile.universityName}
+                  onChange={(e) => updateProfile("universityName", e.target.value)}
+                  placeholder="e.g. Massachusetts Institute of Technology"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-universityWebsite">Website</Label>
+                  <Input
+                    id="gp-universityWebsite"
+                    value={profile.universityWebsite}
+                    onChange={(e) => updateProfile("universityWebsite", e.target.value)}
+                    placeholder="e.g. www.mit.edu"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-universityContact">Contact</Label>
+                  <Input
+                    id="gp-universityContact"
+                    value={profile.universityContact}
+                    onChange={(e) => updateProfile("universityContact", e.target.value)}
+                    placeholder="Phone or email"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <Label htmlFor="gp-universityAddress">Address</Label>
+                <Input
+                  id="gp-universityAddress"
+                  value={profile.universityAddress}
+                  onChange={(e) => updateProfile("universityAddress", e.target.value)}
+                  placeholder="Full address"
+                />
+              </div>
+
+              {/* University Logo Upload */}
+              <div className="space-y-1.5">
+                <Label>University Logo</Label>
+                <div className="flex items-center gap-3">
+                  <div className="h-14 w-14 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white">
+                    {profile.universityLogo ? (
+                      <img src={profile.universityLogo} alt="Logo" className="h-full w-full object-contain p-1" />
+                    ) : (
+                      <Upload className="h-5 w-5 text-slate-400" />
+                    )}
+                  </div>
+                  <div>
+                    <Input
+                      type="file"
+                      id="gp-logo-upload"
+                      accept="image/*"
+                      onChange={handleLogoUpload}
+                      className="hidden"
+                    />
+                    <Label
+                      htmlFor="gp-logo-upload"
+                      className="cursor-pointer text-sm text-blue-600 hover:text-blue-700 font-medium"
+                    >
+                      {profile.universityLogo ? "Change Logo" : "Upload Logo"}
+                    </Label>
+                    <p className="text-xs text-slate-500">PNG or JPG, square preferred</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Student Information */}
+        <Card>
+          <CardHeader className="pb-4">
+            <CardTitle className="text-base flex items-center gap-2">
+              <User className="h-5 w-5 text-green-600" />
+              Student Information
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {/* Student Photo Upload */}
+            <div className="flex items-center gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200">
+              <div className="h-20 w-16 rounded-lg border-2 border-dashed border-slate-300 flex items-center justify-center overflow-hidden bg-white flex-shrink-0">
+                {profile.studentPhoto ? (
+                  <img src={profile.studentPhoto} alt="Photo" className="h-full w-full object-cover" />
+                ) : (
+                  <User className="h-8 w-8 text-slate-400" />
+                )}
+              </div>
+              <div>
+                <Input
+                  type="file"
+                  id="gp-photo-upload"
+                  accept="image/*"
+                  onChange={handlePhotoUpload}
+                  className="hidden"
+                />
+                <Label
+                  htmlFor="gp-photo-upload"
+                  className="cursor-pointer inline-flex items-center gap-1.5 text-sm bg-white border border-slate-300 hover:bg-slate-50 px-3 py-1.5 rounded-md font-medium text-slate-700"
+                >
+                  <Upload className="h-3.5 w-3.5" />
+                  {profile.studentPhoto ? "Change Photo" : "Upload Photo"}
+                </Label>
+                <p className="text-xs text-slate-500 mt-1">ID photo, 3:4 aspect ratio recommended</p>
+              </div>
+            </div>
+
+            {/* Student fields */}
+            <div className="space-y-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-fullName">Full Name</Label>
+                  <Input
+                    id="gp-fullName"
+                    value={profile.fullName}
+                    onChange={(e) => updateProfile("fullName", e.target.value)}
+                    placeholder="Student full name"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-studentId">Student ID</Label>
+                  <Input
+                    id="gp-studentId"
+                    value={profile.studentId}
+                    onChange={(e) => updateProfile("studentId", e.target.value)}
+                    placeholder="e.g. S20240001"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-faculty">Faculty / Department</Label>
+                  <Input
+                    id="gp-faculty"
+                    value={profile.faculty}
+                    onChange={(e) => updateProfile("faculty", e.target.value)}
+                    placeholder="e.g. School of Engineering"
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <Label htmlFor="gp-major">Major / Program</Label>
+                  <Input
+                    id="gp-major"
+                    value={profile.major}
+                    onChange={(e) => updateProfile("major", e.target.value)}
+                    placeholder="e.g. Computer Science"
+                  />
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Shared info hint */}
+      <div className="text-center text-xs text-slate-500 py-2">
+        <GraduationCap className="h-4 w-4 inline-block mr-1 -mt-0.5" />
+        Changes here are automatically applied to Student ID Card, Certificate, Schedule, Admission Letter, Transcript, and Tuition Receipt.
+      </div>
+    </div>
+  )
+}
+
+export default GlobalProfilePanel

@@ -1,0 +1,62 @@
+"use client"
+
+import React, { createContext, useContext, useState, ReactNode } from "react"
+
+export interface GlobalProfile {
+  universityName: string
+  universityLogo: string
+  universityAddress: string
+  universityWebsite: string
+  universityContact: string
+  fullName: string
+  studentId: string
+  faculty: string
+  major: string
+  studentPhoto: string
+}
+
+const DEFAULT_PROFILE: GlobalProfile = {
+  universityName: "",
+  universityLogo: "",
+  universityAddress: "",
+  universityWebsite: "",
+  universityContact: "",
+  fullName: "",
+  studentId: "",
+  faculty: "",
+  major: "",
+  studentPhoto: "",
+}
+
+interface GlobalProfileContextType {
+  profile: GlobalProfile
+  updateProfile: (key: keyof GlobalProfile, value: string) => void
+}
+
+const GlobalProfileContext = createContext<GlobalProfileContextType | undefined>(undefined)
+
+export const GlobalProfileProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [profile, setProfile] = useState<GlobalProfile>(DEFAULT_PROFILE)
+
+  const updateProfile = (key: keyof GlobalProfile, value: string) => {
+    setProfile((prev) => {
+      // Only update if the value has actually changed to prevent infinite loops
+      if (prev[key] === value) return prev
+      return { ...prev, [key]: value }
+    })
+  }
+
+  return (
+    <GlobalProfileContext.Provider value={{ profile, updateProfile }}>
+      {children}
+    </GlobalProfileContext.Provider>
+  )
+}
+
+export const useGlobalProfile = () => {
+  const context = useContext(GlobalProfileContext)
+  if (context === undefined) {
+    throw new Error("useGlobalProfile must be used within a GlobalProfileProvider")
+  }
+  return context
+}

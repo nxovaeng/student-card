@@ -1,0 +1,8 @@
+name = "student-card"
+compatibility_date = "2024-03-20"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages application
+pages_build_output_dir = ".vercel/output/static"
+
+# KV/D1 databases could go here if needed in the future

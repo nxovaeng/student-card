@@ -21,6 +21,8 @@ import TranscriptGenerator from "@/components/transcript/TranscriptGenerator"
 import TuitionReceiptGenerator from "@/components/tuition-receipt/TuitionReceiptGenerator"
 import Footer from "@/components/layout/Footer"
 
+import GlobalProfilePanel from "@/components/profile/GlobalProfilePanel"
+
 /**
  * Home Page Component
  */
@@ -142,9 +144,12 @@ export default function Home() {
     <>
       <div className="w-full max-w-screen-2xl mx-auto px-4 pt-4 pb-8">
         {/* Document type selection */}
-        <Tabs defaultValue="id-card" className="w-full mb-6 tabs-container">
+        <Tabs defaultValue="profile" className="w-full mb-6 tabs-container">
           <div className="bg-gray-100 rounded-md p-2 w-full">
             <TabsList className="flex mx-0 tabs-list overflow-x-auto bg-transparent">
+              <TabsTrigger className="tabs-trigger" value="profile">
+                📋 Profile
+              </TabsTrigger>
               <TabsTrigger className="tabs-trigger" value="id-card">
                 Student ID Card
               </TabsTrigger>
@@ -165,6 +170,10 @@ export default function Home() {
               </TabsTrigger>
             </TabsList>
           </div>
+
+          <TabsContent value="profile">
+            <GlobalProfilePanel />
+          </TabsContent>
 
           <TabsContent value="id-card">
             {/* Form error message */}
