@@ -1,6 +1,7 @@
 import type React from "react"
 import type { CardComponentProps } from "@/lib/types"
 import { CardElements } from "@/components/id-card/common/CardElements"
+import { QRCodeSVG } from "qrcode.react"
 
 /**
  * Landscape Modern ID Card
@@ -54,24 +55,26 @@ export const ModernCard: React.FC<CardComponentProps> = ({ formData, barcodeRef 
           <div
             style={{
               position: "absolute",
-              top: "12%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "52%",
+              top: "8%",
+              left: 0,
+              right: 0,
+              margin: "0 auto",
+              width: "48%",
               aspectRatio: "1",
               borderRadius: "50%",
-              backgroundColor: "rgba(255,255,255,0.15)",
+              backgroundColor: "#ffffff",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               overflow: "hidden",
-              border: "2px solid rgba(255,255,255,0.4)",
+              border: "2px solid rgba(255,255,255,0.8)",
+              boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
             }}
           >
             <img
               src={formData.logo || "/placeholder.svg"}
               alt="Logo"
-              style={{ width: "80%", height: "80%", objectFit: "contain" }}
+              style={{ width: "70%", height: "70%", objectFit: "contain" }}
             />
           </div>
 
@@ -79,10 +82,11 @@ export const ModernCard: React.FC<CardComponentProps> = ({ formData, barcodeRef 
           <div
             style={{
               position: "absolute",
-              bottom: "10%",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "68%",
+              bottom: "8%",
+              left: 0,
+              right: 0,
+              margin: "0 auto",
+              width: "64%",
               aspectRatio: "3/4",
               border: "2px solid rgba(255,255,255,0.7)",
               overflow: "hidden",
@@ -195,10 +199,25 @@ export const ModernCard: React.FC<CardComponentProps> = ({ formData, barcodeRef 
               gap: "4%",
             }}
           >
-            {/* Barcode */}
-            <div style={{ flex: 1, backgroundColor: "#fff", padding: "1px 0" }}>
-              <svg ref={barcodeRef} style={{ width: "100%", height: 22, display: "block" }} />
-            </div>
+            {/* QR / Barcode */}
+            {formData.codeType === "qrcode" ? (
+              <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
+                <div style={{ backgroundColor: "#fff", padding: 2, border: `1px solid ${primary}30` }}>
+                  <QRCodeSVG
+                    value={`ID:${formData.studentId || "S12345678"}`}
+                    size={38}
+                    bgColor="#FFFFFF"
+                    fgColor="#000000"
+                    level="M"
+                    includeMargin={false}
+                  />
+                </div>
+              </div>
+            ) : (
+              <div style={{ flex: 1, backgroundColor: "#fff", padding: "1px 0" }}>
+                <svg ref={barcodeRef} style={{ width: "100%", maxWidth: 140, height: 22, display: "block", marginLeft: "auto" }} />
+              </div>
+            )}
 
             {/* Signature */}
             <div style={{ textAlign: "right", flexShrink: 0 }}>

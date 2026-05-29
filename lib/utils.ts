@@ -2,6 +2,25 @@ import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 import { PROGRAM_DURATION, getDpiFromQuality, mmToPx } from "./constants"
 
+const PRESIDENT_NAMES = [
+  "Dr. James Anderson",
+  "Dr. Sarah Mitchell",
+  "Dr. Robert Smith",
+  "Dr. Emily Chen",
+  "Dr. Michael Johnson",
+  "Dr. William Taylor",
+  "Dr. Jessica Davis",
+  "Dr. David Wilson",
+  "Dr. Richard Miller",
+  "Dr. Susan Moore"
+]
+
+export function generateDeterministicName(seed: string): string {
+  if (!seed) return "Dr. John Doe"
+  const index = seed.length % PRESIDENT_NAMES.length
+  return PRESIDENT_NAMES[index]
+}
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }

@@ -180,7 +180,7 @@ const TuitionReceiptPreview: React.FC<TuitionReceiptPreviewProps> = ({ formData,
 
         {/* ── Footer ── */}
         <div style={{ backgroundColor: `${H}08`, borderTop: `1px solid ${H}20`, padding: "10px 24px", fontSize: 9, color: "#777", textAlign: "center", lineHeight: 1.6 }}>
-          {formData.footerNote}
+          Thank you for your payment. This is an official receipt of {formData.universityName || "the University"}. All fees are subject to the university's refund policy.
         </div>
       </div>
     </div>

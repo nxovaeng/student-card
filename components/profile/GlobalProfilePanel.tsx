@@ -7,7 +7,8 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { GraduationCap, School, User, Upload, CheckCircle2 } from "lucide-react"
+import { GraduationCap, School, User, Upload, CheckCircle2, FileText } from "lucide-react"
+import { MAJOR_DISCIPLINES } from "@/lib/constants"
 
 interface University {
   name: string
@@ -19,6 +20,19 @@ interface University {
 interface UniversityData {
   [country: string]: University[]
 }
+
+const PRESIDENT_NAMES = [
+  "Dr. James Anderson",
+  "Dr. Sarah Mitchell",
+  "Dr. Robert Smith",
+  "Dr. Emily Chen",
+  "Dr. Michael Johnson",
+  "Dr. William Taylor",
+  "Dr. Jessica Davis",
+  "Dr. David Wilson",
+  "Dr. Richard Miller",
+  "Dr. Susan Moore"
+]
 
 /**
  * Global Profile Panel
@@ -77,6 +91,19 @@ const GlobalProfilePanel: React.FC = () => {
         updateProfile("universityAddress", uni.address)
         if (uni.website) updateProfile("universityWebsite", uni.website)
         if (uni.contact) updateProfile("universityContact", uni.contact)
+        
+        // Auto-generate signature
+        const nameIndex = uni.name.length % PRESIDENT_NAMES.length
+        updateProfile("officialSignature", PRESIDENT_NAMES[nameIndex])
+
+        // Auto-fill faculty/major if not already set
+        if (!profile.faculty && MAJOR_DISCIPLINES.length > 0) {
+          const defaultDisc = MAJOR_DISCIPLINES[0]
+          updateProfile("faculty", defaultDisc.label)
+          if (defaultDisc.majors.length > 0) {
+            updateProfile("major", defaultDisc.majors[0])
+          }
+        }
       }
     },
     [universities, updateProfile]
@@ -92,6 +119,19 @@ const GlobalProfilePanel: React.FC = () => {
     }
     reader.readAsDataURL(file)
   }
+
+  // Derived options for linked Faculty/Major
+  const currentDiscipline = useMemo(() => {
+    return MAJOR_DISCIPLINES.find((d) => d.label === profile.faculty) || MAJOR_DISCIPLINES[0]
+  }, [profile.faculty])
+
+  const handleFacultyChange = useCallback((value: string) => {
+    updateProfile("faculty", value)
+    const disc = MAJOR_DISCIPLINES.find((d) => d.label === value)
+    if (disc && disc.majors.length > 0) {
+      updateProfile("major", disc.majors[0])
+    }
+  }, [updateProfile])
 
   // Handle logo upload
   const handleLogoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -126,9 +166,13 @@ const GlobalProfilePanel: React.FC = () => {
     reader.readAsDataURL(file)
   }
 
-  // Count how many fields are filled
-  const filledCount = Object.values(profile).filter((v) => v && v.length > 0).length
-  const totalCount = Object.keys(profile).length
+  // Count how many fields are filled (only user-visible required fields)
+  const VISIBLE_FIELDS: (keyof typeof profile)[] = [
+    "universityName", "universityAddress", "universityWebsite", "universityContact",
+    "fullName", "studentId", "faculty", "major", "birthDate",
+  ]
+  const filledCount = VISIBLE_FIELDS.filter((k) => profile[k] && profile[k]!.length > 0).length
+  const totalCount = VISIBLE_FIELDS.length
 
   return (
     <div className="space-y-6">
@@ -430,22 +474,64 @@ const GlobalProfilePanel: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
                 <div className="space-y-1.5">
                   <Label htmlFor="gp-faculty">Faculty / Department</Label>
-                  <Input
-                    id="gp-faculty"
-                    value={profile.faculty}
-                    onChange={(e) => updateProfile("faculty", e.target.value)}
-                    placeholder="e.g. School of Engineering"
-                  />
+                  <Select
+                    value={profile.faculty || currentDiscipline.label}
+                    onValueChange={handleFacultyChange}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select faculty" />
+                    </SelectTrigger>
+                    <SelectContent className="max-h-[250px]">
+                      {MAJOR_DISCIPLINES.map((d) => (
+                        <SelectItem key={d.value} value={d.label}>
+                          {d.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="gp-major">Major / Program</Label>
-                  <Input
-                    id="gp-major"
-                    value={profile.major}
-                    onChange={(e) => updateProfile("major", e.target.value)}
-                    placeholder="e.g. Computer Science"
-                  />
+                  <Select
+                    value={profile.major || currentDiscipline.majors[0]}
+                    onValueChange={(value) => updateProfile("major", value)}
+                  >
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select major" />
+                    </SelectTrigger>
+                    <SelectContent className="max-h-[250px]">
+                      {currentDiscipline.majors.map((m) => (
+                        <SelectItem key={m} value={m}>
+                          {m}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Document Settings */}
+        <Card className="col-span-1 lg:col-span-2">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-base flex items-center gap-2">
+              <FileText className="h-5 w-5 text-purple-600" />
+              Document Settings (Templates)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="space-y-1.5">
+                <Label htmlFor="gp-officialSignature">Official Signature Name</Label>
+                <Input
+                  id="gp-officialSignature"
+                  value={profile.officialSignature}
+                  onChange={(e) => updateProfile("officialSignature", e.target.value)}
+                  placeholder="e.g. Registrar, MIT"
+                />
+                <p className="text-xs text-slate-500 mt-1">Displayed as the signature on certificates, transcripts, etc.</p>
               </div>
             </div>
           </CardContent>

@@ -7,6 +7,7 @@ import type { AdmissionLetterFormData } from "@/lib/types"
 import { DEFAULT_ADMISSION_LETTER_DATA } from "@/lib/constants"
 
 import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { generateDeterministicName } from "@/lib/utils"
 import { useEffect } from "react"
 
 /**
@@ -27,7 +28,11 @@ export const useAdmissionLetter = (initialData: AdmissionLetterFormData = DEFAUL
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { 
+        updated.universityName = profile.universityName; 
+        updated.signatoryName = generateDeterministicName(profile.universityName)
+        changed = true 
+      }
       if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
       if (profile.universityAddress !== undefined && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
       if (profile.universityContact !== undefined && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }

@@ -7,6 +7,7 @@ import type { CertificateFormData } from "@/lib/types"
 import { DEFAULT_CERTIFICATE_DATA } from "@/lib/constants"
 
 import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { generateDeterministicName } from "@/lib/utils"
 
 export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIFICATE_DATA) => {
   // 证书表单数据
@@ -23,7 +24,11 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { 
+        updated.universityName = profile.universityName; 
+        updated.issuerSignature = generateDeterministicName(profile.universityName)
+        changed = true 
+      }
       if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
       if (profile.fullName !== undefined && profile.fullName !== prev.fullName) { updated.fullName = profile.fullName; changed = true }
       if (profile.birthDate !== undefined && profile.birthDate !== prev.birthDate) { updated.birthDate = profile.birthDate; changed = true }

@@ -188,10 +188,6 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
               <Label>Issue Date</Label>
               <Input name="issueDate" type="date" value={formData.issueDate} onChange={handleChange} />
             </div>
-            <div className="col-span-1 md:col-span-2 space-y-2">
-              <Label>Footer Note</Label>
-              <Input name="footerNote" value={formData.footerNote} onChange={handleChange} />
-            </div>
           </div>
         </CardContent>
       </Card>

@@ -42,7 +42,7 @@ export const PreviewForm: React.FC<IDCardPreviewFormProps> = ({ formData, onChan
 
   // Preview content
   const previewContent = (
-    <div id="student-card" ref={previewRef} className="w-full max-w-md">
+    <div id="student-card" ref={previewRef} className={`w-full ${formData.orientation === 'portrait' ? 'max-w-[280px]' : 'max-w-md'} mx-auto`}>
       {/* Card front preview */}
       <CardPreview formData={formData} />
     </div>

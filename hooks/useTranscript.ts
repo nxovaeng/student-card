@@ -7,6 +7,7 @@ import type { TranscriptFormData, TranscriptCourse } from "@/lib/types"
 import { DEFAULT_TRANSCRIPT_DATA, GRADE_POINTS } from "@/lib/constants"
 
 import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { generateDeterministicName } from "@/lib/utils"
 import { useEffect } from "react"
 
 /**
@@ -24,7 +25,11 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { 
+        updated.universityName = profile.universityName; 
+        updated.registrarName = generateDeterministicName(profile.universityName)
+        changed = true 
+      }
       if (profile.universityLogo !== undefined && profile.universityLogo !== prev.universityLogo) { updated.universityLogo = profile.universityLogo; changed = true }
       if (profile.universityAddress !== undefined && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
       if (profile.universityContact !== undefined && profile.universityContact !== prev.universityContact) { updated.universityContact = profile.universityContact; changed = true }
@@ -34,6 +39,8 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
       if (profile.faculty !== undefined && profile.faculty !== prev.departmentName) { updated.departmentName = profile.faculty; changed = true }
       if (profile.major !== undefined && profile.major !== prev.programName) { updated.programName = profile.major; changed = true }
       if (profile.studentPhoto !== undefined && profile.studentPhoto !== prev.studentPhoto) { updated.studentPhoto = profile.studentPhoto; changed = true }
+      if (profile.birthDate !== undefined && profile.birthDate !== prev.studentDob) { updated.studentDob = profile.birthDate; changed = true }
+      if (profile.officialSignature !== undefined && profile.officialSignature !== prev.registrarName) { updated.registrarName = profile.officialSignature; changed = true }
 
       return changed ? updated : prev
     })
@@ -60,6 +67,8 @@ export const useTranscript = (initialData: TranscriptFormData = DEFAULT_TRANSCRI
         if (name === "studentId") updateProfile("studentId", newValue)
         if (name === "departmentName") updateProfile("faculty", newValue)
         if (name === "programName") updateProfile("major", newValue)
+        if (name === "studentDob") updateProfile("birthDate", newValue)
+        if (name === "registrarName") updateProfile("officialSignature", newValue)
       }
 
       // 清除该字段的错误

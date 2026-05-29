@@ -33,56 +33,6 @@ export default function TranscriptInfoForm({
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="studentName">Student Name</Label>
-              <Input
-                id="studentName"
-                name="studentName"
-                value={formData.studentName}
-                onChange={(e) => onChange("studentName", e.target.value)}
-                placeholder="Full legal name"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="studentId">Student ID</Label>
-              <Input
-                id="studentId"
-                name="studentId"
-                value={formData.studentId}
-                onChange={(e) => onChange("studentId", e.target.value)}
-                placeholder="e.g., 2023001001"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="studentDob">Date of Birth</Label>
-              <Input
-                id="studentDob"
-                name="studentDob"
-                type="date"
-                value={formData.studentDob}
-                onChange={(e) => onChange("studentDob", e.target.value)}
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="programName">Program / Major</Label>
-              <Input
-                id="programName"
-                name="programName"
-                value={formData.programName}
-                onChange={(e) => onChange("programName", e.target.value)}
-                placeholder="e.g., Computer Science"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="departmentName">Department / School</Label>
-              <Input
-                id="departmentName"
-                name="departmentName"
-                value={formData.departmentName}
-                onChange={(e) => onChange("departmentName", e.target.value)}
-                placeholder="e.g., School of Engineering"
-              />
-            </div>
-            <div className="space-y-2">
               <Label htmlFor="degreeType">Degree Type</Label>
               <Select value={formData.degreeType} onValueChange={(v) => onChange("degreeType", v)}>
                 <SelectTrigger>
@@ -126,27 +76,6 @@ export default function TranscriptInfoForm({
               />
             </div>
           </div>
-
-          {/* Student photo toggle */}
-          <div className="flex items-center justify-between pt-2 border-t">
-            <Label htmlFor="showStudentPhoto">Show Student Photo</Label>
-            <Switch
-              id="showStudentPhoto"
-              checked={formData.showStudentPhoto}
-              onCheckedChange={(v) => onChange("showStudentPhoto", v)}
-            />
-          </div>
-          {formData.showStudentPhoto && (
-            <div className="space-y-2">
-              <Label>Student Photo</Label>
-              <input
-                type="file"
-                accept="image/*"
-                className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
-                onChange={(e) => onFileChange?.(e, "studentPhoto")}
-              />
-            </div>
-          )}
         </CardContent>
       </Card>
 
@@ -195,9 +124,8 @@ export default function TranscriptInfoForm({
               <Input
                 id="registrarName"
                 name="registrarName"
-                value={formData.registrarName}
+                value={formData.registrarName || ""}
                 onChange={(e) => onChange("registrarName", e.target.value)}
-                placeholder="e.g., Dr. Jane Smith"
               />
             </div>
             <div className="space-y-2">
@@ -205,9 +133,8 @@ export default function TranscriptInfoForm({
               <Input
                 id="registrarTitle"
                 name="registrarTitle"
-                value={formData.registrarTitle}
+                value={formData.registrarTitle || ""}
                 onChange={(e) => onChange("registrarTitle", e.target.value)}
-                placeholder="e.g., University Registrar"
               />
             </div>
           </div>

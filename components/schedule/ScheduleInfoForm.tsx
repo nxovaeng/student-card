@@ -42,27 +42,9 @@ export default function ScheduleInfoForm({
   const [isCustomMajor, setIsCustomMajor] = useState(false)
 
   const currentDiscipline = MAJOR_DISCIPLINES.find((d) => d.value === selectedDiscipline)
-  const majorOptions = currentDiscipline?.majors ?? []
 
   const handleDisciplineChange = (value: string) => {
     setSelectedDiscipline(value)
-    setIsCustomMajor(value === "custom")
-    if (value !== "custom") {
-      const disc = MAJOR_DISCIPLINES.find((d) => d.value === value)
-      if (disc && disc.majors.length > 0) {
-        onChange("major", disc.majors[0])
-      }
-    }
-  }
-
-  const handleMajorSelect = (value: string) => {
-    if (value === "__custom__") {
-      setIsCustomMajor(true)
-      onChange("major", "")
-    } else {
-      setIsCustomMajor(false)
-      onChange("major", value)
-    }
   }
 
   const handleLoadTemplate = () => {
@@ -170,19 +152,19 @@ export default function ScheduleInfoForm({
         </CardContent>
       </Card>
 
-      {/* Major / Discipline */}
+      {/* Course Templates */}
       <Card>
         <CardHeader>
-          <CardTitle>Major & Discipline</CardTitle>
+          <CardTitle>Course Templates</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
             {/* Discipline selector */}
             <div className="space-y-2">
               <Label>Discipline / Field of Study</Label>
               <Select value={selectedDiscipline} onValueChange={handleDisciplineChange}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select discipline" />
+                  <SelectValue placeholder="Select discipline to load samples" />
                 </SelectTrigger>
                 <SelectContent>
                   {MAJOR_DISCIPLINES.map((d) => (
@@ -193,61 +175,15 @@ export default function ScheduleInfoForm({
                 </SelectContent>
               </Select>
             </div>
-
-            {/* Major selector or custom input */}
-            <div className="space-y-2">
-              <Label htmlFor="major">Major / Program</Label>
-              {selectedDiscipline === "custom" || isCustomMajor ? (
-                <Input
-                  id="major"
-                  name="major"
-                  value={formData.major}
-                  onChange={(e) => onChange("major", e.target.value)}
-                  placeholder="Enter your major"
-                />
-              ) : (
-                <Select
-                  value={majorOptions.includes(formData.major) ? formData.major : "__custom__"}
-                  onValueChange={handleMajorSelect}
-                >
-                  <SelectTrigger id="major">
-                    <SelectValue placeholder="Select major" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {majorOptions.map((m) => (
-                      <SelectItem key={m} value={m}>
-                        {m}
-                      </SelectItem>
-                    ))}
-                    <SelectItem value="__custom__">— Custom major —</SelectItem>
-                  </SelectContent>
-                </Select>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="department">Department / School</Label>
-              <Input
-                id="department"
-                name="department"
-                value={formData.department}
-                onChange={(e) => onChange("department", e.target.value)}
-                placeholder="e.g., School of Computer Science"
-              />
-            </div>
+            {/* Load built-in course template */}
+            {DISCIPLINE_COURSE_TEMPLATES[selectedDiscipline] && (
+              <div>
+                <Button variant="outline" className="w-full" onClick={handleLoadTemplate}>
+                  <BookOpen className="mr-2 h-4 w-4" /> Load Sample Courses
+                </Button>
+              </div>
+            )}
           </div>
-
-          {/* Load built-in course template */}
-          {DISCIPLINE_COURSE_TEMPLATES[selectedDiscipline] && (
-            <div className="pt-2 border-t">
-              <p className="text-sm text-muted-foreground mb-2">
-                Load a sample course schedule for <strong>{currentDiscipline?.label}</strong> to get started quickly.
-              </p>
-              <Button variant="outline" size="sm" onClick={handleLoadTemplate}>
-                Load Sample Courses for {currentDiscipline?.label}
-              </Button>
-            </div>
-          )}
         </CardContent>
       </Card>
 

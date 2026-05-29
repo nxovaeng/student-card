@@ -64,6 +64,7 @@ export const CODE_TYPE_OPTIONS = [
   { label: "QR Code", value: "qrcode" },
 ]
 
+
 // Program type options
 export const PROGRAM_TYPE_OPTIONS = [
   { label: "Bachelor", value: "Bachelor" },

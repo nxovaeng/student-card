@@ -155,18 +155,17 @@ export const InfoForm: React.FC<FormComponentProps> = ({ formData, onChange }) =
         <div className="mt-6 border-t pt-6">
           <h3 className="text-lg font-medium mb-4">Card Settings</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
             {/* Official Signature */}
             <FormField
               control={form.control}
               name="officialSignature"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Official Signature</FormLabel>
+                  <FormLabel>Official Signature Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
-                      placeholder="Enter registrar signature"
+                      placeholder="e.g. Dr. Jane Smith"
                       onChange={(e) => {
                         field.onChange(e)
                         handleInputChange(e)

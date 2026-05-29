@@ -9,6 +9,7 @@ import { DEFAULT_FORM_DATA, DEFAULT_CARD_STYLE } from "@/lib/constants"
 import { calculateExpiryYear, validateFormData } from "@/lib/utils"
 
 import { useGlobalProfile } from "@/context/GlobalProfileContext"
+import { generateDeterministicName } from "@/lib/utils"
 
 export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
   // Card form data
@@ -28,7 +29,11 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
       let changed = false
       const updated = { ...prev }
 
-      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { updated.universityName = profile.universityName; changed = true }
+      if (profile.universityName !== undefined && profile.universityName !== prev.universityName) { 
+        updated.universityName = profile.universityName; 
+        updated.officialSignature = generateDeterministicName(profile.universityName)
+        changed = true 
+      }
       if (profile.universityLogo !== undefined && profile.universityLogo !== prev.logo) { updated.logo = profile.universityLogo; changed = true }
       if (profile.universityAddress !== undefined && profile.universityAddress !== prev.universityAddress) { updated.universityAddress = profile.universityAddress; changed = true }
       if (profile.universityCity !== undefined && profile.universityCity !== prev.universityCity) { updated.universityCity = profile.universityCity; changed = true }

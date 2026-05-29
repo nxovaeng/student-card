@@ -51,17 +51,7 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
           <h3 className="text-lg font-medium">Student Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-            <div className="space-y-2">
-              <Label htmlFor="birthDate">Date of Birth</Label>
-              <Input
-                id="birthDate"
-                name="birthDate"
-                type="date"
-                value={data.birthDate}
-                onChange={(e) => handleChange("birthDate", e.target.value)}
-              />
-            </div>
-            <div className="space-y-2">
+            <div className="space-y-2 col-span-2">
               <Label htmlFor="nationality">Nationality</Label>
               <Input
                 id="nationality"
@@ -78,26 +68,6 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
         <div className="space-y-4">
           <h3 className="text-lg font-medium">Academic Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="faculty">Faculty / School</Label>
-              <Input
-                id="faculty"
-                name="faculty"
-                value={data.faculty}
-                onChange={(e) => handleChange("faculty", e.target.value)}
-                placeholder="e.g., School of Computer Science"
-              />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="major">Major / Program</Label>
-              <Input
-                id="major"
-                name="major"
-                value={data.major}
-                onChange={(e) => handleChange("major", e.target.value)}
-                placeholder="e.g., Computer Science"
-              />
-            </div>
             <div className="space-y-2">
               <Label htmlFor="degreeType">Degree Type</Label>
               <Select value={data.degreeType} onValueChange={(value) => handleChange("degreeType", value)}>
@@ -215,15 +185,14 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="issuerSignature">Issuer Signature</Label>
+              <Label htmlFor="issuerSignature">Issuer Signature (Name)</Label>
               <Input
                 id="issuerSignature"
                 name="issuerSignature"
-                value={data.issuerSignature}
+                value={data.issuerSignature || ""}
                 onChange={(e) => handleChange("issuerSignature", e.target.value)}
-                placeholder="Enter issuer name as signature"
+                placeholder="e.g. Dr. John Doe"
               />
-              <p className="text-xs text-gray-500 mt-1">The text entered here will be displayed as signature</p>
             </div>
           </div>
         </div>

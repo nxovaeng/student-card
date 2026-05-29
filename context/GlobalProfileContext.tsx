@@ -16,7 +16,8 @@ export interface GlobalProfile {
   birthDate: string
   studentPhoto: string
   universityLogoLong: string
-  cardBackgroundImage: string
+  cardBackgroundImage?: string
+  officialSignature?: string
 }
 
 const DEFAULT_PROFILE: GlobalProfile = {
@@ -34,6 +35,7 @@ const DEFAULT_PROFILE: GlobalProfile = {
   studentPhoto: "/placeholder.svg?height=150&width=120",
   universityLogoLong: "/placeholder.svg?height=40&width=200",
   cardBackgroundImage: "/placeholder.svg?height=90&width=140",
+  officialSignature: "Registrar",
 }
 
 interface GlobalProfileContextType {
