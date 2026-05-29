@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { PROGRAM_DURATION } from "./constants"
+import { PROGRAM_DURATION, getDpiFromQuality, mmToPx } from "./constants"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -57,6 +57,70 @@ export const exportToImage = (canvas: HTMLCanvasElement, fileName: string, type:
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
+}
+
+/**
+ * Export an HTML element to a PNG at a physically-correct size.
+ *
+ * Strategy:
+ *  1. Measure the element's current rendered size in CSS pixels.
+ *  2. Compute the target pixel dimensions from the physical mm size at the
+ *     requested DPI (1 inch = 25.4 mm).
+ *  3. Pass `scale = targetPx / renderedPx` to html2canvas so the output
+ *     canvas is exactly the right number of pixels — no more "giant canvas"
+ *     from blindly multiplying by 4 or 6.
+ *
+ * @param element   The DOM element to capture.
+ * @param widthMm   Physical width in millimetres.
+ * @param heightMm  Physical height in millimetres (0 = auto from aspect ratio).
+ * @param quality   One of "low" | "medium" | "high" | "ultra".
+ * @param fileName  Download filename (without extension).
+ * @param bgColor   Background colour for the canvas.
+ */
+export const exportElementToPng = async (
+  element: HTMLElement,
+  widthMm: number,
+  heightMm: number,
+  quality: string,
+  fileName: string,
+  bgColor = "#ffffff",
+): Promise<void> => {
+  const dpi = getDpiFromQuality(quality)
+  const targetWidthPx = mmToPx(widthMm, dpi)
+  const targetHeightPx = heightMm > 0 ? mmToPx(heightMm, dpi) : 0
+
+  const renderedWidth = element.offsetWidth || element.getBoundingClientRect().width
+  const scale = renderedWidth > 0 ? targetWidthPx / renderedWidth : dpi / 96
+
+  const html2canvasModule = await import("html2canvas")
+  const html2canvas = html2canvasModule.default
+
+  const canvas = await html2canvas(element, {
+    scale,
+    useCORS: true,
+    allowTaint: true,
+    backgroundColor: bgColor,
+    logging: false,
+    scrollY: -window.scrollY,
+    foreignObjectRendering: false,
+    // If a fixed height is requested, crop/pad to it
+    ...(targetHeightPx > 0 ? { height: element.offsetHeight } : {}),
+  })
+
+  // If a target height was specified and the canvas is taller, crop it
+  let finalCanvas = canvas
+  if (targetHeightPx > 0 && canvas.height !== targetHeightPx) {
+    const cropped = document.createElement("canvas")
+    cropped.width = canvas.width
+    cropped.height = targetHeightPx
+    const ctx = cropped.getContext("2d")
+    if (ctx) {
+      ctx.drawImage(canvas, 0, 0)
+    }
+    finalCanvas = cropped
+  }
+
+  exportToImage(finalCanvas, fileName, "png")
 }
 
 // Validate input data validity

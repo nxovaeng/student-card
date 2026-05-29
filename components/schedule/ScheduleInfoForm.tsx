@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { useState } from "react"
 
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -10,7 +11,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch"
 import { Badge } from "@/components/ui/badge"
 import { Trash, Plus, Edit, School, Calendar, User, BookOpen } from "lucide-react"
-import { HOUR_FORMAT_OPTIONS } from "@/lib/constants"
+import { HOUR_FORMAT_OPTIONS, MAJOR_DISCIPLINES, DISCIPLINE_COURSE_TEMPLATES } from "@/lib/constants"
 import type { ScheduleFormData, ScheduleCourse } from "@/lib/types"
 
 interface ScheduleInfoFormProps {
@@ -30,49 +31,81 @@ export default function ScheduleInfoForm({
   onEditCourse,
   onDeleteCourse,
 }: ScheduleInfoFormProps) {
+  // Track selected discipline for major list
+  const [selectedDiscipline, setSelectedDiscipline] = useState<string>(() => {
+    // Try to infer discipline from current major
+    for (const disc of MAJOR_DISCIPLINES) {
+      if (disc.majors.includes(formData.major)) return disc.value
+    }
+    return "cs_eng"
+  })
+  const [isCustomMajor, setIsCustomMajor] = useState(false)
+
+  const currentDiscipline = MAJOR_DISCIPLINES.find((d) => d.value === selectedDiscipline)
+  const majorOptions = currentDiscipline?.majors ?? []
+
+  const handleDisciplineChange = (value: string) => {
+    setSelectedDiscipline(value)
+    setIsCustomMajor(value === "custom")
+    if (value !== "custom") {
+      const disc = MAJOR_DISCIPLINES.find((d) => d.value === value)
+      if (disc && disc.majors.length > 0) {
+        onChange("major", disc.majors[0])
+      }
+    }
+  }
+
+  const handleMajorSelect = (value: string) => {
+    if (value === "__custom__") {
+      setIsCustomMajor(true)
+      onChange("major", "")
+    } else {
+      setIsCustomMajor(false)
+      onChange("major", value)
+    }
+  }
+
+  const handleLoadTemplate = () => {
+    const template = DISCIPLINE_COURSE_TEMPLATES[selectedDiscipline]
+    if (template && template.length > 0) {
+      // Generate fresh IDs to avoid conflicts
+      const newCourses = template.map((c) => ({
+        ...c,
+        id: `${c.id}_${Date.now()}_${Math.random().toString(36).slice(2)}`,
+      }))
+      onChange("courses", newCourses)
+    }
+  }
+
   // Format time
   const formatTime = (time: string) => {
     if (!time) return ""
-
     if (formData.hourFormat === "12h") {
       const [hours, minutes] = time.split(":").map(Number)
       const period = hours >= 12 ? "PM" : "AM"
       const hour12 = hours % 12 || 12
       return `${hour12}:${minutes.toString().padStart(2, "0")} ${period}`
     }
-
     return time
   }
 
-  // Get course mode badge color
   const getModeColor = (mode: string) => {
     switch (mode) {
-      case "In-Person":
-        return "bg-green-100 text-green-800 border-green-200"
-      case "Online":
-        return "bg-blue-100 text-blue-800 border-blue-200"
-      case "Hybrid":
-        return "bg-purple-100 text-purple-800 border-purple-200"
-      default:
-        return "bg-gray-100 text-gray-800 border-gray-200"
+      case "In-Person": return "bg-green-100 text-green-800 border-green-200"
+      case "Online": return "bg-blue-100 text-blue-800 border-blue-200"
+      case "Hybrid": return "bg-purple-100 text-purple-800 border-purple-200"
+      default: return "bg-gray-100 text-gray-800 border-gray-200"
     }
   }
 
-  // Get course type badge color
   const getTypeColor = (type: string) => {
     switch (type) {
-      case "Lecture":
-        return "bg-amber-100 text-amber-800 border-amber-200"
-      case "Seminar":
-        return "bg-indigo-100 text-indigo-800 border-indigo-200"
-      case "Lab":
-        return "bg-cyan-100 text-cyan-800 border-cyan-200"
-      case "Tutorial":
-        return "bg-rose-100 text-rose-800 border-rose-200"
-      case "Workshop":
-        return "bg-emerald-100 text-emerald-200 border-emerald-200"
-      default:
-        return "bg-gray-100 text-gray-800 border-gray-200"
+      case "Lecture": return "bg-amber-100 text-amber-800 border-amber-200"
+      case "Seminar": return "bg-indigo-100 text-indigo-800 border-indigo-200"
+      case "Lab": return "bg-cyan-100 text-cyan-800 border-cyan-200"
+      case "Tutorial": return "bg-rose-100 text-rose-800 border-rose-200"
+      case "Workshop": return "bg-emerald-100 text-emerald-800 border-emerald-200"
+      default: return "bg-gray-100 text-gray-800 border-gray-200"
     }
   }
 
@@ -85,8 +118,6 @@ export default function ScheduleInfoForm({
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-
             <div className="space-y-2">
               <Label htmlFor="academicYear">Academic Year</Label>
               <Input
@@ -99,7 +130,7 @@ export default function ScheduleInfoForm({
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="term">Term</Label>
+              <Label htmlFor="term">Term / Semester</Label>
               <Input
                 id="term"
                 name="term"
@@ -136,6 +167,87 @@ export default function ScheduleInfoForm({
               </Select>
             </div>
           </div>
+        </CardContent>
+      </Card>
+
+      {/* Major / Discipline */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Major & Discipline</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Discipline selector */}
+            <div className="space-y-2">
+              <Label>Discipline / Field of Study</Label>
+              <Select value={selectedDiscipline} onValueChange={handleDisciplineChange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select discipline" />
+                </SelectTrigger>
+                <SelectContent>
+                  {MAJOR_DISCIPLINES.map((d) => (
+                    <SelectItem key={d.value} value={d.value}>
+                      {d.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            {/* Major selector or custom input */}
+            <div className="space-y-2">
+              <Label htmlFor="major">Major / Program</Label>
+              {selectedDiscipline === "custom" || isCustomMajor ? (
+                <Input
+                  id="major"
+                  name="major"
+                  value={formData.major}
+                  onChange={(e) => onChange("major", e.target.value)}
+                  placeholder="Enter your major"
+                />
+              ) : (
+                <Select
+                  value={majorOptions.includes(formData.major) ? formData.major : "__custom__"}
+                  onValueChange={handleMajorSelect}
+                >
+                  <SelectTrigger id="major">
+                    <SelectValue placeholder="Select major" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {majorOptions.map((m) => (
+                      <SelectItem key={m} value={m}>
+                        {m}
+                      </SelectItem>
+                    ))}
+                    <SelectItem value="__custom__">— Custom major —</SelectItem>
+                  </SelectContent>
+                </Select>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="department">Department / School</Label>
+              <Input
+                id="department"
+                name="department"
+                value={formData.department}
+                onChange={(e) => onChange("department", e.target.value)}
+                placeholder="e.g., School of Computer Science"
+              />
+            </div>
+          </div>
+
+          {/* Load built-in course template */}
+          {DISCIPLINE_COURSE_TEMPLATES[selectedDiscipline] && (
+            <div className="pt-2 border-t">
+              <p className="text-sm text-muted-foreground mb-2">
+                Load a sample course schedule for <strong>{currentDiscipline?.label}</strong> to get started quickly.
+              </p>
+              <Button variant="outline" size="sm" onClick={handleLoadTemplate}>
+                Load Sample Courses for {currentDiscipline?.label}
+              </Button>
+            </div>
+          )}
         </CardContent>
       </Card>
 
@@ -214,10 +326,12 @@ export default function ScheduleInfoForm({
         </CardHeader>
         <CardContent className="space-y-4">
           {formData.courses.length === 0 ? (
-            <div className="text-center py-4 text-muted-foreground">No courses yet, please click "Add Course" to add</div>
+            <div className="text-center py-4 text-muted-foreground">
+              No courses yet. Click "Add Course" or load a sample schedule above.
+            </div>
           ) : (
             <div className="space-y-4">
-              {formData.courses.map((course, index) => (
+              {formData.courses.map((course) => (
                 <div key={course.id} className="border rounded-lg p-4 hover:bg-slate-50 transition-colors">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center gap-2">
@@ -257,7 +371,7 @@ export default function ScheduleInfoForm({
                       <span className="text-sm">
                         {course.days.join(", ")}{" "}
                         {course.startTime && course.endTime
-                          ? `${formatTime(course.startTime)} - ${formatTime(course.endTime)}`
+                          ? `${formatTime(course.startTime)} – ${formatTime(course.endTime)}`
                           : "No time information"}
                       </span>
                     </div>
@@ -270,16 +384,16 @@ export default function ScheduleInfoForm({
                         <Badge variant="outline" className={getTypeColor(course.type)}>
                           {course.type}
                         </Badge>
-                        {formData.showCredits && <Badge variant="outline">{course.credits} Credits</Badge>}
+                        {formData.showCredits && (
+                          <Badge variant="outline">{course.credits} Credits</Badge>
+                        )}
                       </div>
                     </div>
                   </div>
 
                   {course.notes && formData.showNotes && (
                     <div className="mt-2 text-sm text-muted-foreground">
-                      <p>
-                        <span className="font-medium">Notes:</span> {course.notes}
-                      </p>
+                      <span className="font-medium">Notes:</span> {course.notes}
                     </div>
                   )}
                 </div>

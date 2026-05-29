@@ -13,8 +13,6 @@ import CertificateInfoForm from "./CertificateInfoForm"
 import CertificateDesignForm from "./CertificateDesignForm"
 import CertificatePreview from "./CertificatePreview"
 import type { CertificateFormData } from "@/lib/types"
-import html2canvas from "html2canvas"
-import { exportToImage } from "@/lib/utils"
 
 const CertificateGenerator: React.FC = () => {
   const previewRef = useRef<HTMLDivElement>(null)
@@ -34,7 +32,7 @@ const CertificateGenerator: React.FC = () => {
   }
 
   // Download certificate image
-  const handleDownload = (quality: string) => {
+  const handleDownload = async (quality: string) => {
     if (!previewRef.current) return
 
     // Validate form data
@@ -46,46 +44,31 @@ const CertificateGenerator: React.FC = () => {
 
     const fileName = `${formData.fullName || "student"}_certificate`
 
-    // Add temporary style fix
-    const styleFixElement = document.createElement("style")
-    styleFixElement.id = "export-fix-style"
-    styleFixElement.innerHTML = `
-      #certificate-preview img { display: inline-block !important; }
-      #certificate-preview { font-variant: normal !important; }
-      .h-full { height: 100% !important; }
-      .w-full { width: 100% !important; }
-      .object-contain { object-fit: contain !important; }
-      .object-cover { object-fit: cover !important; }
-    `
-    document.head.appendChild(styleFixElement)
+    try {
+      const fixStyle = document.createElement("style")
+      fixStyle.id = "export-fix-style"
+      fixStyle.textContent = `img { display: inline-block !important; }`
+      document.head.appendChild(fixStyle)
 
-    // Scroll to top to ensure correct rendering
-    window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
+      await new Promise((resolve) => setTimeout(resolve, 300))
 
-    // Add small delay to ensure rendering is complete
-    setTimeout(() => {
-      html2canvas(previewRef.current as HTMLElement, {
-        scale: quality === "ultra" ? 4 : quality === "high" ? 3 : quality === "medium" ? 2 : 1,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: formData.paperColor,
-        scrollY: -window.scrollY,
-        foreignObjectRendering: false,
-        onclone: (documentClone: Document) => {
-          // Apply style fix again in cloned document
-          const imgElements = documentClone.querySelectorAll("img")
-          imgElements.forEach((element) => {
-            if (element instanceof HTMLElement) {
-              element.style.display = "inline-block"
-            }
-          })
-        },
-      }).then((canvas) => {
-        exportToImage(canvas, fileName, "png")
-        // Remove temporary style
-        document.getElementById("export-fix-style")?.remove()
-      })
-    }, 300)
+      // Use DPI-based export: A4 portrait = 210 × 297 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        previewRef.current,
+        210,
+        297,
+        quality,
+        fileName,
+        formData.paperColor || "#ffffff",
+      )
+
+      document.getElementById("export-fix-style")?.remove()
+    } catch (err) {
+      console.error("Export error:", err)
+      alert("Export failed, please try again later.")
+    }
   }
 
   // Validate certificate data

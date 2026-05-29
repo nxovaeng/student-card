@@ -172,56 +172,20 @@ export const useIDCard = (initialData: IDCardFormData = DEFAULT_FORM_DATA) => {
     if (!cardElement) return
 
     try {
-      // Set scale based on export quality
-      let scaleValue = 2
-      switch (quality) {
-        case "low":
-          scaleValue = 2
-          break
-        case "medium":
-          scaleValue = 3
-          break
-        case "high":
-          scaleValue = 4
-          break
-        case "ultra":
-          scaleValue = 6
-          break
-        default:
-          scaleValue = 4
-      }
-
-      // 动态导入html2canvas
-      const html2canvasModule = await import("html2canvas")
-      const html2canvas = html2canvasModule.default
-
-      // 捕获卡片元素
-      const canvas = await html2canvas(cardElement, {
-        scale: scaleValue, // 根据用户选择的质量设置缩放参数
-        useCORS: true, // 允许加载跨域图像
-        backgroundColor: null, // 保持背景透明
-        logging: false, // 关闭日志
-        allowTaint: true, // 允许污染画布
-        scrollY: -window.scrollY, // 确保捕获整个内容，即使有滚动
-      })
-
-      // 创建下载链接
-      const link = document.createElement("a")
-
-      // 将canvas转换为dataURL
-      const image = canvas.toDataURL("image/png")
-
-      // 设置下载属性
-      link.href = image
-      link.download = `student-id-${formData.studentId || "card"}.png`
-
-      // 触发下载
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
+      // Credit card ISO/IEC 7810 ID-1: 85.6 × 54 mm
+      const isPortrait = formData.orientation === "portrait"
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        cardElement,
+        isPortrait ? 54 : 85.6,
+        isPortrait ? 85.6 : 54,
+        quality,
+        `student-id-${formData.studentId || "card"}`,
+        formData.cardColor || "#1e40af",
+      )
     } catch (err) {
       console.error("Error generating image:", err)
-      alert("无法生成图片，请稍后再试")
+      alert("Unable to generate image, please try again later.")
     }
   }
 

@@ -145,33 +145,16 @@ export const useTuitionReceipt = (initialData: TuitionReceiptFormData = DEFAULT_
     if (!element) return
 
     try {
-      let scaleValue = 2
-      switch (quality) {
-        case "low": scaleValue = 2; break
-        case "medium": scaleValue = 3; break
-        case "high": scaleValue = 4; break
-        case "ultra": scaleValue = 6; break
-        default: scaleValue = 4
-      }
-
-      const html2canvasModule = await import("html2canvas")
-      const html2canvas = html2canvasModule.default
-
-      const canvas = await html2canvas(element, {
-        scale: scaleValue,
-        useCORS: true,
-        backgroundColor: formData.paperColor,
-        logging: false,
-        allowTaint: true,
-        scrollY: -window.scrollY,
-      })
-
-      const link = document.createElement("a")
-      link.href = canvas.toDataURL("image/png")
-      link.download = `tuition-receipt-${formData.studentId || "student"}.png`
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
+      // Use DPI-based export: A5 portrait = 148 × 210 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        element,
+        148,  // A5 width mm
+        210,  // A5 height mm
+        quality,
+        `tuition-receipt-${formData.studentId || "student"}`,
+        formData.paperColor || "#ffffff",
+      )
     } catch (err) {
       console.error("Error generating image:", err)
     }

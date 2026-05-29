@@ -9,8 +9,6 @@ import TranscriptDesignForm from "./TranscriptDesignForm"
 import TranscriptPreview from "./TranscriptPreview"
 import { useTranscript } from "@/hooks/useTranscript"
 import { DEFAULT_TRANSCRIPT_DATA } from "@/lib/constants"
-import html2canvas from "html2canvas"
-import { exportToImage } from "@/lib/utils"
 
 /**
  * 成绩单生成器组件
@@ -43,56 +41,29 @@ export default function TranscriptGenerator() {
     const fileName = `${formData.studentName || "student"}_transcript`
 
     try {
-      // 1. 导出前临时注入样式修复
       const fixStyle = document.createElement("style")
       fixStyle.id = "export-fix-style"
-      fixStyle.textContent = `
-        img { 
-          display: inline-block !important; 
-        }
-        .h-full {
-          height: 100% !important;
-        }
-        .w-full {
-          width: 100% !important;
-        }
-        .object-contain {
-          object-fit: contain !important;
-        }
-        .object-cover {
-          object-fit: cover !important;
-        }
-      `
+      fixStyle.textContent = `img { display: inline-block !important; }`
       document.head.appendChild(fixStyle)
 
-      // 2. 导出前确保滚动条位置正确
       window.scrollTo(0, 0)
-
-      // 3. 等待渲染完成
       await new Promise((resolve) => setTimeout(resolve, 300))
 
-      // 设置缩放比例
-      const scaleValue = quality === "ultra" ? 6 : quality === "high" ? 4 : quality === "medium" ? 3 : 2
+      // Use DPI-based export: A4 portrait = 210 × 297 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        previewRef.current,
+        210,
+        297,
+        quality,
+        fileName,
+        formData.paperColor || "#ffffff",
+      )
 
-      // 4. 使用html2canvas导出
-      const canvas = await html2canvas(previewRef.current, {
-        scale: scaleValue,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
-        logging: false,
-        scrollY: -window.scrollY,
-        foreignObjectRendering: false,
-      })
-
-      // 5. 导出图片
-      exportToImage(canvas, fileName, "png")
-
-      // 6. 移除临时样式
       document.getElementById("export-fix-style")?.remove()
     } catch (err) {
-      console.error("导出图片时发生错误:", err)
-      alert("导出图片失败，请稍后再试")
+      console.error("Export error:", err)
+      alert("Export failed, please try again later.")
     }
   }
 

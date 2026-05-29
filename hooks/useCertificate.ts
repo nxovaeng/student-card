@@ -91,56 +91,19 @@ export const useCertificate = (initialData: CertificateFormData = DEFAULT_CERTIF
     if (!certificateElement) return
 
     try {
-      // 根据导出质量设置scale
-      let scaleValue = 2
-      switch (quality) {
-        case "low":
-          scaleValue = 2
-          break
-        case "medium":
-          scaleValue = 3
-          break
-        case "high":
-          scaleValue = 4
-          break
-        case "ultra":
-          scaleValue = 6
-          break
-        default:
-          scaleValue = 4
-      }
-
-      // 动态导入html2canvas
-      const html2canvasModule = await import("html2canvas")
-      const html2canvas = html2canvasModule.default
-
-      // 捕获证书
-      const canvas = await html2canvas(certificateElement, {
-        scale: scaleValue, // 根据用户选择的质量设置缩放参数
-        useCORS: true, // 允许加载跨域图像
-        backgroundColor: formData.paperColor, // 使用纸张颜色作为背景
-        logging: false, // 关闭日志
-        allowTaint: true, // 允许污染画布
-        scrollY: -window.scrollY, // 确保捕获整个内容，即使有滚动
-      })
-
-      // 创建下载链接
-      const link = document.createElement("a")
-
-      // 将canvas转换为dataURL
-      const image = canvas.toDataURL("image/png")
-
-      // 设置下载属性
-      link.href = image
-      link.download = `enrollment-certificate-${formData.studentId || "student"}.png`
-
-      // 触发下载
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
+      // Use DPI-based export: A4 portrait = 210 × 297 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        certificateElement,
+        210,  // A4 width mm
+        297,  // A4 height mm
+        quality,
+        `enrollment-certificate-${formData.studentId || "student"}`,
+        formData.paperColor || "#ffffff",
+      )
     } catch (err) {
       console.error("Error generating image:", err)
-      alert("无法生成图片，请稍后再试")
+      alert("Unable to generate image, please try again later.")
     }
   }
 

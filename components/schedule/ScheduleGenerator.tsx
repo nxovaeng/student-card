@@ -6,8 +6,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle } from "lucide-react"
 import { Form } from "@/components/ui/form"
 import { useForm } from "react-hook-form"
-import html2canvas from "html2canvas"
-import { exportToImage } from "@/lib/utils"
 import { useSchedule } from "@/hooks/useSchedule"
 import { DEFAULT_SCHEDULE_DATA } from "@/lib/constants"
 import ScheduleInfoForm from "./ScheduleInfoForm"
@@ -76,61 +74,32 @@ export default function ScheduleGenerator() {
   const handleDownload = async (quality: string) => {
     if (!previewRef.current) return
 
-    // Validate form data
-    if (Object.keys(formErrors).length > 0) {
-      alert("Please complete all required fields.")
-      return
-    }
-
     const fileName = `${formData.fullName || "student"}_schedule`
 
     try {
-      // 1. Inject temporary style fix before export
+      // Inject temporary style fix before export
       const fixStyle = document.createElement("style")
       fixStyle.id = "export-fix-style"
       fixStyle.textContent = `
-        img { 
-          display: inline-block !important; 
-        }
-        .schedule-container {
-          font-variant: normal !important;
-        }
-        .h-full {
-          height: 100% !important;
-        }
-        .w-full {
-          width: 100% !important;
-        }
-        .object-contain {
-          object-fit: contain !important;
-        }
+        img { display: inline-block !important; }
+        .schedule-container { font-variant: normal !important; }
       `
       document.head.appendChild(fixStyle)
 
-      // 2. Ensure scroll position is correct before export
       window.scrollTo(0, 0)
-
-      // 3. Wait for rendering to complete
       await new Promise((resolve) => setTimeout(resolve, 300))
 
-      // Set scale ratio
-      const scaleValue = quality === "ultra" ? 6 : quality === "high" ? 4 : quality === "medium" ? 3 : 2
+      // Use DPI-based export: landscape A4 = 297 × 210 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        previewRef.current,
+        297, // width mm (landscape A4)
+        210, // height mm
+        quality,
+        fileName,
+        formData.paperColor || "#ffffff",
+      )
 
-      // 4. Export using html2canvas
-      const canvas = await html2canvas(previewRef.current, {
-        scale: scaleValue,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
-        logging: false,
-        scrollY: -window.scrollY,
-        foreignObjectRendering: false,
-      })
-
-      // 5. Export image
-      exportToImage(canvas, fileName, "png")
-
-      // 6. Remove temporary style
       document.getElementById("export-fix-style")?.remove()
     } catch (err) {
       console.error("Error exporting image:", err)

@@ -13,8 +13,6 @@ import TuitionReceiptInfoForm from "./TuitionReceiptInfoForm"
 import TuitionReceiptDesignForm from "./TuitionReceiptDesignForm"
 import TuitionReceiptPreview from "./TuitionReceiptPreview"
 import type { TuitionReceiptFormData } from "@/lib/types"
-import html2canvas from "html2canvas"
-import { exportToImage } from "@/lib/utils"
 
 const TuitionReceiptGenerator: React.FC = () => {
   const previewRef = useRef<HTMLDivElement>(null)
@@ -41,34 +39,35 @@ const TuitionReceiptGenerator: React.FC = () => {
     handleInputChange({ target: { name, value } } as any)
   }
 
-  const handleDownload = (quality: string) => {
+  const handleDownload = async (quality: string) => {
     if (!previewRef.current) return
 
     const fileName = `tuition-receipt-${formData.studentId || "student"}`
 
-    const styleFixElement = document.createElement("style")
-    styleFixElement.id = "export-fix-style"
-    styleFixElement.textContent = `
-      #tuition-receipt-preview img { display: inline-block !important; }
-      #tuition-receipt-preview { font-variant: normal !important; }
-    `
-    document.head.appendChild(styleFixElement)
+    try {
+      const fixStyle = document.createElement("style")
+      fixStyle.id = "export-fix-style"
+      fixStyle.textContent = `img { display: inline-block !important; }`
+      document.head.appendChild(fixStyle)
 
-    window.scrollTo(0, 0)
+      window.scrollTo(0, 0)
+      await new Promise((resolve) => setTimeout(resolve, 300))
 
-    setTimeout(() => {
-      html2canvas(previewRef.current as HTMLElement, {
-        scale: quality === "ultra" ? 4 : quality === "high" ? 3 : quality === "medium" ? 2 : 1,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: formData.paperColor,
-        scrollY: -window.scrollY,
-        foreignObjectRendering: false,
-      }).then((canvas) => {
-        exportToImage(canvas, fileName, "png")
-        document.getElementById("export-fix-style")?.remove()
-      })
-    }, 300)
+      // Use DPI-based export: A5 portrait = 148 × 210 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        previewRef.current,
+        148,
+        210,
+        quality,
+        fileName,
+        formData.paperColor || "#ffffff",
+      )
+
+      document.getElementById("export-fix-style")?.remove()
+    } catch (err) {
+      console.error("Export error:", err)
+    }
   }
 
   return (

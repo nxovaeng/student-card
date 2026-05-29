@@ -188,5 +188,9 @@ export const useSchedule = (initialData: ScheduleFormData = DEFAULT_SCHEDULE_DAT
     cancelEditCourse,
     deleteCourse,
     resetForm,
+    // Directly replace the courses array (used by template loader)
+    setCourses: (courses: ScheduleCourse[]) => {
+      setFormData((prev) => ({ ...prev, courses }))
+    },
   }
 }

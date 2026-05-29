@@ -8,8 +8,6 @@ import AdmissionLetterInfoForm from "./AdmissionLetterInfoForm"
 import AdmissionLetterDesignForm from "./AdmissionLetterDesignForm"
 import AdmissionLetterPreview from "./AdmissionLetterPreview"
 import { useAdmissionLetter } from "@/hooks/useAdmissionLetter"
-import { exportToImage } from "@/lib/utils"
-import html2canvas from "html2canvas"
 
 /**
  * Admission Letter Generator Component
@@ -46,19 +44,16 @@ export default function AdmissionLetterGenerator() {
     if (!previewRef.current) return
 
     try {
-      // Set export quality
-      const scale = quality === "ultra" ? 4 : quality === "high" ? 3 : quality === "medium" ? 2 : 1
-
-      // Capture preview using html2canvas
-      const canvas = await html2canvas(previewRef.current, {
-        scale,
-        useCORS: true,
-        logging: false,
-        backgroundColor: formData.paperColor || "#ffffff",
-      })
-
-      // Export as PNG
-      exportToImage(canvas, `admission-letter-${formData.studentName.replace(/\s+/g, "-")}`, "png")
+      // Use DPI-based export: A4 portrait = 210 × 297 mm
+      const { exportElementToPng } = await import("@/lib/utils")
+      await exportElementToPng(
+        previewRef.current,
+        210,
+        297,
+        quality,
+        `admission-letter-${formData.studentName.replace(/\s+/g, "-")}`,
+        formData.paperColor || "#ffffff",
+      )
     } catch (error) {
       console.error("Export error:", error)
       alert("An error occurred during export, please try again.")

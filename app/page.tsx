@@ -7,8 +7,7 @@ import DesignForm from "@/components/id-card/form/DesignForm"
 import PreviewForm from "@/components/id-card/form/PreviewForm"
 import { useIDCard } from "@/hooks/useIDCard"
 import { DEFAULT_FORM_DATA } from "@/lib/constants"
-import html2canvas from "html2canvas"
-import { exportToImage, validateFormData } from "@/lib/utils"
+import { exportElementToPng, validateFormData } from "@/lib/utils"
 import { AlertCircle } from "lucide-react"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { useForm } from "react-hook-form"
@@ -59,75 +58,26 @@ export default function Home() {
     const fileName = `${formData.fullName || "student"}_id_card`
 
     try {
-      // 1. Temporarily inject style fixes before export
       const fixStyle = document.createElement("style")
       fixStyle.id = "export-fix-style"
-      fixStyle.textContent = `
-        img { 
-          display: inline-block !important; 
-        }
-        #student-card {
-          font-variant: normal !important;
-        }
-        .realistic-card {
-          position: relative !important;
-        }
-        .realistic-content {
-          position: relative !important;
-        }
-        .h-full {
-          height: 100% !important;
-        }
-        .w-full {
-          width: 100% !important;
-        }
-        .object-contain {
-          object-fit: contain !important;
-        }
-        .object-cover {
-          object-fit: cover !important;
-        }
-      `
+      fixStyle.textContent = `img { display: inline-block !important; }`
       document.head.appendChild(fixStyle)
 
-      // 2. Ensure correct scroll position before export
       window.scrollTo(0, 0)
-
-      // 3. Wait for rendering to complete
       await new Promise((resolve) => setTimeout(resolve, 300))
 
-      // Set scale ratio
-      const scaleValue = quality === "ultra" ? 6 : quality === "high" ? 4 : quality === "medium" ? 3 : 2
+      // Credit card ISO/IEC 7810 ID-1: 85.6 × 54 mm
+      // Portrait cards use 54 × 85.6 mm
+      const isPortrait = formData.orientation === "portrait"
+      await exportElementToPng(
+        previewRef.current,
+        isPortrait ? 54 : 85.6,
+        isPortrait ? 85.6 : 54,
+        quality,
+        fileName,
+        formData.cardColor || "#1e40af",
+      )
 
-      // 4. Export using html2canvas
-      const canvas = await html2canvas(previewRef.current, {
-        scale: scaleValue,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
-        logging: false,
-        scrollY: -window.scrollY,
-        foreignObjectRendering: false,
-        onclone: (documentClone: Document) => {
-          // Apply style fixes again in cloned document
-          const imgElements = documentClone.querySelectorAll("img")
-          imgElements.forEach((element) => {
-            if (element instanceof HTMLElement) {
-              element.style.display = "inline-block"
-            }
-          })
-
-          const cardContainer = documentClone.getElementById("student-card")
-          if (cardContainer) {
-            cardContainer.style.fontVariant = "normal"
-          }
-        },
-      })
-
-      // 5. Export image
-      exportToImage(canvas, fileName, "png")
-
-      // 6. Remove temporary styles
       document.getElementById("export-fix-style")?.remove()
     } catch (err) {
       console.error("Error occurred while exporting image:", err)
@@ -135,10 +85,6 @@ export default function Home() {
     }
   }
 
-  // Print card
-  const handlePrint = () => {
-    window.print()
-  }
 
   return (
     <>

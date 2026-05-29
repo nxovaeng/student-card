@@ -8,73 +8,41 @@ import { EXPORT_QUALITY_OPTIONS } from "@/lib/constants"
 import type { AdmissionLetterPreviewProps } from "@/lib/types"
 import { formatDate } from "@/lib/utils"
 
-/**
- * Admission Letter Preview Component
- */
 export default function AdmissionLetterPreview({
   formData,
   onChange,
   onDownload,
   previewRef,
 }: AdmissionLetterPreviewProps) {
-  // Handle download
   const handleDownload = () => {
-    if (onDownload) {
-      onDownload(formData.pngQuality || "high")
-    }
+    if (onDownload) onDownload(formData.pngQuality || "high")
   }
 
-  // Handle quality change
-  const handleQualityChange = (quality: string) => {
-    onChange("pngQuality", quality)
-  }
+  const fmtDate = (d: string) => (d ? formatDate(d) : "")
 
-  // Format date string
-  const formatDateString = (dateString: string) => {
-    if (!dateString) return ""
-    return formatDate(dateString)
-  }
+  const H = formData.headerColor || "#1e40af"
+  const accent = formData.accentColor || "#4f46e5"
 
-  // Render watermark
+  // Watermark grid
   const renderWatermark = () => {
     if (!formData.enableWatermark || !formData.watermarkText) return null
-
-    const watermarkStyle = {
-      position: "absolute" as const,
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      pointerEvents: "none" as const,
-      zIndex: 10,
-      overflow: "hidden",
-    }
-
-    // Create repeated watermark text
-    const watermarks = []
-    const rows = 10
-    const cols = 10
-    const fontSize = Number.parseInt(formData.watermarkSize)
-    const angle = Number.parseInt(formData.watermarkAngle)
-
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        watermarks.push(
+    const items: React.ReactNode[] = []
+    for (let r = 0; r < 8; r++) {
+      for (let c = 0; c < 8; c++) {
+        items.push(
           <div
-            key={`${i}-${j}`}
+            key={`${r}-${c}`}
             style={{
               position: "absolute",
-              top: `${(i * 100) / rows}%`,
-              left: `${(j * 100) / cols}%`,
-              transform: `rotate(${angle}deg)`,
-              fontSize: `${fontSize}px`,
+              top: `${r * 13}%`,
+              left: `${c * 14 - 4}%`,
+              fontSize: `${Number.parseInt(formData.watermarkSize) || 14}px`,
               color: formData.watermarkColor,
               opacity: formData.watermarkOpacity / 100,
-              fontFamily: formData.fontFamily,
+              transform: `rotate(${formData.watermarkAngle}deg)`,
               whiteSpace: "nowrap",
+              fontWeight: "bold",
+              pointerEvents: "none",
             }}
           >
             {formData.watermarkText}
@@ -82,26 +50,25 @@ export default function AdmissionLetterPreview({
         )
       }
     }
-
-    return <div style={watermarkStyle}>{watermarks}</div>
+    return (
+      <div style={{ position: "absolute", inset: 0, overflow: "hidden", zIndex: 5, pointerEvents: "none" }}>
+        {items}
+      </div>
+    )
   }
 
-  // Download button
   const downloadButton = (
     <div className="flex items-center gap-2">
-      <Select value={formData.pngQuality || "high"} onValueChange={handleQualityChange}>
-        <SelectTrigger className="w-[180px]">
-          <SelectValue placeholder="Select export quality" />
+      <Select value={formData.pngQuality || "high"} onValueChange={(v) => onChange("pngQuality", v)}>
+        <SelectTrigger className="w-[200px]">
+          <SelectValue placeholder="Export quality" />
         </SelectTrigger>
         <SelectContent>
-          {EXPORT_QUALITY_OPTIONS.map((option) => (
-            <SelectItem key={option.value} value={option.value}>
-              {option.label}
-            </SelectItem>
+          {EXPORT_QUALITY_OPTIONS.map((o) => (
+            <SelectItem key={o.value} value={o.value}>{o.label}</SelectItem>
           ))}
         </SelectContent>
       </Select>
-
       <Button onClick={handleDownload}>
         <Download className="mr-2 h-4 w-4" />
         Download
@@ -109,160 +76,153 @@ export default function AdmissionLetterPreview({
     </div>
   )
 
-  // Calculate border style
-  const borderStyle = formData.enableBorder
-    ? {
-        border: `2px ${formData.borderStyle} ${formData.borderColor}`,
-        padding: "2rem",
-      }
-    : { padding: "2rem" }
-
-  // Generate signature style
-  const signatureStyle = {
-    fontFamily: "var(--font-handwriting)",
-    fontSize: "1.5rem",
-    marginBottom: "0.5rem",
-    color: "#000",
-  }
-
   return (
     <PreviewContainer title="Admission Letter Preview" actions={downloadButton}>
       <div
         ref={previewRef}
-        className="w-full max-w-4xl mx-auto relative overflow-hidden"
         style={{
-          backgroundColor: formData.paperColor,
-          color: formData.textColor,
-          fontFamily: formData.fontFamily,
-          ...borderStyle,
+          width: "100%",
+          maxWidth: "210mm",
+          margin: "0 auto",
+          backgroundColor: formData.paperColor || "#fff",
+          color: formData.textColor || "#111",
+          fontFamily: formData.fontFamily || "Times New Roman, serif",
+          position: "relative",
+          overflow: "hidden",
+          border: formData.enableBorder ? `1.5px ${formData.borderStyle} ${formData.borderColor}` : "none",
         }}
       >
-        {/* Watermark */}
         {renderWatermark()}
 
-        {/* University Logo and Name */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-4">
+        {/* ── Top accent bar ── */}
+        <div style={{ height: 6, backgroundColor: H }} />
+
+        {/* ── Letterhead ── */}
+        <div style={{ padding: "24px 36px 16px", display: "flex", justifyContent: "space-between", alignItems: "flex-start", borderBottom: `1px solid ${H}25` }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             {formData.universityLogo && (
-              <img
-                src={formData.universityLogo || "/placeholder.svg"}
-                alt="University Logo"
-                className="h-16 w-16 object-contain"
-              />
+              <img src={formData.universityLogo} alt="Logo" style={{ height: 56, width: 56, objectFit: "contain" }} />
             )}
             <div>
-              <h1 className="text-2xl font-bold" style={{ color: formData.headerColor }}>
+              <div style={{ fontWeight: 700, fontSize: 17, color: H, letterSpacing: "0.02em" }}>
                 {formData.universityName}
-              </h1>
-              <p className="text-sm">{formData.universityAddress}</p>
+              </div>
+              <div style={{ fontSize: 10, color: "#555", marginTop: 2, lineHeight: 1.6 }}>
+                {formData.universityAddress}
+              </div>
             </div>
           </div>
-
-          <div className="text-right text-sm">
-            <p>{formData.universityContact}</p>
-            <p>{formData.universityWebsite}</p>
+          <div style={{ textAlign: "right", fontSize: 10, color: "#555", lineHeight: 1.7 }}>
+            <div>{formData.universityContact}</div>
+            <div>{formData.universityWebsite}</div>
           </div>
         </div>
 
-        {/* Letter Title */}
-        <div className="text-center mb-8">
-          <h2
-            className="text-3xl font-bold pb-2 border-b-2 inline-block"
-            style={{ color: formData.headerColor, borderColor: formData.accentColor }}
+        {/* ── Document title ── */}
+        <div style={{ textAlign: "center", padding: "18px 36px 12px" }}>
+          <div
+            style={{
+              display: "inline-block",
+              fontSize: 20,
+              fontWeight: 700,
+              color: H,
+              borderBottom: `2.5px solid ${accent}`,
+              paddingBottom: 5,
+              letterSpacing: "0.04em",
+            }}
           >
             {formData.letterTitle || "Letter of Admission"}
-          </h2>
+          </div>
         </div>
 
-        {/* Student Information */}
-        <div className="mb-6">
-          <p>
-            <span className="font-semibold">Date: </span>
-            {formatDateString(formData.admissionDate)}
-          </p>
-          <p>
-            <span className="font-semibold">To: </span>
-            {formData.studentName}
-          </p>
+        {/* ── Date + recipient ── */}
+        <div style={{ padding: "0 36px 14px", fontSize: 12, lineHeight: 1.9 }}>
+          <div style={{ marginBottom: 10 }}>
+            <span style={{ fontWeight: 600 }}>Date: </span>{fmtDate(formData.admissionDate)}
+          </div>
+          <div>
+            <span style={{ fontWeight: 600 }}>To: </span>{formData.studentName}
+          </div>
           {formData.studentId && (
-            <p>
-              <span className="font-semibold">Student ID: </span>
-              {formData.studentId}
-            </p>
+            <div><span style={{ fontWeight: 600 }}>Student ID: </span>{formData.studentId}</div>
           )}
           {formData.studentAddress && (
-            <p>
-              <span className="font-semibold">Address: </span>
-              {formData.studentAddress}
-            </p>
+            <div><span style={{ fontWeight: 600 }}>Address: </span>{formData.studentAddress}</div>
+          )}
+          {formData.studentEmail && (
+            <div><span style={{ fontWeight: 600 }}>Email: </span>{formData.studentEmail}</div>
           )}
         </div>
 
-        {/* Letter Content */}
-        <div className="mb-6 whitespace-pre-line">{formData.letterContent}</div>
-
-        {/* Admission Details */}
-        <div className="mb-6 p-4 rounded-md" style={{ backgroundColor: `${formData.accentColor}10` }}>
-          <h3 className="text-lg font-semibold mb-2" style={{ color: formData.headerColor }}>
-            Admission Details
-          </h3>
-          <ul className="space-y-1">
-            <li>
-              <span className="font-semibold">Program: </span>
-              {formData.programName}
-            </li>
-            <li>
-              <span className="font-semibold">Department: </span>
-              {formData.departmentName}
-            </li>
-            <li>
-              <span className="font-semibold">Degree: </span>
-              {formData.degreeType}
-            </li>
-            <li>
-              <span className="font-semibold">Duration: </span>
-              {formData.programDuration}
-            </li>
-            <li>
-              <span className="font-semibold">Start Date: </span>
-              {formatDateString(formData.programStartDate)}
-            </li>
-            {formData.scholarshipInfo && (
-              <li>
-                <span className="font-semibold">Scholarship: </span>
-                {formData.scholarshipInfo}
-              </li>
-            )}
-          </ul>
+        {/* ── Letter body ── */}
+        <div style={{ padding: "0 36px 16px", fontSize: 12, lineHeight: 1.85, textAlign: "justify", whiteSpace: "pre-line" }}>
+          {formData.letterContent}
         </div>
 
-        {/* Congratulatory Message */}
+        {/* ── Admission details box ── */}
+        <div
+          style={{
+            margin: "0 36px 16px",
+            border: `1px solid ${H}30`,
+            borderLeft: `4px solid ${H}`,
+            borderRadius: 4,
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ backgroundColor: `${H}10`, padding: "8px 14px", borderBottom: `1px solid ${H}20` }}>
+            <span style={{ fontWeight: 700, fontSize: 12, color: H, letterSpacing: "0.05em", textTransform: "uppercase" }}>
+              Admission Details
+            </span>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 24px", padding: "10px 14px", fontSize: 11, lineHeight: 2 }}>
+            {[
+              ["Program", formData.programName],
+              ["Department", formData.departmentName],
+              ["Degree", formData.degreeType],
+              ["Duration", formData.programDuration],
+              ["Start Date", fmtDate(formData.programStartDate)],
+              formData.scholarshipInfo ? ["Scholarship", formData.scholarshipInfo] : null,
+            ]
+              .filter(Boolean)
+              .map(([label, value]) => (
+                <div key={label as string} style={{ display: "flex", gap: 6 }}>
+                  <span style={{ fontWeight: 600, color: H, minWidth: 90, flexShrink: 0 }}>{label}:</span>
+                  <span>{value || "—"}</span>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {/* ── Congratulatory message ── */}
         {formData.congratulatoryMessage && (
-          <div className="mb-6 font-medium" style={{ color: formData.headerColor }}>
+          <div style={{ margin: "0 36px 14px", padding: "10px 14px", backgroundColor: `${accent}0d`, borderRadius: 4, fontSize: 12, fontStyle: "italic", color: H, lineHeight: 1.7 }}>
             {formData.congratulatoryMessage}
           </div>
         )}
 
-        {/* Next Steps */}
+        {/* ── Next steps ── */}
         {formData.nextStepsInfo && (
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold mb-2" style={{ color: formData.headerColor }}>
+          <div style={{ padding: "0 36px 16px", fontSize: 12, lineHeight: 1.85 }}>
+            <div style={{ fontWeight: 700, color: H, marginBottom: 6, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.05em" }}>
               Next Steps
-            </h3>
-            <div className="whitespace-pre-line">{formData.nextStepsInfo}</div>
+            </div>
+            <div style={{ whiteSpace: "pre-line" }}>{formData.nextStepsInfo}</div>
           </div>
         )}
 
-        {/* Signature Area */}
-        <div className="mt-12 flex justify-end">
-          <div className="text-right">
-            <div className="font-handwriting" style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+        {/* ── Signature ── */}
+        <div style={{ padding: "16px 36px 20px", display: "flex", justifyContent: "flex-end" }}>
+          <div style={{ textAlign: "center" }}>
+            <div style={{ fontFamily: "Georgia, serif", fontStyle: "italic", fontSize: 18, borderBottom: "1px solid #333", paddingBottom: 3, minWidth: 180, marginBottom: 5 }}>
               {formData.signatoryName}
             </div>
-            <p>{formData.signatoryTitle}</p>
-            <p>{formData.universityName}</p>
+            <div style={{ fontSize: 12, fontWeight: 600 }}>{formData.signatoryTitle}</div>
+            <div style={{ fontSize: 11, color: "#555" }}>{formData.universityName}</div>
           </div>
         </div>
+
+        {/* ── Bottom accent bar ── */}
+        <div style={{ height: 4, backgroundColor: accent }} />
       </div>
     </PreviewContainer>
   )
