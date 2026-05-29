@@ -134,7 +134,7 @@ export default function AdmissionLetterDesignForm({
               <Select
                 name="fontFamily"
                 value={formData.fontFamily}
-                onValueChange={(value) => onChange({ target: { name: "fontFamily", value } })}
+                onValueChange={(value) => onChange({ target: { name: "fontFamily", value } } as any)}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select font" />
@@ -170,7 +170,7 @@ export default function AdmissionLetterDesignForm({
                       type: "checkbox",
                       checked,
                     },
-                  } as React.ChangeEvent<HTMLInputElement>)
+                  } as any)
                 }
               />
               <Label htmlFor="enableWatermark">Enable Watermark</Label>
@@ -273,7 +273,7 @@ export default function AdmissionLetterDesignForm({
                       type: "checkbox",
                       checked,
                     },
-                  } as React.ChangeEvent<HTMLInputElement>)
+                  } as any)
                 }
               />
               <Label htmlFor="enableBorder">Enable Border</Label>
@@ -307,7 +307,7 @@ export default function AdmissionLetterDesignForm({
                   <Select
                     name="borderStyle"
                     value={formData.borderStyle}
-                    onValueChange={(value) => onChange({ target: { name: "borderStyle", value } })}
+                    onValueChange={(value) => onChange({ target: { name: "borderStyle", value } } as any)}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Select border style" />

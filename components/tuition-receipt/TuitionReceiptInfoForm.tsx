@@ -49,16 +49,7 @@ const TuitionReceiptInfoForm: React.FC<TuitionReceiptInfoFormProps> = ({
 
             <div className="space-y-2">
               <Label>Term</Label>
-              <Select value={formData.term} onValueChange={(value) => onChange("term", value)}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select term" />
-                </SelectTrigger>
-                <SelectContent>
-                  {SEMESTER_OPTIONS.map((opt) => (
-                    <SelectItem key={opt.value} value={opt.value}>{opt.label}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Input name="term" value={formData.term} onChange={handleChange} placeholder="e.g., Fall 2024" />
             </div>
             <div className="space-y-2">
               <Label>Academic Year</Label>

@@ -21,6 +21,14 @@ interface TranscriptPreviewProps {
 
 export default function TranscriptPreview({ formData, onChange, onDownload, previewRef }: TranscriptPreviewProps) {
   const [exportQuality, setExportQuality] = useState("high")
+
+  const formatDate = (dateString: string) => {
+    if (!dateString) return ""
+    const date = new Date(dateString)
+    if (isNaN(date.getTime())) return dateString
+    return date.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })
+  }
+  
   const localRef = useRef<HTMLDivElement>(null)
   const finalRef = previewRef || localRef
 
@@ -160,11 +168,11 @@ export default function TranscriptPreview({ formData, onChange, onDownload, prev
               ["Student Name", formData.studentName],
               ["Degree", formData.degreeType],
               ["Student ID", formData.studentId],
-              ["Enrollment Date", formData.enrollmentDate],
+              ["Date of Birth", formatDate(formData.studentDob)],
+              ["Enrollment Date", formatDate(formData.enrollmentDate)],
               ["Program", formData.programName],
-              ["Expected Graduation", formData.expectedGraduationDate],
+              ["Expected Graduation", formatDate(formData.expectedGraduationDate)],
               ["Department", formData.departmentName],
-              ["Cumulative GPA", formData.currentGPA],
             ].map(([label, value]) => (
               <div key={label} style={{ display: "flex", gap: 6 }}>
                 <span style={{ fontWeight: 600, color: H, minWidth: 130, flexShrink: 0 }}>{label}:</span>

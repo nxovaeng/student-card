@@ -49,11 +49,84 @@ export const getBackgroundImageStyle = (image: string, opacity: string, isBack =
   }
 }
 
+// Change the DPI metadata of a base64 PNG data URL
+function changeDpiDataUrl(base64Image: string, dpi: number): string {
+  const parts = base64Image.split(",")
+  if (parts.length !== 2 || !parts[0].includes("image/png")) return base64Image
+
+  const dataStr = atob(parts[1])
+  const data = new Uint8Array(dataStr.length)
+  for (let i = 0; i < dataStr.length; i++) {
+    data[i] = dataStr.charCodeAt(i)
+  }
+
+  const ppm = Math.round(dpi / 0.0254)
+  const physChunk = new Uint8Array([
+    0, 0, 0, 9, // Length 9
+    112, 72, 89, 115, // 'pHYs'
+    (ppm >>> 24) & 0xff, (ppm >>> 16) & 0xff, (ppm >>> 8) & 0xff, ppm & 0xff,
+    (ppm >>> 24) & 0xff, (ppm >>> 16) & 0xff, (ppm >>> 8) & 0xff, ppm & 0xff,
+    1, // Unit specifier (meter)
+    0, 0, 0, 0 // CRC placeholder
+  ])
+
+  let crc = 0xffffffff
+  for (let i = 4; i < 17; i++) {
+    crc ^= physChunk[i]
+    for (let j = 0; j < 8; j++) {
+      if (crc & 1) crc = (crc >>> 1) ^ 0xedb88320
+      else crc = crc >>> 1
+    }
+  }
+  crc ^= 0xffffffff
+  physChunk[17] = (crc >>> 24) & 0xff
+  physChunk[18] = (crc >>> 16) & 0xff
+  physChunk[19] = (crc >>> 8) & 0xff
+  physChunk[20] = crc & 0xff
+
+  let offset = 8
+  const chunks: Uint8Array[] = []
+  while (offset < data.length) {
+    const len = (data[offset] << 24) | (data[offset + 1] << 16) | (data[offset + 2] << 8) | data[offset + 3]
+    const type = String.fromCharCode(data[offset + 4], data[offset + 5], data[offset + 6], data[offset + 7])
+    if (type !== "pHYs") {
+      chunks.push(data.slice(offset, offset + 12 + len))
+    }
+    offset += 12 + len
+  }
+
+  const signature = data.slice(0, 8)
+  const totalLength = signature.length + chunks.reduce((acc, c) => acc + c.length, 0) + physChunk.length
+  const newData = new Uint8Array(totalLength)
+  
+  newData.set(signature, 0)
+  newData.set(chunks[0], 8)
+  newData.set(physChunk, 8 + chunks[0].length)
+  
+  let currOffset = 8 + chunks[0].length + physChunk.length
+  for (let i = 1; i < chunks.length; i++) {
+    newData.set(chunks[i], currOffset)
+    currOffset += chunks[i].length
+  }
+
+  let binary = ""
+  for (let i = 0; i < newData.length; i++) {
+    binary += String.fromCharCode(newData[i])
+  }
+  return parts[0] + "," + btoa(binary)
+}
+
 // Export to image functionality
-export const exportToImage = (canvas: HTMLCanvasElement, fileName: string, type: string) => {
+export const exportToImage = (canvas: HTMLCanvasElement, fileName: string, type: string, targetDpi?: number) => {
   const link = document.createElement("a")
   link.download = `${fileName}.${type}`
-  link.href = canvas.toDataURL(`image/${type}`)
+  let dataUrl = canvas.toDataURL(`image/${type}`)
+  
+  if (type === "png" && targetDpi) {
+    dataUrl = changeDpiDataUrl(dataUrl, targetDpi)
+  }
+  
+  link.href = dataUrl
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
@@ -120,7 +193,7 @@ export const exportElementToPng = async (
     finalCanvas = cropped
   }
 
-  exportToImage(finalCanvas, fileName, "png")
+  exportToImage(finalCanvas, fileName, "png", dpi)
 }
 
 // Validate input data validity

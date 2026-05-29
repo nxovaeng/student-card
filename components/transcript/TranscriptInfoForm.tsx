@@ -53,6 +53,16 @@ export default function TranscriptInfoForm({
               />
             </div>
             <div className="space-y-2">
+              <Label htmlFor="studentDob">Date of Birth</Label>
+              <Input
+                id="studentDob"
+                name="studentDob"
+                type="date"
+                value={formData.studentDob}
+                onChange={(e) => onChange("studentDob", e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
               <Label htmlFor="programName">Program / Major</Label>
               <Input
                 id="programName"
@@ -103,6 +113,16 @@ export default function TranscriptInfoForm({
                 type="date"
                 value={formData.expectedGraduationDate}
                 onChange={(e) => onChange("expectedGraduationDate", e.target.value)}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="academicStanding">Academic Standing</Label>
+              <Input
+                id="academicStanding"
+                name="academicStanding"
+                value={formData.academicStanding}
+                onChange={(e) => onChange("academicStanding", e.target.value)}
+                placeholder="e.g., Good Standing"
               />
             </div>
           </div>

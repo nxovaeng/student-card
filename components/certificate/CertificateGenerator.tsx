@@ -27,7 +27,7 @@ const CertificateGenerator: React.FC = () => {
     useCertificate(DEFAULT_CERTIFICATE_DATA)
 
   // Handle form field changes
-  const handleFormChange = (name: string, value: string | boolean) => {
+  const handleFormChange = (name: string, value: any) => {
     handleInputChange({ target: { name, value } } as any)
   }
 

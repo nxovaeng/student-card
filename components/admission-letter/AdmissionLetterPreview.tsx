@@ -137,8 +137,11 @@ export default function AdmissionLetterPreview({
 
         {/* ── Date + recipient ── */}
         <div style={{ padding: "0 36px 14px", fontSize: 12, lineHeight: 1.9 }}>
-          <div style={{ marginBottom: 10 }}>
-            <span style={{ fontWeight: 600 }}>Date: </span>{fmtDate(formData.admissionDate)}
+          <div style={{ marginBottom: 10, display: "flex", justifyContent: "space-between" }}>
+            <div><span style={{ fontWeight: 600 }}>Date: </span>{fmtDate(formData.admissionDate)}</div>
+            {formData.applicationId && (
+              <div><span style={{ fontWeight: 600 }}>Application ID: </span>{formData.applicationId}</div>
+            )}
           </div>
           <div>
             <span style={{ fontWeight: 600 }}>To: </span>{formData.studentName}
@@ -175,16 +178,17 @@ export default function AdmissionLetterPreview({
             </span>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 24px", padding: "10px 14px", fontSize: 11, lineHeight: 2 }}>
-            {[
+            {([
               ["Program", formData.programName],
               ["Department", formData.departmentName],
               ["Degree", formData.degreeType],
               ["Duration", formData.programDuration],
               ["Start Date", fmtDate(formData.programStartDate)],
               formData.scholarshipInfo ? ["Scholarship", formData.scholarshipInfo] : null,
-            ]
-              .filter(Boolean)
-              .map(([label, value]) => (
+              formData.depositAmount ? ["Deposit Required", `$${formData.depositAmount}`] : null,
+              formData.depositDeadline ? ["Deposit Deadline", fmtDate(formData.depositDeadline)] : null,
+            ].filter(Boolean) as string[][]
+            ).map(([label, value]) => (
                 <div key={label as string} style={{ display: "flex", gap: 6 }}>
                   <span style={{ fontWeight: 600, color: H, minWidth: 90, flexShrink: 0 }}>{label}:</span>
                   <span>{value || "—"}</span>

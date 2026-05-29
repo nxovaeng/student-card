@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import type React from "react"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -8,6 +8,32 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { EXPORT_QUALITY_OPTIONS, DAYS_OF_WEEK_OPTIONS } from "@/lib/constants"
 import { Download } from "lucide-react"
 import type { ScheduleFormData, ScheduleCourse } from "@/lib/types"
+
+// Measures the outer container and sets --schedule-scale so the 900px-wide
+// inner content scales to fill it exactly.
+function ScaleUpdater() {
+  useEffect(() => {
+    const update = () => {
+      const containers = document.querySelectorAll<HTMLElement>(".schedule-outer")
+      containers.forEach((el) => {
+        const w = el.offsetWidth
+        const h = el.offsetHeight
+        const inner = el.querySelector<HTMLElement>(".schedule-container")
+        if (inner && w > 0 && h > 0) {
+          const naturalH = Number(inner.getAttribute("data-natural-height")) || 600
+          const scaleW = w / 900
+          const scaleH = h / naturalH
+          const scale = Math.min(scaleW, scaleH) * 0.94 // 0.94 to add a nice page margin
+          el.style.setProperty("--schedule-scale", String(scale))
+        }
+      })
+    }
+    update()
+    window.addEventListener("resize", update)
+    return () => window.removeEventListener("resize", update)
+  }, [])
+  return null
+}
 
 interface SchedulePreviewProps {
   formData: ScheduleFormData
@@ -49,50 +75,76 @@ export default function SchedulePreview({
     return days
   }
 
+  // ── Layout constants ──────────────────────────────────────────────────────
+  // These are the "natural" pixel sizes at which the schedule is designed.
+  // The outer container scales the whole thing to fit landscape A4 ratio.
+  const HOUR_HEIGHT = 52          // px per hour
+  const TIME_COL_W = 65          // px — time label column
+  const HEADER_H = 34          // px — day-name header row
+  const BASE_FONT = 9          // px — base font (will be scaled up visually)
+  const LUNCH_START = 12
+  const LUNCH_END = 13
+  const LUNCH_H = 24          // px — compact lunch row height
+  const displayDays = getDisplayDays()
+  const totalHours = formData.endHour - formData.startHour
+
+  // Calculate natural total height so we can scale to fit
+  const lunchRows = (formData.startHour <= LUNCH_START && formData.endHour > LUNCH_START) ? 1 : 0
+  const normalRows = totalHours - lunchRows
+  const HEADER_BAND_H = 50        // university header band
+  const LEGEND_H = formData.courses.length > 0 ? 32 : 0
+  const NOTES_H = (formData.showNotes && formData.courses.some(c => c.notes)) ? 26 : 0
+  const naturalH = HEADER_BAND_H + HEADER_H + normalRows * HOUR_HEIGHT + lunchRows * LUNCH_H + LEGEND_H + NOTES_H
+
+  // Landscape A4: 297 × 210 mm → natural width we design at
+  const naturalW = 900            // px — design width
+
   const renderWeeklyView = () => {
-    // ── Layout constants ──────────────────────────────────────────────────────
-    // HOUR_HEIGHT controls how tall each 1-hour row is in the preview (px).
-    // Larger = more readable text inside course blocks.
-    const HOUR_HEIGHT = 80          // px per hour
-    const TIME_COL_W  = 72          // px — time label column
-    const HEADER_H    = 36          // px — day-name header row
-    const BASE_FONT   = 13          // px — base font size for the whole grid
-    const displayDays = getDisplayDays()
-    const totalHours  = formData.endHour - formData.startHour
 
     return (
-      <div style={{ fontSize: BASE_FONT, lineHeight: 1.35 }}>
-
-        {/* ── University header ── */}
+      <div
+        style={{
+          width: naturalW,
+          minHeight: naturalH,
+          fontSize: BASE_FONT,
+          lineHeight: 1.35,
+          fontFamily: formData.fontFamily,
+          backgroundColor: formData.paperColor,
+          color: formData.textColor,
+        }}
+      >
+        {/* ── University header band ── */}
         <div
           style={{
             backgroundColor: formData.headerColor,
             color: "#fff",
-            padding: "10px 16px",
+            padding: "8px 14px",
             display: "flex",
             alignItems: "center",
-            gap: 12,
+            gap: 10,
+            height: HEADER_BAND_H,
+            boxSizing: "border-box",
           }}
         >
           {formData.universityLogo && (
             <img
               src={formData.universityLogo}
               alt="Logo"
-              style={{ height: 40, width: 40, objectFit: "contain", flexShrink: 0 }}
+              style={{ height: 36, width: 36, objectFit: "contain", flexShrink: 0 }}
             />
           )}
           <div style={{ flex: 1 }}>
-            <div style={{ fontWeight: 700, fontSize: "1.1em", letterSpacing: "0.03em" }}>
+            <div style={{ fontWeight: 700, fontSize: "1.15em", letterSpacing: "0.02em" }}>
               {formData.universityName}
             </div>
-            <div style={{ fontSize: "0.82em", opacity: 0.85, marginTop: 2 }}>
+            <div style={{ fontSize: "0.85em", opacity: 0.85, marginTop: 1 }}>
               {formData.scheduleTitle} &nbsp;·&nbsp; {formData.term} {formData.academicYear}
             </div>
           </div>
-          <div style={{ textAlign: "right", fontSize: "0.82em", opacity: 0.9, lineHeight: 1.6 }}>
+          <div style={{ textAlign: "right", fontSize: "0.85em", opacity: 0.9, lineHeight: 1.55 }}>
             <div><strong>Student:</strong> {formData.fullName}</div>
             <div><strong>ID:</strong> {formData.studentId}</div>
-            <div><strong>Dept / Major:</strong> {formData.department} / {formData.major}</div>
+            <div><strong>Major:</strong> {formData.major}</div>
           </div>
         </div>
 
@@ -102,18 +154,17 @@ export default function SchedulePreview({
             display: "grid",
             gridTemplateColumns: `${TIME_COL_W}px repeat(${displayDays.length}, 1fr)`,
             borderBottom: `2px solid ${formData.borderColor}`,
+            height: HEADER_H,
           }}
         >
-          {/* Empty corner */}
           <div
             style={{
               backgroundColor: formData.tableHeaderColor,
               borderRight: `1px solid ${formData.borderColor}`,
-              height: HEADER_H,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "0.78em",
+              fontSize: "0.85em",
               fontWeight: 700,
               color: formData.textColor,
             }}
@@ -126,11 +177,10 @@ export default function SchedulePreview({
               style={{
                 backgroundColor: formData.tableHeaderColor,
                 borderRight: `1px solid ${formData.borderColor}`,
-                height: HEADER_H,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "0.85em",
+                fontSize: "0.92em",
                 fontWeight: 700,
                 color: formData.textColor,
               }}
@@ -141,11 +191,56 @@ export default function SchedulePreview({
         </div>
 
         {/* ── Time rows ── */}
-        <div style={{ overflow: "hidden" }}>
+        <div>
           {Array.from({ length: totalHours }, (_, i) => {
             const hour = i + formData.startHour
             const timeStr = `${hour}:00`
             const displayTime = formatTime(timeStr)
+            const isLunch = hour >= LUNCH_START && hour < LUNCH_END
+
+            if (isLunch) {
+              return (
+                <div
+                  key={timeStr}
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: `${TIME_COL_W}px repeat(${displayDays.length}, 1fr)`,
+                    height: LUNCH_H,
+                    borderBottom: `1px solid ${formData.borderColor}`,
+                    backgroundColor: `${formData.tableHeaderColor}aa`,
+                  }}
+                >
+                  <div
+                    style={{
+                      borderRight: `1px solid ${formData.borderColor}`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "0.75em",
+                      fontWeight: 600,
+                      color: `${formData.textColor}88`,
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {displayTime}
+                  </div>
+                  <div
+                    style={{
+                      gridColumn: `2 / span ${displayDays.length}`,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "0.78em",
+                      color: `${formData.textColor}77`,
+                      fontStyle: "italic",
+                      letterSpacing: "0.1em",
+                    }}
+                  >
+                    ── Lunch Break ──
+                  </div>
+                </div>
+              )
+            }
 
             return (
               <div
@@ -165,10 +260,10 @@ export default function SchedulePreview({
                     alignItems: "flex-start",
                     justifyContent: "center",
                     paddingTop: 5,
-                    fontSize: "0.78em",
+                    fontSize: "0.85em",
                     fontWeight: 600,
                     color: formData.textColor,
-                    backgroundColor: `${formData.tableHeaderColor}60`,
+                    backgroundColor: `${formData.tableHeaderColor}55`,
                   }}
                 >
                   {displayTime}
@@ -194,10 +289,10 @@ export default function SchedulePreview({
                     >
                       {startingCourses.map((course) => {
                         const [sh, sm] = (course.startTime || "0:0").split(":").map(Number)
-                        const [eh, em] = (course.endTime   || "0:0").split(":").map(Number)
+                        const [eh, em] = (course.endTime || "0:0").split(":").map(Number)
                         const durationMin = (eh * 60 + em) - (sh * 60 + sm)
-                        const topOffset   = (sm / 60) * HOUR_HEIGHT
-                        const blockHeight = Math.max((durationMin / 60) * HOUR_HEIGHT, 28)
+                        const topOffset = (sm / 60) * HOUR_HEIGHT
+                        const blockHeight = Math.max((durationMin / 60) * HOUR_HEIGHT, 30)
 
                         return (
                           <div
@@ -209,23 +304,22 @@ export default function SchedulePreview({
                               right: 2,
                               height: blockHeight,
                               backgroundColor: course.color,
-                              borderRadius: 4,
+                              borderRadius: 3,
                               padding: "4px 6px",
                               overflow: "hidden",
                               zIndex: 2,
-                              boxShadow: "0 1px 4px rgba(0,0,0,0.18)",
+                              boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
                               display: "flex",
                               flexDirection: "column",
                               gap: 1,
                             }}
                           >
-                            {/* Course name — always visible */}
                             <div
                               style={{
                                 color: "#fff",
-                                fontSize: "0.82em",
+                                fontSize: "0.92em",
                                 fontWeight: 700,
-                                lineHeight: 1.25,
+                                lineHeight: 1.2,
                                 overflow: "hidden",
                                 textOverflow: "ellipsis",
                                 whiteSpace: "nowrap",
@@ -233,14 +327,13 @@ export default function SchedulePreview({
                             >
                               {course.courseName}
                             </div>
-
-                            {/* Secondary info — only if block is tall enough */}
-                            {blockHeight >= 44 && (
+                            {/* Hide details if block is too short */}
+                            {blockHeight >= 38 && (
                               <div
                                 style={{
-                                  color: "rgba(255,255,255,0.92)",
-                                  fontSize: "0.72em",
-                                  lineHeight: 1.3,
+                                  color: "rgba(255,255,255,0.9)",
+                                  fontSize: "0.85em",
+                                  lineHeight: 1.25,
                                   overflow: "hidden",
                                 }}
                               >
@@ -273,19 +366,20 @@ export default function SchedulePreview({
           <div
             style={{
               borderTop: `1px solid ${formData.borderColor}`,
-              padding: "8px 14px",
+              padding: "5px 12px",
               display: "flex",
               flexWrap: "wrap",
-              gap: "6px 20px",
+              gap: "4px 16px",
               backgroundColor: formData.paperColor,
+              minHeight: LEGEND_H,
             }}
           >
             {formData.courses.map((course) => (
-              <div key={course.id} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: "0.78em" }}>
+              <div key={course.id} style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.85em" }}>
                 <div
                   style={{
-                    width: 10,
-                    height: 10,
+                    width: 9,
+                    height: 9,
                     borderRadius: "50%",
                     backgroundColor: course.color,
                     flexShrink: 0,
@@ -305,8 +399,8 @@ export default function SchedulePreview({
           <div
             style={{
               borderTop: `1px solid ${formData.borderColor}`,
-              padding: "6px 14px",
-              fontSize: "0.78em",
+              padding: "4px 12px",
+              fontSize: "0.85em",
               color: formData.textColor,
             }}
           >
@@ -327,24 +421,25 @@ export default function SchedulePreview({
         <CardTitle>Schedule Preview — Landscape A4</CardTitle>
       </CardHeader>
       <CardContent>
-        {/* Outer wrapper: landscape A4 aspect ratio, overflow hidden for clean export */}
+        {/* 
+          Outer wrapper: fixed landscape-A4 aspect ratio.
+          Inner content is designed at naturalW=900px wide, then CSS-scaled
+          to fill the container — so font sizes stay proportional and readable.
+        */}
         <div
           ref={previewRef}
-          className="schedule-container"
+          className="schedule-outer"
           style={{
-            backgroundColor: formData.paperColor,
-            color: formData.textColor,
-            fontFamily: formData.fontFamily,
-            border: `1px solid ${formData.borderColor}`,
-            borderRadius: 6,
-            overflow: "hidden",
-            position: "relative",
-            // Landscape A4: 297 × 210 mm → ratio ≈ 1.414 wide
             width: "100%",
             aspectRatio: "297 / 210",
+            position: "relative",
+            overflow: "hidden",
+            border: `1px solid ${formData.borderColor}`,
+            borderRadius: 6,
+            backgroundColor: formData.paperColor,
           }}
         >
-          {/* Watermark */}
+          {/* Watermark layer */}
           {formData.enableWatermark && formData.watermarkText && (
             <div
               style={{
@@ -378,10 +473,27 @@ export default function SchedulePreview({
             </div>
           )}
 
-          {/* Scale the inner content to fill the fixed-ratio container */}
-          <div style={{ position: "absolute", inset: 0, overflow: "hidden" }}>
+          {/*
+            The schedule is designed at 900px wide.
+            CSS transform scales it to fill the outer container.
+            previewRef points here so html2canvas captures the full 900px content.
+          */}
+          <div
+            className="schedule-container"
+            data-natural-height={naturalH}
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: 900,
+              transformOrigin: "center",
+              transform: "translate(-50%, -50%) scale(var(--schedule-scale, 1))",
+            }}
+          >
             {renderWeeklyView()}
           </div>
+
+          <ScaleUpdater />
         </div>
       </CardContent>
 

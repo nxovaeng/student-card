@@ -74,6 +74,42 @@ export default function AdmissionLetterInfoForm({
               </div>
             </div>
 
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="space-y-2">
+                <Label htmlFor="applicationId">Application ID</Label>
+                <Input
+                  id="applicationId"
+                  name="applicationId"
+                  value={formData.applicationId}
+                  onChange={onChange}
+                  placeholder="e.g., APP123456"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="depositAmount">Deposit Amount ($)</Label>
+                <Input
+                  id="depositAmount"
+                  name="depositAmount"
+                  type="number"
+                  value={formData.depositAmount}
+                  onChange={onChange}
+                  placeholder="e.g., 500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="depositDeadline">Deposit Deadline</Label>
+                <Input
+                  id="depositDeadline"
+                  name="depositDeadline"
+                  type="date"
+                  value={formData.depositDeadline}
+                  onChange={onChange}
+                />
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="programDuration">Program Duration</Label>

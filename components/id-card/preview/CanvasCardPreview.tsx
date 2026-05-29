@@ -99,7 +99,15 @@ export const CanvasCardPreview: React.FC<CanvasCardPreviewProps> = ({ formData }
           ctx.arc(x + radius, y + radius, radius, 0, Math.PI * 2, true)
           ctx.closePath()
           ctx.clip()
-          ctx.drawImage(photo, x, y, size, size)
+          
+          // Implement object-fit: cover
+          const scale = Math.max(size / photo.naturalWidth, size / photo.naturalHeight)
+          const w = photo.naturalWidth * scale
+          const h = photo.naturalHeight * scale
+          const dx = x + (size - w) / 2
+          const dy = y + (size - h) / 2
+          
+          ctx.drawImage(photo, dx, dy, w, h)
           ctx.restore()
         }
       }

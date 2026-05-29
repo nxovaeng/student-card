@@ -75,7 +75,7 @@ export default function ScheduleGenerator() {
       await exportElementToPng(
         previewRef.current,
         297, // width mm (landscape A4)
-        210, // height mm
+        210, // height mm (fixed A4 height)
         quality,
         fileName,
         formData.paperColor || "#ffffff",

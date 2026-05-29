@@ -158,6 +158,9 @@ export interface AdmissionLetterFormData {
   admissionDate: string
   programStartDate: string
   programDuration: string
+  applicationId: string
+  depositAmount: number
+  depositDeadline: string
   scholarshipInfo: string
   letterTitle: string
   letterContent: string
@@ -189,7 +192,7 @@ export interface AdmissionLetterPreviewProps {
   onChange: (name: string, value: string | boolean | number) => void
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>, field: string) => void
   onDownload?: (quality: string) => void
-  previewRef?: React.RefObject<HTMLDivElement>
+  previewRef?: React.RefObject<HTMLDivElement | null>
 }
 
 export interface AdmissionLetterInfoFormProps {
@@ -221,6 +224,8 @@ export interface TranscriptFormData {
   degreeType: string
   enrollmentDate: string
   expectedGraduationDate: string
+  studentDob: string
+  academicStanding: string
   studentPhoto: string
   courses: TranscriptCourse[]
   currentGPA: string
@@ -257,7 +262,7 @@ export interface TranscriptPreviewProps {
   onChange: (name: string, value: string | boolean | number) => void
   onFileChange?: (e: React.ChangeEvent<HTMLInputElement>, field: string) => void
   onDownload?: (quality: string) => void
-  previewRef?: React.RefObject<HTMLDivElement>
+  previewRef?: React.RefObject<HTMLDivElement | null>
 }
 
 export interface TranscriptFormProps {
@@ -329,8 +334,10 @@ export interface CertificateFormData {
 
 export interface CertificatePreviewProps {
   formData: CertificateFormData
+  onChange?: (name: string, value: string | boolean | number) => void
+  onFileChange?: (e: React.ChangeEvent<HTMLInputElement>, field: string) => void
   onDownload?: (quality: string) => void
-  previewRef?: React.RefObject<HTMLDivElement>
+  previewRef?: React.RefObject<HTMLDivElement | null>
 }
 
 // Tuition Receipt types
