@@ -2,144 +2,236 @@ import type React from "react"
 import type { CardComponentProps } from "@/lib/types"
 import { CardElements } from "@/components/id-card/common/CardElements"
 import { QRCodeSVG } from "qrcode.react"
-import { CreditCard } from "lucide-react"
 import { formatValidityDate } from "@/lib/utils"
-import { usePortraitCard } from "@/hooks/usePortraitCard"
 
 /**
- * 竖向现代风格卡片组件
- *
- * 特点：
- * - 圆角、阴影
- * - 鲜明的颜色
- * - 简洁布局
+ * Portrait Modern ID Card
+ * Aspect ratio: 54 × 85.6 mm (ISO ID-1 portrait)
+ * Layout inspired by real university student ID cards.
  */
 export const ModernCard: React.FC<CardComponentProps> = ({ formData, barcodeRef }) => {
-  // 使用竖向卡片Hook获取样式
-  const { cardStyles } = usePortraitCard(formData, "modern")
-
-  // 现代风格的文本颜色
-  const textColor = formData.textColor
+  const primary = formData.cardColor || "#1e40af"
+  const textCol = formData.textColor || "#ffffff"
 
   return (
-    <div className="overflow-hidden rounded-lg shadow-lg" style={{ backgroundColor: formData.cardColor }}>
-      <div className="relative p-6">
-        <CardElements formData={formData}>
-          {/* Header Section */}
-          <div className="relative z-10 mb-5 flex items-center justify-between">
-            <div>
-              <div className="text-sm font-medium" style={{ color: textColor }}>
-                {formData.universityName || "INTERNATIONAL UNIVERSITY"}
-              </div>
-              <div className="mt-1 text-2xl font-bold" style={{ color: textColor }}>
-                STUDENT ID CARD
-              </div>
-            </div>
-            <div className="h-16 w-16">
+    <div
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        borderRadius: 8,
+        aspectRatio: "54 / 85.6",
+        maxWidth: "100%",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.18), 0 1px 4px rgba(0,0,0,0.12)",
+        fontFamily: "Arial, sans-serif",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <CardElements formData={formData}>
+        {/* ── Top header band ── */}
+        <div
+          style={{
+            background: `linear-gradient(135deg, ${primary} 0%, ${primary}dd 100%)`,
+            padding: "6% 5% 5%",
+            position: "relative",
+            flexShrink: 0,
+            zIndex: 2,
+          }}
+        >
+          {/* Diagonal stripe overlay */}
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage:
+                "repeating-linear-gradient(-45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px, transparent 2px, transparent 10px)",
+            }}
+          />
+          <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", gap: "8%" }}>
+            <div
+              style={{
+                width: "18%",
+                aspectRatio: "1",
+                borderRadius: "50%",
+                backgroundColor: "rgba(255,255,255,0.2)",
+                border: "1.5px solid rgba(255,255,255,0.5)",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
               <img
                 src={formData.logo || "/placeholder.svg"}
-                alt="University Logo"
-                className="h-full w-full object-contain"
+                alt="Logo"
+                style={{ width: "80%", height: "80%", objectFit: "contain" }}
               />
             </div>
+            <div>
+              <div
+                style={{
+                  color: textCol,
+                  fontWeight: 800,
+                  fontSize: "0.52em",
+                  letterSpacing: "0.06em",
+                  lineHeight: 1.2,
+                }}
+              >
+                {formData.universityName || "International University"}
+              </div>
+              <div
+                style={{
+                  color: "rgba(255,255,255,0.75)",
+                  fontSize: "0.36em",
+                  letterSpacing: "0.14em",
+                  textTransform: "uppercase",
+                  marginTop: 2,
+                }}
+              >
+                Student ID Card
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Photo ── */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "-8%",
+            position: "relative",
+            zIndex: 3,
+            flexShrink: 0,
+          }}
+        >
+          <div
+            style={{
+              width: "36%",
+              aspectRatio: "3/4",
+              border: `2.5px solid ${primary}`,
+              overflow: "hidden",
+              backgroundColor: "#e5e7eb",
+              boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+            }}
+          >
+            <img
+              src={formData.photo || "/placeholder-user.jpg"}
+              alt="Student"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </div>
+        </div>
+
+        {/* ── Info block ── */}
+        <div
+          style={{
+            flex: 1,
+            padding: "4% 6% 3%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "3%",
+            zIndex: 2,
+          }}
+        >
+          {/* Name */}
+          <div style={{ textAlign: "center" }}>
+            <div
+              style={{
+                fontSize: "0.65em",
+                fontWeight: 700,
+                color: "#111",
+                letterSpacing: "0.02em",
+              }}
+            >
+              {formData.fullName || "JOHN SMITH"}
+            </div>
+            <div style={{ fontSize: "0.38em", color: "#666", marginTop: 2 }}>
+              {formData.faculty || "School of Engineering"}
+            </div>
           </div>
 
-          {/* Main Content Section */}
-          <div className="relative z-10 flex flex-col sm:flex-row gap-5">
-            {/* Photo Column */}
-            <div className="flex flex-col items-center">
-              <div
-                className="h-36 w-28 overflow-hidden rounded border bg-white shadow-sm"
-                style={
-                  formData.realisticEffect
-                    ? {
-                        boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
-                        border: "1px solid rgba(0,0,0,0.08)",
-                      }
-                    : {}
-                }
-              >
-                <div 
-                  className="h-full w-full" 
-                  style={{
-                    backgroundImage: `url(${formData.photo || "/placeholder.svg"})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center"
-                  }}
+          {/* Divider */}
+          <div style={{ height: 1, backgroundColor: `${primary}25`, margin: "1% 0" }} />
+
+          {/* Details grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4% 6%", fontSize: "0.38em" }}>
+            {[
+              ["Student ID", formData.studentId || "2024001001"],
+              ["Program", formData.programType || "Bachelor"],
+              ["Enrolled", formData.enrollmentYear || "2024"],
+              ["Valid Until", formatValidityDate(formData.validityEnd) || "2028/06"],
+            ].map(([label, value]) => (
+              <div key={label}>
+                <div style={{ color: "#999", textTransform: "uppercase", letterSpacing: "0.08em", fontSize: "0.85em" }}>
+                  {label}
+                </div>
+                <div style={{ color: "#222", fontWeight: 600, marginTop: 1 }}>{value}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* QR / Barcode */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "auto",
+              paddingTop: "3%",
+              borderTop: `1px solid ${primary}20`,
+            }}
+          >
+            {formData.codeType === "qrcode" ? (
+              <div style={{ backgroundColor: "#fff", padding: 3, border: `1px solid ${primary}30` }}>
+                <QRCodeSVG
+                  value={`ID:${formData.studentId || "S12345678"}`}
+                  size={52}
+                  bgColor="#FFFFFF"
+                  fgColor="#000000"
+                  level="M"
+                  includeMargin={false}
                 />
               </div>
-            </div>
-
-            {/* Info Column */}
-            <div className="flex-1 space-y-3" style={{ color: textColor }}>
-              <div>
-                <div className="text-xs opacity-80">FULL NAME</div>
-                <div className="text-lg font-semibold">{formData.fullName || "JOHN SMITH"}</div>
+            ) : (
+              <div style={{ backgroundColor: "#fff", padding: "2px 4px" }}>
+                <svg ref={barcodeRef} style={{ width: "100%", maxWidth: 120, height: 28, display: "block" }} />
               </div>
-
-              <div>
-                <div className="text-xs opacity-80">FACULTY</div>
-                <div className="font-semibold">{formData.faculty || "ENGINEERING"}</div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <div className="text-xs opacity-80">PROGRAM</div>
-                  <div className="font-semibold">{formData.programType}</div>
-                </div>
-                <div>
-                  <div className="text-xs opacity-80">ENROLLED</div>
-                  <div className="font-semibold">{formData.enrollmentYear}</div>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
+        </div>
 
-          {/* ID 和 Valid Until 显示在同一行 */}
-          <div className="relative z-10 mt-4 grid grid-cols-2 gap-3" style={{ color: textColor }}>
-            <div>
-              <div className="text-xs opacity-80">STUDENT ID</div>
-              <div className="font-semibold">{formData.studentId || "S12345678"}</div>
-            </div>
-            <div>
-              <div className="text-xs opacity-80">VALID UNTIL</div>
-              <div className="font-semibold">{formatValidityDate(formData.validityEnd) || "2028/06"}</div>
-            </div>
+        {/* ── Bottom footer band ── */}
+        <div
+          style={{
+            backgroundColor: primary,
+            padding: "2.5% 5%",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexShrink: 0,
+            zIndex: 2,
+          }}
+        >
+          <div style={{ fontSize: "0.3em", color: "rgba(255,255,255,0.7)", letterSpacing: "0.06em" }}>
+            {formData.universityWebsite || "www.university.edu"}
           </div>
-
-          {/* Code Section */}
-          <div className="relative z-10 mt-5 border-t border-white/20 pt-4">
-            <div className="flex items-center justify-between">
-              <div className="text-sm font-medium" style={{ color: textColor }}>
-                {formData.codeType === "qrcode" ? "SCAN QR CODE FOR VERIFICATION" : "SCAN BARCODE FOR VERIFICATION"}
-              </div>
-              <CreditCard className="h-5 w-5" style={{ color: textColor }} />
-            </div>
-            <div className="mt-2 flex justify-center">
-              {formData.codeType === "qrcode" ? (
-                <div className="bg-white p-2 rounded-sm shadow-sm">
-                  <QRCodeSVG
-                    value={`ID:${formData.studentId || "S12345678"}`}
-                    size={80}
-                    bgColor={"#FFFFFF"}
-                    fgColor={"#000000"}
-                    level={"M"}
-                    includeMargin={false}
-                  />
-                </div>
-              ) : (
-                <div className="bg-white py-1 px-2 rounded-sm shadow-sm">
-                  <svg ref={barcodeRef} className="w-full max-w-[180px]"></svg>
-                </div>
-              )}
-            </div>
+          <div
+            style={{
+              fontFamily: "Georgia, serif",
+              fontStyle: "italic",
+              fontSize: "0.38em",
+              color: "rgba(255,255,255,0.9)",
+              borderBottom: "0.5px solid rgba(255,255,255,0.5)",
+              paddingBottom: 1,
+            }}
+          >
+            {formData.officialSignature || "S. Davis"}
           </div>
-        </CardElements>
-      </div>
-
-      <div className="relative z-10 bg-black/10 p-2 text-center text-xs" style={{ color: textColor }}>
-        This card remains the property of the university. If found, please return to the Student Office.
-      </div>
+        </div>
+      </CardElements>
     </div>
   )
 }

@@ -16,7 +16,7 @@ import type { ScheduleFormData, ScheduleCourse } from "@/lib/types"
 
 export default function ScheduleGenerator() {
   // Preview reference
-  const previewRef = useRef<HTMLDivElement>(null)
+  const previewRef = useRef<HTMLDivElement | null>(null)
 
   // Active tab state
   const [activeTab, setActiveTab] = useState("info")
@@ -38,36 +38,17 @@ export default function ScheduleGenerator() {
     saveCourse,
     cancelEditCourse,
     deleteCourse,
+    setCourses,
   } = useSchedule(DEFAULT_SCHEDULE_DATA)
 
   // Handle form field changes
   const handleFormChange = (name: string, value: string | boolean | number | string[] | ScheduleCourse[]) => {
     if (typeof value === "string" || typeof value === "boolean" || typeof value === "number") {
       handleInputChange({ target: { name, value, type: typeof value } } as any)
-    } else {
-      // Handle array type values
-      setFormData((prev) => ({
-        ...prev,
-        [name]: value,
-      }))
+    } else if (name === "courses" && Array.isArray(value)) {
+      setCourses(value as ScheduleCourse[])
     }
-  }
-
-  // Set form data (for array type values)
-  const setFormData = (updater: (prev: ScheduleFormData) => ScheduleFormData) => {
-    const newData = updater(formData)
-    Object.entries(newData).forEach(([key, value]) => {
-      if (key !== "courses" && key !== "daysOfWeek") {
-        if (typeof value === "string" || typeof value === "boolean" || typeof value === "number") {
-          handleInputChange({ target: { name: key, value, type: typeof value } } as any)
-        }
-      }
-    })
-
-    // Special handling for array types
-    if (newData.courses !== formData.courses) {
-      handleFormChange("courses", newData.courses)
-    }
+    // other array types (daysOfWeek etc.) are ignored — add handlers here if needed
   }
 
   // Download schedule image

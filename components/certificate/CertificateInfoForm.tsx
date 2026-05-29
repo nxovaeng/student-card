@@ -79,6 +79,26 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
           <h3 className="text-lg font-medium">Academic Information</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
+              <Label htmlFor="faculty">Faculty / School</Label>
+              <Input
+                id="faculty"
+                name="faculty"
+                value={data.faculty}
+                onChange={(e) => handleChange("faculty", e.target.value)}
+                placeholder="e.g., School of Computer Science"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="major">Major / Program</Label>
+              <Input
+                id="major"
+                name="major"
+                value={data.major}
+                onChange={(e) => handleChange("major", e.target.value)}
+                placeholder="e.g., Computer Science"
+              />
+            </div>
+            <div className="space-y-2">
               <Label htmlFor="degreeType">Degree Type</Label>
               <Select value={data.degreeType} onValueChange={(value) => handleChange("degreeType", value)}>
                 <SelectTrigger id="degreeType">
@@ -129,14 +149,17 @@ const CertificateInfoForm: React.FC<FormComponentProps> = ({ formData, onChange,
               />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="currentYear">Current Year</Label>
-              <Input
-                id="currentYear"
-                name="currentYear"
-                value={data.currentYear}
-                onChange={(e) => handleChange("currentYear", e.target.value)}
-                placeholder="e.g., First Year, Second Year"
-              />
+              <Label htmlFor="currentYear">Current Year of Study</Label>
+              <Select value={data.currentYear} onValueChange={(value) => handleChange("currentYear", value)}>
+                <SelectTrigger id="currentYear">
+                  <SelectValue placeholder="Select year" />
+                </SelectTrigger>
+                <SelectContent>
+                  {["First Year", "Second Year", "Third Year", "Fourth Year", "Fifth Year", "Sixth Year", "Graduate Year 1", "Graduate Year 2", "Graduate Year 3"].map((y) => (
+                    <SelectItem key={y} value={y}>{y}</SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </div>

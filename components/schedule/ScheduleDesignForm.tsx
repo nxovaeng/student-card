@@ -37,7 +37,7 @@ export default function ScheduleDesignForm({ formData, onChange, onFileChange }:
                   <SelectValue placeholder="Select start time" />
                 </SelectTrigger>
                 <SelectContent>
-                  {Array.from({ length: 12 }, (_, i) => i + 6).map((hour) => (
+                  {Array.from({ length: 14 }, (_, i) => i + 6).map((hour) => (
                     <SelectItem key={hour} value={hour.toString()}>
                       {hour}:00
                     </SelectItem>
@@ -251,6 +251,25 @@ export default function ScheduleDesignForm({ formData, onChange, onFileChange }:
               </div>
             </div>
           )}
+        </CardContent>
+      </Card>
+
+      {/* Export Info */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Export Settings</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            The schedule exports as a <strong>Landscape A4 PNG (297 × 210 mm)</strong>. Resolution is controlled by the
+            DPI setting in the Preview tab — higher DPI means sharper output at the same physical size.
+          </p>
+          <ul className="mt-2 text-sm text-muted-foreground list-disc pl-5 space-y-1">
+            <li>150 DPI → 1754 × 1240 px (screen / web use)</li>
+            <li>200 DPI → 2339 × 1654 px (standard print)</li>
+            <li>300 DPI → 3508 × 2480 px (professional print)</li>
+            <li>600 DPI → 7016 × 4961 px (high-end print)</li>
+          </ul>
         </CardContent>
       </Card>
     </div>
